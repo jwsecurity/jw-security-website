@@ -1,0 +1,32 @@
+{
+  "short_name": "JW Security",
+  "name": "JW Security | Locksmith, Carpentry and Fire Protection Specialists",
+  "description": "Professional locksmith, carpentry and fire protection specialists serving South London and Surrey since 1991",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#00c6d7",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "categories": ["business", "security", "utilities"],
+  "lang": "en-GB",
+  "dir": "ltr"
+}
