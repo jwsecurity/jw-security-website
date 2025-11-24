@@ -1,12 +1,12 @@
 import React, { useState, useRef, useEffect, useCallback, Suspense, lazy } from 'react';
-import { 
-  Box, 
-  Typography, 
-  Grid, 
-  Container, 
-  Button, 
-  Accordion, 
-  AccordionSummary, 
+import {
+  Box,
+  Typography,
+  Grid,
+  Container,
+  Button,
+  Accordion,
+  AccordionSummary,
   AccordionDetails,
   Divider,
   Paper,
@@ -127,7 +127,7 @@ const JW_RED = '#00c6d7';
 // Styled Components
 const AnimatedBox = styled(Box)(({ animation, delay }) => ({
   animation: `${animation || fadeInUp} 1s ease-out forwards`,
-  opacity: 0, 
+  opacity: 0,
   animationDelay: delay || '0s',
 }));
 
@@ -544,43 +544,43 @@ const TestimonialCarousel = React.memo(({ testimonialsData }) => {
   const [animation, setAnimation] = useState(fadeIn);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const autoPlayRef = useRef(null);
-  
+
   const goToNext = useCallback(() => {
     setAnimation(slideInRight);
     setCurrentIndex(prev => (prev + 1) % testimonialsData.length);
   }, [testimonialsData.length]);
-  
+
   const goToPrev = useCallback(() => {
     setAnimation(slideInLeft);
     setCurrentIndex(prev => (prev === 0 ? testimonialsData.length - 1 : prev - 1));
   }, [testimonialsData.length]);
-  
+
   const goToSlide = (index) => {
     setAnimation(index > currentIndex ? slideInRight : slideInLeft);
     setCurrentIndex(index);
   };
-  
+
   useEffect(() => {
     if (isAutoPlaying) {
       autoPlayRef.current = setInterval(() => {
         goToNext();
       }, 5000);
     }
-    
+
     return () => {
       if (autoPlayRef.current) {
         clearInterval(autoPlayRef.current);
       }
     };
   }, [isAutoPlaying, goToNext]);
-  
+
   const handleMouseEnter = () => setIsAutoPlaying(false);
   const handleMouseLeave = () => setIsAutoPlaying(true);
-  
+
   const testimonial = testimonialsData[currentIndex];
-  
+
   return (
-    <TestimonialWrapper 
+    <TestimonialWrapper
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -588,23 +588,23 @@ const TestimonialCarousel = React.memo(({ testimonialsData }) => {
         <TestimonialQuoteIcon>
           <FormatQuoteIcon />
         </TestimonialQuoteIcon>
-        
-        <Typography 
-          variant="body1" 
-          sx={{ 
+
+        <Typography
+          variant="body1"
+          sx={{
             mt: 2,
-            fontStyle: 'italic', 
-            color: alpha('#000', 0.7), 
-            fontSize: '1.05rem', 
+            fontStyle: 'italic',
+            color: alpha('#000', 0.7),
+            fontSize: '1.05rem',
             lineHeight: 1.7,
             mb: 3
           }}
         >
           "{testimonial.text}"
         </Typography>
-        
+
         <Divider sx={{ mb: 3 }} />
-        
+
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Box
@@ -637,11 +637,11 @@ const TestimonialCarousel = React.memo(({ testimonialsData }) => {
             <Typography sx={{ fontSize: '0.85rem', color: alpha('#000', 0.5), fontWeight: 500 }}>
               Checkatrade
             </Typography>
-            <Box sx={{ 
-              backgroundColor: '#00A651', 
-              color: 'white', 
-              px: 1.2, 
-              py: 0.4, 
+            <Box sx={{
+              backgroundColor: '#00A651',
+              color: 'white',
+              px: 1.2,
+              py: 0.4,
               borderRadius: '4px',
               fontSize: '0.85rem',
               fontWeight: 600
@@ -651,19 +651,19 @@ const TestimonialCarousel = React.memo(({ testimonialsData }) => {
           </Box>
         </Box>
       </TestimonialCard>
-      
+
       <TestimonialNavigation>
         {testimonialsData.map((_, index) => (
-          <TestimonialDot 
-            key={index} 
-            active={index === currentIndex} 
+          <TestimonialDot
+            key={index}
+            active={index === currentIndex}
             onClick={() => goToSlide(index)}
           />
         ))}
       </TestimonialNavigation>
-      
+
       {isAutoPlaying && (
-        <Box sx={{ 
+        <Box sx={{
           position: 'absolute',
           bottom: 0,
           width: '100%',
@@ -672,8 +672,8 @@ const TestimonialCarousel = React.memo(({ testimonialsData }) => {
           borderRadius: '3px',
           backgroundColor: alpha(JW_CYAN, 0.1),
         }}>
-          <Box 
-            sx={{ 
+          <Box
+            sx={{
               height: '100%',
               width: '100%',
               backgroundColor: JW_CYAN,
@@ -683,7 +683,7 @@ const TestimonialCarousel = React.memo(({ testimonialsData }) => {
                 '0%': { transform: 'scaleX(0)' },
                 '100%': { transform: 'scaleX(1)' },
               }
-            }} 
+            }}
           />
         </Box>
       )}
@@ -706,12 +706,15 @@ const HomePage = () => {
   // Detect mobile for animation optimization
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-  
+
   const clients = [
     { name: 'Alpha Property', logo: '/images/trusted/Alpha Propery.png' },
     { name: 'Antony Roberts', logo: '/images/trusted/Antony Roberts.png' },
-    { name: 'Banham', logo: '/images/trusted/Banham.png' },
     { name: 'Garton Jones', logo: '/images/trusted/Garton Jones.webp' },
+    { name: 'EPML', logo: '/images/trusted/EPML.png' },
+    { name: 'Haus Block Management', logo: '/images/trusted/Haus Block Management.png' },
+    { name: 'Hurford Salvi Carr', logo: '/images/trusted/Hurford Salvi Carr.jpg' },
+    { name: 'Rampton Baseley', logo: '/images/trusted/Rampton Baseley.png' },
   ];
 
   const testimonialsData = [
@@ -724,7 +727,7 @@ const HomePage = () => {
     },
     {
       text: 'Julian was extremely responsive and helpful in changing our locks at very short notice and after normal business hours. Highly recommend!',
-      author: 'Verified Customer', 
+      author: 'Verified Customer',
       position: 'Emergency Lock Change • SE27',
       rating: 10,
       date: '20 March'
@@ -739,37 +742,37 @@ const HomePage = () => {
   ];
 
   const securityNeeds = [
-    { 
+    {
       title: 'Fire Protection',
       icon: <WarningOutlinedIcon sx={{ fontSize: 36, color: JW_CYAN }} />,
       description: 'Comprehensive fire safety solutions including risk assessments, alarm systems, emergency lighting, and fire extinguishers.',
       link: '/services/fire-protection'
     },
-    { 
+    {
       title: 'Carpentry Solutions',
       icon: <HandymanIcon sx={{ fontSize: 36, color: JW_CYAN }} />,
       description: 'Expert carpentry services including fire door installation, custom woodwork, repairs, and maintenance for residential and commercial properties.',
       link: '/services/carpentry'
     },
-    { 
+    {
       title: 'Emergency Door Opening',
       icon: <KeyIcon sx={{ fontSize: 36 }} />,
       description: 'Fast, non-destructive entry for homes and businesses when you\'re locked out. 24/7 rapid response.',
       link: '/services/emergency-door-opening'
     },
-    { 
+    {
       title: 'Mobile Key Cutting',
       icon: <KeyIcon sx={{ fontSize: 36 }} />,
       description: 'On-site key cutting service with registered key system. We come to you with our mobile workshop for convenient key duplication.',
       link: '/services/key-cutting'
     },
-    { 
+    {
       title: 'UPVC Doors & Windows',
       icon: <GridViewOutlinedIcon sx={{ fontSize: 36 }} />,
       description: 'Specialist repair and replacement of UPVC door and window locks, handles, and mechanisms for enhanced security.',
       link: '/services/upvc-doors-windows'
     },
-    { 
+    {
       title: 'Security Systems',
       icon: <SecurityOutlinedIcon sx={{ fontSize: 36 }} />,
       description: 'Modern CCTV, alarm systems, and access control solutions professionally installed with premium materials.',
@@ -800,25 +803,25 @@ const HomePage = () => {
     }
   ];
 
-  
+
   // Animation variants - simplified for mobile
   const fadeInUpVariants = {
     hidden: isMobile ? { opacity: 0 } : { opacity: 0, y: 30 },
-    visible: isMobile 
+    visible: isMobile
       ? { opacity: 1, transition: { duration: 0.3 } }
       : { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
   };
-  
+
   const fadeInLeftVariants = {
     hidden: isMobile ? { opacity: 0 } : { opacity: 0, x: -30 },
-    visible: isMobile 
+    visible: isMobile
       ? { opacity: 1, transition: { duration: 0.3 } }
       : { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } }
   };
-  
+
   const fadeInRightVariants = {
     hidden: isMobile ? { opacity: 0 } : { opacity: 0, x: 30 },
-    visible: isMobile 
+    visible: isMobile
       ? { opacity: 1, transition: { duration: 0.3 } }
       : { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } }
   };
@@ -895,7 +898,7 @@ const HomePage = () => {
             />
           </CollageItem>
         </HeroCollageGrid>
-        
+
         {/* Mobile-optimized single hero image */}
         <MobileHeroImage>
           <OptimizedImage
@@ -905,7 +908,7 @@ const HomePage = () => {
             sx={{ width: '100%', height: '100%' }}
           />
         </MobileHeroImage>
-        
+
         <HeroOverlay /> {/* The overlay is placed here */}
         <HeroContent>
           <motion.div
@@ -915,7 +918,7 @@ const HomePage = () => {
               hidden: { opacity: 0 },
               visible: {
                 opacity: 1,
-                transition: isMobile 
+                transition: isMobile
                   ? { duration: 0.3 }
                   : { staggerChildren: 0.2 }
               }
@@ -923,11 +926,11 @@ const HomePage = () => {
           >
             <motion.div variants={fadeInUpVariants}>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
-                <Box 
+                <Box
                   component="img"
                   src="/images/jw/jw-logo.png"
                   alt="JW Security"
-                  sx={{ 
+                  sx={{
                     height: { xs: '50px', sm: '60px', md: '70px' },
                     width: 'auto'
                   }}
@@ -936,10 +939,10 @@ const HomePage = () => {
             </motion.div>
 
             <motion.div variants={fadeInUpVariants}>
-              <HeroTitle variant="h1" sx={{ 
+              <HeroTitle variant="h1" sx={{
                 wordBreak: 'break-word', // Prevent overflow on small screens
               }}>
-                Locksmith, Carpentry and<br/>
+                Locksmith, Carpentry and<br />
                 Fire Protection Specialists
               </HeroTitle>
             </motion.div>
@@ -947,7 +950,7 @@ const HomePage = () => {
             <motion.div variants={fadeInUpVariants}>
               <HeroCallText>
                 <HeroSubtitle>
-                  <strong>Call us now</strong> for emergency call out<br/>
+                  <strong>Call us now</strong> for emergency call out<br />
                   or a free estimate:
                 </HeroSubtitle>
                 <HeroPhoneNumber>
@@ -965,7 +968,7 @@ const HomePage = () => {
         </HeroContent>
 
         {/* Service icons fixed at bottom of hero section - hidden on mobile for performance */}
-        <ServiceIconsContainer sx={{ 
+        <ServiceIconsContainer sx={{
           display: { xs: 'none', md: 'flex' } // Changed from sm to md for better mobile performance
         }}>
           <motion.div
@@ -975,22 +978,22 @@ const HomePage = () => {
           >
             <ServiceIconWrapper component={Link} to="/services/locksmith" sx={{ textDecoration: 'none' }}>
               <CircleIcon>
-                <KeyIcon sx={{ 
-                  fontSize: { xs: 24, sm: 28, md: 34 }, 
-                  color: '#333' 
+                <KeyIcon sx={{
+                  fontSize: { xs: 24, sm: 28, md: 34 },
+                  color: '#333'
                 }} />
               </CircleIcon>
-              <Typography sx={{ 
-                color: 'white', 
-                fontWeight: 600, 
-                fontSize: { xs: '12px', sm: '14px', md: '15px' }, 
-                textAlign: 'center' 
+              <Typography sx={{
+                color: 'white',
+                fontWeight: 600,
+                fontSize: { xs: '12px', sm: '14px', md: '15px' },
+                textAlign: 'center'
               }}>
                 Locksmiths
               </Typography>
             </ServiceIconWrapper>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -998,22 +1001,22 @@ const HomePage = () => {
           >
             <ServiceIconWrapper component={Link} to="/services/carpentry" sx={{ textDecoration: 'none' }}>
               <CircleIcon>
-                <HandymanIcon sx={{ 
-                  fontSize: { xs: 24, sm: 28, md: 34 }, 
-                  color: '#333' 
+                <HandymanIcon sx={{
+                  fontSize: { xs: 24, sm: 28, md: 34 },
+                  color: '#333'
                 }} />
               </CircleIcon>
-              <Typography sx={{ 
-                color: 'white', 
-                fontWeight: 600, 
-                fontSize: { xs: '12px', sm: '14px', md: '15px' }, 
-                textAlign: 'center' 
+              <Typography sx={{
+                color: 'white',
+                fontWeight: 600,
+                fontSize: { xs: '12px', sm: '14px', md: '15px' },
+                textAlign: 'center'
               }}>
                 Carpentry
               </Typography>
             </ServiceIconWrapper>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -1021,16 +1024,16 @@ const HomePage = () => {
           >
             <ServiceIconWrapper component={Link} to="/services/fire-protection" sx={{ textDecoration: 'none' }}>
               <CircleIcon>
-                <WarningOutlinedIcon sx={{ 
-                  fontSize: { xs: 24, sm: 28, md: 34 }, 
-                  color: '#333' 
+                <WarningOutlinedIcon sx={{
+                  fontSize: { xs: 24, sm: 28, md: 34 },
+                  color: '#333'
                 }} />
               </CircleIcon>
-              <Typography sx={{ 
-                color: 'white', 
-                fontWeight: 600, 
-                fontSize: { xs: '12px', sm: '14px', md: '15px' }, 
-                textAlign: 'center' 
+              <Typography sx={{
+                color: 'white',
+                fontWeight: 600,
+                fontSize: { xs: '12px', sm: '14px', md: '15px' },
+                textAlign: 'center'
               }}>
                 Fire Protection
               </Typography>
@@ -1042,7 +1045,7 @@ const HomePage = () => {
       {/* Introducing Us Section */}
       <Section odd>
         <Container maxWidth="xl">
-          <Box 
+          <Box
             sx={{
               display: 'flex',
               flexDirection: { xs: 'column-reverse', sm: 'row' },
@@ -1051,8 +1054,8 @@ const HomePage = () => {
             }}
           >
             {/* Image Column - LEFT */}
-            <Box 
-              sx={{ 
+            <Box
+              sx={{
                 width: { xs: '100%', sm: '40%', md: '45%' },
                 flex: { xs: '1 1 auto', sm: '0 0 40%', md: '0 0 45%' }
               }}
@@ -1064,8 +1067,8 @@ const HomePage = () => {
                 variants={fadeInLeftVariants}
               >
                 <OptimizedImage
-                  src="/images/jw/locksmith.jpg" 
-                  alt="Locksmith repairing door lock" 
+                  src="/images/jw/locksmith.jpg"
+                  alt="Locksmith repairing door lock"
                   sx={{
                     width: '100%',
                     height: 'auto',
@@ -1078,10 +1081,10 @@ const HomePage = () => {
                 />
               </motion.div>
             </Box>
-            
+
             {/* Content Column - RIGHT */}
-            <Box 
-              sx={{ 
+            <Box
+              sx={{
                 width: { xs: '100%', sm: '60%', md: '55%' },
                 flex: { xs: '1 1 auto', sm: '0 0 60%', md: '0 0 55%' },
                 pl: { sm: 3, md: 4, lg: 6 }
@@ -1093,23 +1096,23 @@ const HomePage = () => {
                 viewport={{ once: true, amount: 0.3 }}
                 variants={fadeInRightVariants}
               >
-                <Typography variant="h6" sx={{ color: JW_CYAN, mb: 1, textTransform: 'uppercase', fontWeight:'600' }}>
+                <Typography variant="h6" sx={{ color: JW_CYAN, mb: 1, textTransform: 'uppercase', fontWeight: '600' }}>
                   Introducing Us
                 </Typography>
-                <SectionTitle variant="h3" component="h2" sx={{ 
-                  textAlign: 'left', 
-                  '&::after': { left: 0, transform: 'none' }, 
-                  fontSize: { xs: '2rem', sm: '2.3rem', md: '2.5rem' }, 
-                  mb: 3 
+                <SectionTitle variant="h3" component="h2" sx={{
+                  textAlign: 'left',
+                  '&::after': { left: 0, transform: 'none' },
+                  fontSize: { xs: '2rem', sm: '2.3rem', md: '2.5rem' },
+                  mb: 3
                 }}>
                   Security is Our Specialty
                 </SectionTitle>
                 <Typography paragraph sx={{ my: 2.5, fontSize: { xs: '1.125rem', md: '1.05rem' }, lineHeight: 1.7 }}>
-                  JW Security provides an extensive range of locksmith and security related services 
+                  JW Security provides an extensive range of locksmith and security related services
                   to South London and Surrey since 1991.
                 </Typography>
                 <Typography paragraph sx={{ mb: 3.5, fontSize: { xs: '1.125rem', md: '1.05rem' }, lineHeight: 1.7 }}>
-                  Everything we do is bespoke and our team of highly experienced engineers pride 
+                  Everything we do is bespoke and our team of highly experienced engineers pride
                   themselves in their quality of work, level of professionalism and exhaustive product knowledge.
                 </Typography>
                 <StyledButton variant="contained" component={Link} to="/about" size="large">
@@ -1120,7 +1123,7 @@ const HomePage = () => {
           </Box>
         </Container>
       </Section>
-      
+
       {/* Client Logos Section - with animation */}
       <Section>
         <Container sx={{ textAlign: 'center' }}>
@@ -1161,9 +1164,9 @@ const HomePage = () => {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUpVariants}
           >
-            <Typography variant="h3" component="h2" sx={{ 
-              textAlign: 'center', 
-              mb: { xs: 5, md: 7 }, 
+            <Typography variant="h3" component="h2" sx={{
+              textAlign: 'center',
+              mb: { xs: 5, md: 7 },
               fontWeight: 700,
               fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' },
               color: '#1c2e4a'
@@ -1171,7 +1174,7 @@ const HomePage = () => {
               Meeting Your Security Needs
             </Typography>
           </motion.div>
-          
+
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr' }, gap: 3 }}>
             {securityNeeds.map((item, index) => (
               <motion.div
@@ -1182,9 +1185,9 @@ const HomePage = () => {
                 variants={fadeInUpVariants}
                 transition={{ delay: index * 0.1 }}
               >
-                <Box 
-                  sx={{ 
-                    height: '100%', 
+                <Box
+                  sx={{
+                    height: '100%',
                     width: '100%',
                     backgroundColor: 'white',
                     borderRadius: '10px',
@@ -1197,14 +1200,14 @@ const HomePage = () => {
                     }
                   }}
                 >
-                  <Box sx={{ 
+                  <Box sx={{
                     p: { xs: 3, sm: 3.5 },
                     display: 'flex',
                     flexDirection: 'column',
                     height: '100%'
                   }}>
                     <Box sx={{ mb: 2.5, display: 'flex', alignItems: 'center' }}>
-                      <Box sx={{ 
+                      <Box sx={{
                         color: '#00c6d7',
                         mr: 2,
                         display: 'flex',
@@ -1213,31 +1216,31 @@ const HomePage = () => {
                       }}>
                         {React.cloneElement(item.icon, { sx: { fontSize: 32 } })}
                       </Box>
-                      <Typography variant="h6" component="h3" sx={{ 
-                        fontWeight: '600', 
-                        color: '#1A233C', 
+                      <Typography variant="h6" component="h3" sx={{
+                        fontWeight: '600',
+                        color: '#1A233C',
                         fontSize: '1.15rem',
                         lineHeight: 1.3
                       }}>
                         {item.title}
                       </Typography>
                     </Box>
-                    
-                    <Typography sx={{ 
+
+                    <Typography sx={{
                       fontSize: { xs: '1rem', md: '0.95rem' }, // Larger on mobile for readability
-                      lineHeight: 1.65, 
+                      lineHeight: 1.65,
                       color: '#555',
                       mb: 2.5,
                       flexGrow: 1
                     }}>
                       {item.description}
                     </Typography>
-                    
+
                     <Box sx={{ mt: 'auto' }}>
-                      <Button 
+                      <Button
                         component={Link}
                         to={item.link}
-                        sx={{ 
+                        sx={{
                           color: '#007bff',
                           fontWeight: 500,
                           textTransform: 'none',
@@ -1274,36 +1277,36 @@ const HomePage = () => {
           >
             <Box sx={{ textAlign: 'center', mb: 7 }}>
               <DecorativeLine sx={{ mx: 'auto', mb: 2.5 }} />
-              <Typography 
-                variant="h3" 
-                component="h2" 
-                sx={{ 
-                  fontWeight: 700, 
+              <Typography
+                variant="h3"
+                component="h2"
+                sx={{
+                  fontWeight: 700,
                   fontSize: { xs: '2.2rem', md: '2.5rem' },
                   color: JW_BLUE
                 }}
               >
                 Checkatrade Reviews
               </Typography>
-              <Typography 
-                sx={{ 
-                  maxWidth: '700px', 
-                  mx: 'auto', 
+              <Typography
+                sx={{
+                  maxWidth: '700px',
+                  mx: 'auto',
                   mt: 2,
                   color: alpha('#000', 0.6),
-                  fontSize: '1.05rem', 
+                  fontSize: '1.05rem',
                 }}
               >
                 Real reviews from verified customers on Checkatrade
               </Typography>
             </Box>
           </motion.div>
-          
+
           <Suspense fallback={
-            <Box sx={{ 
-              minHeight: '350px', 
-              display: 'flex', 
-              alignItems: 'center', 
+            <Box sx={{
+              minHeight: '350px',
+              display: 'flex',
+              alignItems: 'center',
               justifyContent: 'center',
               width: '100%',
               maxWidth: '1000px',
@@ -1327,7 +1330,7 @@ const HomePage = () => {
                 target="_blank"
                 variant="outlined"
                 endIcon={<KeyboardArrowRightIcon />}
-                sx={{ 
+                sx={{
                   color: JW_CYAN,
                   borderColor: alpha(JW_CYAN, 0.5),
                   py: 1.2,
@@ -1362,24 +1365,24 @@ const HomePage = () => {
           >
             <Box sx={{ textAlign: 'center', mb: 6 }}>
               <DecorativeLine sx={{ mx: 'auto', mb: 2.5 }} />
-              <Typography 
-                variant="h3" 
-                component="h2" 
-                sx={{ 
-                  fontWeight: 700, 
+              <Typography
+                variant="h3"
+                component="h2"
+                sx={{
+                  fontWeight: 700,
                   fontSize: { xs: '2.2rem', md: '2.5rem' },
                   color: JW_BLUE
                 }}
               >
                 Frequently Asked Questions
               </Typography>
-              <Typography 
-                sx={{ 
-                  maxWidth: '700px', 
-                  mx: 'auto', 
+              <Typography
+                sx={{
+                  maxWidth: '700px',
+                  mx: 'auto',
                   mt: 2,
                   color: alpha('#000', 0.6),
-                  fontSize: '1.05rem', 
+                  fontSize: '1.05rem',
                 }}
               >
                 Get answers to common questions about our premium security services
@@ -1387,9 +1390,9 @@ const HomePage = () => {
             </Box>
           </motion.div>
 
-          <Box 
-            sx={{ 
-              maxWidth: '900px', 
+          <Box
+            sx={{
+              maxWidth: '900px',
               mx: 'auto',
               '& .MuiAccordion-root': {
                 bgcolor: 'white',
@@ -1422,10 +1425,10 @@ const HomePage = () => {
                 variants={fadeInUpVariants}
                 transition={{ delay: index * 0.1 }}
               >
-                <Accordion 
+                <Accordion
                   disableGutters
                   elevation={0}
-                  sx={{ 
+                  sx={{
                     overflow: 'hidden',
                     transition: 'all 0.3s ease',
                     '&:hover': {
@@ -1435,11 +1438,11 @@ const HomePage = () => {
                 >
                   <AccordionSummary
                     expandIcon={
-                      <ExpandMoreIcon 
-                        sx={{ 
-                          color: JW_CYAN, 
-                          fontSize: 28 
-                        }} 
+                      <ExpandMoreIcon
+                        sx={{
+                          color: JW_CYAN,
+                          fontSize: 28
+                        }}
                       />
                     }
                   >
@@ -1460,8 +1463,8 @@ const HomePage = () => {
       </Section>
 
       {/* Call to Action Section - with parallax */}
-      <Box 
-        sx={{ 
+      <Box
+        sx={{
           py: { xs: 8, md: 10 },
           backgroundImage: `linear-gradient(to right, ${alpha(JW_BLUE, 0.95)}, ${alpha(JW_BLUE, 0.92)}), url(/images/jw/locksmith-maintenance.jpg)`,
           backgroundSize: 'cover',
@@ -1495,11 +1498,11 @@ const HomePage = () => {
                   alignItems: 'center',
                   textAlign: 'center'
                 }}>
-                  <Typography 
-                    variant="h3" 
-                    sx={{ 
-                      fontWeight: 700, 
-                      mb: 3, 
+                  <Typography
+                    variant="h3"
+                    sx={{
+                      fontWeight: 700,
+                      mb: 3,
                       fontSize: { xs: '2rem', md: '2.5rem' },
                       textShadow: '0 2px 10px rgba(0,0,0,0.2)',
                       color: 'white'
@@ -1507,16 +1510,16 @@ const HomePage = () => {
                   >
                     Premium Security Solutions for High-End Properties
                   </Typography>
-                  <Typography 
-                    sx={{ 
-                      fontSize: '1.1rem', 
-                      mb: 5, 
+                  <Typography
+                    sx={{
+                      fontSize: '1.1rem',
+                      mb: 5,
                       maxWidth: '600px',
                       lineHeight: 1.7,
                       color: alpha('#fff', 0.9)
                     }}
                   >
-                    Our expert team provides bespoke security solutions with meticulous attention to detail. 
+                    Our expert team provides bespoke security solutions with meticulous attention to detail.
                     Trust JW Security to protect what matters most to you with over 30 years of experience.
                   </Typography>
                   <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2.5} justifyContent="center">
@@ -1525,7 +1528,7 @@ const HomePage = () => {
                       to="/contact"
                       variant="contained"
                       size="large"
-                      sx={{ 
+                      sx={{
                         bgcolor: JW_CYAN,
                         color: JW_BLUE,
                         fontWeight: 600,
@@ -1550,7 +1553,7 @@ const HomePage = () => {
                       to="/services"
                       variant="outlined"
                       size="large"
-                      sx={{ 
+                      sx={{
                         color: '#fff',
                         borderColor: alpha('#fff', 0.5),
                         fontWeight: 600,
@@ -1580,10 +1583,10 @@ const HomePage = () => {
                 viewport={{ once: true, amount: 0.3 }}
                 variants={fadeInRightVariants}
               >
-                <Box 
-                  sx={{ 
-                    p: 3.5, 
-                    bgcolor: alpha('#fff', 0.05), 
+                <Box
+                  sx={{
+                    p: 3.5,
+                    bgcolor: alpha('#fff', 0.05),
                     backdropFilter: 'blur(10px)',
                     borderRadius: '12px',
                     border: `1px solid ${alpha('#fff', 0.1)}`,
@@ -1601,7 +1604,7 @@ const HomePage = () => {
                     Locked out? Security breach? We provide rapid response services for all emergencies.
                   </Typography>
                   <Box sx={{ display: 'flex', alignItems: 'center', my: 3, justifyContent: 'center' }}>
-                    <Box sx={{ 
+                    <Box sx={{
                       mr: 2.5,
                       width: 56,
                       height: 56,
@@ -1627,7 +1630,7 @@ const HomePage = () => {
                     to="/contact"
                     fullWidth
                     variant="contained"
-                    sx={{ 
+                    sx={{
                       bgcolor: JW_CYAN,
                       color: JW_BLUE,
                       fontWeight: 600,
@@ -1651,7 +1654,7 @@ const HomePage = () => {
           </Grid>
         </Container>
       </Box>
-      
+
       <Footer />
     </>
   );
