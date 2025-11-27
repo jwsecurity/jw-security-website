@@ -450,7 +450,7 @@ const Header = React.memo(() => {
                       </Typography>
                     </Box>
                   </Box>
-                  <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <Box sx={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                     <ContactButton component={Link} to="/quote" aria-label="Request a quote">
                       Request a Quote
                     </ContactButton>
@@ -460,6 +460,11 @@ const Header = React.memo(() => {
                       target="_blank"
                       rel="noopener noreferrer"
                       sx={{
+                        position: 'absolute',
+                        top: '100%',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        width: 'max-content',
                         mt: 1,
                         display: 'flex',
                         alignItems: 'center',
@@ -473,7 +478,7 @@ const Header = React.memo(() => {
                       }}
                     >
                       <WhatsAppIcon sx={{ fontSize: 14, mr: 0.5 }} />
-                      Message Us on Whatsapp: 07822013982
+                      0782 2013 982
                     </Box>
                   </Box>
                 </Stack>
@@ -705,6 +710,28 @@ const Header = React.memo(() => {
             >
               Request a Quote
             </ContactButton>
+            <Box
+              component="a"
+              href="https://wa.me/447822013982"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                mt: 2,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                textDecoration: 'none',
+                color: alpha('#fff', 0.7),
+                fontSize: '0.85rem',
+                transition: 'color 0.2s',
+                '&:hover': {
+                  color: JW_CYAN,
+                }
+              }}
+            >
+              <WhatsAppIcon sx={{ fontSize: 16, mr: 0.5 }} />
+              0782 2013 982
+            </Box>
           </Box>
         </Drawer>
       )}
