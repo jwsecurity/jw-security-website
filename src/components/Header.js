@@ -90,6 +90,10 @@ const ContactButton = styled(Button)(({ theme }) => ({
   fontWeight: 600,
   borderRadius: '6px',
   padding: '10px 20px',
+  [theme.breakpoints.up('md')]: {
+    padding: '6px 16px',
+    fontSize: '0.85rem',
+  },
   textTransform: 'none',
   '&:hover': {
     backgroundColor: alpha(JW_CYAN, 0.85),
@@ -450,8 +454,8 @@ const Header = React.memo(() => {
                       </Typography>
                     </Box>
                   </Box>
-                  <Box sx={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <ContactButton component={Link} to="/quote" aria-label="Request a quote">
+                  <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <ContactButton component={Link} to="/quote" aria-label="Request a quote" sx={{ mt: 0.5 }}>
                       Request a Quote
                     </ContactButton>
                     <Box
@@ -460,31 +464,26 @@ const Header = React.memo(() => {
                       target="_blank"
                       rel="noopener noreferrer"
                       sx={{
-                        position: 'absolute',
-                        top: '100%',
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        width: 'max-content',
-                        mt: 1.5,
+                        mt: 0.5,
                         display: 'flex',
                         alignItems: 'center',
                         textDecoration: 'none',
                         backgroundColor: '#25D366',
                         color: '#ffffff',
                         borderRadius: '50px',
-                        padding: '6px 16px',
+                        padding: '4px 12px',
                         fontWeight: 600,
                         boxShadow: '0 4px 10px rgba(37, 211, 102, 0.3)',
-                        fontSize: '0.85rem',
+                        fontSize: '0.75rem',
                         transition: 'all 0.2s ease',
                         '&:hover': {
-                          transform: 'translateX(-50%) translateY(-2px)',
+                          transform: 'translateY(-2px)',
                           boxShadow: '0 6px 15px rgba(37, 211, 102, 0.4)',
                           backgroundColor: '#20bd5a',
                         }
                       }}
                     >
-                      <WhatsAppIcon sx={{ fontSize: 18, mr: 0.8 }} />
+                      <WhatsAppIcon sx={{ fontSize: 16, mr: 0.5 }} />
                       Message Us
                     </Box>
                   </Box>
