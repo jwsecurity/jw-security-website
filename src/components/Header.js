@@ -465,20 +465,27 @@ const Header = React.memo(() => {
                         left: '50%',
                         transform: 'translateX(-50%)',
                         width: 'max-content',
-                        mt: 1,
+                        mt: 1.5,
                         display: 'flex',
                         alignItems: 'center',
                         textDecoration: 'none',
-                        color: alpha('#fff', 0.7),
-                        fontSize: '0.75rem',
-                        transition: 'color 0.2s',
+                        backgroundColor: '#25D366',
+                        color: '#ffffff',
+                        borderRadius: '50px',
+                        padding: '6px 16px',
+                        fontWeight: 600,
+                        boxShadow: '0 4px 10px rgba(37, 211, 102, 0.3)',
+                        fontSize: '0.85rem',
+                        transition: 'all 0.2s ease',
                         '&:hover': {
-                          color: JW_CYAN,
+                          transform: 'translateX(-50%) translateY(-2px)',
+                          boxShadow: '0 6px 15px rgba(37, 211, 102, 0.4)',
+                          backgroundColor: '#20bd5a',
                         }
                       }}
                     >
-                      <WhatsAppIcon sx={{ fontSize: 14, mr: 0.5 }} />
-                      0782 2013 982
+                      <WhatsAppIcon sx={{ fontSize: 18, mr: 0.8 }} />
+                      Message Us
                     </Box>
                   </Box>
                 </Stack>
@@ -716,21 +723,28 @@ const Header = React.memo(() => {
               target="_blank"
               rel="noopener noreferrer"
               sx={{
-                mt: 2,
+                mt: 2.5,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 textDecoration: 'none',
-                color: alpha('#fff', 0.7),
-                fontSize: '0.85rem',
-                transition: 'color 0.2s',
+                backgroundColor: '#25D366',
+                color: '#ffffff',
+                borderRadius: '50px',
+                padding: '8px 20px',
+                fontWeight: 600,
+                boxShadow: '0 4px 10px rgba(37, 211, 102, 0.3)',
+                fontSize: '0.9rem',
+                transition: 'all 0.2s ease',
                 '&:hover': {
-                  color: JW_CYAN,
+                  transform: 'translateY(-2px)',
+                  boxShadow: '0 6px 15px rgba(37, 211, 102, 0.4)',
+                  backgroundColor: '#20bd5a',
                 }
               }}
             >
-              <WhatsAppIcon sx={{ fontSize: 16, mr: 0.5 }} />
-              0782 2013 982
+              <WhatsAppIcon sx={{ fontSize: 20, mr: 1 }} />
+              Message Us
             </Box>
           </Box>
         </Drawer>
