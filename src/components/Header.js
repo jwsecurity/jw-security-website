@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { 
-  AppBar, Toolbar, Container, Button, Box, Typography, 
-  IconButton, Menu, MenuItem, useMediaQuery, Drawer, 
+import {
+  AppBar, Toolbar, Container, Button, Box, Typography,
+  IconButton, Menu, MenuItem, useMediaQuery, Drawer,
   Collapse, List, ListItem, ListItemText, Divider,
   Paper, Grid, Stack, Fade, Popper, ClickAwayListener
 } from '@mui/material';
@@ -19,6 +19,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import PhoneIcon from '@mui/icons-material/Phone';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Link, useLocation } from 'react-router-dom';
 
 // JW Security color constants
@@ -29,7 +30,7 @@ const JW_BLUE = '#1c2e4a';
 const FrostedGlassAppBar = styled(AppBar, {
   shouldForwardProp: (prop) => prop !== 'scrolled'
 })(({ theme, scrolled }) => ({
-  backgroundColor: scrolled 
+  backgroundColor: scrolled
     ? alpha(JW_BLUE, 0.85)
     : 'rgba(0, 0, 0, 0.1)',
   backdropFilter: 'blur(10px)',
@@ -175,7 +176,7 @@ const Header = React.memo(() => {
   const [megaMenuAnchorEl, setMegaMenuAnchorEl] = useState(null);
   const [mobileSubMenu, setMobileSubMenu] = useState('');
   const servicesButtonRef = useRef(null);
-  
+
   // Handle scroll effect for frosted glass
   useEffect(() => {
     const handleScroll = () => {
@@ -193,27 +194,27 @@ const Header = React.memo(() => {
 
   // Service mega menu data
   const services = [
-    { 
+    {
       title: 'Fire Protection',
       icon: <ShieldIcon sx={{ color: JW_CYAN, fontSize: 28 }} />,
       description: 'Comprehensive fire safety and protection solutions',
       link: '/services/fire-protection',
       highlighted: true
     },
-    { 
-      title: 'Locksmith Services', 
+    {
+      title: 'Locksmith Services',
       icon: <LockIcon sx={{ color: JW_CYAN, fontSize: 28 }} />,
       description: 'Professional door and window security solutions for high-end properties',
       link: '/services/locksmith'
     },
-    { 
-      title: 'Security Systems', 
+    {
+      title: 'Security Systems',
       icon: <SecurityIcon sx={{ color: JW_CYAN, fontSize: 28 }} />,
       description: 'Modern security installations with premium materials and attention to detail',
       link: '/services/security'
     },
-    { 
-      title: 'Emergency Services', 
+    {
+      title: 'Emergency Services',
       icon: <ShieldIcon sx={{ color: JW_CYAN, fontSize: 28 }} />,
       description: '24/7 rapid response from our team of expert technicians',
       link: '/services/emergency'
@@ -245,17 +246,17 @@ const Header = React.memo(() => {
     <>
       <FrostedGlassAppBar position="fixed" scrolled={scrolled ? 1 : 0} elevation={0}>
         <Container maxWidth="xl">
-          <Toolbar disableGutters sx={{ 
-            py: scrolled ? 0.8 : 1.5, 
+          <Toolbar disableGutters sx={{
+            py: scrolled ? 0.8 : 1.5,
             transition: 'padding 0.3s ease',
             [theme.breakpoints.down('md')]: {
               py: scrolled ? 0.5 : 0.8
             }
           }}>
             {/* Logo */}
-            <Box component={Link} to="/" sx={{ 
-              display: 'flex', 
-              alignItems: 'center', 
+            <Box component={Link} to="/" sx={{
+              display: 'flex',
+              alignItems: 'center',
               textDecoration: 'none',
               color: 'white',
               mr: 4,
@@ -268,7 +269,7 @@ const Header = React.memo(() => {
                 component="img"
                 src="/images/jw/jw-logo.png"
                 alt="JW Security"
-                sx={{ 
+                sx={{
                   height: 38,
                   [theme.breakpoints.down('md')]: {
                     height: 30
@@ -281,39 +282,39 @@ const Header = React.memo(() => {
             {!isMobile && (
               <>
                 <Box sx={{ display: 'flex', flexGrow: 1 }}>
-                  <NavigationButton 
-                    component={Link} 
-                    to="/" 
+                  <NavigationButton
+                    component={Link}
+                    to="/"
                     active={isPathActive('/')}
                     aria-label="Home"
                   >
                     Home
                   </NavigationButton>
-                  <NavigationButton 
-                    component={Link} 
-                    to="/residential" 
+                  <NavigationButton
+                    component={Link}
+                    to="/residential"
                     active={isPathActive('/residential')}
                     aria-label="Residential"
                   >
                     Residential
                   </NavigationButton>
-                  <NavigationButton 
-                    component={Link} 
-                    to="/commercial" 
+                  <NavigationButton
+                    component={Link}
+                    to="/commercial"
                     active={isPathActive('/commercial')}
                     aria-label="Commercial"
                   >
                     Commercial
                   </NavigationButton>
-                  
+
                   <Box sx={{ position: 'relative' }}>
-                    <NavigationButton 
+                    <NavigationButton
                       ref={servicesButtonRef}
                       onClick={handleMegaMenuToggle}
                       active={location.pathname.includes('/services') || Boolean(megaMenuAnchorEl)}
                       endIcon={
-                        <KeyboardArrowDownIcon 
-                          sx={{ 
+                        <KeyboardArrowDownIcon
+                          sx={{
                             transition: 'transform 0.3s',
                             transform: megaMenuAnchorEl ? 'rotate(180deg)' : 'rotate(0)'
                           }}
@@ -325,7 +326,7 @@ const Header = React.memo(() => {
                     >
                       Services
                     </NavigationButton>
-                    
+
                     <Popper
                       open={Boolean(megaMenuAnchorEl)}
                       anchorEl={megaMenuAnchorEl}
@@ -340,11 +341,11 @@ const Header = React.memo(() => {
                           <MegaMenuContainer className={Boolean(megaMenuAnchorEl) ? 'open' : ''}>
                             <ClickAwayListener onClickAway={handleMegaMenuClose}>
                               <List component="nav" dense aria-label="services menu">
-                              {services.map((service, index) => (
+                                {services.map((service, index) => (
                                   service.highlighted ? (
-                                    <HighlightedMenuItem 
-                                      key={index} 
-                                      component={Link} 
+                                    <HighlightedMenuItem
+                                      key={index}
+                                      component={Link}
                                       to={service.link}
                                       onClick={handleMegaMenuClose}
                                       role="menuitem"
@@ -353,9 +354,9 @@ const Header = React.memo(() => {
                                       {service.title}
                                     </HighlightedMenuItem>
                                   ) : (
-                                    <MegaMenuItem 
-                                      key={index} 
-                                      component={Link} 
+                                    <MegaMenuItem
+                                      key={index}
+                                      component={Link}
                                       to={service.link}
                                       onClick={handleMegaMenuClose}
                                       role="menuitem"
@@ -366,14 +367,14 @@ const Header = React.memo(() => {
                                   )
                                 ))}
                                 <Divider sx={{ my: 1, borderColor: alpha('#fff', 0.1) }} />
-                                <MegaMenuItem 
-                                  component={Link} 
+                                <MegaMenuItem
+                                  component={Link}
                                   to="/services"
                                   onClick={handleMegaMenuClose}
                                   sx={{ fontWeight: 'bold', color: JW_CYAN }}
                                   role="menuitem"
                                 >
-                                  <ArrowForwardIosIcon sx={{fontSize: '1rem !important'}}/> View All Services
+                                  <ArrowForwardIosIcon sx={{ fontSize: '1rem !important' }} /> View All Services
                                 </MegaMenuItem>
                               </List>
                             </ClickAwayListener>
@@ -382,52 +383,52 @@ const Header = React.memo(() => {
                       )}
                     </Popper>
                   </Box>
-                  
-                  <NavigationButton 
-                    component={Link} 
-                    to="/about" 
+
+                  <NavigationButton
+                    component={Link}
+                    to="/about"
                     active={isPathActive('/about')}
                     aria-label="About Us"
                   >
                     About Us
                   </NavigationButton>
-                  <NavigationButton 
-                    component={Link} 
-                    to="/case-studies" 
+                  <NavigationButton
+                    component={Link}
+                    to="/case-studies"
                     active={isPathActive('/case-studies')}
                     aria-label="Case Studies"
                   >
                     Case Studies
                   </NavigationButton>
-                  <NavigationButton 
-                    component={Link} 
-                    to="/blog" 
+                  <NavigationButton
+                    component={Link}
+                    to="/blog"
                     active={isPathActive('/blog')}
                     aria-label="Blog"
                   >
                     Blog
                   </NavigationButton>
-                  
-                  <NavigationButton 
-                    component={Link} 
-                    to="/contact" 
+
+                  <NavigationButton
+                    component={Link}
+                    to="/contact"
                     active={isPathActive('/contact')}
                     aria-label="Contact"
                   >
                     Contact
                   </NavigationButton>
                 </Box>
-                
+
                 <Stack direction="row" spacing={3} alignItems="center">
-                  <Box sx={{ 
-                    p: 2.5, 
-                    bgcolor: alpha(JW_BLUE, 0.6), 
+                  <Box sx={{
+                    p: 2.5,
+                    bgcolor: alpha(JW_BLUE, 0.6),
                     borderRadius: '12px',
                     boxShadow: '0 10px 30px rgba(0,0,0,0.15)',
-                    display: 'flex', 
+                    display: 'flex',
                     alignItems: 'center',
                   }}>
-                  
+
                     <Box sx={{
                       width: 40,
                       height: 40,
@@ -437,21 +438,44 @@ const Header = React.memo(() => {
                       alignItems: 'center',
                       justifyContent: 'center',
                       mr: 2
-                    }}> 
+                    }}>
                       <PhoneIcon sx={{ color: JW_CYAN }} />
                     </Box>
                     <Box>
-                    <Typography sx={{ fontSize: '0.8rem', color: alpha('#fff', 0.8) }}>
-                      24/7 Emergency Service
-                    </Typography>
-                    <Typography sx={{ fontWeight: 600, color: JW_CYAN }}>
+                      <Typography sx={{ fontSize: '0.8rem', color: alpha('#fff', 0.8) }}>
+                        24/7 Emergency Service
+                      </Typography>
+                      <Typography sx={{ fontWeight: 600, color: JW_CYAN }}>
                         0208 646 7931
-                    </Typography>
+                      </Typography>
                     </Box>
                   </Box>
-                  <ContactButton component={Link} to="/quote" aria-label="Request a quote">
-                    Request a Quote
-                  </ContactButton>
+                  <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <ContactButton component={Link} to="/quote" aria-label="Request a quote">
+                      Request a Quote
+                    </ContactButton>
+                    <Box
+                      component="a"
+                      href="https://wa.me/447822013982"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      sx={{
+                        mt: 1,
+                        display: 'flex',
+                        alignItems: 'center',
+                        textDecoration: 'none',
+                        color: alpha('#fff', 0.7),
+                        fontSize: '0.75rem',
+                        transition: 'color 0.2s',
+                        '&:hover': {
+                          color: JW_CYAN,
+                        }
+                      }}
+                    >
+                      <WhatsAppIcon sx={{ fontSize: 14, mr: 0.5 }} />
+                      Message Us on Whatsapp: 07822013982
+                    </Box>
+                  </Box>
                 </Stack>
               </>
             )}
@@ -471,7 +495,7 @@ const Header = React.memo(() => {
           </Toolbar>
         </Container>
       </FrostedGlassAppBar>
-      
+
       {/* Mobile Menu Drawer */}
       {isMobile && (
         <Drawer
@@ -497,7 +521,7 @@ const Header = React.memo(() => {
         >
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <Box 
+              <Box
                 component="img"
                 src="/images/jw/jw-logo.png"
                 alt="JW Security"
@@ -513,9 +537,9 @@ const Header = React.memo(() => {
               <CloseIcon />
             </IconButton>
           </Box>
-          
+
           <Divider sx={{ my: 2, borderColor: alpha('#fff', 0.1) }} />
-          
+
           <List component="nav">
             <MobileNavItem
               button
@@ -523,58 +547,58 @@ const Header = React.memo(() => {
               to="/"
               onClick={handleMobileMenuToggle}
               selected={isPathActive('/')}
-              sx={{ 
+              sx={{
                 backgroundColor: isPathActive('/') ? alpha(JW_CYAN, 0.1) : 'transparent',
                 '&.Mui-selected': { color: JW_CYAN }
               }}
             >
               <ListItemText primary="Home" />
             </MobileNavItem>
-            
+
             <MobileNavItem
               button
               component={Link}
               to="/residential"
               onClick={handleMobileMenuToggle}
               selected={isPathActive('/residential')}
-              sx={{ 
+              sx={{
                 backgroundColor: isPathActive('/residential') ? alpha(JW_CYAN, 0.1) : 'transparent',
                 '&.Mui-selected': { color: JW_CYAN }
               }}
             >
               <ListItemText primary="Residential" />
             </MobileNavItem>
-            
+
             <MobileNavItem
               button
               component={Link}
               to="/commercial"
               onClick={handleMobileMenuToggle}
               selected={isPathActive('/commercial')}
-              sx={{ 
+              sx={{
                 backgroundColor: isPathActive('/commercial') ? alpha(JW_CYAN, 0.1) : 'transparent',
                 '&.Mui-selected': { color: JW_CYAN }
               }}
             >
               <ListItemText primary="Commercial" />
             </MobileNavItem>
-            
-            <MobileNavItem 
-              button 
+
+            <MobileNavItem
+              button
               onClick={() => handleMobileSubMenuToggle('services')}
               aria-expanded={mobileSubMenu === 'services'}
               aria-controls="services-submenu"
             >
               <ListItemText primary="Services" />
-              <ArrowDropDownIcon 
-                sx={{ 
-                  ml: 1, 
+              <ArrowDropDownIcon
+                sx={{
+                  ml: 1,
                   transition: 'transform 0.3s',
                   transform: mobileSubMenu === 'services' ? 'rotate(180deg)' : 'rotate(0)'
-                }} 
+                }}
               />
             </MobileNavItem>
-            
+
             <Collapse in={mobileSubMenu === 'services'} timeout="auto" unmountOnExit id="services-submenu">
               <List component="div" disablePadding>
                 {services.map((service, index) => (
@@ -584,7 +608,7 @@ const Header = React.memo(() => {
                     component={Link}
                     to={service.link}
                     onClick={handleMobileMenuToggle}
-                    sx={{ 
+                    sx={{
                       pl: 4,
                       ...(service.highlighted && {
                         backgroundColor: alpha(JW_CYAN, 0.12),
@@ -596,9 +620,9 @@ const Header = React.memo(() => {
                     <Box sx={{ mr: 2, display: 'flex' }}>
                       {React.cloneElement(service.icon, { sx: { fontSize: 20 } })}
                     </Box>
-                    <ListItemText 
+                    <ListItemText
                       primary={service.title}
-                      primaryTypographyProps={{ 
+                      primaryTypographyProps={{
                         fontSize: '0.95rem',
                         ...(service.highlighted && { fontWeight: 600 })
                       }}
@@ -607,56 +631,56 @@ const Header = React.memo(() => {
                 ))}
               </List>
             </Collapse>
-            
+
             <MobileNavItem
               button
               component={Link}
               to="/about"
               onClick={handleMobileMenuToggle}
               selected={isPathActive('/about')}
-              sx={{ 
+              sx={{
                 backgroundColor: isPathActive('/about') ? alpha(JW_CYAN, 0.1) : 'transparent',
                 '&.Mui-selected': { color: JW_CYAN }
               }}
             >
               <ListItemText primary="About Us" />
             </MobileNavItem>
-            
+
             <MobileNavItem
               button
               component={Link}
               to="/case-studies"
               onClick={handleMobileMenuToggle}
               selected={isPathActive('/case-studies')}
-              sx={{ 
+              sx={{
                 backgroundColor: isPathActive('/case-studies') ? alpha(JW_CYAN, 0.1) : 'transparent',
                 '&.Mui-selected': { color: JW_CYAN }
               }}
             >
               <ListItemText primary="Case Studies" />
             </MobileNavItem>
-            
+
             <MobileNavItem
               button
               component={Link}
               to="/blog"
               onClick={handleMobileMenuToggle}
               selected={isPathActive('/blog')}
-              sx={{ 
+              sx={{
                 backgroundColor: isPathActive('/blog') ? alpha(JW_CYAN, 0.1) : 'transparent',
                 '&.Mui-selected': { color: JW_CYAN }
               }}
             >
               <ListItemText primary="Blog" />
             </MobileNavItem>
-            
+
             <MobileNavItem
               button
               component={Link}
               to="/contact"
               onClick={handleMobileMenuToggle}
               selected={isPathActive('/contact')}
-              sx={{ 
+              sx={{
                 backgroundColor: isPathActive('/contact') ? alpha(JW_CYAN, 0.1) : 'transparent',
                 '&.Mui-selected': { color: JW_CYAN }
               }}
@@ -664,7 +688,7 @@ const Header = React.memo(() => {
               <ListItemText primary="Contact" />
             </MobileNavItem>
           </List>
-          
+
           <Box sx={{ mt: 4, pt: 3, borderTop: `1px solid ${alpha('#fff', 0.1)}` }}>
             <Typography sx={{ fontWeight: 600, mb: 1 }}>
               24/7 Emergency Service
@@ -672,9 +696,9 @@ const Header = React.memo(() => {
             <Typography sx={{ fontSize: '1.25rem', fontWeight: 700, color: JW_CYAN, mb: 2 }}>
               0208 646 7931
             </Typography>
-            
-            <ContactButton 
-              component={Link} 
+
+            <ContactButton
+              component={Link}
               to="/quote"
               onClick={handleMobileMenuToggle}
               fullWidth
