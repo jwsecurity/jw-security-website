@@ -90,10 +90,7 @@ const ContactButton = styled(Button)(({ theme }) => ({
   fontWeight: 600,
   borderRadius: '6px',
   padding: '10px 20px',
-  [theme.breakpoints.up('md')]: {
-    padding: '6px 16px',
-    fontSize: '0.85rem',
-  },
+
   textTransform: 'none',
   '&:hover': {
     backgroundColor: alpha(JW_CYAN, 0.85),
@@ -455,37 +452,9 @@ const Header = React.memo(() => {
                     </Box>
                   </Box>
                   <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <ContactButton component={Link} to="/quote" aria-label="Request a quote" sx={{ mt: 0.5 }}>
+                    <ContactButton component={Link} to="/quote" aria-label="Request a quote">
                       Request a Quote
                     </ContactButton>
-                    <Box
-                      component="a"
-                      href="https://wa.me/447822013982"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      sx={{
-                        mt: 0.5,
-                        display: 'flex',
-                        alignItems: 'center',
-                        textDecoration: 'none',
-                        backgroundColor: '#25D366',
-                        color: '#ffffff',
-                        borderRadius: '50px',
-                        padding: '4px 12px',
-                        fontWeight: 600,
-                        boxShadow: '0 4px 10px rgba(37, 211, 102, 0.3)',
-                        fontSize: '0.75rem',
-                        transition: 'all 0.2s ease',
-                        '&:hover': {
-                          transform: 'translateY(-2px)',
-                          boxShadow: '0 6px 15px rgba(37, 211, 102, 0.4)',
-                          backgroundColor: '#20bd5a',
-                        }
-                      }}
-                    >
-                      <WhatsAppIcon sx={{ fontSize: 16, mr: 0.5 }} />
-                      Message Us
-                    </Box>
                   </Box>
                 </Stack>
               </>
@@ -747,6 +716,51 @@ const Header = React.memo(() => {
             </Box>
           </Box>
         </Drawer>
+      )}
+
+      {/* Floating WhatsApp Button (Desktop Only) */}
+      {!isMobile && (
+        <Box
+          component="a"
+          href="https://wa.me/447822013982"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            position: 'fixed',
+            bottom: '30px',
+            right: '30px',
+            zIndex: 1500,
+            backgroundColor: '#25D366',
+            color: 'white',
+            borderRadius: '50px',
+            padding: '10px 24px',
+            boxShadow: '0 4px 15px rgba(37, 211, 102, 0.4)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '12px',
+            fontWeight: 600,
+            textDecoration: 'none',
+            transition: 'all 0.3s ease',
+            cursor: 'pointer',
+            '&:hover': {
+              transform: 'scale(1.05)',
+              boxShadow: '0 6px 20px rgba(37, 211, 102, 0.6)',
+              backgroundColor: '#20bd5a',
+            }
+          }}
+        >
+          <Box
+            component="img"
+            src="/images/jw/whatsapp-icon-design.png"
+            alt="WhatsApp"
+            sx={{
+              width: '28px',
+              height: 'auto',
+              objectFit: 'contain'
+            }}
+          />
+          Message Us
+        </Box>
       )}
     </>
   );
