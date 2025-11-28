@@ -698,11 +698,12 @@ const Header = React.memo(() => {
                 textDecoration: 'none',
                 backgroundColor: '#25D366',
                 color: '#ffffff',
-                borderRadius: '50px',
-                padding: '8px 20px',
+                borderRadius: '6px',
+                padding: '10px 20px',
                 fontWeight: 600,
                 boxShadow: '0 4px 10px rgba(37, 211, 102, 0.3)',
                 fontSize: '0.9rem',
+                fontFamily: "'Poppins', Arial, sans-serif",
                 transition: 'all 0.2s ease',
                 '&:hover': {
                   transform: 'translateY(-2px)',
@@ -711,17 +712,7 @@ const Header = React.memo(() => {
                 }
               }}
             >
-              <Box
-                component="img"
-                src="/images/jw/whatsapp-icon-design.png"
-                alt="WhatsApp"
-                sx={{
-                  width: '24px',
-                  height: 'auto',
-                  objectFit: 'contain',
-                  mr: 1
-                }}
-              />
+              <WhatsAppIcon sx={{ fontSize: 24, mr: 1 }} />
               Message Us
             </Box>
           </Box>
@@ -743,46 +734,37 @@ const Header = React.memo(() => {
             display: 'flex',
             alignItems: 'center',
             textDecoration: 'none',
-            cursor: 'pointer',
-            transition: 'transform 0.3s ease',
+            backgroundColor: '#25D366',
+            color: 'white',
+            borderRadius: '50px',
+            padding: '10px 25px 10px 15px',
+            boxShadow: '0 4px 20px rgba(37, 211, 102, 0.4)',
+            transition: 'transform 0.3s ease, box-shadow 0.3s ease',
             '&:hover': {
               transform: 'scale(1.05)',
+              boxShadow: '0 6px 25px rgba(37, 211, 102, 0.6)',
             }
           }}
         >
-          {/* Overlapping Icon */}
           <Box
             component="img"
             src="/images/jw/whatsapp-icon-design.png"
             alt="WhatsApp"
             sx={{
-              width: '60px',
+              width: '45px',
               height: 'auto',
               objectFit: 'contain',
-              zIndex: 2,
-              marginRight: '-22px', // Overlap the pill
-              filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.15))'
+              mr: 1.5,
+              filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))'
             }}
           />
-
-          {/* Text Pill */}
-          <Box
-            sx={{
-              backgroundColor: '#25D366',
-              background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)',
-              color: 'white',
-              borderRadius: '30px',
-              padding: '12px 24px 12px 32px', // Extra left padding for overlap
-              fontWeight: 600,
-              fontSize: '1rem',
-              boxShadow: '0 4px 15px rgba(37, 211, 102, 0.4)',
-              zIndex: 1,
-              display: 'flex',
-              alignItems: 'center',
-            }}
-          >
+          <Typography sx={{
+            fontWeight: 600,
+            fontSize: '1.1rem',
+            fontFamily: "'Poppins', Arial, sans-serif"
+          }}>
             Message Us
-          </Box>
+          </Typography>
         </Box>
       )}
     </>
