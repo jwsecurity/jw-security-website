@@ -32,6 +32,7 @@ import KeyCuttingPage from './components/services/KeyCuttingPage';
 import ElectronicKeyPadsPage from './components/services/ElectronicKeyPadsPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { Analytics } from '@vercel/analytics/react';
 import './App.css';
 
 // Create a theme instance with the website's color scheme
@@ -132,6 +133,7 @@ function App() {
       <CssBaseline />
       <Router>
         <div className="App">
+          <Analytics />
           <Routes>
             {/* Public routes */}
             <Route path="/" element={<HomePage />} />
