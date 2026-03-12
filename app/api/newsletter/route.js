@@ -36,7 +36,7 @@ export async function POST(request) {
 		const sanitizedEmail = sanitizeHeaderValue(email);
 
 		const adminEmails = [
-			"Luca@jwsecurity.co.uk",
+			"mirzausman.ah@gmail.com",
 			"Kyle@jwsecurity.co.uk",
 			"Help@jwsecurity.co.uk",
 		];
