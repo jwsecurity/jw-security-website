@@ -106,7 +106,7 @@ export async function POST(request) {
 		const formattedDate = escapeHtml(formatPreferredDate(preferredDate));
 
 		const adminEmails = [
-			"Luca@jwsecurity.co.uk",
+			"mirzausman.ah@gmail.com",
 			"Kyle@jwsecurity.co.uk",
 			"Help@jwsecurity.co.uk",
 		];
