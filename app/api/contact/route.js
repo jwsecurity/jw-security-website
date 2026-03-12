@@ -55,7 +55,7 @@ export async function POST(request) {
 		const escapedMessage = escapeHtml(message);
 
 		const adminEmails = [
-			"mirzausman.ah@gmail.com",
+			"Luca@jwsecurity.co.uk",
 			"Kyle@jwsecurity.co.uk",
 			"Help@jwsecurity.co.uk",
 		];
