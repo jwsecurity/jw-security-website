@@ -32,10 +32,11 @@ export default function ReCaptcha({ onVerify, options = {} }) {
 			return () => clearInterval(interval);
 		}
 
+		const container = containerRef.current;
 		return () => {
-			// reCAPTCHA doesn't have a direct "remove" like Turnstile in the same way, 
-			// but we can at least reset or handle cleanup if needed.
-			// Re-rendering will handle it if the component unmounts/remounts.
+			if (container) {
+				container.innerHTML = "";
+			}
 			widgetIdRef.current = null;
 		};
 	}, [onVerify, options]);
