@@ -17,9 +17,9 @@ import SendIcon from "@mui/icons-material/Send";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import { styled, alpha } from "@mui/material/styles";
+import ReCaptcha from "@/components/common/ReCaptcha";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import ReCaptcha from "@/components/common/ReCaptcha";
 
 const JW_CYAN = "#00c6d7";
 const JW_BLUE = "#1c2e4a";
@@ -466,7 +466,9 @@ export default function ContactPage() {
 												required
 												disabled={isSubmitting}
 											/>
-											<ReCaptcha onVerify={(token) => setRecaptchaToken(token)} />
+											<ReCaptcha
+												onVerify={(token) => setRecaptchaToken(token)}
+											/>
 											<StyledButton
 												type="submit"
 												size="large"

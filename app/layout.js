@@ -1,7 +1,6 @@
 import "@/styles/globals.css";
 import Script from "next/script";
 import Providers from "./providers";
-import ReactLenis from "lenis/react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { Open_Sans, Poppins } from "next/font/google";
@@ -35,15 +34,11 @@ export default function RootLayout({ children }) {
 					src="https://www.google.com/recaptcha/api.js"
 					strategy="afterInteractive"
 				/>
-				<ReactLenis
-					root
-					options={{ smooth: true }}>
-					<Providers>
-						<Header />
-						{children}
-						<Footer />
-					</Providers>
-				</ReactLenis>
+				<Providers>
+					<Header />
+					{children}
+					<Footer />
+				</Providers>
 			</body>
 		</html>
 	);

@@ -1,5 +1,7 @@
 "use client";
 import { useEffect } from "react";
+import { ReactLenis } from "lenis/react";
+import NextTopLoader from "nextjs-toploader";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
@@ -92,7 +94,22 @@ export default function Providers({ children }) {
 	return (
 		<ThemeProvider theme={theme}>
 			<CssBaseline />
-			{children}
+			<ReactLenis
+				root
+				options={{ smooth: true }}>
+				{children}
+			</ReactLenis>
+			<NextTopLoader
+				color="#00c6d7"
+				initialPosition={0.08}
+				crawlSpeed={200}
+				height={4}
+				crawl={false}
+				showSpinner={false}
+				easing="ease"
+				speed={100}
+				shadow={false}
+			/>
 		</ThemeProvider>
 	);
 }

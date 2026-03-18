@@ -1,20 +1,43 @@
 "use client";
-import React, { useEffect, useRef } from "react";
 import { Box } from "@mui/material";
+import React, { useEffect, useRef } from "react";
 
 export default function ReCaptcha({ onVerify, options = {} }) {
 	const containerRef = useRef(null);
 	const widgetIdRef = useRef(null);
 
+	const onVerifyRef = useRef(onVerify);
+	const optionsRef = useRef(options);
+
+	// Update refs when props change
 	useEffect(() => {
+		onVerifyRef.current = onVerify;
+	}, [onVerify]);
+
+	useEffect(() => {
+		optionsRef.current = options;
+	}, [options]);
+
+	useEffect(() => {
+		const container = containerRef.current;
+		let wrapper = null;
+
 		const renderWidget = () => {
-			if (window.grecaptcha && containerRef.current && widgetIdRef.current === null) {
-				widgetIdRef.current = window.grecaptcha.render(containerRef.current, {
+			if (
+				window.grecaptcha &&
+				window.grecaptcha.render &&
+				container &&
+				widgetIdRef.current === null
+			) {
+				wrapper = document.createElement("div");
+				container.appendChild(wrapper);
+
+				widgetIdRef.current = window.grecaptcha.render(wrapper, {
 					sitekey: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
 					callback: (token) => {
-						onVerify(token);
+						if (onVerifyRef.current) onVerifyRef.current(token);
 					},
-					...options,
+					...optionsRef.current,
 				});
 			}
 		};
@@ -22,7 +45,6 @@ export default function ReCaptcha({ onVerify, options = {} }) {
 		if (window.grecaptcha && window.grecaptcha.render) {
 			renderWidget();
 		} else {
-			// If script hasn't loaded yet, wait for it
 			const interval = setInterval(() => {
 				if (window.grecaptcha && window.grecaptcha.render) {
 					renderWidget();
@@ -32,14 +54,15 @@ export default function ReCaptcha({ onVerify, options = {} }) {
 			return () => clearInterval(interval);
 		}
 
-		const container = containerRef.current;
 		return () => {
-			if (container) {
-				container.innerHTML = "";
+			if (container && wrapper) {
+				try {
+					container.removeChild(wrapper);
+				} catch (e) {}
 			}
 			widgetIdRef.current = null;
 		};
-	}, [onVerify, options]);
+	}, []);
 
 	return (
 		<Box
