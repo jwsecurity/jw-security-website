@@ -224,7 +224,6 @@ export default function ChelseaPage() {
 										))}
 									</List>
 								</ServiceCard>
-
 								<ServiceCard>
 									<Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
 										<LockIcon sx={{ fontSize: 40, color: JW_CYAN, mr: 2 }} />
@@ -251,7 +250,6 @@ export default function ChelseaPage() {
 							</Box>
 						</Grid>
 					</Grid>
-
 					<Box sx={{ mt: 8, mb: 6 }}>
 						<SectionTitle
 							variant="h4"
@@ -307,7 +305,6 @@ export default function ChelseaPage() {
 							))}
 						</Grid>
 					</Box>
-
 					<Box sx={{ mt: 8, mb: 6 }}>
 						<SectionTitle
 							variant="h4"
@@ -356,7 +353,6 @@ export default function ChelseaPage() {
 							))}
 						</Grid>
 					</Box>
-
 					<Box sx={{ my: 8 }}>
 						<SectionTitle
 							variant="h4"
@@ -393,7 +389,6 @@ export default function ChelseaPage() {
 							))}
 						</Grid>
 					</Box>
-
 					<Grid
 						container
 						spacing={6}
@@ -484,7 +479,6 @@ export default function ChelseaPage() {
 							/>
 						</Grid>
 					</Grid>
-
 					<Box
 						sx={{
 							mt: 8,

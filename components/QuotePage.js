@@ -20,6 +20,7 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { styled, alpha } from "@mui/material/styles";
+import Turnstile from "@/components/common/Turnstile";
 
 const JW_CYAN = "#00c6d7";
 const JW_BLUE = "#1c2e4a";
@@ -137,6 +138,7 @@ export default function QuotePage() {
 		details: "",
 	});
 	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [turnstileToken, setTurnstileToken] = useState("");
 	const [snackbar, setSnackbar] = useState({
 		open: false,
 		message: "",
@@ -155,7 +157,7 @@ export default function QuotePage() {
 			const res = await fetch("/api/quote", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify(formData),
+				body: JSON.stringify({ ...formData, turnstileToken }),
 			});
 			const data = await res.json();
 			if (!res.ok) throw new Error(data.error || "Failed to submit");
@@ -243,104 +245,144 @@ export default function QuotePage() {
 										We aim to respond within 24 hours. For emergencies, please
 										call 0208 646 7931.
 									</Typography>
-
 									<Grid
 										container
 										spacing={2.5}>
-										<Grid
-											item
-											xs={12}>
-											<StyledTextField
-												label="Your Name"
-												name="name"
-												fullWidth
-												required
-												value={formData.name}
-												onChange={handleChange}
-											/>
-										</Grid>
-										<Grid
-											item
-											xs={12}>
-											<StyledTextField
-												label="Email"
-												name="email"
-												type="email"
-												fullWidth
-												required
-												value={formData.email}
-												onChange={handleChange}
-											/>
-										</Grid>
-										<Grid
-											item
-											xs={12}>
-											<StyledTextField
-												label="Phone"
-												name="phone"
-												fullWidth
-												value={formData.phone}
-												onChange={handleChange}
-											/>
-										</Grid>
-										<Grid
-											item
-											xs={12}>
-											<StyledTextField
-												label="Postcode"
-												name="postcode"
-												fullWidth
-												value={formData.postcode}
-												onChange={handleChange}
-											/>
-										</Grid>
-
-										<Grid
-											item
-											xs={12}>
-											<FormControl
-												fullWidth
-												sx={{ mb: 0 }}>
-												<InputLabel id="service-label">Service</InputLabel>
-												<Select
-													labelId="service-label"
-													label="Service"
-													name="service"
-													value={formData.service}
-													onChange={handleChange}>
-													{serviceOptions.map((opt) => (
-														<MenuItem
-															key={opt.value}
-															value={opt.value}>
-															{opt.label}
+										<div className="w-full flex items-center gap-5">
+											<Grid
+												item
+												style={{
+													width: "100%",
+												}}
+												xs={12}>
+												<StyledTextField
+													label="Your Name"
+													name="name"
+													fullWidth
+													required
+													value={formData.name}
+													onChange={handleChange}
+												/>
+											</Grid>
+											<Grid
+												item
+												style={{
+													width: "100%",
+												}}
+												xs={12}>
+												<StyledTextField
+													label="Email"
+													name="email"
+													type="email"
+													fullWidth
+													required
+													value={formData.email}
+													onChange={handleChange}
+												/>
+											</Grid>
+										</div>
+										<div className="w-full flex items-center gap-5">
+											<Grid
+												item
+												style={{
+													width: "100%",
+												}}
+												xs={12}>
+												<StyledTextField
+													label="Phone"
+													name="phone"
+													fullWidth
+													value={formData.phone}
+													onChange={handleChange}
+												/>
+											</Grid>
+											<Grid
+												item
+												style={{
+													width: "100%",
+												}}
+												xs={12}>
+												<StyledTextField
+													label="Postcode"
+													name="postcode"
+													fullWidth
+													value={formData.postcode}
+													onChange={handleChange}
+												/>
+											</Grid>
+										</div>
+										<div className="w-full flex items-start gap-5">
+											<Grid
+												item
+												style={{
+													width: "100%",
+												}}
+												xs={12}>
+												<FormControl
+													fullWidth
+													sx={{ mb: 0 }}>
+													<InputLabel id="service-label">Service</InputLabel>
+													<Select
+														labelId="service-label"
+														label="Service"
+														name="service"
+														value={formData.service}
+														onChange={handleChange}>
+														{serviceOptions.map((opt) => (
+															<MenuItem
+																key={opt.value}
+																value={opt.value}>
+																{opt.label}
+															</MenuItem>
+														))}
+													</Select>
+												</FormControl>
+											</Grid>
+											<Grid
+												item
+												style={{
+													width: "100%",
+												}}
+												xs={12}>
+												<FormControl
+													fullWidth
+													sx={{ mb: 0 }}>
+													<InputLabel id="urgency-label">Urgency</InputLabel>
+													<Select
+														labelId="urgency-label"
+														label="Urgency"
+														name="urgency"
+														value={formData.urgency}
+														onChange={handleChange}>
+														<MenuItem value="standard">
+															Standard (1–5 days)
 														</MenuItem>
-													))}
-												</Select>
-											</FormControl>
-										</Grid>
+														<MenuItem value="urgent">Urgent (24–48h)</MenuItem>
+													</Select>
+												</FormControl>
+											</Grid>
+											<Grid
+												item
+												style={{
+													width: "100%",
+												}}
+												xs={12}>
+												<StyledTextField
+													label="Preferred Date"
+													name="preferredDate"
+													type="date"
+													fullWidth
+													InputLabelProps={{ shrink: true }}
+													value={formData.preferredDate}
+													onChange={handleChange}
+												/>
+											</Grid>
+										</div>
 										<Grid
 											item
-											xs={12}>
-											<FormControl
-												fullWidth
-												sx={{ mb: 0 }}>
-												<InputLabel id="urgency-label">Urgency</InputLabel>
-												<Select
-													labelId="urgency-label"
-													label="Urgency"
-													name="urgency"
-													value={formData.urgency}
-													onChange={handleChange}>
-													<MenuItem value="standard">
-														Standard (1–5 days)
-													</MenuItem>
-													<MenuItem value="urgent">Urgent (24–48h)</MenuItem>
-												</Select>
-											</FormControl>
-										</Grid>
-
-										<Grid
-											item
+											style={{
+												width: "100%",
+											}}
 											xs={12}>
 											<FormControl
 												component="fieldset"
@@ -366,23 +408,10 @@ export default function QuotePage() {
 												</RadioGroup>
 											</FormControl>
 										</Grid>
-
 										<Grid
-											item
-											xs={12}>
-											<StyledTextField
-												label="Preferred Date"
-												name="preferredDate"
-												type="date"
-												fullWidth
-												InputLabelProps={{ shrink: true }}
-												value={formData.preferredDate}
-												onChange={handleChange}
-											/>
-										</Grid>
-										<Grid
-											item
-											xs={12}>
+											style={{
+												width: "100%",
+											}}>
 											<StyledTextField
 												label="Project Details"
 												name="details"
@@ -395,29 +424,28 @@ export default function QuotePage() {
 												placeholder="Tell us what you need, number of doors/cameras, access constraints, etc."
 											/>
 										</Grid>
-
-										<Grid
-											item
-											xs={12}>
-											<StyledButton
-												type="submit"
-												disabled={isSubmitting}
-												sx={{ alignSelf: { xs: "stretch", sm: "flex-start" } }}
-												startIcon={
-													isSubmitting ? (
-														<CircularProgress
-															size={20}
-															color="inherit"
-														/>
-													) : null
-												}>
-												{isSubmitting ? "Submitting…" : "Request Quote"}
-											</StyledButton>
-										</Grid>
+									</Grid>
+									<Grid
+										item
+										xs={12}>
+										<Turnstile onVerify={(token) => setTurnstileToken(token)} />
+										<StyledButton
+											type="submit"
+											disabled={isSubmitting || !turnstileToken}
+											sx={{ alignSelf: { xs: "stretch", sm: "flex-start" } }}
+											startIcon={
+												isSubmitting ? (
+													<CircularProgress
+														size={20}
+														color="inherit"
+													/>
+												) : null
+											}>
+											{isSubmitting ? "Submitting…" : "Request Quote"}
+										</StyledButton>
 									</Grid>
 								</QuoteFormCard>
 							</Grid>
-
 							<Grid
 								item
 								xs={12}

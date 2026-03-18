@@ -17,6 +17,7 @@ import LockIcon from "@mui/icons-material/Lock";
 import SendIcon from "@mui/icons-material/Send";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
+import Turnstile from "@/components/common/Turnstile";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -143,6 +144,7 @@ export default function Footer() {
 		message: "",
 	});
 	const [isSubmitting, setIsSubmitting] = React.useState(false);
+	const [turnstileToken, setTurnstileToken] = React.useState("");
 
 	const services = [
 		{ label: "Locksmith Services", path: "/services/locksmith" },
@@ -159,10 +161,17 @@ export default function Footer() {
 		{ label: "Commercial", path: "/commercial" },
 		{ label: "Services", path: "/services" },
 		{ label: "About Us", path: "/about" },
+		{ label: "Our Locations", path: "/locations" },
 		{ label: "Case Studies", path: "/case-studies" },
 		{ label: "Blog", path: "/blog" },
 		{ label: "Request a Quote", path: "/quote" },
 		{ label: "Contact Us", path: "/contact" },
+	];
+
+	const ourLocations = [
+		{ label: "Chelsea", path: "/locations/chelsea" },
+		{ label: "Kensington", path: "/locations/kensington" },
+		{ label: "Mayfair", path: "/locations/mayfair" },
 	];
 
 	const handleSubscribe = async (e) => {
@@ -176,7 +185,7 @@ export default function Footer() {
 				headers: {
 					"Content-Type": "application/json",
 				},
-				body: JSON.stringify({ email: newsletterEmail }),
+				body: JSON.stringify({ email: newsletterEmail, turnstileToken }),
 			});
 
 			const result = await response.json();
@@ -293,7 +302,6 @@ export default function Footer() {
 								<InstagramIcon fontSize="small" />
 							</SocialIconButton>
 						</Box>
-
 						{!isMobile && (
 							<Box sx={{ mt: 4 }}>
 								<Typography
@@ -347,6 +355,26 @@ export default function Footer() {
 					<Grid
 						item
 						xs={12}
+						sm={6}
+						md={2}>
+						<FooterHeading variant="h6">Our Locations</FooterHeading>
+						{ourLocations.map((link, index) => (
+							<Link
+								key={index}
+								href={link.path}
+								style={{ textDecoration: "none" }}>
+								<FooterLink component="span">
+									<KeyboardArrowRightIcon
+										sx={{ fontSize: 18, mr: 1, opacity: 0.7 }}
+									/>
+									{link.label}
+								</FooterLink>
+							</Link>
+						))}
+					</Grid>
+					<Grid
+						item
+						xs={12}
 						md={4}>
 						<FooterHeading variant="h6">Contact Us</FooterHeading>
 						<Box sx={{ mb: 3 }}>
@@ -364,7 +392,6 @@ export default function Footer() {
 									</Typography>
 								</Box>
 							</ContactInfoItem>
-
 							<ContactInfoItem>
 								<ContactIcon>
 									<EmailIcon sx={{ color: JW_CYAN, fontSize: 16 }} />
@@ -412,7 +439,7 @@ export default function Footer() {
 											<IconButton
 												type="submit"
 												edge="end"
-												disabled={isSubmitting}
+												disabled={isSubmitting || !turnstileToken}
 												sx={{
 													"color": JW_CYAN,
 													"&:hover": {
@@ -425,6 +452,7 @@ export default function Footer() {
 									),
 								}}
 							/>
+							<Turnstile onVerify={(token) => setTurnstileToken(token)} />
 							{newsletterStatus.message && (
 								<Typography
 									sx={{

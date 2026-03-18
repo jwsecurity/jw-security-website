@@ -4,6 +4,7 @@ import ReactLenis from "lenis/react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { Open_Sans, Poppins } from "next/font/google";
+import Script from "next/script";
 
 const openSans = Open_Sans({
 	subsets: ["latin"],
@@ -30,6 +31,10 @@ export default function RootLayout({ children }) {
 			lang="en"
 			suppressHydrationWarning>
 			<body className={`${openSans.className} ${poppins.className} lenis`}>
+				<Script
+					src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+					strategy="afterInteractive"
+				/>
 				<ReactLenis
 					root
 					options={{ smooth: true }}>

@@ -1,4 +1,5 @@
 import { Resend } from "resend";
+import { verifyTurnstileToken } from "@/lib/turnstile";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -71,7 +72,17 @@ export async function POST(request) {
 			urgency,
 			preferredDate,
 			details,
+			turnstileToken,
 		} = body;
+
+		// Verify Turnstile Token
+		const isVerified = await verifyTurnstileToken(turnstileToken);
+		if (!isVerified) {
+			return Response.json(
+				{ error: "Captcha verification failed. Please try again." },
+				{ status: 400 },
+			);
+		}
 
 		if (!name || !email || !service || !details) {
 			return Response.json(
