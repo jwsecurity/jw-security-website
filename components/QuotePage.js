@@ -20,7 +20,7 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { styled, alpha } from "@mui/material/styles";
-import Turnstile from "@/components/common/Turnstile";
+import ReCaptcha from "@/components/common/ReCaptcha";
 
 const JW_CYAN = "#00c6d7";
 const JW_BLUE = "#1c2e4a";
@@ -138,7 +138,7 @@ export default function QuotePage() {
 		details: "",
 	});
 	const [isSubmitting, setIsSubmitting] = useState(false);
-	const [turnstileToken, setTurnstileToken] = useState("");
+	const [recaptchaToken, setRecaptchaToken] = useState("");
 	const [snackbar, setSnackbar] = useState({
 		open: false,
 		message: "",
@@ -157,7 +157,7 @@ export default function QuotePage() {
 			const res = await fetch("/api/quote", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify({ ...formData, turnstileToken }),
+				body: JSON.stringify({ ...formData, recaptchaToken }),
 			});
 			const data = await res.json();
 			if (!res.ok) throw new Error(data.error || "Failed to submit");
@@ -428,10 +428,10 @@ export default function QuotePage() {
 									<Grid
 										item
 										xs={12}>
-										<Turnstile onVerify={(token) => setTurnstileToken(token)} />
+										<ReCaptcha onVerify={(token) => setRecaptchaToken(token)} />
 										<StyledButton
 											type="submit"
-											disabled={isSubmitting || !turnstileToken}
+											disabled={isSubmitting || !recaptchaToken}
 											sx={{ alignSelf: { xs: "stretch", sm: "flex-start" } }}
 											startIcon={
 												isSubmitting ? (

@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
 			suppressHydrationWarning>
 			<body className={`${openSans.className} ${poppins.className} lenis`}>
 				<Script
-					src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+					src="https://www.google.com/recaptcha/api.js"
 					strategy="afterInteractive"
 				/>
 				<ReactLenis

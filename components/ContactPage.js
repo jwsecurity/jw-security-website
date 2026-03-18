@@ -19,7 +19,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import { styled, alpha } from "@mui/material/styles";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import Turnstile from "@/components/common/Turnstile";
+import ReCaptcha from "@/components/common/ReCaptcha";
 
 const JW_CYAN = "#00c6d7";
 const JW_BLUE = "#1c2e4a";
@@ -133,7 +133,7 @@ export default function ContactPage() {
 	});
 
 	const [isSubmitting, setIsSubmitting] = useState(false);
-	const [turnstileToken, setTurnstileToken] = useState("");
+	const [recaptchaToken, setRecaptchaToken] = useState("");
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
@@ -153,7 +153,7 @@ export default function ContactPage() {
 				headers: {
 					"Content-Type": "application/json",
 				},
-				body: JSON.stringify({ ...formData, turnstileToken }),
+				body: JSON.stringify({ ...formData, recaptchaToken }),
 			});
 
 			const result = await response.json();
@@ -466,11 +466,11 @@ export default function ContactPage() {
 												required
 												disabled={isSubmitting}
 											/>
-											<Turnstile onVerify={(token) => setTurnstileToken(token)} />
+											<ReCaptcha onVerify={(token) => setRecaptchaToken(token)} />
 											<StyledButton
 												type="submit"
 												size="large"
-												disabled={isSubmitting || !turnstileToken}
+												disabled={isSubmitting || !recaptchaToken}
 												sx={{ alignSelf: { xs: "stretch", sm: "flex-start" } }}
 												startIcon={
 													isSubmitting ? (

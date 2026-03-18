@@ -17,7 +17,7 @@ import LockIcon from "@mui/icons-material/Lock";
 import SendIcon from "@mui/icons-material/Send";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
-import Turnstile from "@/components/common/Turnstile";
+import ReCaptcha from "@/components/common/ReCaptcha";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -144,7 +144,7 @@ export default function Footer() {
 		message: "",
 	});
 	const [isSubmitting, setIsSubmitting] = React.useState(false);
-	const [turnstileToken, setTurnstileToken] = React.useState("");
+	const [recaptchaToken, setRecaptchaToken] = React.useState("");
 
 	const services = [
 		{ label: "Locksmith Services", path: "/services/locksmith" },
@@ -185,7 +185,7 @@ export default function Footer() {
 				headers: {
 					"Content-Type": "application/json",
 				},
-				body: JSON.stringify({ email: newsletterEmail, turnstileToken }),
+				body: JSON.stringify({ email: newsletterEmail, recaptchaToken }),
 			});
 
 			const result = await response.json();
@@ -439,7 +439,7 @@ export default function Footer() {
 											<IconButton
 												type="submit"
 												edge="end"
-												disabled={isSubmitting || !turnstileToken}
+												disabled={isSubmitting || !recaptchaToken}
 												sx={{
 													"color": JW_CYAN,
 													"&:hover": {
@@ -452,7 +452,7 @@ export default function Footer() {
 									),
 								}}
 							/>
-							<Turnstile onVerify={(token) => setTurnstileToken(token)} />
+							<ReCaptcha onVerify={(token) => setRecaptchaToken(token)} />
 							{newsletterStatus.message && (
 								<Typography
 									sx={{
