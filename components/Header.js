@@ -103,7 +103,7 @@ const ContactButton = styled(Button)(({ theme }) => ({
 	"boxShadow": "0 4px 10px rgba(0, 198, 215, 0.25)",
 	"fontWeight": 600,
 	"borderRadius": "6px",
-	"padding": "10px 20px",
+	"padding": "17px 20px",
 
 	"textTransform": "none",
 	"&:hover": {
@@ -294,9 +294,9 @@ export default function Header() {
 									src="/images/jw/jw-logo.png"
 									alt="JW Security"
 									sx={{
-										height: 38,
+										height: 60,
 										[theme.breakpoints.down("md")]: {
-											height: 30,
+											height: 32,
 										},
 									}}
 								/>
@@ -481,7 +481,8 @@ export default function Header() {
 									alignItems="center">
 									<Box
 										sx={{
-											p: 2.5,
+											px: 2,
+											py: 1,
 											bgcolor: alpha(JW_BLUE, 0.6),
 											borderRadius: "12px",
 											boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
