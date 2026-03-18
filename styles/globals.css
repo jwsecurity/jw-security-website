@@ -36,6 +36,20 @@ body {
 	font-size: 1rem;
 }
 
+::-webkit-scrollbar {
+	width: 6px;
+}
+::-webkit-scrollbar-track {
+	background: #333333;
+}
+::-webkit-scrollbar-thumb {
+	background: #00c6d7;
+	border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #00c6d7;
+}
+
 h1,
 h2,
 h3,
@@ -464,7 +478,6 @@ html.lenis body {
 .lenis.lenis-smooth iframe {
 	pointer-events: none;
 }
-
 
 .container {
 	padding: 0 20px;

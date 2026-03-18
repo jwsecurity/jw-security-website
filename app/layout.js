@@ -1,10 +1,10 @@
 import "@/styles/globals.css";
+import Script from "next/script";
 import Providers from "./providers";
 import ReactLenis from "lenis/react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { Open_Sans, Poppins } from "next/font/google";
-import Script from "next/script";
 
 const openSans = Open_Sans({
 	subsets: ["latin"],

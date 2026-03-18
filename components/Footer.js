@@ -486,7 +486,7 @@ export default function Footer() {
 					)}
 					<Box sx={{ display: "flex", gap: 3 }}>
 						<Link
-							href="/"
+							href="/privacy"
 							style={{
 								color: alpha("#fff", 0.7),
 								textDecoration: "none",
@@ -495,7 +495,7 @@ export default function Footer() {
 							Privacy Policy
 						</Link>
 						<Link
-							href="/"
+							href="/terms"
 							style={{
 								color: alpha("#fff", 0.7),
 								textDecoration: "none",
@@ -504,7 +504,7 @@ export default function Footer() {
 							Terms of Service
 						</Link>
 						<Link
-							href="/"
+							href="/cookies"
 							style={{
 								color: alpha("#fff", 0.7),
 								textDecoration: "none",
