@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import {
 	Box,
 	Container,
@@ -10,17 +10,15 @@ import {
 	ListItemIcon,
 	ListItemText,
 	Button,
-	Paper,
 } from "@mui/material";
 import PageHero from "../common/PageHero";
-import HomeIcon from "@mui/icons-material/Home";
+import LockIcon from "@mui/icons-material/Lock";
+import PhoneIcon from "@mui/icons-material/Phone";
 import { styled, alpha } from "@mui/material/styles";
 import ContactSection from "../common/ContactSection";
 import SecurityIcon from "@mui/icons-material/Security";
-import BusinessIcon from "@mui/icons-material/Business";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 
 const JW_BLUE = "#1c2e4a";
@@ -43,6 +41,13 @@ const SectionTitle = styled(Typography)(({ theme }) => ({
 	},
 }));
 
+const CTABanner = styled(Box)(({ theme }) => ({
+	backgroundColor: JW_CYAN,
+	padding: theme.spacing(4, 0),
+	textAlign: "center",
+	color: JW_BLUE,
+}));
+
 const ServiceCard = styled(Card)(({ theme }) => ({
 	"height": "100%",
 	"padding": theme.spacing(3),
@@ -53,16 +58,8 @@ const ServiceCard = styled(Card)(({ theme }) => ({
 	"&:hover": {
 		transform: "translateY(-5px)",
 		boxShadow: "0 12px 20px rgba(0,0,0,0.12)",
-		borderColor: JW_CYAN,
+		borderColor: alpha(JW_CYAN, 0.5),
 	},
-}));
-
-const AreaCard = styled(Paper)(({ theme }) => ({
-	padding: theme.spacing(3),
-	backgroundColor: alpha(JW_BLUE, 0.03),
-	borderRadius: "8px",
-	border: `1px solid ${alpha(JW_BLUE, 0.1)}`,
-	marginBottom: theme.spacing(2),
 }));
 
 export default function MayfairPage() {
@@ -97,49 +94,6 @@ export default function MayfairPage() {
 		},
 	];
 
-	const premiumServices = [
-		{
-			title: "Ultra High-Security Solutions",
-			description:
-				"Cutting-edge security systems for Mayfair's most exclusive properties and businesses.",
-			features: [
-				"Multi-point locking systems with biometric access",
-				"Invisible security measures for listed buildings",
-				"Integration with 24/7 concierge services",
-				"Diplomatic-grade security installations",
-			],
-		},
-		{
-			title: "Luxury Retail Security",
-			description:
-				"Specialized security for Bond Street boutiques and high-value commercial premises.",
-			features: [
-				"Electronic master key systems",
-				"Time-delay safes and vault rooms",
-				"Discrete panic button installations",
-				"After-hours security protocols",
-			],
-		},
-	];
-
-	const mayfairExpertise = [
-		{
-			title: "Private Members' Clubs",
-			content:
-				"We provide discrete security solutions for Mayfair's exclusive clubs, understanding the need for seamless access control that maintains the ambiance while ensuring member safety and privacy.",
-		},
-		{
-			title: "Embassy & Diplomatic Security",
-			content:
-				"With numerous embassies and diplomatic residences in Mayfair, we offer security installations that meet international diplomatic standards, including ballistic-rated locks and reinforced entry systems.",
-		},
-		{
-			title: "Art & Auction Houses",
-			content:
-				"Mayfair's concentration of galleries and auction houses requires specialized security. We provide climate-controlled secure storage solutions and sophisticated access systems for high-value collections.",
-		},
-	];
-
 	return (
 		<>
 			<PageHero
@@ -153,17 +107,28 @@ export default function MayfairPage() {
 				<Container>
 					<Grid
 						container
-						spacing={6}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
-							<SectionTitle variant="h4">
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Box
+								component="img"
+								src="/images/jw/pexels-kseniachernaya-5768107-scaled.jpg"
+								alt="Mayfair Security Experts"
+								sx={{
+									width: "100%",
+									height: "auto",
+									borderRadius: "10px",
+									boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
+								}}
+							/>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h3">
 								Mayfair&apos;s Premier Security Specialists
 							</SectionTitle>
 							<Typography
 								paragraph
-								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								sx={{ mb: 3, fontSize: "1.1rem", lineHeight: 1.8 }}>
 								In the heart of London&apos;s most exclusive district, JW
 								Security delivers security solutions that match Mayfair&apos;s
 								exceptional standards. From the luxury boutiques of Bond Street
@@ -172,422 +137,433 @@ export default function MayfairPage() {
 							</Typography>
 							<Typography
 								paragraph
-								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								sx={{ fontSize: "1.1rem", lineHeight: 1.8 }}>
 								Our Mayfair division specializes in ultra high-security
 								installations that blend seamlessly with the area&apos;s
 								architectural grandeur. We understand that security in Mayfair
-								demands more than just protection - it requires solutions that
-								respect the aesthetic and operational requirements of luxury
-								properties, exclusive businesses, and diplomatic premises.
+								demands technical excellence.
 							</Typography>
-							<Typography
-								paragraph
-								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								With three decades of experience serving Mayfair&apos;s elite
-								clientele, we&apos;ve built our reputation on reliability,
-								discretion, and technical excellence. Our team includes
-								specialists in diplomatic security, luxury retail protection,
-								and high-net-worth residential security.
-							</Typography>
-						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
-							<Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-								<ServiceCard>
-									<Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-										<VerifiedUserIcon
-											sx={{ fontSize: 40, color: JW_CYAN, mr: 2 }}
-										/>
-										<Typography
-											variant="h6"
-											sx={{ fontWeight: 600, color: JW_BLUE }}>
-											Security Credentials
-										</Typography>
-									</Box>
-									<List dense>
-										<ListItem sx={{ py: 0.5 }}>
-											<ListItemIcon sx={{ minWidth: 30 }}>
-												<CheckCircleOutlineIcon
-													sx={{ fontSize: 18, color: JW_CYAN }}
-												/>
-											</ListItemIcon>
-											<ListItemText primary="Metropolitan Police approved" />
-										</ListItem>
-										<ListItem sx={{ py: 0.5 }}>
-											<ListItemIcon sx={{ minWidth: 30 }}>
-												<CheckCircleOutlineIcon
-													sx={{ fontSize: 18, color: JW_CYAN }}
-												/>
-											</ListItemIcon>
-											<ListItemText primary="Security Industry Authority licensed" />
-										</ListItem>
-										<ListItem sx={{ py: 0.5 }}>
-											<ListItemIcon sx={{ minWidth: 30 }}>
-												<CheckCircleOutlineIcon
-													sx={{ fontSize: 18, color: JW_CYAN }}
-												/>
-											</ListItemIcon>
-											<ListItemText primary="Diplomatic security clearance" />
-										</ListItem>
-										<ListItem sx={{ py: 0.5 }}>
-											<ListItemIcon sx={{ minWidth: 30 }}>
-												<CheckCircleOutlineIcon
-													sx={{ fontSize: 18, color: JW_CYAN }}
-												/>
-											</ListItemIcon>
-											<ListItemText primary="Insurance industry recognized" />
-										</ListItem>
-									</List>
-								</ServiceCard>
-
-								<ServiceCard>
-									<Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-										<AccessTimeIcon
-											sx={{ fontSize: 40, color: JW_CYAN, mr: 2 }}
-										/>
-										<Typography
-											variant="h6"
-											sx={{ fontWeight: 600, color: JW_BLUE }}>
-											Priority Response
-										</Typography>
-									</Box>
-									<Typography
-										variant="body2"
-										sx={{ color: "text.secondary", mb: 2 }}>
-										VIP service levels for Mayfair clients
-									</Typography>
-									<List dense>
-										<ListItem sx={{ py: 0.5 }}>
-											<ListItemText
-												primary="15-20 minute emergency response"
-												secondary="Dedicated Mayfair rapid response unit"
-											/>
-										</ListItem>
-										<ListItem sx={{ py: 0.5 }}>
-											<ListItemText
-												primary="Direct priority hotline"
-												secondary="Skip the queue with VIP access"
-											/>
-										</ListItem>
-									</List>
-								</ServiceCard>
-							</Box>
 						</Grid>
 					</Grid>
-
-					<Box sx={{ mt: 8, mb: 6 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4 }}>
-							Mayfair Districts We Protect
-						</SectionTitle>
-						<Grid
-							container
-							spacing={3}>
-							{localAreas.map((area, index) => (
-								<Grid
-									item
-									xs={12}
-									md={6}
-									key={index}>
-									<AreaCard>
-										<Typography
-											variant="h6"
-											sx={{ fontWeight: 600, color: JW_BLUE, mb: 1 }}>
-											{area.name}
-										</Typography>
-										<Typography
-											variant="body2"
-											sx={{ color: "text.secondary", mb: 2 }}>
-											{area.description}
-										</Typography>
-										<Typography
-											variant="body2"
-											sx={{ fontWeight: 500 }}>
-											Key locations:
-										</Typography>
-										<List
-											dense
-											sx={{ mt: 0.5 }}>
-											{area.landmarks.map((landmark, idx) => (
-												<ListItem
-													key={idx}
-													sx={{ py: 0, px: 0 }}>
-													<ListItemIcon sx={{ minWidth: 25 }}>
-														<LocationOnIcon
-															sx={{ fontSize: 16, color: JW_CYAN }}
-														/>
-													</ListItemIcon>
-													<ListItemText
-														primary={landmark}
-														primaryTypographyProps={{ fontSize: "0.875rem" }}
-													/>
-												</ListItem>
-											))}
-										</List>
-									</AreaCard>
-								</Grid>
-							))}
-						</Grid>
-					</Box>
-
-					<Box sx={{ mt: 8, mb: 6 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4 }}>
-							Premium Security Solutions for Mayfair
-						</SectionTitle>
-						<Grid
-							container
-							spacing={4}>
-							{premiumServices.map((service, index) => (
-								<Grid
-									item
-									xs={12}
-									md={6}
-									key={index}>
-									<ServiceCard>
-										<Typography
-											variant="h5"
-											sx={{ mb: 2, fontWeight: 600, color: JW_BLUE }}>
-											{service.title}
-										</Typography>
-										<Typography
-											paragraph
-											sx={{ mb: 2, color: "text.secondary" }}>
-											{service.description}
-										</Typography>
-										<List dense>
-											{service.features.map((feature, idx) => (
-												<ListItem
-													key={idx}
-													sx={{ py: 0.5, px: 0 }}>
-													<ListItemIcon sx={{ minWidth: 30 }}>
-														<CheckCircleOutlineIcon
-															sx={{ fontSize: 18, color: JW_CYAN }}
-														/>
-													</ListItemIcon>
-													<ListItemText
-														primary={feature}
-														primaryTypographyProps={{ fontSize: "0.9rem" }}
-													/>
-												</ListItem>
-											))}
-										</List>
-									</ServiceCard>
-								</Grid>
-							))}
-						</Grid>
-					</Box>
-
-					<Box sx={{ my: 8 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4 }}>
-							Specialized Mayfair Security Expertise
-						</SectionTitle>
-						<Grid
-							container
-							spacing={3}>
-							{mayfairExpertise.map((item, index) => (
-								<Grid
-									item
-									xs={12}
-									md={4}
-									key={index}>
-									<Paper
-										sx={{
-											p: 3,
-											height: "100%",
-											backgroundColor: alpha(JW_CYAN, 0.05),
-										}}>
-										<Typography
-											variant="h6"
-											sx={{ fontWeight: 600, color: JW_BLUE, mb: 2 }}>
-											{item.title}
-										</Typography>
-										<Typography
-											variant="body2"
-											sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-											{item.content}
-										</Typography>
-									</Paper>
-								</Grid>
-							))}
-						</Grid>
-					</Box>
-
-					<Box
-						sx={{
-							mt: 8,
-							p: 4,
-							backgroundColor: alpha(JW_BLUE, 0.03),
-							borderRadius: 2,
-						}}>
-						<Typography
-							variant="h5"
-							sx={{
-								fontWeight: 600,
-								color: JW_BLUE,
-								mb: 3,
-								textAlign: "center",
-							}}>
-							Trusted by Mayfair&apos;s Elite
-						</Typography>
-						<Grid
-							container
-							spacing={4}>
-							<Grid
-								item
-								xs={12}
-								md={4}>
-								<Box sx={{ textAlign: "center" }}>
-									<BusinessIcon sx={{ fontSize: 50, color: JW_CYAN, mb: 2 }} />
-									<Typography
-										variant="h6"
-										sx={{ fontWeight: 600, mb: 1 }}>
-										Luxury Retailers
-									</Typography>
-									<Typography
-										variant="body2"
-										sx={{ color: "text.secondary" }}>
-										Protecting Bond Street&apos;s premier boutiques and flagship
-										stores
-									</Typography>
-								</Box>
-							</Grid>
-							<Grid
-								item
-								xs={12}
-								md={4}>
-								<Box sx={{ textAlign: "center" }}>
-									<HomeIcon sx={{ fontSize: 50, color: JW_CYAN, mb: 2 }} />
-									<Typography
-										variant="h6"
-										sx={{ fontWeight: 600, mb: 1 }}>
-										Private Residences
-									</Typography>
-									<Typography
-										variant="body2"
-										sx={{ color: "text.secondary" }}>
-										Securing Mayfair&apos;s most exclusive homes and penthouses
-									</Typography>
-								</Box>
-							</Grid>
-							<Grid
-								item
-								xs={12}
-								md={4}>
-								<Box sx={{ textAlign: "center" }}>
-									<SecurityIcon sx={{ fontSize: 50, color: JW_CYAN, mb: 2 }} />
-									<Typography
-										variant="h6"
-										sx={{ fontWeight: 600, mb: 1 }}>
-										Diplomatic Properties
-									</Typography>
-									<Typography
-										variant="body2"
-										sx={{ color: "text.secondary" }}>
-										Meeting international security standards for embassies
-									</Typography>
-								</Box>
-							</Grid>
-						</Grid>
-					</Box>
-
+				</Container>
+			</Box>
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
 					<Grid
 						container
 						spacing={6}
-						sx={{ mt: 4 }}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h3">Serving All of Mayfair</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
+								With three decades of experience serving Mayfair&apos;s elite
+								clientele, we&apos;ve built our reputation on reliability,
+								discretion, and technical excellence. Our team includes
+								specialists in diplomatic security and luxury retail protection.
+							</Typography>
+							<Typography
+								variant="h6"
+								sx={{ fontWeight: 600, mb: 2, color: JW_BLUE }}>
+								Most Popular Service Areas:
+							</Typography>
+							<Grid
+								container
+								spacing={1}>
+								{localAreas.map((area, index) => (
+									<Grid
+										size={{ xs: 6 }}
+										key={index}>
+										<Box
+											sx={{ display: "flex", alignItems: "center", py: 0.5 }}>
+											<LocationOnIcon
+												sx={{
+													mr: 1,
+													color: JW_CYAN,
+													fontSize: 20,
+													flexShrink: 0,
+												}}
+											/>
+											<Typography variant="body1">{area.name}</Typography>
+										</Box>
+									</Grid>
+								))}
+							</Grid>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Box
+								sx={{
+									p: 4,
+									bgcolor: "white",
+									borderRadius: 4,
+									boxShadow: "0 10px 40px rgba(0,0,0,0.05)",
+									border: `1px solid ${alpha(JW_CYAN, 0.2)}`,
+								}}>
+								<Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
+									<PhoneIcon sx={{ fontSize: 28, color: JW_CYAN, mr: 1.5 }} />
+									<Typography
+										variant="h5"
+										sx={{ fontWeight: 700, color: JW_BLUE }}>
+										Priority? Call VIP Line
+									</Typography>
+								</Box>
+								<Typography
+									variant="h3"
+									sx={{ fontWeight: 800, color: JW_CYAN, mb: 1 }}>
+									020 7946 0125
+								</Typography>
+								<Typography
+									variant="body2"
+									sx={{ color: "text.secondary", mb: 4 }}>
+									15-20 Minute Rapid Response in Mayfair (W1 area)
+								</Typography>
+								<Button
+									variant="contained"
+									fullWidth
+									size="large"
+									sx={{
+										"bgcolor": JW_BLUE,
+										"py": 2,
+										"&:hover": { bgcolor: JW_CYAN, color: JW_BLUE },
+									}}>
+									REQUEST VIP CONSULTATION
+								</Button>
+							</Box>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+			<Box sx={{ py: { xs: 5, md: 8 } }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h3">
+								The Mayfair Security Standard
+							</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
+								Mayfair security demands more than just protection - it requires
+								solutions that respect the aesthetic and operational
+								requirements of luxury properties.
+							</Typography>
+							<Grid
+								container
+								spacing={3}>
+								<Grid size={{ xs: 6 }}>
+									<Box
+										sx={{
+											textAlign: "center",
+											p: 2,
+											bgcolor: alpha(JW_CYAN, 0.1),
+											borderRadius: 2,
+										}}>
+										<Typography
+											variant="h4"
+											sx={{ fontWeight: 800, color: JW_BLUE }}>
+											5.0
+										</Typography>
+										<Typography
+											variant="caption"
+											sx={{ fontWeight: 600 }}>
+											ELITE RATING
+										</Typography>
+									</Box>
+								</Grid>
+								<Grid size={{ xs: 6 }}>
+									<Box
+										sx={{
+											textAlign: "center",
+											p: 2,
+											bgcolor: alpha(JW_BLUE, 0.1),
+											borderRadius: 2,
+										}}>
+										<Typography
+											variant="h4"
+											sx={{ fontWeight: 800, color: JW_CYAN }}>
+											VIP
+										</Typography>
+										<Typography
+											variant="caption"
+											sx={{ fontWeight: 600 }}>
+											SERVICE LEVEL
+										</Typography>
+									</Box>
+								</Grid>
+							</Grid>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/locksmith-hands-maintenance-and-handyman-with-tools-home-renovation-and-fixing-change-door-locks.jpg"
-								alt="Premium locksmith services in Mayfair"
+								src="/images/jw/a-japanese-male-worker-checks-the-locks-on-a-house.jpg"
+								alt="Specialized Security"
 								sx={{
 									width: "100%",
 									height: "auto",
 									borderRadius: "10px",
-									boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
+									boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
 								}}
 							/>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
-							<SectionTitle variant="h5">
-								The Mayfair Security Standard
-							</SectionTitle>
-							<List>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText
-										primary="White Glove Service"
-										secondary="Professional presentation befitting Mayfair's standards"
-									/>
-								</ListItem>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText
-										primary="Absolute Discretion"
-										secondary="Confidential service with signed NDAs available"
-									/>
-								</ListItem>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText
-										primary="Cutting-Edge Technology"
-										secondary="Latest security innovations from global manufacturers"
-									/>
-								</ListItem>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText
-										primary="24/7 VIP Support"
-										secondary="Dedicated account management and priority response"
-									/>
-								</ListItem>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText
-										primary="Comprehensive Insurance"
-										secondary="Full coverage for high-value properties and contents"
-									/>
-								</ListItem>
-							</List>
-							<Button
-								variant="contained"
-								size="large"
-								component="a"
-								href="/contact"
+					</Grid>
+				</Container>
+			</Box>
+			<Box
+				sx={{
+					py: 12,
+					position: "relative",
+					backgroundImage:
+						'linear-gradient(rgba(28, 46, 74, 0.85), rgba(28, 46, 74, 0.85)), url("/images/jw/ancient-tools-and-spare-parts-in-old-locksmiths-workshop.jpg")',
+					backgroundSize: "cover",
+					backgroundPosition: "center",
+					backgroundAttachment: "fixed",
+					color: "white",
+				}}>
+				<Container>
+					<Grid
+						container
+						spacing={6}>
+						<Grid size={{ xs: 12, md: 8 }}>
+							<Typography
+								variant="overline"
 								sx={{
-									"mt": 3,
-									"backgroundColor": JW_CYAN,
-									"&:hover": {
-										backgroundColor: JW_BLUE,
-									},
+									color: "white",
+									fontWeight: 700,
+									mb: 1,
+									display: "block",
 								}}>
-								Request VIP Consultation
-							</Button>
+								MAYFAIR EXPERTISE
+							</Typography>
+							<Typography
+								variant="h3"
+								sx={{ fontWeight: 800, mb: 3, color: "white" }}>
+								Uncompromising <br />
+								Protection for Mayfair
+							</Typography>
+							<Typography
+								variant="h6"
+								sx={{ mb: 4, fontWeight: 400, opacity: 0.9, color: "white" }}>
+								From Bond Street retail security to Grosvenor Square diplomatic
+								residences, we set the standard for elite protection in London.
+							</Typography>
 						</Grid>
 					</Grid>
 				</Container>
+			</Box>
+			<Box sx={{ py: { xs: 5, md: 8 } }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Box
+								component="img"
+								src="/images/jw/locksmith-hands-maintenance-and-handyman-with-tools-home-renovation-and-fixing-change-door-locks.jpg"
+								alt="Residential Security"
+								sx={{
+									width: "100%",
+									height: "auto",
+									borderRadius: "10px",
+									boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
+								}}
+							/>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h3">
+								Ultra High-Security Residences
+							</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
+								Securing Mayfair&apos;s most exclusive homes and penthouses
+								requires cutting-edge technology and absolute discretion.
+							</Typography>
+							<List sx={{ mb: 4 }}>
+								<ListItem sx={{ py: 0.5, px: 0 }}>
+									<ListItemIcon sx={{ minWidth: 35 }}>
+										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
+									</ListItemIcon>
+									<ListItemText primary="Biometric and keyless entry systems" />
+								</ListItem>
+								<ListItem sx={{ py: 0.5, px: 0 }}>
+									<ListItemIcon sx={{ minWidth: 35 }}>
+										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
+									</ListItemIcon>
+									<ListItemText primary="Integration with smart-home automation" />
+								</ListItem>
+								<ListItem sx={{ py: 0.5, px: 0 }}>
+									<ListItemIcon sx={{ minWidth: 35 }}>
+										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
+									</ListItemIcon>
+									<ListItemText primary="Panic room and safe installations" />
+								</ListItem>
+							</List>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_CYAN, 0.05) }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h3">
+								Luxury Retail & Gallery Security
+							</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
+								Protecting Bond Street&apos;s premier boutiques and flagship
+								stores with discrete monitoring systems and advanced access
+								control.
+							</Typography>
+							<Button
+								variant="contained"
+								size="large"
+								href="/contact"
+								sx={{ bgcolor: JW_BLUE, px: 6, py: 1.5 }}>
+								LEARN MORE
+							</Button>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Box
+								component="img"
+								src="/images/jw/security-equipment.jpg"
+								alt="Commercial Security"
+								sx={{
+									width: "100%",
+									height: "auto",
+									borderRadius: "10px",
+									boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
+								}}
+							/>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+			<Box sx={{ py: 10 }}>
+				<Container>
+					<Typography
+						variant="h3"
+						sx={{
+							fontWeight: 800,
+							color: JW_BLUE,
+							mb: 6,
+							textAlign: "center",
+						}}>
+						Mayfair&apos;s 24/7 Security Partner
+					</Typography>
+					<Grid
+						container
+						spacing={4}>
+						<Grid size={{ xs: 12, md: 4 }}>
+							<ServiceCard>
+								<Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
+									<AccessTimeIcon
+										sx={{ fontSize: 40, color: JW_CYAN, mr: 2 }}
+									/>
+									<Typography
+										variant="h5"
+										sx={{ fontWeight: 700, color: JW_BLUE }}>
+										Priority Response
+									</Typography>
+								</Box>
+								<Typography
+									variant="body1"
+									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
+									15-20 minute average arrival time for our dedicated Mayfair
+									rapid response unit.
+								</Typography>
+							</ServiceCard>
+						</Grid>
+						<Grid size={{ xs: 12, md: 4 }}>
+							<ServiceCard>
+								<Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
+									<SecurityIcon sx={{ fontSize: 40, color: JW_CYAN, mr: 2 }} />
+									<Typography
+										variant="h5"
+										sx={{ fontWeight: 700, color: JW_BLUE }}>
+										SIA Licensed
+									</Typography>
+								</Box>
+								<Typography
+									variant="body1"
+									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
+									Fully vetted and licensed experts meeting the highest
+									international security standards.
+								</Typography>
+							</ServiceCard>
+						</Grid>
+						<Grid size={{ xs: 12, md: 4 }}>
+							<ServiceCard>
+								<Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
+									<LockIcon sx={{ fontSize: 40, color: JW_CYAN, mr: 2 }} />
+									<Typography
+										variant="h5"
+										sx={{ fontWeight: 700, color: JW_BLUE }}>
+										Fixed Pricing
+									</Typography>
+								</Box>
+								<Typography
+									variant="body1"
+									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
+									Transparent, upfront quotes with no call-out charges for all
+									Mayfair properties.
+								</Typography>
+							</ServiceCard>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+			<CTABanner sx={{ py: 8 }}>
+				<Container>
+					<Typography
+						variant="h3"
+						sx={{ fontWeight: 800, mb: 3 }}>
+						SCHEDULE A{" "}
+						<Box
+							component="span"
+							sx={{ color: "white" }}>
+							FREE
+						</Box>{" "}
+						SECURITY QUOTE
+					</Typography>
+					<Typography
+						variant="h6"
+						sx={{ mb: 4, color: "white", opacity: 0.9 }}>
+						Join Mayfair&apos;s elite who trust JW Security for their peace of
+						mind.
+					</Typography>
+					<Button
+						variant="contained"
+						size="large"
+						href="/contact"
+						sx={{
+							fontWeight: 900,
+							px: 6,
+							py: 2,
+							fontSize: "1.1rem",
+						}}>
+						CALL US TODAY: 020 7946 0125
+					</Button>
+				</Container>
+			</CTABanner>
+			<Box sx={{ p: { xs: 5, md: 8 } }}>
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.1057964080583!2d-0.1459604229924458!3d51.51127501041975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876052caa0c2fa9%3A0x64126c3040d9ed14!2sBond%20St%2C%20London%2C%20UK!5e0!3m2!1sen!2s!4v1774034892943!5m2!1sen!2s"
+					width="100%"
+					height="450"
+					style={{ border: 0 }}
+					allowFullScreen=""
+					loading="lazy"
+					referrerPolicy="no-referrer-when-downgrade"></iframe>
 			</Box>
 			<ContactSection
 				title="Secure Your Mayfair Property Today"
