@@ -1108,9 +1108,8 @@ export default function HomePage() {
 						</Box>
 						<Box
 							sx={{
-								width: { xs: "100%", sm: "60%", md: "55%" },
-								flex: { xs: "1 1 auto", sm: "0 0 60%", md: "0 0 55%" },
-								pl: { sm: 3, md: 4, lg: 6 },
+								width: { xs: "100%", sm: "60%", md: "50%" },
+								flex: { xs: "1 1 auto", sm: "0 0 60%", md: "0 0 50%" },
 							}}>
 							<motion.div
 								initial="hidden"

@@ -1,5 +1,5 @@
 import { Resend } from "resend";
-import { verifyTurnstileToken } from "@/lib/turnstile";
+import { verifyRecaptchaToken } from "@/lib/recaptcha";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -29,10 +29,10 @@ function sanitizeHeaderValue(value) {
 export async function POST(request) {
 	try {
 		const body = await request.json();
-		const { name, email, phone, subject, message, turnstileToken } = body;
+		const { name, email, phone, subject, message, recaptchaToken } = body;
 
-		// Verify Turnstile Token
-		const isVerified = await verifyTurnstileToken(turnstileToken);
+		// Verify reCAPTCHA Token
+		const isVerified = await verifyRecaptchaToken(recaptchaToken);
 		if (!isVerified) {
 			return Response.json(
 				{ error: "Captcha verification failed. Please try again." },
