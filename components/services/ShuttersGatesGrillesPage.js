@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import {
 	Box,
 	Container,
@@ -10,9 +10,17 @@ import {
 	ListItemIcon,
 	ListItemText,
 	Divider,
+	Button,
 } from "@mui/material";
 import PageHero from "../common/PageHero";
 import { styled, alpha } from "@mui/material/styles";
+
+const CTABanner = styled(Box)(({ theme }) => ({
+	backgroundColor: "#00c6d7",
+	padding: theme.spacing(4, 0),
+	textAlign: "center",
+	color: "#1c2e4a",
+}));
 import ContactSection from "../common/ContactSection";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 
@@ -163,11 +171,22 @@ export default function ShuttersGatesGrillesPage() {
 				<Container>
 					<Grid
 						container
-						spacing={6}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Box
+								component="img"
+								src="/images/jw/confident-locksmith-looking-at-camera.jpg"
+								alt="Security installation specialist"
+								sx={{
+									width: "100%",
+									height: "auto",
+									borderRadius: "10px",
+									boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+								}}
+							/>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h4">
 								Premium Physical Security Solutions
 							</SectionTitle>
@@ -199,199 +218,264 @@ export default function ShuttersGatesGrillesPage() {
 								security barriers.
 							</Typography>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+					</Grid>
+				</Container>
+			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h4">Our Security Barriers</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								From high-street shop fronts to residential driveway entrances,
+								we provide the physical deterrence you need.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Our barrier solutions are built to withstand the toughest
+								conditions while maintaining a professional and clean appearance
+								for your property.
+							</Typography>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Grid
+								container
+								spacing={2}>
+								{products.map((product, index) => (
+									<Grid
+										size={{ xs: 12 }}
+										key={index}>
+										<ProductCard sx={{ p: 2.5 }}>
+											<Typography
+												variant="h6"
+												sx={{
+													fontWeight: 600,
+													color: JW_BLUE,
+													mb: 1,
+													fontSize: "1.1rem",
+												}}>
+												{product.title}
+											</Typography>
+											<Typography
+												variant="body2"
+												sx={{ color: alpha("#000", 0.65) }}>
+												{product.description}
+											</Typography>
+										</ProductCard>
+									</Grid>
+								))}
+							</Grid>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
+			<CTABanner sx={{ py: 8 }}>
+				<Container>
+					<Typography
+						variant="h3"
+						sx={{ fontWeight: 800, mb: 3 }}>
+						SCHEDULE A{" "}
+						<Box
+							component="span"
+							sx={{ color: "white" }}>
+							FREE
+						</Box>{" "}
+						SECURITY QUOTE
+					</Typography>
+					<Typography
+						variant="h6"
+						sx={{ mb: 4, color: "white", opacity: 0.9 }}>
+						Join hundreds of local residents who trust JW Security for their
+						peace of mind.
+					</Typography>
+					<Button
+						variant="contained"
+						size="large"
+						href="/contact"
+						sx={{
+							"fontWeight": 900,
+							"px": 6,
+							"py": 2,
+							"fontSize": "1.1rem",
+							"bgcolor": JW_BLUE,
+							"color": "white",
+							"&:hover": { bgcolor: "white", color: JW_BLUE },
+						}}>
+						CALL US TODAY: 0208 646 7931
+					</Button>
+				</Container>
+			</CTABanner>
+
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_CYAN, 0.05) }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/confident-locksmith-looking-at-camera.jpg"
-								alt="Security installation specialist"
+								src="/images/jw/symmetric-security-cameras.jpg"
+								alt="Barrier applications"
 								sx={{
 									width: "100%",
 									height: "auto",
 									borderRadius: "10px",
-									boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+									boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
 								}}
 							/>
 						</Grid>
-					</Grid>
-
-					<Box sx={{ mt: 8, mb: 6 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4, textAlign: "center" }}>
-							Our Security Barrier Products
-						</SectionTitle>
-						<Grid
-							container
-							spacing={4}>
-							{products.map((product, index) => (
-								<Grid
-									item
-									xs={12}
-									md={4}
-									key={index}>
-									<ProductCard>
-										<Typography
-											variant="h5"
-											component="h3"
-											sx={{ fontWeight: 600, color: JW_BLUE, mb: 2 }}>
-											{product.title}
-										</Typography>
-										<Typography
-											variant="body1"
-											sx={{ color: alpha("#000", 0.7), mb: 3 }}>
-											{product.description}
-										</Typography>
-										<Divider sx={{ mb: 2 }} />
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h4">Applications</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Our systems are flexible enough for any setting, providing peace
+								of mind for varied environments.
+							</Typography>
+							<Grid
+								container
+								spacing={2}>
+								{applications.map((application, index) => (
+									<Grid
+										size={{ xs: 12, sm: 6 }}
+										key={index}>
 										<Typography
 											variant="subtitle2"
-											sx={{ fontWeight: 600, mb: 1 }}>
-											Key Features:
+											sx={{
+												fontWeight: 800,
+												color: JW_BLUE,
+												mb: 1.5,
+												textTransform: "uppercase",
+												letterSpacing: 1,
+											}}>
+											{application.type}
 										</Typography>
-										<FeatureList>
-											{product.features.map((feature, idx) => (
+										<List
+											dense
+											sx={{ p: 0 }}>
+											{application.examples.slice(0, 3).map((example, idx) => (
 												<ListItem
 													key={idx}
-													disableGutters>
-													<ListItemIcon sx={{ minWidth: 36 }}>
+													sx={{ px: 0, py: 0.2 }}>
+													<ListItemIcon sx={{ minWidth: 28 }}>
 														<CheckCircleOutlineIcon
-															sx={{ color: JW_CYAN, fontSize: 20 }}
+															sx={{ color: JW_CYAN, fontSize: 16 }}
 														/>
 													</ListItemIcon>
 													<ListItemText
-														primary={feature}
-														primaryTypographyProps={{ fontSize: "0.95rem" }}
+														primary={example}
+														primaryTypographyProps={{ fontSize: "0.9rem" }}
 													/>
 												</ListItem>
 											))}
-										</FeatureList>
-									</ProductCard>
-								</Grid>
-							))}
+										</List>
+									</Grid>
+								))}
+							</Grid>
 						</Grid>
-					</Box>
+					</Grid>
+				</Container>
+			</Box>
 
-					<Box sx={{ my: 8 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4 }}>
-							Applications
-						</SectionTitle>
-						<Typography
-							paragraph
-							sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
-							Our security shutters, gates, and grilles are suitable for a wide
-							range of applications:
-						</Typography>
-						<Grid
-							container
-							spacing={4}>
-							{applications.map((application, index) => (
-								<Grid
-									item
-									xs={12}
-									md={4}
-									key={index}>
-									<Typography
-										variant="h6"
-										sx={{ fontWeight: 600, color: JW_BLUE, mb: 2 }}>
-										{application.type}
-									</Typography>
-									{application.examples.map((example, idx) => (
-										<ApplicationCard key={idx}>
-											<Typography variant="body1">{example}</Typography>
-										</ApplicationCard>
-									))}
-								</Grid>
-							))}
-						</Grid>
-					</Box>
-
+			<Box sx={{ py: { xs: 5, md: 8 } }}>
+				<Container>
 					<Grid
 						container
-						spacing={6}
-						sx={{ mt: 4 }}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
-							<SectionTitle variant="h5">
-								Benefits of Our Security Barriers
-							</SectionTitle>
-							<List>
-								{benefits.map((benefit, index) => (
-									<ListItem
-										key={index}
-										sx={{ py: 1 }}>
-										<ListItemIcon>
-											<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-										</ListItemIcon>
-										<ListItemText primary={benefit} />
-									</ListItem>
+						spacing={6}>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h5">Our Security Process</SectionTitle>
+							<Box sx={{ mb: 0 }}>
+								{[
+									{
+										t: "Consultation",
+										d: "Thorough property assessment to understand your unique security needs.",
+									},
+									{
+										t: "Custom Design",
+										d: "Precision engineering to ensure your barriers fit perfectly and look great.",
+									},
+									{
+										t: "Installation",
+										d: "Efficient, professional fitting with minimal disruption to your daily life.",
+									},
+									{
+										t: "Quality Check",
+										d: "Rigorous testing to guarantee the integrity of your new security barrier.",
+									},
+								].map((step, idx) => (
+									<Box
+										key={idx}
+										sx={{ mb: 2.5, display: "flex", gap: 2 }}>
+										<Typography
+											variant="h6"
+											sx={{ color: JW_CYAN, fontWeight: 900 }}>
+											0{idx + 1}
+										</Typography>
+										<Box>
+											<Typography
+												variant="subtitle1"
+												sx={{
+													fontWeight: 700,
+													color: JW_BLUE,
+													lineHeight: 1.2,
+													mb: 0.5,
+												}}>
+												{step.t}
+											</Typography>
+											<Typography
+												variant="body2"
+												sx={{ color: alpha("#000", 0.6) }}>
+												{step.d}
+											</Typography>
+										</Box>
+									</Box>
 								))}
-							</List>
+							</Box>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
-							<SectionTitle variant="h5">
-								Our Security Barrier Process
-							</SectionTitle>
-							<Box sx={{ mb: 3 }}>
-								<Typography
-									variant="h6"
-									sx={{ fontWeight: 600, color: JW_BLUE, mb: 1 }}>
-									1. Consultation and Assessment
-								</Typography>
-								<Typography
-									variant="body1"
-									sx={{ mb: 3 }}>
-									We begin with a thorough assessment of your property to
-									understand your security needs, usage patterns, and aesthetic
-									preferences.
-								</Typography>
-
-								<Typography
-									variant="h6"
-									sx={{ fontWeight: 600, color: JW_BLUE, mb: 1 }}>
-									2. Custom Design
-								</Typography>
-								<Typography
-									variant="body1"
-									sx={{ mb: 3 }}>
-									Our team designs security solutions specifically for your
-									property, ensuring proper fit and functionality.
-								</Typography>
-
-								<Typography
-									variant="h6"
-									sx={{ fontWeight: 600, color: JW_BLUE, mb: 1 }}>
-									3. Professional Installation
-								</Typography>
-								<Typography
-									variant="body1"
-									sx={{ mb: 3 }}>
-									Experienced technicians install your security barriers with
-									minimal disruption to your property or business.
-								</Typography>
-
-								<Typography
-									variant="h6"
-									sx={{ fontWeight: 600, color: JW_BLUE, mb: 1 }}>
-									4. Quality Assurance
-								</Typography>
-								<Typography variant="body1">
-									We perform thorough testing after installation to ensure all
-									components work correctly and provide the intended security.
-								</Typography>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h5">Benefits of Our Barriers</SectionTitle>
+							<Box
+								sx={{
+									p: 3,
+									bgcolor: alpha(JW_CYAN, 0.05),
+									borderRadius: 3,
+									border: `1px solid ${alpha(JW_CYAN, 0.1)}`,
+								}}>
+								<List>
+									{benefits.map((benefit, index) => (
+										<ListItem
+											key={index}
+											sx={{ py: 0.8 }}>
+											<ListItemIcon sx={{ minWidth: 35 }}>
+												<CheckCircleOutlineIcon
+													sx={{ color: JW_BLUE, fontSize: 20 }}
+												/>
+											</ListItemIcon>
+											<ListItemText
+												primary={benefit}
+												primaryTypographyProps={{
+													fontWeight: 500,
+													fontSize: "0.95rem",
+												}}
+											/>
+										</ListItem>
+									))}
+								</List>
 							</Box>
 						</Grid>
 					</Grid>
 				</Container>
 			</Box>
+
 			<ContactSection
 				title="Enhance Your Property Security"
 				subtitle="Contact our team to discuss custom security barriers for your home or business. We provide free consultations and competitive quotes for all our security solutions."

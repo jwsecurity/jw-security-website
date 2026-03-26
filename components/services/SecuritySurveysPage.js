@@ -1,4 +1,5 @@
-﻿"use client";
+"use client";
+import React from "react";
 import {
 	Box,
 	Container,
@@ -9,10 +10,18 @@ import {
 	ListItem,
 	ListItemIcon,
 	ListItemText,
+	Button,
 } from "@mui/material";
 import PageHero from "../common/PageHero";
 import HomeIcon from "@mui/icons-material/Home";
 import { styled, alpha } from "@mui/material/styles";
+
+const CTABanner = styled(Box)(({ theme }) => ({
+	backgroundColor: "#00c6d7",
+	padding: theme.spacing(4, 0),
+	textAlign: "center",
+	color: "#1c2e4a",
+}));
 import ContactSection from "../common/ContactSection";
 import BusinessIcon from "@mui/icons-material/Business";
 import AssessmentIcon from "@mui/icons-material/Assessment";
@@ -147,11 +156,22 @@ export default function SecuritySurveysPage() {
 				<Container>
 					<Grid
 						container
-						spacing={6}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Box
+								component="img"
+								src="/images/jw/security-camera.jpg"
+								alt="Security survey assessment"
+								sx={{
+									width: "100%",
+									height: "auto",
+									borderRadius: "10px",
+									boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+								}}
+							/>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h4">
 								Professional Security Survey Services
 							</SectionTitle>
@@ -182,182 +202,276 @@ export default function SecuritySurveysPage() {
 								picture.
 							</Typography>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+					</Grid>
+				</Container>
+			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h4">
+								Our Security Survey Services
+							</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								We provide specialized assessments for different environments,
+								ensuring that our security strategies are tailored to the unique
+								risks of your property type.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
+								From family homes to large commercial complexes, our surveys
+								deliver the clarity and evidence-based guidance you need to
+								improve your defenses.
+							</Typography>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Grid
+								container
+								spacing={2}>
+								{surveyTypes.map((type, index) => (
+									<Grid
+										size={{ xs: 12 }}
+										key={index}>
+										<SurveyTypeCard
+											sx={{
+												p: 2.5,
+												display: "flex",
+												flexDirection: "row",
+												alignItems: "center",
+												gap: 2.5,
+											}}>
+											<Box
+												sx={{
+													flexShrink: 0,
+													bgcolor: alpha(JW_CYAN, 0.1),
+													p: 1,
+													borderRadius: "50%",
+													display: "flex",
+												}}>
+												{React.cloneElement(type.icon, {
+													sx: { fontSize: 24 },
+												})}
+											</Box>
+											<Box>
+												<Typography
+													variant="h6"
+													sx={{
+														fontWeight: 600,
+														color: JW_BLUE,
+														mb: 0.5,
+														fontSize: "1.05rem",
+													}}>
+													{type.title}
+												</Typography>
+												<Typography
+													variant="body2"
+													sx={{ color: alpha("#000", 0.65) }}>
+													{type.description}
+												</Typography>
+											</Box>
+										</SurveyTypeCard>
+									</Grid>
+								))}
+							</Grid>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
+			<CTABanner sx={{ py: 8 }}>
+				<Container>
+					<Typography
+						variant="h3"
+						sx={{ fontWeight: 800, mb: 3 }}>
+						SCHEDULE A{" "}
+						<Box
+							component="span"
+							sx={{ color: "white" }}>
+							FREE
+						</Box>{" "}
+						SECURITY QUOTE
+					</Typography>
+					<Typography
+						variant="h6"
+						sx={{ mb: 4, color: "white", opacity: 0.9 }}>
+						Join hundreds of local residents who trust JW Security for their
+						peace of mind.
+					</Typography>
+					<Button
+						variant="contained"
+						size="large"
+						href="tel:02086467931"
+						sx={{
+							"fontWeight": 900,
+							"px": 6,
+							"py": 2,
+							"fontSize": "1.1rem",
+							"bgcolor": JW_BLUE,
+							"color": "white",
+							"&:hover": { bgcolor: "white", color: JW_BLUE },
+						}}>
+						CALL US TODAY: 0208 646 7931
+					</Button>
+				</Container>
+			</CTABanner>
+
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_CYAN, 0.05) }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h4">
+								Our Security Survey Process
+							</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Our structured approach ensures that no detail is overlooked,
+								from the first conversation to the final verification.
+							</Typography>
 							<Box
 								component="img"
-								src="/images/jw/security-camera.jpg"
-								alt="Security survey assessment"
+								src="/images/jw/maintenance-concept-focused-serious-young-locksmith-with-tattoo-on-hand-wearing-blue-uniform.jpg"
+								alt="Security survey process"
 								sx={{
 									width: "100%",
 									height: "auto",
 									borderRadius: "10px",
-									boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+									boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
 								}}
 							/>
 						</Grid>
-					</Grid>
-
-					<Box sx={{ mt: 8, mb: 6 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4, textAlign: "center" }}>
-							Our Security Survey Services
-						</SectionTitle>
-						<Grid
-							container
-							spacing={4}>
-							{surveyTypes.map((type, index) => (
-								<Grid
-									item
-									xs={12}
-									md={4}
-									key={index}>
-									<SurveyTypeCard>
+						<Grid size={{ xs: 12, md: 6 }}>
+							{surveyProcess.map((step, index) => (
+								<SurveyProcessCard
+									key={index}
+									sx={{ p: 2, mb: 1.5 }}>
+									<Box sx={{ display: "flex", alignItems: "flex-start" }}>
 										<Box
 											sx={{
+												width: 24,
+												height: 24,
+												borderRadius: "50%",
+												bgcolor: JW_BLUE,
+												color: "white",
 												display: "flex",
-												flexDirection: "column",
 												alignItems: "center",
-												textAlign: "center",
-												mb: 2,
+												justifyContent: "center",
+												fontSize: "0.85rem",
+												fontWeight: "bold",
+												mr: 2,
+												flexShrink: 0,
+												mt: 0.5,
 											}}>
-											<IconBox>{type.icon}</IconBox>
+											{index + 1}
+										</Box>
+										<Box>
 											<Typography
-												variant="h6"
-												sx={{ fontWeight: 600, color: JW_BLUE, mb: 2 }}>
-												{type.title}
+												variant="subtitle1"
+												sx={{ fontWeight: 700, color: JW_BLUE, mb: 0.2 }}>
+												{step.step}
+											</Typography>
+											<Typography
+												variant="body2"
+												sx={{ color: alpha("#000", 0.7) }}>
+												{step.description}
 											</Typography>
 										</Box>
-										<Typography
-											variant="body1"
-											sx={{ color: alpha("#000", 0.7), textAlign: "center" }}>
-											{type.description}
-										</Typography>
-									</SurveyTypeCard>
-								</Grid>
+									</Box>
+								</SurveyProcessCard>
 							))}
 						</Grid>
-					</Box>
+					</Grid>
+				</Container>
+			</Box>
 
-					<Box sx={{ my: 8 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4 }}>
-							Our Security Survey Process
-						</SectionTitle>
-						{surveyProcess.map((step, index) => (
-							<SurveyProcessCard key={index}>
-								<Box sx={{ display: "flex", alignItems: "flex-start" }}>
-									<Box
-										sx={{
-											width: 30,
-											height: 30,
-											borderRadius: "50%",
-											bgcolor: JW_BLUE,
-											color: "white",
-											display: "flex",
-											alignItems: "center",
-											justifyContent: "center",
-											fontWeight: "bold",
-											mr: 2,
-											flexShrink: 0,
-										}}>
-										{index + 1}
-									</Box>
-									<Box>
-										<Typography
-											variant="h6"
-											sx={{ fontWeight: 600, color: JW_BLUE, mb: 0.5 }}>
-											{step.step}
-										</Typography>
-										<Typography
-											variant="body1"
-											sx={{ color: alpha("#000", 0.7) }}>
-											{step.description}
-										</Typography>
-									</Box>
-								</Box>
-							</SurveyProcessCard>
-						))}
-					</Box>
-
+			<Box sx={{ py: { xs: 5, md: 8 } }}>
+				<Container>
 					<Grid
 						container
 						spacing={6}
-						sx={{ mt: 4 }}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h5">
-								Benefits of Our Security Surveys
-							</SectionTitle>
-							<List>
-								{surveyBenefits.map((benefit, index) => (
-									<ListItem
-										key={index}
-										sx={{ py: 1 }}>
-										<ListItemIcon>
-											<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-										</ListItemIcon>
-										<ListItemText primary={benefit} />
-									</ListItem>
-								))}
-							</List>
-						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
-							<SectionTitle variant="h5">
-								When to Consider a Security Survey
+								When to Consider a Survey
 							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								A professional security survey is particularly valuable in these
+								A professional survey is particularly valuable in these critical
 								situations:
 							</Typography>
-							<Box sx={{ pl: 2 }}>
-								<Typography
-									paragraph
-									sx={{ fontSize: "1.05rem", mb: 2 }}>
-									• When moving into a new home or business premises
-								</Typography>
-								<Typography
-									paragraph
-									sx={{ fontSize: "1.05rem", mb: 2 }}>
-									• After a security breach or burglary attempt
-								</Typography>
-								<Typography
-									paragraph
-									sx={{ fontSize: "1.05rem", mb: 2 }}>
-									• If you&apos;re storing valuable items or sensitive
-									information
-								</Typography>
-								<Typography
-									paragraph
-									sx={{ fontSize: "1.05rem", mb: 2 }}>
-									• When renovating or expanding your property
-								</Typography>
-								<Typography
-									paragraph
-									sx={{ fontSize: "1.05rem", mb: 2 }}>
-									• If you&apos;re concerned about increases in local crime
-								</Typography>
-								<Typography
-									paragraph
-									sx={{ fontSize: "1.05rem", mb: 2 }}>
-									• For insurance requirement compliance
-								</Typography>
+							<List sx={{ pl: 0 }}>
+								{[
+									"Moving into a new home or business premises",
+									"After a security breach or burglary attempt",
+									"Storing valuable items or sensitive data",
+									"Renovating or expanding your property",
+									"An increase in local criminal activity",
+									"Compliance with insurance requirements",
+								].map((text, idx) => (
+									<ListItem
+										key={idx}
+										sx={{
+											display: "flex",
+											alignItems: "flex-start",
+											px: 0,
+											py: 0.5,
+										}}>
+										<ListItemIcon sx={{ minWidth: 35, mt: 0.5 }}>
+											<CheckCircleOutlineIcon
+												sx={{ color: JW_CYAN, fontSize: 20 }}
+											/>
+										</ListItemIcon>
+										<ListItemText
+											primary={text}
+											primaryTypographyProps={{ fontSize: "1.05rem" }}
+										/>
+									</ListItem>
+								))}
+							</List>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h5">
+								Benefits of Our Expert Assessments
+							</SectionTitle>
+							<Box
+								sx={{
+									p: 3,
+									bgcolor: alpha(JW_CYAN, 0.05),
+									borderRadius: 3,
+									border: `1px solid ${alpha(JW_CYAN, 0.1)}`,
+								}}>
+								<List>
+									{surveyBenefits.map((benefit, index) => (
+										<ListItem
+											key={index}
+											sx={{ py: 1 }}>
+											<ListItemIcon>
+												<CheckCircleOutlineIcon sx={{ color: JW_BLUE }} />
+											</ListItemIcon>
+											<ListItemText
+												primary={benefit}
+												primaryTypographyProps={{ fontWeight: 500 }}
+											/>
+										</ListItem>
+									))}
+								</List>
 							</Box>
 						</Grid>
 					</Grid>
 				</Container>
 			</Box>
+
 			<ContactSection />
 		</>
 	);

@@ -1,4 +1,5 @@
-﻿"use client";
+"use client";
+import React from "react";
 import {
 	Box,
 	Container,
@@ -233,11 +234,22 @@ export default function SecuritySystemsPage() {
 				<Container>
 					<Grid
 						container
-						spacing={6}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Box
+								component="img"
+								src="/images/jw/surveillance-cam-cctv-system-isolated-on-white-background-3d-illustration.jpg"
+								alt="Modern security system"
+								sx={{
+									width: "100%",
+									height: "auto",
+									borderRadius: "10px",
+									boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+								}}
+							/>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h4">
 								State-of-the-Art Security Systems
 							</SectionTitle>
@@ -253,163 +265,185 @@ export default function SecuritySystemsPage() {
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
 								Our systems combine the latest technology with professional
-								installation to create robust security solutions. From simple
-								CCTV setups to complex integrated systems, we ensure your
-								property is protected 24/7.
+								installation to create robust security solutions.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
 								Every installation begins with a free security assessment where
 								we identify vulnerabilities and recommend the most effective
-								solutions within your budget. Our NSI Gold certified installers
-								ensure compliance with all relevant standards.
+								solutions within your budget.
 							</Typography>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
-							<Box
-								component="img"
-								src="/images/jw/surveillance-cam-cctv-system-isolated-on-white-background-3d-illustration.jpg"
-								alt="Modern security system"
-								sx={{
-									width: "100%",
-									height: "auto",
-									borderRadius: "10px",
-									boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
-								}}
-							/>
-						</Grid>
 					</Grid>
+				</Container>
+			</Box>
 
-					<Box sx={{ mt: 8, mb: 6 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4, textAlign: "center" }}>
-							Security System Solutions
-						</SectionTitle>
-						<Grid
-							container
-							spacing={4}>
-							{securityServices.map((service, index) => (
-								<Grid
-									item
-									xs={12}
-									md={6}
-									lg={4}
-									key={index}>
-									<ServiceCard>
-										<IconBox>{service.icon}</IconBox>
-										<Typography
-											variant="h5"
-											sx={{ mb: 2, fontWeight: 600, color: JW_BLUE }}>
-											{service.title}
-										</Typography>
-										<Typography
-											paragraph
-											sx={{ mb: 2, color: "text.secondary" }}>
-											{service.description}
-										</Typography>
-										<List dense>
-											{service.features.map((feature, idx) => (
-												<ListItem
-													key={idx}
-													sx={{ py: 0.5, px: 0 }}>
-													<ListItemIcon sx={{ minWidth: 30 }}>
-														<CheckCircleOutlineIcon
-															sx={{ fontSize: 18, color: JW_CYAN }}
-														/>
-													</ListItemIcon>
-													<ListItemText
-														primary={feature}
-														primaryTypographyProps={{
-															fontSize: "0.9rem",
-															color: "text.secondary",
-														}}
-													/>
-												</ListItem>
-											))}
-										</List>
-									</ServiceCard>
-								</Grid>
-							))}
-						</Grid>
-					</Box>
-
-					<Box sx={{ my: 8 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4 }}>
-							Benefits of Professional Security Systems
-						</SectionTitle>
-						<Grid
-							container
-							spacing={3}>
-							{benefits.map((benefit, index) => (
-								<Grid
-									item
-									xs={12}
-									sm={6}
-									md={4}
-									key={index}>
-									<FeatureCard>
-										<Typography
-											variant="h6"
-											sx={{ fontWeight: 600, color: JW_BLUE, mb: 1 }}>
-											{benefit.title}
-										</Typography>
-										<Typography
-											variant="body2"
-											sx={{ color: "text.secondary" }}>
-											{benefit.description}
-										</Typography>
-									</FeatureCard>
-								</Grid>
-							))}
-						</Grid>
-					</Box>
-
-					<Box sx={{ my: 8 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4 }}>
-							Trusted Security Brands
-						</SectionTitle>
-						<Typography
-							paragraph
-							sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-							We work with industry-leading manufacturers to ensure reliable,
-							high-quality security solutions:
-						</Typography>
-						<Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
-							{systemBrands.map((brand, index) => (
-								<Chip
-									key={index}
-									label={brand}
-									sx={{
-										"fontSize": "0.95rem",
-										"py": 2,
-										"px": 1,
-										"backgroundColor": alpha(JW_BLUE, 0.05),
-										"&:hover": {
-											backgroundColor: alpha(JW_CYAN, 0.1),
-										},
-									}}
-								/>
-							))}
-						</Box>
-					</Box>
-
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
 					<Grid
 						container
 						spacing={6}
-						sx={{ mt: 4 }}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h4">Integrated Solutions</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								From HD surveillance to sophisticated access control, we provide
+								seamlessly integrated security for homes and businesses.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Our team ensures that your technology is not just installed, but
+								perfectly configured for your environment.
+							</Typography>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Grid
+								container
+								spacing={2}>
+								{securityServices.slice(0, 4).map((service, index) => (
+									<Grid
+										size={{ xs: 12, sm: 6 }}
+										key={index}>
+										<ServiceCard sx={{ p: 2.5 }}>
+											<Box
+												sx={{
+													display: "flex",
+													alignItems: "center",
+													mb: 1,
+													gap: 1.5,
+												}}>
+												{React.cloneElement(service.icon, {
+													sx: { fontSize: 24 },
+												})}
+												<Typography
+													variant="subtitle1"
+													sx={{
+														fontWeight: 800,
+														color: JW_BLUE,
+														lineHeight: 1.2,
+													}}>
+													{service.title}
+												</Typography>
+											</Box>
+											<Typography
+												variant="body2"
+												sx={{ color: alpha("#000", 0.6) }}>
+												{service.description}
+											</Typography>
+										</ServiceCard>
+									</Grid>
+								))}
+							</Grid>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
+			<Box sx={{ py: 0 }}>
+				<Box
+					sx={{
+						py: 8,
+						backgroundColor: JW_CYAN,
+						textAlign: "center",
+						color: JW_BLUE,
+					}}>
+					<Container>
+						<Typography
+							variant="h4"
+							sx={{ fontWeight: 900, mb: 3 }}>
+							NEED A SECURITY ASSESSMENT?
+						</Typography>
+						<Typography
+							variant="h6"
+							sx={{ mb: 4, opacity: 0.9 }}>
+							Our NSI Gold installers are ready to secure your world.
+						</Typography>
+						<Button
+							variant="contained"
+							size="large"
+							href="/contact"
+							sx={{
+								"fontWeight": 900,
+								"px": 6,
+								"py": 2,
+								"fontSize": "1.2rem",
+								"bgcolor": JW_BLUE,
+								"color": "white",
+								"&:hover": { bgcolor: "white", color: JW_BLUE },
+							}}>
+							BOOK FREE SURVEY
+						</Button>
+					</Container>
+				</Box>
+			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_CYAN, 0.05) }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Grid
+								container
+								spacing={2}>
+								{benefits.slice(0, 4).map((benefit, index) => (
+									<Grid
+										size={{ xs: 12, sm: 6 }}
+										key={index}>
+										<Box
+											sx={{
+												p: 2.5,
+												bgcolor: "white",
+												borderRadius: 3,
+												boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+												height: "100%",
+											}}>
+											<Typography
+												variant="subtitle1"
+												sx={{ fontWeight: 800, color: JW_BLUE, mb: 1 }}>
+												{benefit.title}
+											</Typography>
+											<Typography
+												variant="body2"
+												sx={{ color: alpha("#000", 0.6) }}>
+												{benefit.description}
+											</Typography>
+										</Box>
+									</Grid>
+								))}
+							</Grid>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h4">System Benefits</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								A professional security system provides more than just
+								protection - it offers intelligence and control.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
+								From reducing insurance premiums to providing verifiable
+								evidence, our systems are a long-term investment in your safety.
+							</Typography>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 } }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
 								src="/images/jw/home-ip-video-surveillance-concept.jpg"
@@ -418,73 +452,51 @@ export default function SecuritySystemsPage() {
 									width: "100%",
 									height: "auto",
 									borderRadius: "10px",
-									boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
+									boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
 								}}
 							/>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
-							<SectionTitle variant="h5">
-								Professional Installation & Support
-							</SectionTitle>
-							<List>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText primary="Free security assessment and consultation" />
-								</ListItem>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText primary="NSI Gold certified installers" />
-								</ListItem>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText primary="Comprehensive system training" />
-								</ListItem>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText primary="24/7 technical support" />
-								</ListItem>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText primary="Annual maintenance contracts" />
-								</ListItem>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText primary="Insurance approved systems" />
-								</ListItem>
-							</List>
-							<Button
-								variant="contained"
-								size="large"
-								component="a"
-								href="/contact"
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h5">Professional Support</SectionTitle>
+							<Box
 								sx={{
-									"mt": 3,
-									"backgroundColor": JW_CYAN,
-									"&:hover": {
-										backgroundColor: JW_BLUE,
-									},
+									p: 3,
+									bgcolor: alpha(JW_CYAN, 0.05),
+									borderRadius: 3,
+									border: `1px solid ${alpha(JW_CYAN, 0.1)}`,
 								}}>
-								Get a Free Security Assessment
-							</Button>
+								<List>
+									{[
+										"NSI Gold certified installation standards",
+										"24/7 technical support & monitoring",
+										"Comprehensive on-site system training",
+										"Annual maintenance and health checks",
+										"Scalable systems for future growth",
+									].map((feature, index) => (
+										<ListItem
+											key={index}
+											sx={{ py: 0.8 }}>
+											<ListItemIcon sx={{ minWidth: 35 }}>
+												<CheckCircleOutlineIcon
+													sx={{ color: JW_BLUE, fontSize: 20 }}
+												/>
+											</ListItemIcon>
+											<ListItemText
+												primary={feature}
+												primaryTypographyProps={{
+													fontWeight: 500,
+													fontSize: "0.95rem",
+												}}
+											/>
+										</ListItem>
+									))}
+								</List>
+							</Box>
 						</Grid>
 					</Grid>
 				</Container>
 			</Box>
+
 			<ContactSection
 				title="Secure Your Property Today"
 				subtitle="Contact us for a free security assessment and no-obligation quote"

@@ -165,9 +165,7 @@ const MegaMenuItem = styled(MenuItem)(({ theme }) => ({
 }));
 
 const HighlightedMenuItem = styled(MegaMenuItem)(({ theme }) => ({
-	"backgroundColor": alpha(JW_CYAN, 0.15),
 	"color": "white",
-	"borderLeft": `3px solid ${JW_CYAN}`,
 	"&:hover": {
 		backgroundColor: alpha(JW_CYAN, 0.25),
 	},
@@ -220,6 +218,7 @@ export default function Header() {
 			description:
 				"Professional door and window security solutions for high-end properties",
 			link: "/services/locksmith",
+			subPaths: ["/services/burglary-repairs", "/services/key-cutting", "/services/locks-and-safes", "/services/upvc-door-locks"]
 		},
 		{
 			title: "Security Systems",
@@ -227,14 +226,22 @@ export default function Header() {
 			description:
 				"Modern security installations with premium materials and attention to detail",
 			link: "/services/security",
+			subPaths: ["/services/electronic-key-pads", "/services/security-surveys", "/services/shutters-gates-grilles"]
 		},
 		{
 			title: "Emergency Services",
 			icon: <ShieldIcon sx={{ color: JW_CYAN, fontSize: 28 }} />,
 			description: "24/7 rapid response from our team of expert technicians",
 			link: "/services/emergency",
+			subPaths: ["/services/emergency-door-opening"]
 		},
 	];
+
+	const isServiceActive = (service) => {
+		if (isPathActive(service.link)) return true;
+		if (service.subPaths && service.subPaths.some(path => pathname.startsWith(path))) return true;
+		return false;
+	};
 
 	const handleMobileMenuToggle = () => {
 		setMobileOpen(!mobileOpen);
@@ -387,7 +394,8 @@ export default function Header() {
 																			<HighlightedMenuItem
 																				component="span"
 																				onClick={handleMegaMenuClose}
-																				role="menuitem">
+																				role="menuitem"
+																				sx={isServiceActive(service) ? { backgroundColor: alpha(JW_CYAN, 0.15), color: "white", borderLeft: `3px solid ${JW_CYAN}` } : {}}>
 																				{service.icon}
 																				{service.title}
 																			</HighlightedMenuItem>
@@ -400,7 +408,8 @@ export default function Header() {
 																			<MegaMenuItem
 																				component="span"
 																				onClick={handleMegaMenuClose}
-																				role="menuitem">
+																				role="menuitem"
+																				sx={isServiceActive(service) ? { backgroundColor: alpha(JW_CYAN, 0.15), color: "white", borderLeft: `3px solid ${JW_CYAN}` } : {}}>
 																				{service.icon}
 																				{service.title}
 																			</MegaMenuItem>

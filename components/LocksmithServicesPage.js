@@ -1,4 +1,5 @@
-﻿"use client";
+"use client";
+import React from "react";
 import {
 	Box,
 	Container,
@@ -253,11 +254,22 @@ export default function LocksmithServicesPage() {
 				<Container>
 					<Grid
 						container
-						spacing={6}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Box
+								component="img"
+								src="/images/jw/confident-locksmith-looking-at-camera.jpg"
+								alt="Professional locksmith at work"
+								sx={{
+									width: "100%",
+									height: "auto",
+									borderRadius: "10px",
+									boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+								}}
+							/>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h4">
 								London&apos;s Trusted Master Locksmiths Since 1991
 							</SectionTitle>
@@ -277,136 +289,183 @@ export default function LocksmithServicesPage() {
 								fully equipped to handle any lock-related challenge. From period
 								property mortice locks in Victorian conversions to the latest
 								smart lock systems in modern apartments, we have the expertise
-								and tools to provide immediate solutions. We specialize in
-								non-destructive entry techniques, saving you the cost and hassle
-								of lock replacement whenever possible.
+								and tools to provide immediate solutions.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								What sets us apart is our commitment to honest, transparent
-								service. We provide fixed-price quotes before starting any work,
-								with no hidden call-out charges or surprise fees. Our 24/7
-								emergency service means you&apos;re never left stranded, and our
-								average response time of 20-30 minutes across London ensures
-								help arrives when you need it most.
+								We provide fixed-price quotes before starting any work, with no
+								hidden call-out charges or surprise fees. Our 24/7 emergency
+								service means you&apos;re never left stranded across London.
 							</Typography>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
-							<Box
-								component="img"
-								src="/images/jw/confident-locksmith-looking-at-camera.jpg"
-								alt="Professional locksmith at work"
-								sx={{
-									width: "100%",
-									height: "auto",
-									borderRadius: "10px",
-									boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
-								}}
-							/>
-						</Grid>
 					</Grid>
+				</Container>
+			</Box>
 
-					<Box sx={{ mt: 8, mb: 6 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4, textAlign: "center" }}>
-							Our Locksmith Services
-						</SectionTitle>
-						<Grid
-							container
-							spacing={4}>
-							{locksmithServices.map((service, index) => (
-								<Grid
-									item
-									xs={12}
-									md={6}
-									lg={4}
-									key={index}>
-									<ServiceCard>
-										<IconBox>{service.icon}</IconBox>
-										<Typography
-											variant="h5"
-											sx={{ mb: 2, fontWeight: 600, color: JW_BLUE }}>
-											{service.title}
-										</Typography>
-										<Typography
-											paragraph
-											sx={{ mb: 2, color: "text.secondary" }}>
-											{service.description}
-										</Typography>
-										<List dense>
-											{service.services.map((item, idx) => (
-												<ListItem
-													key={idx}
-													sx={{ py: 0.5, px: 0 }}>
-													<ListItemIcon sx={{ minWidth: 30 }}>
-														<CheckCircleOutlineIcon
-															sx={{ fontSize: 18, color: JW_CYAN }}
-														/>
-													</ListItemIcon>
-													<ListItemText
-														primary={item}
-														primaryTypographyProps={{
-															fontSize: "0.9rem",
-															color: "text.secondary",
-														}}
-													/>
-												</ListItem>
-											))}
-										</List>
-									</ServiceCard>
-								</Grid>
-							))}
-						</Grid>
-					</Box>
-
-					<Box sx={{ my: 8 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4 }}>
-							Lock Brands We Service
-						</SectionTitle>
-						<Typography
-							paragraph
-							sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-							Our experienced locksmiths work with all major lock manufacturers
-							and security brands:
-						</Typography>
-						<Grid
-							container
-							spacing={2}>
-							{lockBrands.map((brand, index) => (
-								<Grid
-									item
-									xs={6}
-									sm={4}
-									md={3}
-									lg={2}
-									key={index}>
-									<BrandCard>
-										<Typography
-											variant="body1"
-											sx={{ fontWeight: 500 }}>
-											{brand}
-										</Typography>
-									</BrandCard>
-								</Grid>
-							))}
-						</Grid>
-					</Box>
-
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
 					<Grid
 						container
 						spacing={6}
-						sx={{ mt: 4 }}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h4">
+								Our Professional Services
+							</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								We provide a wide range of specialized locksmithing for both
+								emergency and planned security needs.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Our techniques focus on non-destructive entry and
+								high-durability hardware selection.
+							</Typography>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Grid
+								container
+								spacing={2}>
+								{locksmithServices.slice(0, 4).map((service, index) => (
+									<Grid
+										size={{ xs: 12, sm: 6 }}
+										key={index}>
+										<ServiceCard sx={{ p: 2.5 }}>
+											<Box
+												sx={{
+													display: "flex",
+													alignItems: "center",
+													mb: 1,
+													gap: 1.5,
+												}}>
+												{React.cloneElement(service.icon, {
+													sx: { fontSize: 24 },
+												})}
+												<Typography
+													variant="subtitle1"
+													sx={{
+														fontWeight: 800,
+														color: JW_BLUE,
+														lineHeight: 1.2,
+													}}>
+													{service.title}
+												</Typography>
+											</Box>
+											<Typography
+												variant="body2"
+												sx={{ color: alpha("#000", 0.6) }}>
+												{service.description}
+											</Typography>
+										</ServiceCard>
+									</Grid>
+								))}
+							</Grid>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_CYAN, 0.05) }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h4">Brands We Trust</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Our experienced locksmiths work with all major lock
+								manufacturers and security brands to ensure the highest
+								standards.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								We carry stock for most common types to allow for immediate
+								replacement.
+							</Typography>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Grid
+								container
+								spacing={1}>
+								{lockBrands.slice(0, 12).map((brand, index) => (
+									<Grid
+										size={{ xs: 4 }}
+										key={index}>
+										<Box
+											sx={{
+												p: 1.5,
+												textAlign: "center",
+												border: `1px solid ${alpha(JW_BLUE, 0.05)}`,
+												borderRadius: "4px",
+												bgcolor: "white",
+												fontSize: "0.8rem",
+												fontWeight: 700,
+												color: JW_BLUE,
+											}}>
+											{brand}
+										</Box>
+									</Grid>
+								))}
+							</Grid>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
+			<Box sx={{ py: 0 }}>
+				<Box
+					sx={{
+						py: 8,
+						backgroundColor: JW_CYAN,
+						textAlign: "center",
+						color: JW_BLUE,
+					}}>
+					<Container>
+						<Typography
+							variant="h4"
+							sx={{ fontWeight: 900, mb: 3 }}>
+							URGENT LOCKSMITH HELP?
+						</Typography>
+						<Typography
+							variant="h6"
+							sx={{ mb: 4, opacity: 0.9 }}>
+							Contact London&apos;s most reliable security team for immediate
+							dispatch.
+						</Typography>
+						<Button
+							variant="contained"
+							size="large"
+							href="tel:02086467931"
+							sx={{
+								"fontWeight": 900,
+								"px": 6,
+								"py": 2,
+								"fontSize": "1.2rem",
+								"bgcolor": JW_BLUE,
+								"color": "white",
+								"&:hover": { bgcolor: "white", color: JW_BLUE },
+							}}>
+							CALL US: 0208 646 7931
+						</Button>
+					</Container>
+				</Box>
+			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 } }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
 								src="/images/jw/locksmith-in-workshop-makes-new-key-use-grinding-engraving-machine.jpg"
@@ -415,80 +474,113 @@ export default function LocksmithServicesPage() {
 									width: "100%",
 									height: "auto",
 									borderRadius: "10px",
-									boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
+									boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
 								}}
 							/>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
-							<SectionTitle variant="h5">
-								Why Choose JW Security Locksmiths?
-							</SectionTitle>
-							<List>
-								{features.map((feature, index) => (
-									<ListItem
-										key={index}
-										sx={{ py: 1 }}>
-										<ListItemIcon>
-											<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-										</ListItemIcon>
-										<ListItemText primary={feature} />
-									</ListItem>
-								))}
-							</List>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h5">Why Choose JW Security?</SectionTitle>
+							<Box
+								sx={{
+									p: 3,
+									bgcolor: alpha(JW_CYAN, 0.05),
+									borderRadius: 3,
+									border: `1px solid ${alpha(JW_CYAN, 0.1)}`,
+								}}>
+								<List>
+									{features.map((feature, index) => (
+										<ListItem
+											key={index}
+											sx={{ py: 0.8 }}>
+											<ListItemIcon sx={{ minWidth: 35 }}>
+												<CheckCircleOutlineIcon
+													sx={{ color: JW_BLUE, fontSize: 20 }}
+												/>
+											</ListItemIcon>
+											<ListItemText
+												primary={feature}
+												primaryTypographyProps={{
+													fontWeight: 500,
+													fontSize: "0.95rem",
+												}}
+											/>
+										</ListItem>
+									))}
+								</List>
+							</Box>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}>
+						<Grid size={{ xs: 12, md: 5 }}>
+							<SectionTitle variant="h4">Common Questions</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Find answers to common concerns about our professional locksmith
+								services.
+							</Typography>
 							<Button
 								variant="contained"
 								size="large"
-								component="a"
 								href="/contact"
 								sx={{
-									"mt": 3,
-									"backgroundColor": JW_CYAN,
-									"&:hover": {
-										backgroundColor: JW_BLUE,
-									},
+									"fontWeight": 900,
+									"px": 4,
+									"py": 1.5,
+									"bgcolor": JW_CYAN,
+									"color": JW_BLUE,
+									"&:hover": { bgcolor: JW_BLUE, color: "white" },
 								}}>
-								Get a Free Locksmith Quote
+								STILL HAVE QUESTIONS?
 							</Button>
 						</Grid>
-					</Grid>
-
-					<Box sx={{ mt: 8 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4 }}>
-							Frequently Asked Questions
-						</SectionTitle>
-						{faqs.map((faq, index) => (
-							<Accordion
-								key={index}
-								sx={{ mb: 2, boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
-								<AccordionSummary
-									expandIcon={<ExpandMoreIcon />}
+						<Grid size={{ xs: 12, md: 7 }}>
+							{faqs.map((faq, index) => (
+								<Accordion
+									key={index}
 									sx={{
-										"backgroundColor": alpha(JW_BLUE, 0.02),
-										"&:hover": {
-											backgroundColor: alpha(JW_CYAN, 0.05),
-										},
+										"mb": 1.5,
+										"boxShadow": "0 2px 8px rgba(0,0,0,0.05)",
+										"borderRadius": "8px !important",
+										"&::before": { display: "none" },
 									}}>
-									<Typography
-										variant="h6"
-										sx={{ fontSize: "1.1rem", fontWeight: 600 }}>
-										{faq.question}
-									</Typography>
-								</AccordionSummary>
-								<AccordionDetails>
-									<Typography sx={{ lineHeight: 1.7, color: "text.secondary" }}>
-										{faq.answer}
-									</Typography>
-								</AccordionDetails>
-							</Accordion>
-						))}
-					</Box>
+									<AccordionSummary
+										expandIcon={<ExpandMoreIcon sx={{ color: JW_CYAN }} />}
+										sx={{
+											"px": 3,
+											"py": 0.5,
+											"&.Mui-expanded": { minHeight: 48 },
+										}}>
+										<Typography
+											variant="subtitle1"
+											sx={{ fontWeight: 700, color: JW_BLUE }}>
+											{faq.question}
+										</Typography>
+									</AccordionSummary>
+									<AccordionDetails sx={{ px: 3, pb: 3 }}>
+										<Typography
+											sx={{
+												lineHeight: 1.7,
+												color: alpha("#000", 0.6),
+												fontSize: "0.95rem",
+											}}>
+											{faq.answer}
+										</Typography>
+									</AccordionDetails>
+								</Accordion>
+							))}
+						</Grid>
+					</Grid>
 				</Container>
 			</Box>
+
 			<ContactSection
 				title="Need a Locksmith?"
 				subtitle="Available 24/7 for emergency services and scheduled appointments"

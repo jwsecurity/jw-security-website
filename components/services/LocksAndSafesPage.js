@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import {
 	Box,
 	Container,
@@ -12,9 +12,17 @@ import {
 	ListItemIcon,
 	ListItemText,
 	Divider,
+	Button,
 } from "@mui/material";
 import PageHero from "../common/PageHero";
 import { styled, alpha } from "@mui/material/styles";
+
+const CTABanner = styled(Box)(({ theme }) => ({
+	backgroundColor: "#00c6d7",
+	padding: theme.spacing(4, 0),
+	textAlign: "center",
+	color: "#1c2e4a",
+}));
 import ContactSection from "../common/ContactSection";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 
@@ -153,11 +161,22 @@ export default function LocksAndSafesPage() {
 				<Container>
 					<Grid
 						container
-						spacing={6}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Box
+								component="img"
+								src="/images/jw/tools-to-repair-in-old-locksmiths-workshop.jpg"
+								alt="Professional lock installation"
+								sx={{
+									width: "100%",
+									height: "auto",
+									borderRadius: "10px",
+									boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+								}}
+							/>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h4">Premium Locks & Safes</SectionTitle>
 							<Typography
 								paragraph
@@ -187,14 +206,209 @@ export default function LocksAndSafesPage() {
 								security hardware.
 							</Typography>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+					</Grid>
+				</Container>
+			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h4">Our Security Products</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								We offer an extensive selection of physical security hardware
+								designed to meet the highest industry standards. Whether
+								you&apos;re upgrading your home&apos;s entry points or securing
+								valuable business assets, we have the right equipment.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Our range includes everything from smart, keyless entry systems
+								to heavy-duty commercial safes that are fire and theft
+								resistant.
+							</Typography>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Grid
+								container
+								spacing={2}>
+								{lockProducts.map((product, index) => (
+									<Grid
+										size={{ xs: 12, sm: 6 }}
+										key={index}>
+										<ProductCard>
+											<CardMedia
+												component="img"
+												height="120"
+												image={product.image}
+												alt={product.title}
+											/>
+											<CardContent sx={{ p: 2 }}>
+												<Typography
+													variant="subtitle2"
+													sx={{
+														fontWeight: 700,
+														color: JW_BLUE,
+														mb: 0.5,
+														lineHeight: 1.2,
+													}}>
+													{product.title}
+												</Typography>
+												<Typography
+													variant="caption"
+													sx={{
+														color: alpha("#000", 0.6),
+														display: "block",
+														lineHeight: 1.3,
+													}}>
+													{product.description}
+												</Typography>
+											</CardContent>
+										</ProductCard>
+									</Grid>
+								))}
+							</Grid>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 } }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/tools-to-repair-in-old-locksmiths-workshop.jpg"
-								alt="Professional lock installation"
+								src="/images/jw/ancient-tools-and-spare-parts-in-old-locksmiths-workshop.jpg"
+								alt="Ancient tools"
+								sx={{
+									width: "100%",
+									height: "auto",
+									borderRadius: "10px",
+									boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
+								}}
+							/>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h4">Types of Locks We Supply</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								We offer every major type of lock used in modern security. From
+								traditional mortice locks for heritage properties to multi-point
+								systems for UPVC and composite doors.
+							</Typography>
+							<Grid
+								container
+								spacing={1}>
+								{lockTypes.map((type, index) => (
+									<Grid
+										size={{ xs: 12, sm: 6 }}
+										key={index}>
+										<LockTypeItem sx={{ p: 1, mb: 1 }}>
+											<CheckCircleOutlineIcon
+												sx={{ color: JW_CYAN, mr: 1, fontSize: 18 }}
+											/>
+											<Typography
+												variant="body2"
+												sx={{ fontWeight: 600, fontSize: "0.85rem" }}>
+												{type}
+											</Typography>
+										</LockTypeItem>
+									</Grid>
+								))}
+							</Grid>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
+			<CTABanner sx={{ py: 8 }}>
+				<Container>
+					<Typography
+						variant="h3"
+						sx={{ fontWeight: 800, mb: 3 }}>
+						SCHEDULE A{" "}
+						<Box
+							component="span"
+							sx={{ color: "white" }}>
+							FREE
+						</Box>{" "}
+						SECURITY QUOTE
+					</Typography>
+					<Typography
+						variant="h6"
+						sx={{ mb: 4, color: "white", opacity: 0.9 }}>
+						Join hundreds of local residents who trust JW Security for their
+						peace of mind.
+					</Typography>
+					<Button
+						variant="contained"
+						size="large"
+						href="/contact"
+						sx={{
+							"fontWeight": 900,
+							"px": 6,
+							"py": 2,
+							"fontSize": "1.1rem",
+							"bgcolor": JW_BLUE,
+							"color": "white",
+							"&:hover": { bgcolor: "white", color: JW_BLUE },
+						}}>
+						CALL US TODAY: 0208 646 7931
+					</Button>
+				</Container>
+			</CTABanner>
+
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_CYAN, 0.05) }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h4">Safe Solutions</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Protect your physical assets with our expert safe selection and
+								installation services.
+							</Typography>
+							<Grid
+								container
+								spacing={1}>
+								{safeTypes.map((type, index) => (
+									<Grid
+										size={{ xs: 12, sm: 6 }}
+										key={index}>
+										<LockTypeItem sx={{ bgcolor: "white", p: 1, mb: 1 }}>
+											<CheckCircleOutlineIcon
+												sx={{ color: JW_BLUE, mr: 1, fontSize: 18 }}
+											/>
+											<Typography
+												variant="body2"
+												sx={{ fontWeight: 600, fontSize: "0.85rem" }}>
+												{type}
+											</Typography>
+										</LockTypeItem>
+									</Grid>
+								))}
+							</Grid>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Box
+								component="img"
+								src="/images/jw/locksmith-man-and-maintenance-handyman-with-home-renovation-and-fixing-change-door-locks-with.jpg"
+								alt="Safe installation"
 								sx={{
 									width: "100%",
 									height: "auto",
@@ -204,180 +418,55 @@ export default function LocksAndSafesPage() {
 							/>
 						</Grid>
 					</Grid>
-
-					<Box sx={{ mt: 8, mb: 6 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4, textAlign: "center" }}>
-							Our Security Products
-						</SectionTitle>
-						<Grid
-							container
-							spacing={4}>
-							{lockProducts.map((product, index) => (
-								<Grid
-									item
-									xs={12}
-									sm={6}
-									key={index}>
-									<ProductCard>
-										<CardMedia
-											component="img"
-											height="200"
-											image={product.image}
-											alt={product.title}
-										/>
-										<CardContent sx={{ flexGrow: 1 }}>
-											<Typography
-												variant="h6"
-												component="h3"
-												sx={{ fontWeight: 600, color: JW_BLUE, mb: 1.5 }}>
-												{product.title}
-											</Typography>
-											<Typography
-												variant="body2"
-												sx={{ color: alpha("#000", 0.7) }}>
-												{product.description}
-											</Typography>
-										</CardContent>
-									</ProductCard>
-								</Grid>
-							))}
-						</Grid>
-					</Box>
-
-					<Box sx={{ my: 8 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4 }}>
-							Types of Locks We Supply
-						</SectionTitle>
-						<Typography
-							paragraph
-							sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-							We offer a comprehensive range of lock types to suit various
-							applications and security requirements:
-						</Typography>
-						<LockTypeList>
-							{lockTypes.map((type, index) => (
-								<LockTypeItem key={index}>
-									<CheckCircleOutlineIcon sx={{ color: JW_CYAN, mr: 1.5 }} />
-									<Typography
-										variant="body1"
-										sx={{ fontWeight: 500 }}>
-										{type}
-									</Typography>
-								</LockTypeItem>
-							))}
-						</LockTypeList>
-					</Box>
-
-					<Divider sx={{ my: 6 }} />
-
-					<Box sx={{ my: 8 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4 }}>
-							Safe Solutions
-						</SectionTitle>
-						<Typography
-							paragraph
-							sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-							Protect your valuables, important documents, and cash with our
-							range of high-quality safes:
-						</Typography>
-						<Grid
-							container
-							spacing={3}>
-							<Grid
-								item
-								xs={12}
-								md={6}>
-								<LockTypeList sx={{ gridTemplateColumns: "1fr" }}>
-									{safeTypes.map((type, index) => (
-										<LockTypeItem key={index}>
-											<CheckCircleOutlineIcon
-												sx={{ color: JW_CYAN, mr: 1.5 }}
-											/>
-											<Typography
-												variant="body1"
-												sx={{ fontWeight: 500 }}>
-												{type}
-											</Typography>
-										</LockTypeItem>
-									))}
-								</LockTypeList>
-							</Grid>
-							<Grid
-								item
-								xs={12}
-								md={6}>
-								<Box
-									component="img"
-									src="/images/jw/ancient-tools-and-spare-parts-in-old-locksmiths-workshop.jpg"
-									alt="Locksmith tools and equipment"
-									sx={{
-										width: "100%",
-										height: "auto",
-										borderRadius: "10px",
-										boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
-									}}
-								/>
-							</Grid>
-						</Grid>
-					</Box>
-
-					<Box sx={{ my: 8 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4 }}>
-							Our Locks & Safes Services
-						</SectionTitle>
-						<Grid
-							container
-							spacing={6}>
-							<Grid
-								item
-								xs={12}
-								md={6}>
-								<List>
-									{services
-										.slice(0, Math.ceil(services.length / 2))
-										.map((service, index) => (
-											<ListItem
-												key={index}
-												sx={{ py: 1 }}>
-												<ListItemIcon>
-													<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-												</ListItemIcon>
-												<ListItemText primary={service} />
-											</ListItem>
-										))}
-								</List>
-							</Grid>
-							<Grid
-								item
-								xs={12}
-								md={6}>
-								<List>
-									{services
-										.slice(Math.ceil(services.length / 2))
-										.map((service, index) => (
-											<ListItem
-												key={index}
-												sx={{ py: 1 }}>
-												<ListItemIcon>
-													<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-												</ListItemIcon>
-												<ListItemText primary={service} />
-											</ListItem>
-										))}
-								</List>
-							</Grid>
-						</Grid>
-					</Box>
 				</Container>
 			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 } }}>
+				<Container>
+					<SectionTitle
+						variant="h4"
+						sx={{ mb: 4 }}>
+						Our Locks & Safes Services
+					</SectionTitle>
+					<Grid
+						container
+						spacing={6}>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<List>
+								{services
+									.slice(0, Math.ceil(services.length / 2))
+									.map((service, index) => (
+										<ListItem
+											key={index}
+											sx={{ py: 1 }}>
+											<ListItemIcon>
+												<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
+											</ListItemIcon>
+											<ListItemText primary={service} />
+										</ListItem>
+									))}
+							</List>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<List>
+								{services
+									.slice(Math.ceil(services.length / 2))
+									.map((service, index) => (
+										<ListItem
+											key={index}
+											sx={{ py: 1 }}>
+											<ListItemIcon>
+												<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
+											</ListItemIcon>
+											<ListItemText primary={service} />
+										</ListItem>
+									))}
+							</List>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
 			<ContactSection
 				title="Need Expert Advice on Locks or Safes?"
 				subtitle="Our security specialists can help you select the right products for your property's specific requirements. Contact us for a personalized consultation."

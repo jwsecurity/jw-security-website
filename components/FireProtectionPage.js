@@ -1,4 +1,5 @@
-﻿"use client";
+"use client";
+import React from "react";
 import {
 	Box,
 	Container,
@@ -199,11 +200,22 @@ export default function FireProtectionPage() {
 				<Container>
 					<Grid
 						container
-						spacing={6}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Box
+								component="img"
+								src="/images/jw/cctv-camera-on-white-ceiling.jpg"
+								alt="Fire safety equipment installation"
+								sx={{
+									width: "100%",
+									height: "auto",
+									borderRadius: "10px",
+									boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+								}}
+							/>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h4">
 								Complete Fire Protection Solutions
 							</SectionTitle>
@@ -221,129 +233,185 @@ export default function FireProtectionPage() {
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
 								From fire door installations and inspections to complete fire
 								alarm systems and emergency lighting, we deliver solutions that
-								protect lives and property. Our services are designed to meet
-								the specific needs of residential buildings, commercial
-								properties, and public facilities.
+								protect lives and property.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
 								All our work is carried out by qualified technicians and
 								complies with British Standards and the Regulatory Reform (Fire
-								Safety) Order 2005. We provide detailed documentation and
-								certification for all installations and inspections.
+								Safety) Order 2005.
 							</Typography>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
-							<Box
-								component="img"
-								src="/images/jw/cctv-camera-on-white-ceiling.jpg"
-								alt="Fire safety equipment installation"
-								sx={{
-									width: "100%",
-									height: "auto",
-									borderRadius: "10px",
-									boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
-								}}
-							/>
-						</Grid>
 					</Grid>
+				</Container>
+			</Box>
 
-					<Box sx={{ mt: 8, mb: 6 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4, textAlign: "center" }}>
-							Our Fire Protection Services
-						</SectionTitle>
-						<Grid
-							container
-							spacing={4}>
-							{fireProtectionServices.map((service, index) => (
-								<Grid
-									item
-									xs={12}
-									md={6}
-									lg={4}
-									key={index}>
-									<ServiceCard>
-										<IconBox>{service.icon}</IconBox>
-										<Typography
-											variant="h5"
-											sx={{ mb: 2, fontWeight: 600, color: JW_BLUE }}>
-											{service.title}
-										</Typography>
-										<Typography
-											paragraph
-											sx={{ mb: 2, color: "text.secondary" }}>
-											{service.description}
-										</Typography>
-										<List dense>
-											{service.details.map((detail, idx) => (
-												<ListItem
-													key={idx}
-													sx={{ py: 0.5, px: 0 }}>
-													<ListItemIcon sx={{ minWidth: 30 }}>
-														<CheckCircleOutlineIcon
-															sx={{ fontSize: 18, color: JW_CYAN }}
-														/>
-													</ListItemIcon>
-													<ListItemText
-														primary={detail}
-														primaryTypographyProps={{
-															fontSize: "0.9rem",
-															color: "text.secondary",
-														}}
-													/>
-												</ListItem>
-											))}
-										</List>
-									</ServiceCard>
-								</Grid>
-							))}
-						</Grid>
-					</Box>
-					<Box sx={{ my: 8 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4 }}>
-							Compliance & Standards
-						</SectionTitle>
-						<Grid
-							container
-							spacing={3}>
-							{complianceStandards.map((standard, index) => (
-								<Grid
-									item
-									xs={12}
-									md={4}
-									key={index}>
-									<ComplianceCard>
-										<Typography
-											variant="h6"
-											sx={{ fontWeight: 600, color: JW_BLUE, mb: 1 }}>
-											{standard.title}
-										</Typography>
-										<Typography
-											variant="body2"
-											sx={{ color: "text.secondary" }}>
-											{standard.description}
-										</Typography>
-									</ComplianceCard>
-								</Grid>
-							))}
-						</Grid>
-					</Box>
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
 					<Grid
 						container
 						spacing={6}
-						sx={{ mt: 4 }}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h4">Professional Fire Safety</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Our services cover the full spectrum of fire prevention and
+								detection requirements for residential and commercial buildings.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
+								We focus on ensuring every installation is certified and every
+								inspection is thorough.
+							</Typography>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Grid
+								container
+								spacing={2}>
+								{fireProtectionServices.slice(0, 4).map((service, index) => (
+									<Grid
+										size={{ xs: 12, sm: 6 }}
+										key={index}>
+										<ServiceCard sx={{ p: 2.5 }}>
+											<Box
+												sx={{
+													display: "flex",
+													alignItems: "center",
+													mb: 1,
+													gap: 1.5,
+												}}>
+												{React.cloneElement(service.icon, {
+													sx: { fontSize: 24 },
+												})}
+												<Typography
+													variant="subtitle1"
+													sx={{
+														fontWeight: 800,
+														color: JW_BLUE,
+														lineHeight: 1.2,
+													}}>
+													{service.title}
+												</Typography>
+											</Box>
+											<Typography
+												variant="body2"
+												sx={{ color: alpha("#000", 0.6) }}>
+												{service.description}
+											</Typography>
+										</ServiceCard>
+									</Grid>
+								))}
+							</Grid>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
+			<Box sx={{ py: 0 }}>
+				<Box
+					sx={{
+						py: 8,
+						backgroundColor: JW_CYAN,
+						textAlign: "center",
+						color: JW_BLUE,
+					}}>
+					<Container>
+						<Typography
+							variant="h4"
+							sx={{ fontWeight: 900, mb: 3 }}>
+							FIRE SAFETY ASSESSMENT?
+						</Typography>
+						<Typography
+							variant="h6"
+							sx={{ mb: 4, opacity: 0.9 }}>
+							Contact London&apos;s most reliable fire protection team today.
+						</Typography>
+						<Button
+							variant="contained"
+							size="large"
+							href="/contact"
+							sx={{
+								"fontWeight": 900,
+								"px": 6,
+								"py": 2,
+								"fontSize": "1.2rem",
+								"bgcolor": JW_BLUE,
+								"color": "white",
+								"&:hover": { bgcolor: "white", color: JW_BLUE },
+							}}>
+							BOOK FREE SURVEY
+						</Button>
+					</Container>
+				</Box>
+			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_CYAN, 0.05) }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Grid
+								container
+								spacing={2}>
+								{complianceStandards.map((standard, index) => (
+									<Grid
+										size={{ xs: 12 }}
+										key={index}>
+										<ComplianceCard sx={{ mb: 0 }}>
+											<Typography
+												variant="h6"
+												sx={{
+													fontWeight: 700,
+													color: JW_BLUE,
+													mb: 1,
+													fontSize: "1rem",
+												}}>
+												{standard.title}
+											</Typography>
+											<Typography
+												variant="body2"
+												sx={{ color: alpha("#000", 0.6) }}>
+												{standard.description}
+											</Typography>
+										</ComplianceCard>
+									</Grid>
+								))}
+							</Grid>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h4">Compliance & Standards</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Safety is not just a priority, it&apos;s a requirement. We
+								ensure every piece of work meets the highest UK safety
+								certifications.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
+								From FD30 doors to addressable alarm systems, our solutions are
+								built to conform to British Standards BS 476, BS 5839, and BS
+								5266.
+							</Typography>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 } }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
 								src="/images/jw/pexels-life-of-pix-8092-scaled.jpg"
@@ -352,73 +420,52 @@ export default function FireProtectionPage() {
 									width: "100%",
 									height: "auto",
 									borderRadius: "10px",
-									boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
+									boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
 								}}
 							/>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
-							<SectionTitle variant="h5">
-								Why Choose JW Security for Fire Protection?
-							</SectionTitle>
-							<List>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText primary="Over 30 years of experience in fire safety" />
-								</ListItem>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText primary="Fully certified and insured technicians" />
-								</ListItem>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText primary="24/7 emergency response available" />
-								</ListItem>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText primary="Comprehensive maintenance contracts" />
-								</ListItem>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText primary="Free site surveys and quotations" />
-								</ListItem>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText primary="Coverage across all of London" />
-								</ListItem>
-							</List>
-							<Button
-								variant="contained"
-								size="large"
-								component="a"
-								href="/contact"
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h5">Why Choose JW Security?</SectionTitle>
+							<Box
 								sx={{
-									"mt": 3,
-									"backgroundColor": JW_CYAN,
-									"&:hover": {
-										backgroundColor: JW_BLUE,
-									},
+									p: 3,
+									bgcolor: alpha(JW_CYAN, 0.05),
+									borderRadius: 3,
+									border: `1px solid ${alpha(JW_CYAN, 0.1)}`,
 								}}>
-								Get a Free Fire Safety Quote
-							</Button>
+								<List>
+									{[
+										"Over 30 years of experience in fire safety",
+										"Fully certified and insured technicians",
+										"24/7 emergency response available",
+										"Comprehensive maintenance contracts",
+										"Free site surveys and quotations",
+										"Coverage across all of London",
+									].map((feature, index) => (
+										<ListItem
+											key={index}
+											sx={{ py: 0.8 }}>
+											<ListItemIcon sx={{ minWidth: 35 }}>
+												<CheckCircleOutlineIcon
+													sx={{ color: JW_BLUE, fontSize: 20 }}
+												/>
+											</ListItemIcon>
+											<ListItemText
+												primary={feature}
+												primaryTypographyProps={{
+													fontWeight: 500,
+													fontSize: "0.95rem",
+												}}
+											/>
+										</ListItem>
+									))}
+								</List>
+							</Box>
 						</Grid>
 					</Grid>
 				</Container>
 			</Box>
+
 			<ContactSection
 				title="Need Fire Protection Services?"
 				subtitle="Contact us today for a free fire safety assessment and quotation"

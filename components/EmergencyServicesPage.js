@@ -1,4 +1,5 @@
-﻿"use client";
+"use client";
+import React from "react";
 import {
 	Box,
 	Container,
@@ -203,72 +204,11 @@ export default function EmergencyServicesPage() {
 			/>
 			<Box sx={{ py: { xs: 5, md: 8 } }}>
 				<Container>
-					<Box sx={{ textAlign: "center", mb: 6 }}>
-						<Typography
-							variant="h3"
-							sx={{ fontWeight: 700, color: JW_BLUE, mb: 3 }}>
-							Need Emergency Help Now?
-						</Typography>
-						<Typography
-							variant="h5"
-							sx={{ mb: 3, color: "text.secondary" }}>
-							Don&apos;t panic - help is just a phone call away
-						</Typography>
-						<EmergencyButton
-							startIcon={<PhoneIcon />}
-							component="a"
-							href="tel:02079460125"
-							size="large">
-							Call Now: 020 7946 0125
-						</EmergencyButton>
-						<Typography
-							variant="body2"
-							sx={{ mt: 2, color: "text.secondary" }}>
-							Average response time: 20-30 minutes across London
-						</Typography>
-					</Box>
-
 					<Grid
 						container
-						spacing={6}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
-							<SectionTitle variant="h4">When Every Second Counts</SectionTitle>
-							<Typography
-								paragraph
-								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Being locked out of your home or discovering your property has
-								been broken into is stressful and frightening. That&apos;s why
-								JW Security maintains a dedicated emergency response team
-								available 24 hours a day, 365 days a year. We understand that
-								security emergencies don&apos;t follow business hours.
-							</Typography>
-							<Typography
-								paragraph
-								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Our emergency locksmiths are strategically positioned across
-								London to ensure rapid response times. Each technician carries a
-								fully-stocked van with tools and parts to resolve most
-								emergencies in a single visit. We specialize in non-destructive
-								entry techniques, saving you the cost and hassle of replacing
-								locks unnecessarily.
-							</Typography>
-							<Typography
-								paragraph
-								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								What truly matters in an emergency is trust. All our emergency
-								technicians are DBS checked, fully insured, and carry
-								identification. We provide upfront pricing with no hidden
-								call-out charges, because the last thing you need during a
-								crisis is a financial surprise.
-							</Typography>
-						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
 							<EmergencyCard>
 								<Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
 									<AccessTimeIcon
@@ -277,12 +217,12 @@ export default function EmergencyServicesPage() {
 									<Box>
 										<Typography
 											variant="h5"
-											sx={{ fontWeight: 600, color: JW_BLUE }}>
-											Response Times by Area
+											sx={{ fontWeight: 800, color: JW_BLUE }}>
+											Area Response
 										</Typography>
 										<Typography
 											variant="body2"
-											sx={{ color: "text.secondary" }}>
+											sx={{ color: alpha("#000", 0.6) }}>
 											Our average arrival times across London
 										</Typography>
 									</Box>
@@ -297,131 +237,233 @@ export default function EmergencyServicesPage() {
 											</ListItemIcon>
 											<ListItemText
 												primary={area}
-												primaryTypographyProps={{ fontWeight: 500 }}
+												primaryTypographyProps={{
+													fontWeight: 500,
+													fontSize: "0.9rem",
+												}}
 											/>
 										</ListItem>
 									))}
 								</List>
+								<EmergencyButton
+									startIcon={<PhoneIcon />}
+									component="a"
+									href="tel:02079460125"
+									fullWidth
+									sx={{ mt: 3, py: 1.5 }}>
+									020 7946 0125
+								</EmergencyButton>
 							</EmergencyCard>
 						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h4">When Every Second Counts</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Being locked out of your home or discovering your property has
+								been broken into is stressful and frightening. JW Security
+								maintains a dedicated emergency team available 24 hours a day,
+								365 days a year.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Our locksmiths are strategically positioned across London. Each
+								technician carries a fully-stocked van to resolve most
+								emergencies in a single visit.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
+								All our technicians are DBS checked and fully insured. We
+								provide upfront pricing with no hidden call-out charges.
+							</Typography>
+						</Grid>
 					</Grid>
-					<Box sx={{ mt: 8, mb: 6 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4, textAlign: "center" }}>
-							Emergency Services We Provide
-						</SectionTitle>
-						<Grid
-							container
-							spacing={4}>
-							{emergencyServices.map((service, index) => (
-								<Grid
-									item
-									xs={12}
-									md={6}
-									key={index}>
-									<ServiceCard>
-										<IconBox>{service.icon}</IconBox>
-										<Typography
-											variant="h5"
-											sx={{ mb: 2, fontWeight: 600, color: JW_BLUE }}>
-											{service.title}
-										</Typography>
-										<Typography
-											paragraph
-											sx={{ mb: 2, color: "text.secondary" }}>
-											{service.description}
-										</Typography>
-										<List dense>
-											{service.features.map((feature, idx) => (
-												<ListItem
-													key={idx}
-													sx={{ py: 0.5, px: 0 }}>
-													<ListItemIcon sx={{ minWidth: 30 }}>
-														<CheckCircleOutlineIcon
-															sx={{ fontSize: 18, color: JW_CYAN }}
-														/>
-													</ListItemIcon>
-													<ListItemText
-														primary={feature}
-														primaryTypographyProps={{ fontSize: "0.9rem" }}
-													/>
-												</ListItem>
-											))}
-										</List>
-									</ServiceCard>
-								</Grid>
-							))}
-						</Grid>
-					</Box>
-					<Box
-						sx={{
-							my: 8,
-							p: 4,
-							backgroundColor: alpha(JW_BLUE, 0.03),
-							borderRadius: 2,
-						}}>
-						<Typography
-							variant="h4"
-							sx={{
-								fontWeight: 600,
-								color: JW_BLUE,
-								mb: 4,
-								textAlign: "center",
-							}}>
-							How Our Emergency Response Works
-						</Typography>
-						<Grid
-							container
-							spacing={3}>
-							{responseProcess.map((item, index) => (
-								<Grid
-									item
-									xs={12}
-									sm={6}
-									md={3}
-									key={index}>
-									<Box sx={{ textAlign: "center" }}>
-										<Box
-											sx={{
-												width: 60,
-												height: 60,
-												borderRadius: "50%",
-												backgroundColor: JW_CYAN,
-												color: "white",
-												display: "flex",
-												alignItems: "center",
-												justifyContent: "center",
-												fontSize: "1.5rem",
-												fontWeight: "bold",
-												margin: "0 auto",
-												mb: 2,
-											}}>
-											{item.step}
-										</Box>
-										<Typography
-											variant="h6"
-											sx={{ fontWeight: 600, mb: 1 }}>
-											{item.title}
-										</Typography>
-										<Typography
-											variant="body2"
-											sx={{ color: "text.secondary" }}>
-											{item.description}
-										</Typography>
-									</Box>
-								</Grid>
-							))}
-						</Grid>
-					</Box>
+				</Container>
+			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
 					<Grid
 						container
 						spacing={6}
-						sx={{ mt: 4 }}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h4">Rapid Response Services</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								We handle all types of residential and commercial emergencies,
+								from lost keys to full burglary restoration.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Our focus is on security restoration and peace of mind for every
+								client.
+							</Typography>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Grid
+								container
+								spacing={2}>
+								{emergencyServices.slice(0, 4).map((service, index) => (
+									<Grid
+										size={{ xs: 12, sm: 6 }}
+										key={index}>
+										<ServiceCard sx={{ p: 2.5 }}>
+											<Box
+												sx={{
+													display: "flex",
+													alignItems: "center",
+													mb: 1,
+													gap: 1.5,
+												}}>
+												{React.cloneElement(service.icon, {
+													sx: { fontSize: 24 },
+												})}
+												<Typography
+													variant="subtitle1"
+													sx={{
+														fontWeight: 800,
+														color: JW_BLUE,
+														lineHeight: 1.2,
+													}}>
+													{service.title}
+												</Typography>
+											</Box>
+											<Typography
+												variant="body2"
+												sx={{ color: alpha("#000", 0.6) }}>
+												{service.description}
+											</Typography>
+										</ServiceCard>
+									</Grid>
+								))}
+							</Grid>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
+			<Box sx={{ py: 0 }}>
+				<Box
+					sx={{
+						py: 8,
+						backgroundColor: JW_CYAN,
+						textAlign: "center",
+						color: JW_BLUE,
+					}}>
+					<Container>
+						<Typography
+							variant="h4"
+							sx={{ fontWeight: 900, mb: 3 }}>
+							LOCKED OUT OR NEED URGENT SECURITY?
+						</Typography>
+						<Typography
+							variant="h6"
+							sx={{ mb: 4, opacity: 0.9 }}>
+							Our rapid response team is standing by to assist you.
+						</Typography>
+						<Button
+							variant="contained"
+							size="large"
+							href="tel:02086467931"
+							sx={{
+								"fontWeight": 900,
+								"px": 6,
+								"py": 2,
+								"fontSize": "1.2rem",
+								"bgcolor": JW_BLUE,
+								"color": "white",
+								"&:hover": { bgcolor: "white", color: JW_BLUE },
+							}}>
+							CALL US: 0208 646 7931
+						</Button>
+					</Container>
+				</Box>
+			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_CYAN, 0.05) }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Grid
+								container
+								spacing={2}>
+								{responseProcess.map((item, index) => (
+									<Grid
+										size={{ xs: 12, sm: 6 }}
+										key={index}>
+										<Box
+											sx={{
+												p: 2.5,
+												bgcolor: "white",
+												borderRadius: 3,
+												boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+												height: "100%",
+											}}>
+											<Box
+												sx={{
+													width: 32,
+													height: 32,
+													borderRadius: "50%",
+													backgroundColor: JW_CYAN,
+													color: JW_BLUE,
+													display: "flex",
+													alignItems: "center",
+													justifyContent: "center",
+													fontSize: "0.9rem",
+													fontWeight: 900,
+													mb: 1.5,
+												}}>
+												{item.step}
+											</Box>
+											<Typography
+												variant="subtitle1"
+												sx={{ fontWeight: 800, color: JW_BLUE, mb: 1 }}>
+												{item.title}
+											</Typography>
+											<Typography
+												variant="body2"
+												sx={{ color: alpha("#000", 0.6) }}>
+												{item.description}
+											</Typography>
+										</Box>
+									</Grid>
+								))}
+							</Grid>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h4">How We Respond</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Our streamlined dispatch system ensures that help arrives at
+								your doorstep with minimal delay.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Simply call our emergency line, and a master technician will be
+								on their way to resolve your security crisis.
+							</Typography>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 } }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
 								src="/images/jw/locksmith-hands-maintenance-and-handyman-with-tools-home-renovation-and-fixing-change-door-locks.jpg"
@@ -430,105 +472,51 @@ export default function EmergencyServicesPage() {
 									width: "100%",
 									height: "auto",
 									borderRadius: "10px",
-									boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
+									boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
 								}}
 							/>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
-							<SectionTitle variant="h5">
-								Why Choose JW Security for Emergencies?
-							</SectionTitle>
-							<List>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText
-										primary="Genuine 24/7 Availability"
-										secondary="Not just an answering service - real technicians ready to help"
-									/>
-								</ListItem>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText
-										primary="No Call-Out Charges"
-										secondary="You only pay for the work completed"
-									/>
-								</ListItem>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText
-										primary="Fixed Price Quotes"
-										secondary="Clear pricing before we start any work"
-									/>
-								</ListItem>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText
-										primary="ID Verified Technicians"
-										secondary="All staff are DBS checked and carry identification"
-									/>
-								</ListItem>
-								<ListItem sx={{ py: 1 }}>
-									<ListItemIcon>
-										<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-									</ListItemIcon>
-									<ListItemText
-										primary="Fully Equipped Vans"
-										secondary="Most emergencies resolved in one visit"
-									/>
-								</ListItem>
-							</List>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h5">Expert Emergency Support</SectionTitle>
+							<Box
+								sx={{
+									p: 3,
+									bgcolor: alpha(JW_CYAN, 0.05),
+									borderRadius: 3,
+									border: `1px solid ${alpha(JW_CYAN, 0.1)}`,
+								}}>
+								<List>
+									{[
+										"Genuine 24/7 National Availability",
+										"No Call-Out Charges",
+										"Upfront fixed-price quotations",
+										"Fully ID Verified Technicians",
+										"DBS Checked Staff & High-Level Training",
+									].map((feature, index) => (
+										<ListItem
+											key={index}
+											sx={{ py: 0.8 }}>
+											<ListItemIcon sx={{ minWidth: 35 }}>
+												<CheckCircleOutlineIcon
+													sx={{ color: JW_BLUE, fontSize: 20 }}
+												/>
+											</ListItemIcon>
+											<ListItemText
+												primary={feature}
+												primaryTypographyProps={{
+													fontWeight: 500,
+													fontSize: "0.95rem",
+												}}
+											/>
+										</ListItem>
+									))}
+								</List>
+							</Box>
 						</Grid>
 					</Grid>
-					<Box
-						sx={{
-							mt: 8,
-							p: 4,
-							backgroundColor: alpha(JW_CYAN, 0.1),
-							borderRadius: 2,
-							textAlign: "center",
-						}}>
-						<SecurityIcon sx={{ fontSize: 60, color: JW_BLUE, mb: 2 }} />
-						<Typography
-							variant="h5"
-							sx={{ fontWeight: 600, color: JW_BLUE, mb: 2 }}>
-							Prevention is Better Than Cure
-						</Typography>
-						<Typography
-							paragraph
-							sx={{ color: "text.secondary", maxWidth: 800, mx: "auto" }}>
-							While we&apos;re always here for emergencies, we also offer
-							security assessments to help prevent them. Consider scheduling a
-							security survey to identify potential vulnerabilities before they
-							become emergencies.
-						</Typography>
-						<Button
-							variant="outlined"
-							component="a"
-							href="/services/security-surveys"
-							sx={{
-								"borderColor": JW_BLUE,
-								"color": JW_BLUE,
-								"&:hover": {
-									borderColor: JW_CYAN,
-									backgroundColor: alpha(JW_CYAN, 0.1),
-								},
-							}}>
-							Learn About Security Surveys
-						</Button>
-					</Box>
 				</Container>
 			</Box>
+
 			<ContactSection
 				title="Emergency? Call Us Now"
 				subtitle="020 7946 0125 - Available 24/7, 365 days a year"

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import {
 	Box,
 	Container,
@@ -10,11 +10,19 @@ import {
 	ListItemIcon,
 	ListItemText,
 	Paper,
+	Button,
 } from "@mui/material";
 import React from "react";
 import PageHero from "../common/PageHero";
 import BuildIcon from "@mui/icons-material/Build";
 import { styled, alpha } from "@mui/material/styles";
+
+const CTABanner = styled(Box)(({ theme }) => ({
+	backgroundColor: "#00c6d7",
+	padding: theme.spacing(4, 0),
+	textAlign: "center",
+	color: "#1c2e4a",
+}));
 import ContactSection from "../common/ContactSection";
 import SecurityIcon from "@mui/icons-material/Security";
 import HandymanIcon from "@mui/icons-material/Handyman";
@@ -169,11 +177,22 @@ export default function UPVCDoorsWindowsPage() {
 				<Container>
 					<Grid
 						container
-						spacing={6}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Box
+								component="img"
+								src="/images/jw/carpenter-installing-door-lock-in-the-new-house-with-a-screwdriver.jpg"
+								alt="UPVC door lock installation"
+								sx={{
+									width: "100%",
+									height: "auto",
+									borderRadius: "10px",
+									boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+								}}
+							/>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h4">
 								UPVC Doors & Windows Specialists
 							</SectionTitle>
@@ -206,206 +225,267 @@ export default function UPVCDoorsWindowsPage() {
 								property.
 							</Typography>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
-							<Box
-								component="img"
-								src="/images/jw/carpenter-installing-door-lock-in-the-new-house-with-a-screwdriver.jpg"
-								alt="UPVC door lock installation"
-								sx={{
-									width: "100%",
-									height: "auto",
-									borderRadius: "10px",
-									boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
-								}}
-							/>
-						</Grid>
 					</Grid>
+				</Container>
+			</Box>
 
-					<Box sx={{ mt: 8, mb: 6 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4, textAlign: "center" }}>
-							Our UPVC Doors & Windows Services
-						</SectionTitle>
-						<Grid
-							container
-							spacing={4}>
-							{services.map((service, index) => (
-								<Grid
-									item
-									xs={12}
-									sm={6}
-									key={index}>
-									<ServiceCard>
-										<Box
-											sx={{
-												display: "flex",
-												flexDirection: "column",
-												alignItems: "center",
-												textAlign: "center",
-												mb: 2,
-											}}>
-											<IconBox>{service.icon}</IconBox>
-											<Typography
-												variant="h6"
-												sx={{ fontWeight: 600, color: JW_BLUE, mb: 2 }}>
-												{service.title}
-											</Typography>
-										</Box>
-										<Typography
-											variant="body1"
-											sx={{ color: alpha("#000", 0.7), textAlign: "center" }}>
-											{service.description}
-										</Typography>
-									</ServiceCard>
-								</Grid>
-							))}
-						</Grid>
-					</Box>
-
-					<Box sx={{ my: 8 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4 }}>
-							Common UPVC Door & Window Problems & Solutions
-						</SectionTitle>
-						{commonProblems.map((item, index) => (
-							<Box
-								key={index}
-								sx={{ mb: 4 }}>
-								<ProblemSolutionCard isProblem={true}>
-									<Typography
-										variant="h6"
-										sx={{ fontWeight: 600, color: "#d32f2f", mb: 1 }}>
-										Problem: {item.problem}
-									</Typography>
-								</ProblemSolutionCard>
-								<ProblemSolutionCard isProblem={false}>
-									<Typography
-										variant="h6"
-										sx={{ fontWeight: 600, color: "#2e7d32", mb: 1 }}>
-										Solution: {item.solution}
-									</Typography>
-								</ProblemSolutionCard>
-							</Box>
-						))}
-					</Box>
-
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
 					<Grid
 						container
 						spacing={6}
-						sx={{ mt: 4 }}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h4">Our Specialized Services</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								We offer targeted solutions for the unique challenges of UPVC
+								security hardware.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Our tools and techniques are specifically designed for
+								high-precision adjustments and repairs on modern multi-point
+								systems.
+							</Typography>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Grid
+								container
+								spacing={2}>
+								{services.map((service, index) => (
+									<Grid
+										size={{ xs: 12, sm: 6 }}
+										key={index}>
+										<ServiceCard sx={{ p: 2.5 }}>
+											<Box
+												sx={{
+													display: "flex",
+													alignItems: "center",
+													mb: 1,
+													gap: 1.5,
+												}}>
+												{React.cloneElement(service.icon, {
+													sx: { fontSize: 24 },
+												})}
+												<Typography
+													variant="subtitle1"
+													sx={{
+														fontWeight: 800,
+														color: JW_BLUE,
+														lineHeight: 1.2,
+													}}>
+													{service.title}
+												</Typography>
+											</Box>
+											<Typography
+												variant="body2"
+												sx={{ color: alpha("#000", 0.6) }}>
+												{service.description}
+											</Typography>
+										</ServiceCard>
+									</Grid>
+								))}
+							</Grid>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
+			<CTABanner sx={{ py: 8 }}>
+				<Container>
+					<Typography
+						variant="h3"
+						sx={{ fontWeight: 800, mb: 3 }}>
+						SCHEDULE A{" "}
+						<Box
+							component="span"
+							sx={{ color: "white" }}>
+							FREE
+						</Box>{" "}
+						SECURITY QUOTE
+					</Typography>
+					<Typography
+						variant="h6"
+						sx={{ mb: 4, color: "white", opacity: 0.9 }}>
+						Join hundreds of local residents who trust JW Security for their
+						peace of mind.
+					</Typography>
+					<Button
+						variant="contained"
+						size="large"
+						href="/contact"
+						sx={{
+							"fontWeight": 900,
+							"px": 6,
+							"py": 2,
+							"fontSize": "1.1rem",
+							"bgcolor": JW_BLUE,
+							"color": "white",
+							"&:hover": { bgcolor: "white", color: JW_BLUE },
+						}}>
+						CALL US TODAY: 0208 646 7931
+					</Button>
+				</Container>
+			</CTABanner>
+
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_CYAN, 0.05) }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h4">Problems & Solutions</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								UPVC mechanisms are prone to specific wear patterns. Here is how
+								we address the most frequent issues.
+							</Typography>
+							<Box sx={{ maxHeight: "400px", overflowY: "auto", pr: 1 }}>
+								{commonProblems.map((item, index) => (
+									<Box
+										key={index}
+										sx={{ mb: 2 }}>
+										<ProblemSolutionCard
+											isProblem={true}
+											sx={{ p: 2, mb: 0.5 }}>
+											<Typography
+												variant="body2"
+												sx={{ fontWeight: 700, color: "#d32f2f" }}>
+												{item.problem}
+											</Typography>
+										</ProblemSolutionCard>
+										<ProblemSolutionCard
+											isProblem={false}
+											sx={{ p: 2 }}>
+											<Typography
+												variant="body2"
+												sx={{ fontWeight: 600, color: "#2e7d32" }}>
+												{item.solution}
+											</Typography>
+										</ProblemSolutionCard>
+									</Box>
+								))}
+							</Box>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/door-technician.jpg"
-								alt="Professional door technician working on UPVC door"
+								src="/images/jw/a-japanese-male-worker-checks-the-locks-on-a-house.jpg"
+								alt="UPVC lock check"
 								sx={{
 									width: "100%",
 									height: "auto",
 									borderRadius: "10px",
-									boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
+									boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
 								}}
 							/>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+					</Grid>
+				</Container>
+			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 } }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h5">
 								Why Choose Our UPVC Services
 							</SectionTitle>
-							<List>
-								{benefits.map((benefit, index) => (
-									<ListItem
-										key={index}
-										sx={{ py: 1 }}>
-										<ListItemIcon>
-											<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-										</ListItemIcon>
-										<ListItemText primary={benefit} />
-									</ListItem>
+							<Box
+								sx={{
+									p: 3,
+									bgcolor: alpha(JW_CYAN, 0.05),
+									borderRadius: 3,
+									border: `1px solid ${alpha(JW_CYAN, 0.1)}`,
+								}}>
+								<List>
+									{benefits.map((benefit, index) => (
+										<ListItem
+											key={index}
+											sx={{ py: 0.8 }}>
+											<ListItemIcon sx={{ minWidth: 35 }}>
+												<CheckCircleOutlineIcon
+													sx={{ color: JW_BLUE, fontSize: 20 }}
+												/>
+											</ListItemIcon>
+											<ListItemText
+												primary={benefit}
+												primaryTypographyProps={{
+													fontWeight: 500,
+													fontSize: "0.95rem",
+												}}
+											/>
+										</ListItem>
+									))}
+								</List>
+							</Box>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h5">Brands We Service</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 3, fontSize: "1rem", lineHeight: 1.6 }}>
+								Our techniques are compatible with all major industry
+								manufacturers and balcony door specialists.
+							</Typography>
+							<Grid
+								container
+								spacing={1}>
+								{[
+									"Yale",
+									"ERA",
+									"Mila",
+									"Avocet",
+									"Fullex",
+									"GU",
+									"KFV",
+									"Lockmaster",
+									"Maco",
+									"Millenco",
+									"Roto",
+									"Winkhaus",
+								].map((brand, index) => (
+									<Grid
+										size={{ xs: 4 }}
+										key={index}>
+										<Box
+											sx={{
+												p: 1,
+												textAlign: "center",
+												border: `1px solid ${alpha(JW_BLUE, 0.05)}`,
+												borderRadius: "4px",
+												bgcolor: "white",
+												fontSize: "0.8rem",
+												fontWeight: 700,
+												color: JW_BLUE,
+											}}>
+											{brand}
+										</Box>
+									</Grid>
 								))}
-							</List>
+							</Grid>
+							<Typography
+								sx={{
+									mt: 2,
+									fontStyle: "italic",
+									color: alpha("#000", 0.5),
+									fontSize: "0.8rem",
+								}}>
+								* And many others. Contact us for any non-listed brands.
+							</Typography>
 						</Grid>
 					</Grid>
-
-					<Box sx={{ mt: 8 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4 }}>
-							UPVC Brands We Service
-						</SectionTitle>
-						<Typography
-							paragraph
-							sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-							Our technicians are experienced with all major UPVC door and
-							window brands and mechanisms, including balcony doors. We work
-							with:
-						</Typography>
-						<Grid
-							container
-							spacing={2}>
-							{[
-								"Yale",
-								"ERA",
-								"Mila",
-								"Avocet",
-								"Fullex",
-								"GU",
-								"KFV",
-								"Lockmaster",
-								"Maco",
-								"Millenco",
-								"Roto",
-								"Safeware",
-								"Schuco",
-								"Siegenia",
-								"Sobinco",
-								"Winkhaus",
-							].map((brand, index) => (
-								<Grid
-									item
-									xs={6}
-									sm={4}
-									md={3}
-									key={index}>
-									<Box
-										sx={{
-											"p": 2,
-											"textAlign": "center",
-											"border": `1px solid ${alpha(JW_BLUE, 0.1)}`,
-											"borderRadius": "6px",
-											"transition": "all 0.2s",
-											"&:hover": {
-												backgroundColor: alpha(JW_CYAN, 0.05),
-												transform: "translateY(-3px)",
-												boxShadow: "0 5px 15px rgba(0,0,0,0.05)",
-											},
-										}}>
-										<Typography
-											variant="body1"
-											sx={{ fontWeight: 500 }}>
-											{brand}
-										</Typography>
-									</Box>
-								</Grid>
-							))}
-						</Grid>
-						<Typography
-							sx={{ mt: 3, fontStyle: "italic", color: alpha("#000", 0.6) }}>
-							* This is not an exhaustive list. If you don&apos;t see your lock
-							brand listed, please contact us - we likely still service it.
-						</Typography>
-					</Box>
 				</Container>
 			</Box>
+
 			<ContactSection
 				title="Having UPVC Door or Window Problems?"
 				subtitle="Contact our specialists for fast diagnosis and repair. We provide emergency services and free quotations for all UPVC door and window lock issues."

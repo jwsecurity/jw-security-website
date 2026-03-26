@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import {
 	Box,
 	Container,
@@ -11,11 +11,19 @@ import {
 	ListItemText,
 	Paper,
 	Chip,
+	Button,
 } from "@mui/material";
 import React from "react";
 import PageHero from "../common/PageHero";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import { styled, alpha } from "@mui/material/styles";
+
+const CTABanner = styled(Box)(({ theme }) => ({
+	backgroundColor: "#00c6d7",
+	padding: theme.spacing(4, 0),
+	textAlign: "center",
+	color: "#1c2e4a",
+}));
 import ContactSection from "../common/ContactSection";
 import ContentCutIcon from "@mui/icons-material/ContentCut";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
@@ -171,11 +179,22 @@ export default function KeyCuttingPage() {
 				<Container>
 					<Grid
 						container
-						spacing={6}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Box
+								component="img"
+								src="/images/jw/locksmith-in-workshop-makes-new-key-use-grinding-engraving-machine.jpg"
+								alt="Key cutting machine in action"
+								sx={{
+									width: "100%",
+									height: "auto",
+									borderRadius: "10px",
+									boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+								}}
+							/>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h4">
 								Professional Mobile Key Cutting
 							</SectionTitle>
@@ -204,144 +223,180 @@ export default function KeyCuttingPage() {
 								property.
 							</Typography>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
-							<Box
-								component="img"
-								src="/images/jw/locksmith-in-workshop-makes-new-key-use-grinding-engraving-machine.jpg"
-								alt="Key cutting machine in action"
-								sx={{
-									width: "100%",
-									height: "auto",
-									borderRadius: "10px",
-									boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
-								}}
-							/>
+					</Grid>
+				</Container>
+			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h4">Our Key Cutting Services</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								We provide a wide array of specialized key cutting solutions
+								on-site. From standard residential locks to advanced
+								high-security systems, our mobile workshops are ready for
+								anything.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Our quick and efficient service ensures that your day remains
+								uninterrupted, with most keys cut accurately in just minutes
+								while you wait.
+							</Typography>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Grid
+								container
+								spacing={2}>
+								{services.map((service, index) => (
+									<Grid
+										size={{ xs: 12, sm: 6 }}
+										key={index}>
+										<ServiceCard sx={{ p: 2.5 }}>
+											<Box
+												sx={{
+													display: "flex",
+													alignItems: "center",
+													mb: 1.5,
+													gap: 1.5,
+												}}>
+												<Box
+													sx={{
+														bgcolor: alpha(JW_CYAN, 0.1),
+														p: 1,
+														borderRadius: "50%",
+														display: "flex",
+													}}>
+													{React.cloneElement(service.icon, {
+														sx: { fontSize: 24 },
+													})}
+												</Box>
+												<Typography
+													variant="subtitle1"
+													sx={{ fontWeight: 600, color: JW_BLUE }}>
+													{service.title}
+												</Typography>
+											</Box>
+											<Typography
+												variant="body2"
+												sx={{ color: alpha("#000", 0.65) }}>
+												{service.description}
+											</Typography>
+										</ServiceCard>
+									</Grid>
+								))}
+							</Grid>
 						</Grid>
 					</Grid>
+				</Container>
+			</Box>
 
-					<Box sx={{ mt: 8, mb: 6 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4, textAlign: "center" }}>
-							Our Key Cutting Services
-						</SectionTitle>
-						<Grid
-							container
-							spacing={4}>
-							{services.map((service, index) => (
-								<Grid
-									item
-									xs={12}
-									sm={6}
-									key={index}>
-									<ServiceCard>
-										<Box
-											sx={{
-												display: "flex",
-												flexDirection: "column",
-												alignItems: "center",
-												textAlign: "center",
-												mb: 2,
-											}}>
-											<IconBox>{service.icon}</IconBox>
-											<Typography
-												variant="h6"
-												sx={{ fontWeight: 600, color: JW_BLUE, mb: 2 }}>
-												{service.title}
-											</Typography>
-										</Box>
-										<Typography
-											variant="body1"
-											sx={{ color: alpha("#000", 0.7), textAlign: "center" }}>
-											{service.description}
-										</Typography>
-									</ServiceCard>
-								</Grid>
-							))}
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_CYAN, 0.05) }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h4">Registered Key System</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Our unique registered key system provides the highest level of
+								key control for your property. Perfect for businesses,
+								landlords, and security-conscious homeowners.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
+								By ensuring that duplication is only available to registered
+								holders, we provide a definitive barrier against unauthorized
+								access and key theft.
+							</Typography>
 						</Grid>
-					</Box>
-
-					<Box
-						sx={{
-							my: 8,
-							backgroundColor: alpha(JW_BLUE, 0.03),
-							p: 5,
-							borderRadius: "15px",
-						}}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4, textAlign: "center" }}>
-							Registered Key System
-						</SectionTitle>
-						<Typography
-							paragraph
-							sx={{
-								textAlign: "center",
-								mb: 4,
-								fontSize: "1.05rem",
-								maxWidth: "800px",
-								mx: "auto",
-							}}>
-							Our unique registered key system provides the highest level of key
-							control for your property. Perfect for businesses, landlords, and
-							security-conscious homeowners.
-						</Typography>
-						<Grid
-							container
-							spacing={3}>
-							{registeredKeyFeatures.map((feature, index) => (
-								<Grid
-									item
-									xs={12}
-									sm={6}
-									md={3}
-									key={index}>
-									<FeatureBox>
-										<Box
-											sx={{
-												display: "flex",
-												flexDirection: "column",
-												alignItems: "center",
-												textAlign: "center",
-											}}>
-											<Box sx={{ color: JW_CYAN, mb: 2 }}>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Grid
+								container
+								spacing={2}>
+								{registeredKeyFeatures.map((feature, index) => (
+									<Grid
+										size={{ xs: 12, sm: 6 }}
+										key={index}>
+										<FeatureBox sx={{ p: 2 }}>
+											<Box sx={{ color: JW_CYAN, mb: 1 }}>
 												{React.cloneElement(feature.icon, {
-													sx: { fontSize: 40 },
+													sx: { fontSize: 32 },
 												})}
 											</Box>
 											<Typography
-												variant="h6"
-												sx={{
-													fontWeight: 600,
-													color: JW_BLUE,
-													mb: 1,
-													fontSize: "1.1rem",
-												}}>
+												variant="subtitle1"
+												sx={{ fontWeight: 700, color: JW_BLUE, mb: 0.5 }}>
 												{feature.title}
 											</Typography>
 											<Typography
 												variant="body2"
-												sx={{ color: alpha("#000", 0.7), fontSize: "0.9rem" }}>
+												sx={{ color: alpha("#000", 0.7), fontSize: "0.85rem" }}>
 												{feature.description}
 											</Typography>
-										</Box>
-									</FeatureBox>
-								</Grid>
-							))}
+										</FeatureBox>
+									</Grid>
+								))}
+							</Grid>
 						</Grid>
-					</Box>
+					</Grid>
+				</Container>
+			</Box>
 
+			<CTABanner sx={{ py: 8 }}>
+				<Container>
+					<Typography
+						variant="h3"
+						sx={{ fontWeight: 800, mb: 3 }}>
+						SCHEDULE A{" "}
+						<Box
+							component="span"
+							sx={{ color: "white" }}>
+							FREE
+						</Box>{" "}
+						SECURITY QUOTE
+					</Typography>
+					<Typography
+						variant="h6"
+						sx={{ mb: 4, color: "white", opacity: 0.9 }}>
+						Join hundreds of local residents who trust JW Security for their
+						peace of mind.
+					</Typography>
+					<Button
+						variant="contained"
+						size="large"
+						href="/contact"
+						sx={{
+							"fontWeight": 900,
+							"px": 6,
+							"py": 2,
+							"fontSize": "1.1rem",
+							"bgcolor": JW_BLUE,
+							"color": "white",
+							"&:hover": { bgcolor: "white", color: JW_BLUE },
+						}}>
+						CALL US TODAY: 0208 646 7931
+					</Button>
+				</Container>
+			</CTABanner>
+
+			<Box sx={{ py: { xs: 5, md: 8 } }}>
+				<Container>
 					<Grid
 						container
-						spacing={6}
-						sx={{ mt: 4 }}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						spacing={6}>
+						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h5">Types of Keys We Cut</SectionTitle>
 							<Grid
 								container
@@ -349,9 +404,7 @@ export default function KeyCuttingPage() {
 								sx={{ mt: 2 }}>
 								{keyTypes.map((keyType, index) => (
 									<Grid
-										item
-										xs={12}
-										sm={6}
+										size={{ xs: 12, sm: 6 }}
 										key={index}>
 										<ListItem sx={{ py: 0.5 }}>
 											<ListItemIcon sx={{ minWidth: "35px" }}>
@@ -368,10 +421,7 @@ export default function KeyCuttingPage() {
 								))}
 							</Grid>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h5">
 								Why Choose Our Mobile Service
 							</SectionTitle>
@@ -389,13 +439,18 @@ export default function KeyCuttingPage() {
 							</List>
 						</Grid>
 					</Grid>
+				</Container>
+			</Box>
 
-					<Box sx={{ mt: 8, textAlign: "center" }}>
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
+					<Box sx={{ textAlign: "center" }}>
 						<Paper
 							sx={{
 								p: 4,
-								backgroundColor: alpha(JW_CYAN, 0.05),
+								backgroundColor: "white",
 								borderRadius: "10px",
+								boxShadow: "0 4px 20px rgba(0,0,0,0.05)",
 							}}>
 							<Typography
 								variant="h5"
@@ -433,9 +488,9 @@ export default function KeyCuttingPage() {
 										key={area}
 										label={area}
 										sx={{
-											backgroundColor: "white",
+											backgroundColor: alpha(JW_BLUE, 0.05),
 											color: JW_BLUE,
-											border: `1px solid ${alpha(JW_BLUE, 0.2)}`,
+											border: `1px solid ${alpha(JW_BLUE, 0.1)}`,
 										}}
 									/>
 								))}
@@ -444,6 +499,7 @@ export default function KeyCuttingPage() {
 					</Box>
 				</Container>
 			</Box>
+
 			<ContactSection
 				title="Need Keys Cut Today?"
 				subtitle="Contact us for fast, professional mobile key cutting service. We come to you with all the equipment needed to cut your keys on-site."

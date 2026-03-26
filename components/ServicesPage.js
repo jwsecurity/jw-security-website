@@ -263,13 +263,11 @@ export default function ServicesPage() {
 
 								<Grid
 									container
-									spacing={3}>
+									spacing={6}
+									alignItems="center">
 									{categoryServices.map((service, index) => (
 										<Grid
-											item
-											xs={12}
-											sm={6}
-											md={category.id === "core" ? 3 : 4}
+											size={{ xs: 12, md: 6 }}
 											key={index}>
 											<ServiceCard>
 												{service.icon && (

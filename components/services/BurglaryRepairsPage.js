@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import {
 	Box,
 	Container,
@@ -9,9 +9,17 @@ import {
 	ListItem,
 	ListItemIcon,
 	ListItemText,
+	Button,
 } from "@mui/material";
 import PageHero from "../common/PageHero";
 import { styled, alpha } from "@mui/material/styles";
+
+const CTABanner = styled(Box)(({ theme }) => ({
+	backgroundColor: "#00c6d7",
+	padding: theme.spacing(4, 0),
+	textAlign: "center",
+	color: "#1c2e4a",
+}));
 import ContactSection from "../common/ContactSection";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 
@@ -92,11 +100,22 @@ export default function BurglaryRepairsPage() {
 				<Container>
 					<Grid
 						container
-						spacing={6}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Box
+								component="img"
+								src="/images/jw/closeup-of-a-professional-locksmith-installing-a-new-lock-on-a-house-exterior-door-with-the-inside.jpg"
+								alt="Burglary repair service"
+								sx={{
+									width: "100%",
+									height: "auto",
+									borderRadius: "10px",
+									boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+								}}
+							/>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h4">
 								Professional Burglary Repair Services
 							</SectionTitle>
@@ -126,130 +145,183 @@ export default function BurglaryRepairsPage() {
 								your property quickly even after hours.
 							</Typography>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
-							<Box
-								component="img"
-								src="/images/jw/closeup-of-a-professional-locksmith-installing-a-new-lock-on-a-house-exterior-door-with-the-inside.jpg"
-								alt="Burglary repair service"
-								sx={{
-									width: "100%",
-									height: "auto",
-									borderRadius: "10px",
-									boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
-								}}
-							/>
-						</Grid>
 					</Grid>
+				</Container>
+			</Box>
 
-					<Box sx={{ mt: 8, mb: 6 }}>
-						<SectionTitle
-							variant="h4"
-							sx={{ mb: 4 }}>
-							Our Burglary Repair Services
-						</SectionTitle>
-						<Grid
-							container
-							spacing={3}>
-							{services.map((service, index) => (
-								<Grid
-									item
-									xs={12}
-									sm={6}
-									key={index}>
-									<FeatureCard>
-										<Typography
-											variant="h6"
-											sx={{ fontWeight: 600, color: JW_BLUE, mb: 2 }}>
-											{service.title}
-										</Typography>
-										<Typography
-											variant="body1"
-											sx={{ color: alpha("#000", 0.7) }}>
-											{service.description}
-										</Typography>
-									</FeatureCard>
-								</Grid>
-							))}
-						</Grid>
-					</Box>
+			<CTABanner sx={{ py: 8 }}>
+				<Container>
+					<Typography
+						variant="h3"
+						sx={{ fontWeight: 800, mb: 3 }}>
+						SCHEDULE A{" "}
+						<Box
+							component="span"
+							sx={{ color: "white" }}>
+							FREE
+						</Box>{" "}
+						SECURITY QUOTE
+					</Typography>
+					<Typography
+						variant="h6"
+						sx={{ mb: 4, color: "white", opacity: 0.9 }}>
+						Join hundreds of local residents who trust JW Security for their
+						peace of mind.
+					</Typography>
+					<Button
+						variant="contained"
+						size="large"
+						href="tel:02086467931"
+						sx={{
+							"fontWeight": 900,
+							"px": 6,
+							"py": 2,
+							"fontSize": "1.1rem",
+							"bgcolor": JW_BLUE,
+							"color": "white",
+							"&:hover": { bgcolor: "white", color: JW_BLUE },
+						}}>
+						CALL US TODAY: 0208 646 7931
+					</Button>
+				</Container>
+			</CTABanner>
 
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
 					<Grid
 						container
 						spacing={6}
-						sx={{ mt: 4 }}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
-							<SectionTitle variant="h5">
-								Benefits of Our Burglary Repair Service
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h4">
+								Our Burglary Repair Services
 							</SectionTitle>
-							<List>
-								{benefits.map((benefit, index) => (
-									<ListItem
-										key={index}
-										sx={{ py: 1 }}>
-										<ListItemIcon>
-											<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-										</ListItemIcon>
-										<ListItemText primary={benefit} />
-									</ListItem>
-								))}
-							</List>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								We offer a complete range of repair services to handle any
+								damage caused by forced entry. Our priority is to restore your
+								property&apos;s physical security while ensuring all repairs
+								meet the highest standards of quality and durability.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Our team is equipped to handle emergency boarding up, structural
+								repairs to door frames, and precision lock installations on the
+								spot.
+							</Typography>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Grid
+								container
+								spacing={2}>
+								{services.map((service, index) => (
+									<Grid
+										size={{ xs: 12, sm: 6 }}
+										key={index}>
+										<FeatureCard sx={{ p: 2.5 }}>
+											<Typography
+												variant="h6"
+												sx={{
+													fontWeight: 600,
+													color: JW_BLUE,
+													mb: 1,
+													fontSize: "1.1rem",
+												}}>
+												{service.title}
+											</Typography>
+											<Typography
+												variant="body2"
+												sx={{ color: alpha("#000", 0.7) }}>
+												{service.description}
+											</Typography>
+										</FeatureCard>
+									</Grid>
+								))}
+							</Grid>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 } }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h5">
 								What to Do After a Break-In
 							</SectionTitle>
 							<Typography
 								paragraph
-								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								If you&apos;ve experienced a break-in, follow these steps:
+								sx={{ fontSize: "1.05rem", lineHeight: 1.7, mb: 3 }}>
+								If you&apos;ve experienced a break-in, follow these critical
+								steps to ensure your safety and protect your environment:
 							</Typography>
-							<List sx={{ pl: 2 }}>
-								<ListItem
-									sx={{ display: "list-item", listStyleType: "decimal" }}>
-									<Typography sx={{ fontSize: "1.05rem" }}>
-										Ensure your safety first - do not enter if you suspect the
-										intruder might still be inside
-									</Typography>
-								</ListItem>
-								<ListItem
-									sx={{ display: "list-item", listStyleType: "decimal" }}>
-									<Typography sx={{ fontSize: "1.05rem" }}>
-										Call the police to report the break-in
-									</Typography>
-								</ListItem>
-								<ListItem
-									sx={{ display: "list-item", listStyleType: "decimal" }}>
-									<Typography sx={{ fontSize: "1.05rem" }}>
-										Contact JW Security at <strong>0208 646 7931</strong> for
-										emergency repairs
-									</Typography>
-								</ListItem>
-								<ListItem
-									sx={{ display: "list-item", listStyleType: "decimal" }}>
-									<Typography sx={{ fontSize: "1.05rem" }}>
-										Document the damage for insurance purposes (take photos)
-									</Typography>
-								</ListItem>
-								<ListItem
-									sx={{ display: "list-item", listStyleType: "decimal" }}>
-									<Typography sx={{ fontSize: "1.05rem" }}>
-										Notify your insurance company about the incident
-									</Typography>
-								</ListItem>
+							<List sx={{ pl: 0 }}>
+								{[
+									"Ensure your safety first - do not enter if you suspect the intruder might still be inside",
+									"Call the police immediately to report the break-in",
+									"Contact JW Security at 0208 646 7931 for emergency securement",
+									"Document the damage with photos for insurance purposes",
+									"Notify your insurance provider about the incident",
+								].map((text, idx) => (
+									<ListItem
+										key={idx}
+										sx={{
+											display: "flex",
+											alignItems: "flex-start",
+											px: 0,
+											py: 0.5,
+										}}>
+										<ListItemIcon sx={{ minWidth: 35, mt: 0.5 }}>
+											<CheckCircleOutlineIcon
+												sx={{ color: JW_CYAN, fontSize: 20 }}
+											/>
+										</ListItemIcon>
+										<ListItemText
+											primary={text}
+											primaryTypographyProps={{ fontSize: "1.05rem" }}
+										/>
+									</ListItem>
+								))}
 							</List>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h5">
+								Benefits of Our Expert Service
+							</SectionTitle>
+							<Box
+								sx={{
+									p: 3,
+									bgcolor: alpha(JW_CYAN, 0.05),
+									borderRadius: 3,
+									border: `1px solid ${alpha(JW_CYAN, 0.1)}`,
+								}}>
+								<List>
+									{benefits.map((benefit, index) => (
+										<ListItem
+											key={index}
+											sx={{ py: 1 }}>
+											<ListItemIcon>
+												<CheckCircleOutlineIcon sx={{ color: JW_BLUE }} />
+											</ListItemIcon>
+											<ListItemText
+												primary={benefit}
+												primaryTypographyProps={{ fontWeight: 500 }}
+											/>
+										</ListItem>
+									))}
+								</List>
+							</Box>
 						</Grid>
 					</Grid>
 				</Container>
 			</Box>
+
 			<ContactSection />
 		</>
 	);
