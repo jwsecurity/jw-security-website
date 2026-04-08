@@ -272,6 +272,7 @@ export default function Footer() {
 							<SocialIconButton
 								size="small"
 								component="a"
+								aria-label="facebook"
 								href="https://www.facebook.com/jwsecurity"
 								target="_blank"
 								rel="noopener noreferrer">
@@ -279,6 +280,7 @@ export default function Footer() {
 							</SocialIconButton>
 							<SocialIconButton
 								size="small"
+								aria-label="twitter"
 								component="a"
 								href="https://www.twitter.com/jwsecurity"
 								target="_blank"
@@ -288,6 +290,7 @@ export default function Footer() {
 							<SocialIconButton
 								size="small"
 								component="a"
+								aria-label="linkedin"
 								href="https://www.linkedin.com/company/jwsecurity"
 								target="_blank"
 								rel="noopener noreferrer">
@@ -296,6 +299,7 @@ export default function Footer() {
 							<SocialIconButton
 								size="small"
 								component="a"
+								aria-label="instagram"
 								href="https://www.instagram.com/jwsecurity"
 								target="_blank"
 								rel="noopener noreferrer">
@@ -437,6 +441,7 @@ export default function Footer() {
 									endAdornment: (
 										<InputAdornment position="end">
 											<IconButton
+												aria-label="submit"
 												type="submit"
 												edge="end"
 												disabled={isSubmitting || !recaptchaToken}

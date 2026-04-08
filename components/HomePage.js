@@ -22,7 +22,6 @@ import {
 	useMediaQuery,
 } from "@mui/material";
 import Link from "next/link";
-import Header from "./Header";
 import { motion } from "framer-motion";
 import KeyIcon from "@mui/icons-material/Key";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -35,6 +34,7 @@ import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
 import { styled, keyframes, alpha, useTheme } from "@mui/material/styles";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import Image from "next/image";
 
 const fadeInUp = keyframes`
   from {
@@ -44,50 +44,6 @@ const fadeInUp = keyframes`
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-`;
-
-const fadeInLeft = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-`;
-
-const fadeInRight = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-`;
-
-const slideIn = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-`;
-
-const slideOut = keyframes`
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(-100px);
   }
 `;
 
@@ -124,14 +80,6 @@ const slideInLeft = keyframes`
 
 const JW_CYAN = "#00c6d7";
 const JW_BLUE = "#1c2e4a";
-
-const AnimatedBox = styled(Box, {
-	shouldForwardProp: (prop) => prop !== "animation" && prop !== "delay",
-})(({ animation, delay }) => ({
-	animation: `${animation || fadeInUp} 1s ease-out forwards`,
-	opacity: 0,
-	animationDelay: delay || "0s",
-}));
 
 const HeroSectionStyled = styled(Box)(({ theme }) => ({
 	position: "relative",
@@ -231,12 +179,6 @@ const HeroContent = styled(Container)(({ theme }) => ({
 		maxWidth: "100%",
 	},
 }));
-
-const HeroLogo = styled("img")({
-	width: "250px",
-	height: "auto",
-	marginBottom: "20px",
-});
 
 const HeroTitle = styled(Typography)(({ theme }) => ({
 	fontFamily: "'Poppins', Arial, sans-serif",
@@ -372,19 +314,6 @@ const StyledButton = styled(Button)(({ theme }) => ({
 	},
 }));
 
-const ClientLogo = styled("img")({
-	"maxWidth": "120px",
-	"maxHeight": "60px",
-	"objectFit": "contain",
-	"filter": "grayscale(100%)",
-	"opacity": 0.7,
-	"transition": "filter 0.3s, opacity 0.3s",
-	"&:hover": {
-		filter: "grayscale(0%)",
-		opacity: 1,
-	},
-});
-
 const TestimonialWrapper = styled(Box)(({ theme }) => ({
 	position: "relative",
 	marginTop: theme.spacing(2),
@@ -452,28 +381,6 @@ const TestimonialDot = styled(Box, {
 	"&:hover": {
 		transform: "scale(1.2)",
 		backgroundColor: active ? JW_CYAN : alpha(JW_CYAN, 0.5),
-	},
-}));
-
-const SectionTitleUnderlined = styled(Typography)(({ theme }) => ({
-	"fontFamily": "'Poppins', Arial, sans-serif",
-	"fontWeight": 700,
-	"marginBottom": theme.spacing(4),
-	"color": "#223555",
-	"position": "relative",
-	"display": "inline-block",
-	"paddingBottom": theme.spacing(1),
-	"textAlign": "center",
-	"letterSpacing": "-0.01em",
-	"&::after": {
-		content: '""',
-		position: "absolute",
-		width: "80px",
-		height: "3px",
-		backgroundColor: JW_CYAN,
-		bottom: 0,
-		left: "50%",
-		transform: "translateX(-50%)",
 	},
 }));
 
@@ -548,13 +455,6 @@ const TestimonialCarousel = React.memo(function TestimonialCarousel({
 	const goToNext = useCallback(() => {
 		setAnimation(slideInRight);
 		setCurrentIndex((prev) => (prev + 1) % testimonialsData.length);
-	}, [testimonialsData.length]);
-
-	const goToPrev = useCallback(() => {
-		setAnimation(slideInLeft);
-		setCurrentIndex((prev) =>
-			prev === 0 ? testimonialsData.length - 1 : prev - 1,
-		);
 	}, [testimonialsData.length]);
 
 	const goToSlide = (index) => {
@@ -712,19 +612,19 @@ export default function HomePage() {
 	const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
 	const clients = [
-		{ name: "Alpha Property", logo: "/images/trusted/Alpha Propery.png" },
-		{ name: "Antony Roberts", logo: "/images/trusted/Antony Roberts.png" },
+		{ name: "Alpha Property", logo: "/images/trusted/Alpha Propery.webp" },
+		{ name: "Antony Roberts", logo: "/images/trusted/Antony Roberts.webp" },
 		{ name: "Garton Jones", logo: "/images/trusted/Garton Jones.webp" },
-		{ name: "EPML", logo: "/images/trusted/EPML.png" },
+		{ name: "EPML", logo: "/images/trusted/EPML.webp" },
 		{
 			name: "Haus Block Management",
-			logo: "/images/trusted/Haus Block Management.png",
+			logo: "/images/trusted/Haus Block Management.webp",
 		},
 		{
 			name: "Hurford Salvi Carr",
-			logo: "/images/trusted/Hurford Salvi Carr.jpg",
+			logo: "/images/trusted/Hurford Salvi Carr.webp",
 		},
-		{ name: "Rampton Baseley", logo: "/images/trusted/Rampton Baseley.png" },
+		{ name: "Rampton Baseley", logo: "/images/trusted/Rampton Baseley.webp" },
 	];
 
 	const testimonialsData = [
@@ -848,82 +748,125 @@ export default function HomePage() {
 
 	return (
 		<>
-			<Header />
 			<HeroSectionStyled>
 				<HeroCollageGrid>
 					<CollageItem>
-						<OptimizedImage
-							src="/images/jw/locksmith.jpg"
+						<Image
+							src="/images/jw/locksmith.webp"
 							alt="Professional locksmith at work"
-							loading="eager"
-							sx={{ width: "100%", height: "100%" }}
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+							width={465}
+							height={310}
+							priority
+							className="w-full h-full object-cover"
 						/>
 					</CollageItem>
 					<CollageItem>
-						<OptimizedImage
-							src="/images/jw/carpentry-plane-tool-for-woodworking-in-workshop.jpg"
+						<Image
+							src="/images/jw/carpentry-plane-tool-for-woodworking-in-workshop.webp"
 							alt="Carpentry tools in workshop"
-							loading="eager"
-							sx={{ width: "100%", height: "100%" }}
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+							width={465}
+							height={310}
+							priority
+							fetchPriority="high"
+							className="w-full h-full object-cover"
 						/>
 					</CollageItem>
 					<CollageItem>
-						<OptimizedImage
-							src="/images/jw/security-camera.jpg"
+						<Image
+							src="/images/jw/security-camera.webp"
 							alt="Security camera installation"
-							loading="eager"
-							sx={{ width: "100%", height: "100%" }}
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+							width={465}
+							height={310}
+							priority
+							fetchPriority="high"
+							className="w-full h-full object-cover"
 						/>
 					</CollageItem>
 					<CollageItem>
-						<OptimizedImage
-							src="/images/jw/pexels-caio-64609-scaled.jpg"
+						<Image
+							src="/images/jw/pexels-caio-64609-scaled.webp"
 							alt="Security professional"
-							sx={{ width: "100%", height: "100%" }}
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+							width={465}
+							height={310}
+							priority
+							fetchPriority="high"
+							className="w-full h-full object-cover"
 						/>
 					</CollageItem>
 					<CollageItem>
-						<OptimizedImage
-							src="/images/jw/hand-saw-on-a-wooden-table-in-carpentry-workshop.jpg"
+						<Image
+							src="/images/jw/hand-saw-on-a-wooden-table-in-carpentry-workshop.webp"
 							alt="Carpentry hand saw tool"
-							sx={{ width: "100%", height: "100%" }}
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+							width={465}
+							height={310}
+							priority
+							fetchPriority="high"
+							className="w-full h-full object-cover"
 						/>
 					</CollageItem>
 					<CollageItem>
-						<OptimizedImage
-							src="/images/jw/cctv-camera-on-white-ceiling.jpg"
+						<Image
+							src="/images/jw/cctv-camera-on-white-ceiling.webp"
 							alt="CCTV security camera"
-							sx={{ width: "100%", height: "100%" }}
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+							width={465}
+							height={310}
+							priority
+							fetchPriority="high"
+							className="w-full h-full object-cover"
 						/>
 					</CollageItem>
 					<CollageItem>
-						<OptimizedImage
-							src="/images/jw/carpenter-installing-door-lock-in-the-new-house-with-a-screwdriver.jpg"
+						<Image
+							src="/images/jw/carpenter-installing-door-lock-in-the-new-house-with-a-screwdriver.webp"
 							alt="Carpenter installing door lock"
-							sx={{ width: "100%", height: "100%" }}
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+							width={465}
+							height={310}
+							priority
+							fetchPriority="high"
+							className="w-full h-full object-cover"
 						/>
 					</CollageItem>
 					<CollageItem>
-						<OptimizedImage
-							src="/images/jw/pexels-life-of-pix-8092-scaled.jpg"
+						<Image
+							src="/images/jw/pexels-life-of-pix-8092-scaled.webp"
 							alt="Professional tools"
-							sx={{ width: "100%", height: "100%" }}
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+							width={465}
+							height={310}
+							priority
+							fetchPriority="high"
+							className="w-full h-full object-cover"
 						/>
 					</CollageItem>
 					<CollageItem>
-						<OptimizedImage
-							src="/images/jw/symmetric-security-cameras.jpg"
+						<Image
+							src="/images/jw/symmetric-security-cameras.webp"
 							alt="Multiple security cameras"
-							sx={{ width: "100%", height: "100%" }}
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+							width={465}
+							height={310}
+							priority
+							fetchPriority="high"
+							className="w-full h-full object-cover"
 						/>
 					</CollageItem>
 				</HeroCollageGrid>
 				<MobileHeroImage>
-					<OptimizedImage
-						src="/images/jw/locksmith.jpg"
+					<Image
+						src="/images/jw/locksmith.webp"
 						alt="Professional locksmith services"
-						loading="eager"
-						sx={{ width: "100%", height: "100%" }}
+						width={722}
+						height={481}
+						priority
+						fetchPriority="high"
+						className="w-full h-full object-cover"
 					/>
 				</MobileHeroImage>
 				<HeroOverlay />
@@ -942,14 +885,13 @@ export default function HomePage() {
 						}}>
 						<motion.div variants={fadeInUpVariants}>
 							<Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
-								<Box
-									component="img"
-									src="/images/jw/jw-logo.png"
+								<Image
+									src="/images/jw/jw-logo.webp"
 									alt="JW Security"
-									sx={{
-										height: { xs: "50px", sm: "60px", md: "70px" },
-										width: "auto",
-									}}
+									width={199}
+									height={70}
+									sizes=""
+									priority
 								/>
 							</Box>
 						</motion.div>
@@ -1092,7 +1034,7 @@ export default function HomePage() {
 								viewport={{ once: true, amount: 0.3 }}
 								variants={fadeInLeftVariants}>
 								<OptimizedImage
-									src="/images/jw/locksmith.jpg"
+									src="/images/jw/locksmith.webp"
 									alt="Locksmith repairing door lock"
 									sx={{
 										width: "100%",
@@ -1203,9 +1145,12 @@ export default function HomePage() {
 									viewport={{ once: true, amount: 0.3 }}
 									variants={fadeInUpVariants}
 									transition={{ delay: index * 0.1 }}>
-									<ClientLogo
+									<Image
 										src={client.logo}
 										alt={client.name}
+										width={100}
+										height={100}
+										sizes=""
 									/>
 								</motion.div>
 							</Grid>
@@ -1313,6 +1258,7 @@ export default function HomePage() {
 										<Box sx={{ mt: "auto" }}>
 											<Link
 												href={item.link}
+												aria-label={`Learn more about ${item.title}`}
 												passHref>
 												<Button
 													component="span"
@@ -1330,7 +1276,7 @@ export default function HomePage() {
 															color: "#0056b3",
 														},
 													}}>
-													Learn more
+													See Details
 												</Button>
 											</Link>
 										</Box>
@@ -1524,7 +1470,7 @@ export default function HomePage() {
 			<Box
 				sx={{
 					"py": { xs: 8, md: 10 },
-					"backgroundImage": `linear-gradient(to right, ${alpha(JW_BLUE, 0.95)}, ${alpha(JW_BLUE, 0.92)}), url(/images/jw/locksmith-maintenance.jpg)`,
+					"backgroundImage": `linear-gradient(to right, ${alpha(JW_BLUE, 0.95)}, ${alpha(JW_BLUE, 0.92)}), url(/images/jw/locksmith-maintenance.webp)`,
 					"backgroundSize": "cover",
 					"backgroundPosition": "center",
 					"backgroundAttachment": "fixed",

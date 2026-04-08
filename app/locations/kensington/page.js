@@ -15,7 +15,7 @@ export default function Kensington() {
 		"@context": "https://schema.org",
 		"@type": "LocalBusiness",
 		"name": "JW Security - Kensington Locksmith & Security Services",
-		"image": "https://jwsecurity.co.uk/images/jw/jw-logo.png",
+		"image": "https://jwsecurity.co.uk/images/jw/jw-logo.webp",
 		"description":
 			"Professional locksmith and security services in Kensington. 24/7 emergency response, high-security locks, CCTV installation, and fire door services for residential and commercial properties.",
 		"@id": "https://jwsecurity.co.uk/locations/kensington",
@@ -84,7 +84,7 @@ export default function Kensington() {
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
 			/>
-			<KensingtonPage />;
+			<KensingtonPage />
 		</>
 	);
 }

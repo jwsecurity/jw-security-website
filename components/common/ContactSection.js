@@ -9,7 +9,7 @@ const JW_CYAN = "#00c6d7";
 
 const ContactSectionWrapper = styled(Box)(({ theme }) => ({
 	"padding": theme.spacing(7, 0),
-	"backgroundImage": `linear-gradient(to right, ${alpha(JW_BLUE, 0.95)}, ${alpha(JW_BLUE, 0.92)}), url(/images/jw/locksmith-maintenance.jpg)`,
+	"backgroundImage": `linear-gradient(to right, ${alpha(JW_BLUE, 0.95)}, ${alpha(JW_BLUE, 0.92)}), url(/images/jw/locksmith-maintenance.webp)`,
 	"backgroundSize": "cover",
 	"backgroundPosition": "center",
 	"backgroundAttachment": "fixed",

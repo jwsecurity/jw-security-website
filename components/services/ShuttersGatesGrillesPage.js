@@ -163,7 +163,7 @@ export default function ShuttersGatesGrillesPage() {
 			<PageHero
 				title="Shutters, Gates & Grilles"
 				subtitle="Custom-designed physical security barriers to protect your property"
-				backgroundImage="/images/jw/symmetric-security-cameras.jpg"
+				backgroundImage="/images/jw/symmetric-security-cameras.webp"
 				minHeight="45vh"
 				centerContent={true}
 			/>
@@ -176,7 +176,7 @@ export default function ShuttersGatesGrillesPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/confident-locksmith-looking-at-camera.jpg"
+								src="/images/jw/confident-locksmith-looking-at-camera.webp"
 								alt="Security installation specialist"
 								sx={{
 									width: "100%",
@@ -323,7 +323,7 @@ export default function ShuttersGatesGrillesPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/symmetric-security-cameras.jpg"
+								src="/images/jw/symmetric-security-cameras.webp"
 								alt="Barrier applications"
 								sx={{
 									width: "100%",

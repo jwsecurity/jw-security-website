@@ -29,7 +29,7 @@ export default function About() {
 		"@type": "LocalBusiness",
 		"name": "JW Security",
 		"alternateName": "1st Call Security",
-		"image": "https://jwsecurity.co.uk/images/jw/jw-logo.png",
+		"image": "https://jwsecurity.co.uk/images/jw/jw-logo.webp",
 		"@id": "https://jwsecurity.co.uk",
 		"url": "https://jwsecurity.co.uk",
 		"telephone": "020 7946 0125",

@@ -15,7 +15,7 @@ const PageHero = styled(Box)(({ theme }) => ({
 	paddingTop: `calc(${theme.spacing(10)} + 90px)`,
 	position: "relative",
 	backgroundImage:
-		"linear-gradient(rgba(28, 46, 74, 0.85), rgba(28, 46, 74, 0.85)), url(/images/jw/locksmith-maintenance.jpg)",
+		"linear-gradient(rgba(28, 46, 74, 0.85), rgba(28, 46, 74, 0.85)), url(/images/jw/locksmith-maintenance.webp)",
 	backgroundSize: "cover",
 	backgroundPosition: "center",
 }));
@@ -153,7 +153,7 @@ export default function AboutPage() {
 							md={6}>
 							<Box
 								component="img"
-								src="/images/jw/locksmith.jpg"
+								src="/images/jw/locksmith.webp"
 								alt="JW Security History"
 								sx={{
 									width: "100%",

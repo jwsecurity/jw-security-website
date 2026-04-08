@@ -34,7 +34,7 @@ export default function CaseStudiesPage() {
 			<PageHero
 				title="Case Studies"
 				subtitle="Before/after results from recent residential and commercial work"
-				backgroundImage="/images/jw/locksmith-maintenance.jpg"
+				backgroundImage="/images/jw/locksmith-maintenance.webp"
 				minHeight="40vh"
 				centerContent
 			/>

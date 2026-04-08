@@ -21,7 +21,7 @@ export default function Mayfair() {
 		"@context": "https://schema.org",
 		"@type": "LocalBusiness",
 		"name": "JW Security - Mayfair Locksmith & Security Services",
-		"image": "https://jwsecurity.co.uk/images/jw/jw-logo.png",
+		"image": "https://jwsecurity.co.uk/images/jw/jw-logo.webp",
 		"description":
 			"Premium locksmith and security services in Mayfair, London. Ultra high-security solutions, luxury retail security, diplomatic-grade installations. Serving Bond Street, Grosvenor Square, and Berkeley Square.",
 		"@id": "https://jwsecurity.co.uk/locations/mayfair",
@@ -90,7 +90,7 @@ export default function Mayfair() {
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
 			/>
-			<MayfairPage />;
+			<MayfairPage />
 		</>
 	);
 }

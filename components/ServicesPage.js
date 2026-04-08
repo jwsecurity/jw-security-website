@@ -213,7 +213,7 @@ export default function ServicesPage() {
 			<PageHero
 				title="Our Services"
 				subtitle="Comprehensive security solutions for residential and commercial properties across London"
-				backgroundImage="/images/jw/locksmith-maintenance.jpg"
+				backgroundImage="/images/jw/locksmith-maintenance.webp"
 				minHeight="45vh"
 				centerContent={true}
 			/>

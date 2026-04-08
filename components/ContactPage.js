@@ -34,7 +34,7 @@ const PageHero = styled(Box)(({ theme }) => ({
 	"display": "flex",
 	"alignItems": "center",
 	"backgroundImage":
-		"linear-gradient(rgba(28, 46, 74, 0.85), rgba(28, 46, 74, 0.85)), url(/images/jw/locksmith-maintenance.jpg)",
+		"linear-gradient(rgba(28, 46, 74, 0.85), rgba(28, 46, 74, 0.85)), url(/images/jw/locksmith-maintenance.webp)",
 	"backgroundSize": "cover",
 	"backgroundPosition": "center",
 	"&::before": {

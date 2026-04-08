@@ -31,7 +31,7 @@ export const metadata = {
 			"Premium security solutions for residential and commercial properties across London and Surrey since 1991.",
 		images: [
 			{
-				url: "https://www.jwsecurity.co.uk/images/jw/locksmith.jpg",
+				url: "https://www.jwsecurity.co.uk/images/jw/locksmith.webp",
 			},
 		],
 	},
@@ -49,7 +49,7 @@ const locksmithSchema = {
 	"@type": "Locksmith",
 	"name": "JW Security",
 	"url": "https://www.jwsecurity.co.uk/",
-	"image": "https://www.jwsecurity.co.uk/images/jw/locksmith.jpg",
+	"image": "https://www.jwsecurity.co.uk/images/jw/locksmith.webp",
 	"telephone": "+44 7860 606151",
 	"description":
 		"Premium security solutions for residential and commercial properties across London and Surrey since 1991.",
@@ -74,7 +74,7 @@ const businessSchema = {
 	"@type": "Locksmith",
 	"name": "JW Security",
 	"url": "https://www.jwsecurity.co.uk/",
-	"image": "https://www.jwsecurity.co.uk/images/jw/locksmith.jpg",
+	"image": "https://www.jwsecurity.co.uk/images/jw/locksmith.webp",
 	"telephone": "+44 7860 606151",
 	"email": "help@jwsecurity.co.uk",
 	"description":
@@ -106,7 +106,7 @@ export default function RootLayout({ children }) {
 		<html
 			lang="en"
 			suppressHydrationWarning>
-			<body className={`${openSans.className} ${poppins.className} lenis`}>
+			<body className={`${openSans.variable} ${poppins.variable} lenis`}>
 				<Script
 					src="https://www.google.com/recaptcha/api.js"
 					strategy="afterInteractive"

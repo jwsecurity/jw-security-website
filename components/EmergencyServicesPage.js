@@ -198,7 +198,7 @@ export default function EmergencyServicesPage() {
 			<PageHero
 				title="24/7 Emergency Services"
 				subtitle="Immediate response when you need us most - Available every hour of every day"
-				backgroundImage="/images/jw/closeup-of-a-professional-locksmith-installing-a-new-lock-on-a-house-exterior-door-with-the-inside.jpg"
+				backgroundImage="/images/jw/closeup-of-a-professional-locksmith-installing-a-new-lock-on-a-house-exterior-door-with-the-inside.webp"
 				minHeight="45vh"
 				centerContent={true}
 			/>
@@ -466,7 +466,7 @@ export default function EmergencyServicesPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/locksmith-hands-maintenance-and-handyman-with-tools-home-renovation-and-fixing-change-door-locks.jpg"
+								src="/images/jw/locksmith-hands-maintenance-and-handyman-with-tools-home-renovation-and-fixing-change-door-locks.webp"
 								alt="Emergency locksmith response"
 								sx={{
 									width: "100%",

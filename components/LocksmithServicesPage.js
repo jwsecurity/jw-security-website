@@ -245,7 +245,7 @@ export default function LocksmithServicesPage() {
 			<PageHero
 				title="Locksmith Services"
 				subtitle="Professional locksmith solutions for homes, businesses, and vehicles across London"
-				backgroundImage="/images/jw/locksmith-maintenance.jpg"
+				backgroundImage="/images/jw/locksmith-maintenance.webp"
 				minHeight="45vh"
 				centerContent={true}
 			/>
@@ -259,7 +259,7 @@ export default function LocksmithServicesPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/confident-locksmith-looking-at-camera.jpg"
+								src="/images/jw/confident-locksmith-looking-at-camera.webp"
 								alt="Professional locksmith at work"
 								sx={{
 									width: "100%",
@@ -468,7 +468,7 @@ export default function LocksmithServicesPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/locksmith-in-workshop-makes-new-key-use-grinding-engraving-machine.jpg"
+								src="/images/jw/locksmith-in-workshop-makes-new-key-use-grinding-engraving-machine.webp"
 								alt="Locksmith workshop"
 								sx={{
 									width: "100%",

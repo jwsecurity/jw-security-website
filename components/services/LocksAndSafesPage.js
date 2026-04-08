@@ -85,27 +85,27 @@ export default function LocksAndSafesPage() {
 			title: "High-Security Door Locks",
 			description:
 				"Advanced locking mechanisms offering exceptional protection against picking, bumping, and other entry methods.",
-			image: "/images/jw/locksmith.jpg",
+			image: "/images/jw/locksmith.webp",
 		},
 		{
 			title: "Digital Smart Locks",
 			description:
 				"Keyless entry systems with PIN codes, fingerprint access, or mobile app control for convenient security.",
-			image: "/images/jw/tools-to-repair-in-old-locksmiths-workshop.jpg",
+			image: "/images/jw/tools-to-repair-in-old-locksmiths-workshop.webp",
 		},
 		{
 			title: "Home Safes",
 			description:
 				"Secure storage for valuables, documents, and other important items with fire and theft protection.",
 			image:
-				"/images/jw/ancient-tools-and-spare-parts-in-old-locksmiths-workshop.jpg",
+				"/images/jw/ancient-tools-and-spare-parts-in-old-locksmiths-workshop.webp",
 		},
 		{
 			title: "Commercial Grade Safes",
 			description:
 				"Heavy-duty safes for businesses with advanced security features and customizable options.",
 			image:
-				"/images/jw/keys-set-on-blue-background-door-lock-keys-and-safes-for-property-security-and-house-protection.jpg",
+				"/images/jw/keys-set-on-blue-background-door-lock-keys-and-safes-for-property-security-and-house-protection.webp",
 		},
 	];
 
@@ -153,7 +153,7 @@ export default function LocksAndSafesPage() {
 			<PageHero
 				title="Locks & Safes"
 				subtitle="High-quality security products from trusted brands, professionally installed"
-				backgroundImage="/images/jw/small-locksmiths-workshop-with-ancient-tools.jpg"
+				backgroundImage="/images/jw/small-locksmiths-workshop-with-ancient-tools.webp"
 				minHeight="45vh"
 				centerContent={true}
 			/>
@@ -166,7 +166,7 @@ export default function LocksAndSafesPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/tools-to-repair-in-old-locksmiths-workshop.jpg"
+								src="/images/jw/tools-to-repair-in-old-locksmiths-workshop.webp"
 								alt="Professional lock installation"
 								sx={{
 									width: "100%",
@@ -288,7 +288,7 @@ export default function LocksAndSafesPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/ancient-tools-and-spare-parts-in-old-locksmiths-workshop.jpg"
+								src="/images/jw/ancient-tools-and-spare-parts-in-old-locksmiths-workshop.webp"
 								alt="Ancient tools"
 								sx={{
 									width: "100%",
@@ -407,7 +407,7 @@ export default function LocksAndSafesPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/locksmith-man-and-maintenance-handyman-with-home-renovation-and-fixing-change-door-locks-with.jpg"
+								src="/images/jw/locksmith-man-and-maintenance-handyman-with-home-renovation-and-fixing-change-door-locks-with.webp"
 								alt="Safe installation"
 								sx={{
 									width: "100%",

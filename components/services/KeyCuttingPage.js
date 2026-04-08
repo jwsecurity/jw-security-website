@@ -171,7 +171,7 @@ export default function KeyCuttingPage() {
 			<PageHero
 				title="Mobile Key Cutting Service"
 				subtitle="Professional on-site key cutting with our fully equipped mobile workshop"
-				backgroundImage="/images/jw/keys-set-on-blue-background-door-lock-keys-and-safes-for-property-security-and-house-protection.jpg"
+				backgroundImage="/images/jw/keys-set-on-blue-background-door-lock-keys-and-safes-for-property-security-and-house-protection.webp"
 				minHeight="45vh"
 				centerContent={true}
 			/>
@@ -184,7 +184,7 @@ export default function KeyCuttingPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/locksmith-in-workshop-makes-new-key-use-grinding-engraving-machine.jpg"
+								src="/images/jw/locksmith-in-workshop-makes-new-key-use-grinding-engraving-machine.webp"
 								alt="Key cutting machine in action"
 								sx={{
 									width: "100%",

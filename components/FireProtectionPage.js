@@ -192,7 +192,7 @@ export default function FireProtectionPage() {
 			<PageHero
 				title="Fire Protection Services"
 				subtitle="Comprehensive fire safety solutions including fire doors, alarms, and emergency systems"
-				backgroundImage="/images/jw/pexels-tima-miroshnichenko-6790761-scaled.jpg"
+				backgroundImage="/images/jw/pexels-tima-miroshnichenko-6790761-scaled.webp"
 				minHeight="45vh"
 				centerContent={true}
 			/>
@@ -205,7 +205,7 @@ export default function FireProtectionPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/cctv-camera-on-white-ceiling.jpg"
+								src="/images/jw/cctv-camera-on-white-ceiling.webp"
 								alt="Fire safety equipment installation"
 								sx={{
 									width: "100%",
@@ -414,7 +414,7 @@ export default function FireProtectionPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/pexels-life-of-pix-8092-scaled.jpg"
+								src="/images/jw/pexels-life-of-pix-8092-scaled.webp"
 								alt="Fire safety inspection"
 								sx={{
 									width: "100%",

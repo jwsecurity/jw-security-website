@@ -72,7 +72,7 @@ export default function ResidentialPage() {
 			<PageHero
 				title="Residential Security"
 				subtitle="Discreet, premium protection for homes and apartments"
-				backgroundImage="/images/jw/locksmith.jpg"
+				backgroundImage="/images/jw/locksmith.webp"
 				minHeight="40vh"
 				centerContent
 			/>

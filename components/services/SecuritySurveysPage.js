@@ -148,7 +148,7 @@ export default function SecuritySurveysPage() {
 			<PageHero
 				title="Full Security Surveys"
 				subtitle="Comprehensive property assessments to identify vulnerabilities and enhance your security"
-				backgroundImage="/images/jw/maintenance-concept-focused-serious-young-locksmith-with-tattoo-on-hand-wearing-blue-uniform.jpg"
+				backgroundImage="/images/jw/maintenance-concept-focused-serious-young-locksmith-with-tattoo-on-hand-wearing-blue-uniform.webp"
 				minHeight="45vh"
 				centerContent={true}
 			/>
@@ -161,7 +161,7 @@ export default function SecuritySurveysPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/security-camera.jpg"
+								src="/images/jw/security-camera.webp"
 								alt="Security survey assessment"
 								sx={{
 									width: "100%",
@@ -340,7 +340,7 @@ export default function SecuritySurveysPage() {
 							</Typography>
 							<Box
 								component="img"
-								src="/images/jw/maintenance-concept-focused-serious-young-locksmith-with-tattoo-on-hand-wearing-blue-uniform.jpg"
+								src="/images/jw/maintenance-concept-focused-serious-young-locksmith-with-tattoo-on-hand-wearing-blue-uniform.webp"
 								alt="Security survey process"
 								sx={{
 									width: "100%",

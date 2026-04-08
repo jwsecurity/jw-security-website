@@ -13,14 +13,14 @@ const PageHero = styled(Box)(({ theme }) => ({
 	paddingTop: `calc(${theme.spacing(10)} + 90px)`,
 	position: "relative",
 	backgroundImage:
-		"linear-gradient(rgba(28, 46, 74, 0.85), rgba(28, 46, 74, 0.85)), url(/images/jw/locksmith-maintenance.jpg)",
+		"linear-gradient(rgba(28, 46, 74, 0.85), rgba(28, 46, 74, 0.85)), url(/images/jw/locksmith-maintenance.webp)",
 	backgroundSize: "cover",
 	backgroundPosition: "center",
 }));
 
 const ContentSection = styled(Box)(({ theme }) => ({
-	padding: theme.spacing(10, 0),
-	backgroundColor: "#ffffff",
+	"padding": theme.spacing(10, 0),
+	"backgroundColor": "#ffffff",
 	"& h2": {
 		color: JW_BLUE,
 		fontWeight: 700,
@@ -74,7 +74,13 @@ export default function LegalPage({ title, subtitle, children }) {
 					<Underline />
 					<Typography
 						variant="h6"
-						sx={{ mt: 3, maxWidth: "700px", fontWeight: 400, color: "white", opacity: 0.9 }}>
+						sx={{
+							mt: 3,
+							maxWidth: "700px",
+							fontWeight: 400,
+							color: "white",
+							opacity: 0.9,
+						}}>
 						{subtitle}
 					</Typography>
 				</Container>

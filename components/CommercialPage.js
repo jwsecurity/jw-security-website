@@ -70,7 +70,7 @@ export default function CommercialPage() {
 			<PageHero
 				title="Commercial Security"
 				subtitle="Trusted by managing agents, schools, estates and NHS"
-				backgroundimage="/images/jw/security-camera.jpg"
+				backgroundimage="/images/jw/security-camera.webp"
 				minHeight="40vh"
 				centerContent
 			/>

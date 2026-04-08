@@ -15,7 +15,7 @@ export default function Chelsea() {
 		"@context": "https://schema.org",
 		"@type": "LocalBusiness",
 		"name": "JW Security - Chelsea Locksmith & Security Services",
-		"image": "https://jwsecurity.co.uk/images/jw/jw-logo.png",
+		"image": "https://jwsecurity.co.uk/images/jw/jw-logo.webp",
 		"description":
 			"Expert locksmith and security services in Chelsea, London. 24/7 emergency response, luxury property security, period property specialists. Serving Kings Road, Sloane Square, and Chelsea Harbour.",
 		"@id": "https://jwsecurity.co.uk/locations/chelsea",
@@ -86,7 +86,7 @@ export default function Chelsea() {
 					__html: JSON.stringify(jsonLd),
 				}}
 			/>
-			<ChelseaPage />;
+			<ChelseaPage />
 		</>
 	);
 }

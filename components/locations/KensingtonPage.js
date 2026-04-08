@@ -110,7 +110,7 @@ export default function KensingtonPage() {
 			<PageHero
 				title="Locksmith & Security Services in Kensington"
 				subtitle="Trusted local security experts serving Royal Borough residents and businesses since 1991"
-				backgroundImage="/images/jw/pexels-burst-374861.jpg"
+				backgroundImage="/images/jw/pexels-burst-374861.webp"
 				minHeight="45vh"
 				centerContent={true}
 			/>
@@ -125,7 +125,7 @@ export default function KensingtonPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/confident-locksmith-looking-at-camera.jpg"
+								src="/images/jw/confident-locksmith-looking-at-camera.webp"
 								alt="Kensington Security Experts"
 								sx={{
 									width: "100%",
@@ -318,7 +318,7 @@ export default function KensingtonPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/locksmith-hands-maintenance-and-handyman-with-tools-home-renovation-and-fixing-change-door-locks.jpg"
+								src="/images/jw/locksmith-hands-maintenance-and-handyman-with-tools-home-renovation-and-fixing-change-door-locks.webp"
 								alt="Specialized Security"
 								sx={{
 									width: "100%",
@@ -338,7 +338,7 @@ export default function KensingtonPage() {
 					py: 12,
 					position: "relative",
 					backgroundImage:
-						'linear-gradient(rgba(28, 46, 74, 0.85), rgba(28, 46, 74, 0.85)), url("/images/jw/pexels-burst-374861.jpg")',
+						'linear-gradient(rgba(28, 46, 74, 0.85), rgba(28, 46, 74, 0.85)), url("/images/jw/pexels-burst-374861.webp")',
 					backgroundSize: "cover",
 					backgroundPosition: "center",
 					backgroundAttachment: "fixed",
@@ -386,7 +386,7 @@ export default function KensingtonPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/a-locksmith-is-repairing-an-interior-door-lock-close-up-of-male-hands-repairing-or-replacing-an.jpg"
+								src="/images/jw/a-locksmith-is-repairing-an-interior-door-lock-close-up-of-male-hands-repairing-or-replacing-an.webp"
 								alt="Residential Security"
 								sx={{
 									width: "100%",
@@ -462,7 +462,7 @@ export default function KensingtonPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/cctv-camera-on-white-ceiling.jpg"
+								src="/images/jw/cctv-camera-on-white-ceiling.webp"
 								alt="Commercial Security"
 								sx={{
 									width: "100%",

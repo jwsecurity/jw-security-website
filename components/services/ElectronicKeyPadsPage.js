@@ -172,7 +172,7 @@ export default function ElectronicKeyPadsPage() {
 			<PageHero
 				title="Electronic Key Pads"
 				subtitle="Modern keyless entry solutions for convenient and enhanced access control"
-				backgroundImage="/images/jw/home-ip-video-surveillance-concept.jpg"
+				backgroundImage="/images/jw/home-ip-video-surveillance-concept.webp"
 				minHeight="45vh"
 				centerContent={true}
 			/>
@@ -185,7 +185,7 @@ export default function ElectronicKeyPadsPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/cctv-camera-on-white-ceiling.jpg"
+								src="/images/jw/cctv-camera-on-white-ceiling.webp"
 								alt="Modern electronic security system"
 								sx={{
 									width: "100%",
@@ -313,7 +313,7 @@ export default function ElectronicKeyPadsPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/home-ip-video-surveillance-concept.jpg"
+								src="/images/jw/home-ip-video-surveillance-concept.webp"
 								alt="Smart keypad security"
 								sx={{
 									width: "100%",
@@ -408,7 +408,7 @@ export default function ElectronicKeyPadsPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/locksmith-in-workshop-makes-new-key-use-grinding-engraving-machine-1.jpg"
+								src="/images/jw/locksmith-in-workshop-makes-new-key-use-grinding-engraving-machine-1.webp"
 								alt="Locksmith workshop professional"
 								sx={{
 									width: "100%",

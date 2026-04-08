@@ -9,7 +9,7 @@ export default function HowToChooseSecureDoorLock() {
 			<PageHero
 				title="How to choose a secure door lock"
 				subtitle="Understanding lock grades, cylinders and standards"
-				backgroundImage="/images/jw/locksmith.jpg"
+				backgroundImage="/images/jw/locksmith.webp"
 				minHeight="35vh"
 				centerContent
 			/>

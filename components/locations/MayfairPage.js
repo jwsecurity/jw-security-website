@@ -99,7 +99,7 @@ export default function MayfairPage() {
 			<PageHero
 				title="Elite Security Services in Mayfair"
 				subtitle="Protecting London's most prestigious district with uncompromising security solutions"
-				backgroundImage="/images/jw/pexels-kseniachernaya-5768107-scaled.jpg"
+				backgroundImage="/images/jw/pexels-kseniachernaya-5768107-scaled.webp"
 				minHeight="45vh"
 				centerContent={true}
 			/>
@@ -112,7 +112,7 @@ export default function MayfairPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/pexels-kseniachernaya-5768107-scaled.jpg"
+								src="/images/jw/pexels-kseniachernaya-5768107-scaled.webp"
 								alt="Mayfair Security Experts"
 								sx={{
 									width: "100%",
@@ -299,7 +299,7 @@ export default function MayfairPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/a-japanese-male-worker-checks-the-locks-on-a-house.jpg"
+								src="/images/jw/a-japanese-male-worker-checks-the-locks-on-a-house.webp"
 								alt="Specialized Security"
 								sx={{
 									width: "100%",
@@ -317,7 +317,7 @@ export default function MayfairPage() {
 					py: 12,
 					position: "relative",
 					backgroundImage:
-						'linear-gradient(rgba(28, 46, 74, 0.85), rgba(28, 46, 74, 0.85)), url("/images/jw/ancient-tools-and-spare-parts-in-old-locksmiths-workshop.jpg")',
+						'linear-gradient(rgba(28, 46, 74, 0.85), rgba(28, 46, 74, 0.85)), url("/images/jw/ancient-tools-and-spare-parts-in-old-locksmiths-workshop.webp")',
 					backgroundSize: "cover",
 					backgroundPosition: "center",
 					backgroundAttachment: "fixed",
@@ -363,7 +363,7 @@ export default function MayfairPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/locksmith-hands-maintenance-and-handyman-with-tools-home-renovation-and-fixing-change-door-locks.jpg"
+								src="/images/jw/locksmith-hands-maintenance-and-handyman-with-tools-home-renovation-and-fixing-change-door-locks.webp"
 								alt="Residential Security"
 								sx={{
 									width: "100%",
@@ -435,7 +435,7 @@ export default function MayfairPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/security-equipment.jpg"
+								src="/images/jw/security-equipment.webp"
 								alt="Commercial Security"
 								sx={{
 									width: "100%",

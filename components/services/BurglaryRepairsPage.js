@@ -92,7 +92,7 @@ export default function BurglaryRepairsPage() {
 			<PageHero
 				title="Burglary Repairs"
 				subtitle="Prompt and reliable repairs to secure your property after a break-in"
-				backgroundImage="/images/jw/locksmith-man-and-maintenance-handyman-with-home-renovation-and-fixing-change-door-locks-with.jpg"
+				backgroundImage="/images/jw/locksmith-man-and-maintenance-handyman-with-home-renovation-and-fixing-change-door-locks-with.webp"
 				minHeight="45vh"
 				centerContent={true}
 			/>
@@ -105,7 +105,7 @@ export default function BurglaryRepairsPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/closeup-of-a-professional-locksmith-installing-a-new-lock-on-a-house-exterior-door-with-the-inside.jpg"
+								src="/images/jw/closeup-of-a-professional-locksmith-installing-a-new-lock-on-a-house-exterior-door-with-the-inside.webp"
 								alt="Burglary repair service"
 								sx={{
 									width: "100%",

@@ -203,7 +203,7 @@ export default function CarpentrySolutionsPage() {
 			<PageHero
 				title="Carpentry Solutions"
 				subtitle="Professional carpentry and joinery services for residential and commercial properties"
-				backgroundImage="/images/jw/carpentry-plane-tool-for-woodworking-in-workshop.jpg"
+				backgroundImage="/images/jw/carpentry-plane-tool-for-woodworking-in-workshop.webp"
 				minHeight="45vh"
 				centerContent={true}
 			/>
@@ -258,7 +258,7 @@ export default function CarpentrySolutionsPage() {
 							md={6}>
 							<Box
 								component="img"
-								src="/images/jw/hand-saw-on-a-wooden-table-in-carpentry-workshop.jpg"
+								src="/images/jw/hand-saw-on-a-wooden-table-in-carpentry-workshop.webp"
 								alt="Professional carpentry workshop"
 								sx={{
 									width: "100%",

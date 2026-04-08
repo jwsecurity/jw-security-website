@@ -226,7 +226,7 @@ export default function SecuritySystemsPage() {
 			<PageHero
 				title="Security Systems"
 				subtitle="Advanced security technology to protect what matters most"
-				backgroundImage="/images/jw/security-camera.jpg"
+				backgroundImage="/images/jw/security-camera.webp"
 				minHeight="45vh"
 				centerContent={true}
 			/>
@@ -239,7 +239,7 @@ export default function SecuritySystemsPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/surveillance-cam-cctv-system-isolated-on-white-background-3d-illustration.jpg"
+								src="/images/jw/surveillance-cam-cctv-system-isolated-on-white-background-3d-illustration.webp"
 								alt="Modern security system"
 								sx={{
 									width: "100%",
@@ -446,7 +446,7 @@ export default function SecuritySystemsPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/home-ip-video-surveillance-concept.jpg"
+								src="/images/jw/home-ip-video-surveillance-concept.webp"
 								alt="Security monitoring"
 								sx={{
 									width: "100%",

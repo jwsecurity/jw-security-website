@@ -27,7 +27,7 @@ export default function BlogPage() {
 			<PageHero
 				title="Blog & Tips"
 				subtitle="Practical security advice and answers to common questions"
-				backgroundImage="/images/jw/locksmith.jpg"
+				backgroundImage="/images/jw/locksmith.webp"
 				minHeight="40vh"
 				centerContent
 			/>

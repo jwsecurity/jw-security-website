@@ -169,7 +169,7 @@ export default function UPVCDoorsWindowsPage() {
 			<PageHero
 				title="UPVC Doors & Windows"
 				subtitle="Specialist repair and replacement services for UPVC door locks and window mechanisms"
-				backgroundImage="/images/jw/a-japanese-male-worker-checks-the-locks-on-a-house.jpg"
+				backgroundImage="/images/jw/a-japanese-male-worker-checks-the-locks-on-a-house.webp"
 				minHeight="45vh"
 				centerContent={true}
 			/>
@@ -182,7 +182,7 @@ export default function UPVCDoorsWindowsPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/carpenter-installing-door-lock-in-the-new-house-with-a-screwdriver.jpg"
+								src="/images/jw/carpenter-installing-door-lock-in-the-new-house-with-a-screwdriver.webp"
 								alt="UPVC door lock installation"
 								sx={{
 									width: "100%",
@@ -375,7 +375,7 @@ export default function UPVCDoorsWindowsPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/a-japanese-male-worker-checks-the-locks-on-a-house.jpg"
+								src="/images/jw/a-japanese-male-worker-checks-the-locks-on-a-house.webp"
 								alt="UPVC lock check"
 								sx={{
 									width: "100%",

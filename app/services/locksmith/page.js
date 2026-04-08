@@ -18,7 +18,7 @@ export default function Locksmith() {
 		"provider": {
 			"@type": "LocalBusiness",
 			"name": "JW Security",
-			"image": "https://jwsecurity.co.uk/images/jw/jw-logo.png",
+			"image": "https://jwsecurity.co.uk/images/jw/jw-logo.webp",
 			"telephone": "020 7946 0125",
 			"address": {
 				"@type": "PostalAddress",
@@ -50,7 +50,7 @@ export default function Locksmith() {
 					__html: JSON.stringify(jsonLd),
 				}}
 			/>
-			<LocksmithServicesPage />;
+			<LocksmithServicesPage />
 		</>
 	);
 }

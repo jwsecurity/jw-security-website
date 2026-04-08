@@ -1,6 +1,7 @@
 "use client";
 import { styled } from "@mui/material/styles";
 import { Box, CircularProgress } from "@mui/material";
+import Image from "next/image";
 
 const LoadingContainer = styled(Box)(() => ({
 	display: "flex",
@@ -27,11 +28,12 @@ export default function Loading() {
 	return (
 		<LoadingContainer>
 			<LogoContainer>
-				<Box
-					component="img"
-					src="/images/jw/jw-logo.png"
+				<Image
+					src="/images/jw/jw-logo.webp"
 					alt="JW Security"
-					sx={{ height: 60 }}
+					width={199}
+					height={70}
+					priority
 				/>
 			</LogoContainer>
 			<CircularProgress

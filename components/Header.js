@@ -22,6 +22,7 @@ import {
 	ClickAwayListener,
 } from "@mui/material";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import LockIcon from "@mui/icons-material/Lock";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -218,7 +219,12 @@ export default function Header() {
 			description:
 				"Professional door and window security solutions for high-end properties",
 			link: "/services/locksmith",
-			subPaths: ["/services/burglary-repairs", "/services/key-cutting", "/services/locks-and-safes", "/services/upvc-door-locks"]
+			subPaths: [
+				"/services/burglary-repairs",
+				"/services/key-cutting",
+				"/services/locks-and-safes",
+				"/services/upvc-door-locks",
+			],
 		},
 		{
 			title: "Security Systems",
@@ -226,20 +232,28 @@ export default function Header() {
 			description:
 				"Modern security installations with premium materials and attention to detail",
 			link: "/services/security",
-			subPaths: ["/services/electronic-key-pads", "/services/security-surveys", "/services/shutters-gates-grilles"]
+			subPaths: [
+				"/services/electronic-key-pads",
+				"/services/security-surveys",
+				"/services/shutters-gates-grilles",
+			],
 		},
 		{
 			title: "Emergency Services",
 			icon: <ShieldIcon sx={{ color: JW_CYAN, fontSize: 28 }} />,
 			description: "24/7 rapid response from our team of expert technicians",
 			link: "/services/emergency",
-			subPaths: ["/services/emergency-door-opening"]
+			subPaths: ["/services/emergency-door-opening"],
 		},
 	];
 
 	const isServiceActive = (service) => {
 		if (isPathActive(service.link)) return true;
-		if (service.subPaths && service.subPaths.some(path => pathname.startsWith(path))) return true;
+		if (
+			service.subPaths &&
+			service.subPaths.some((path) => pathname.startsWith(path))
+		)
+			return true;
 		return false;
 	};
 
@@ -296,16 +310,13 @@ export default function Header() {
 									[theme.breakpoints.down("md")]: { mr: 2 },
 									"&:hover": { opacity: 0.9 },
 								}}>
-								<Box
-									component="img"
-									src="/images/jw/jw-logo.png"
+								<Image
+									src="/images/jw/jw-logo.webp"
 									alt="JW Security"
-									sx={{
-										height: 60,
-										[theme.breakpoints.down("md")]: {
-											height: 32,
-										},
-									}}
+									width={170}
+									height={60}
+									priority
+									fetchPriority="high"
 								/>
 							</Box>
 						</Link>
@@ -395,7 +406,18 @@ export default function Header() {
 																				component="span"
 																				onClick={handleMegaMenuClose}
 																				role="menuitem"
-																				sx={isServiceActive(service) ? { backgroundColor: alpha(JW_CYAN, 0.15), color: "white", borderLeft: `3px solid ${JW_CYAN}` } : {}}>
+																				sx={
+																					isServiceActive(service)
+																						? {
+																								backgroundColor: alpha(
+																									JW_CYAN,
+																									0.15,
+																								),
+																								color: "white",
+																								borderLeft: `3px solid ${JW_CYAN}`,
+																							}
+																						: {}
+																				}>
 																				{service.icon}
 																				{service.title}
 																			</HighlightedMenuItem>
@@ -409,7 +431,18 @@ export default function Header() {
 																				component="span"
 																				onClick={handleMegaMenuClose}
 																				role="menuitem"
-																				sx={isServiceActive(service) ? { backgroundColor: alpha(JW_CYAN, 0.15), color: "white", borderLeft: `3px solid ${JW_CYAN}` } : {}}>
+																				sx={
+																					isServiceActive(service)
+																						? {
+																								backgroundColor: alpha(
+																									JW_CYAN,
+																									0.15,
+																								),
+																								color: "white",
+																								borderLeft: `3px solid ${JW_CYAN}`,
+																							}
+																						: {}
+																				}>
 																				{service.icon}
 																				{service.title}
 																			</MegaMenuItem>
@@ -582,11 +615,13 @@ export default function Header() {
 							mb: 3,
 						}}>
 						<Box sx={{ display: "flex", alignItems: "center" }}>
-							<Box
-								component="img"
-								src="/images/jw/jw-logo.png"
+							<Image
+								src="/images/jw/jw-logo.webp"
 								alt="JW Security"
-								sx={{ height: 32 }}
+								width={170}
+								height={60}
+								priority
+								fetchPriority="high"
 							/>
 						</Box>
 						<IconButton
@@ -859,17 +894,13 @@ export default function Header() {
 							boxShadow: "0 6px 25px rgba(37, 211, 102, 0.6)",
 						},
 					}}>
-					<Box
-						component="img"
-						src="/images/jw/whatsapp-icon-design.png"
+					<Image
+						src="/images/jw/whatsapp-icon-design.webp"
 						alt="WhatsApp"
-						sx={{
-							width: "45px",
-							height: "auto",
-							objectFit: "contain",
-							mr: 1.5,
-							filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.1))",
-						}}
+						width={45}
+						height={44}
+						priority
+						className="object-contain mr-3! drop-shadow-2xl"
 					/>
 					<Typography
 						sx={{

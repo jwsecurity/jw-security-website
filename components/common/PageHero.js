@@ -10,7 +10,7 @@ const HeroWrapper = styled(Box)(
 	({
 		theme,
 		minHeight = "65vh",
-		backgroundImage = "/images/jw/locksmith-maintenance.jpg",
+		backgroundImage = "/images/jw/locksmith-maintenance.webp",
 	}) => ({
 		position: "relative",
 		backgroundColor: JW_BLUE,
@@ -56,7 +56,7 @@ const DecorativeLine = styled(Box)(({ theme }) => ({
 export default function PageHero({
 	title,
 	subtitle,
-	backgroundimage = "/images/jw/locksmith-maintenance.jpg",
+	backgroundimage = "/images/jw/locksmith-maintenance.webp",
 	minHeight = "65vh",
 	centerContent = false,
 	ctaButton = true,

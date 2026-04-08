@@ -92,7 +92,7 @@ export default function EmergencyDoorOpeningPage() {
 			<PageHero
 				title="Emergency Door Opening"
 				subtitle="Fast, professional assistance when you're locked out of your home or business"
-				backgroundImage="/images/jw/locksmith-in-installing-new-house-door-lock-hand-holds-the-screwdriver.jpg"
+				backgroundImage="/images/jw/locksmith-in-installing-new-house-door-lock-hand-holds-the-screwdriver.webp"
 				minHeight="45vh"
 				centerContent={true}
 			/>
@@ -105,7 +105,7 @@ export default function EmergencyDoorOpeningPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
-								src="/images/jw/a-locksmith-is-repairing-an-interior-door-lock-close-up-of-male-hands-repairing-or-replacing-an.jpg"
+								src="/images/jw/a-locksmith-is-repairing-an-interior-door-lock-close-up-of-male-hands-repairing-or-replacing-an.webp"
 								alt="Emergency door opening service"
 								sx={{
 									width: "100%",

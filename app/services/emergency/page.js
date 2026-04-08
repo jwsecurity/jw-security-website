@@ -67,7 +67,7 @@ export default function Emergency() {
 					__html: JSON.stringify(jsonLd),
 				}}
 			/>
-			<EmergencyServicesPage />;
+			<EmergencyServicesPage />
 		</>
 	);
 }
