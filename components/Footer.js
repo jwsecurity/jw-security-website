@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import Link from "next/link";
-import LockIcon from "@mui/icons-material/Lock";
+import Image from "next/image";
 import SendIcon from "@mui/icons-material/Send";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
@@ -232,30 +232,14 @@ export default function Footer() {
 						xs={12}
 						md={4}>
 						<Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
-							<Box
-								sx={{
-									width: 50,
-									height: 50,
-									borderRadius: "50%",
-									display: "flex",
-									alignItems: "center",
-									justifyContent: "center",
-									backgroundColor: alpha("#fff", 0.1),
-									border: `1px solid ${alpha("#fff", 0.15)}`,
-									mr: 2,
-								}}>
-								<LockIcon sx={{ color: JW_CYAN, fontSize: 28 }} />
-							</Box>
-							<Typography
-								variant="h5"
-								sx={{
-									fontFamily: "'Poppins', Arial, sans-serif",
-									color: "white",
-									fontWeight: 700,
-									letterSpacing: 0.5,
-								}}>
-								JW Security
-							</Typography>
+							<Image
+								src="/images/jw/jw-logo.webp"
+								alt="JW Security"
+								width={199}
+								height={70}
+								fetchPriority="high"
+								sizes="199px"
+							/>
 						</Box>
 						<Typography
 							sx={{

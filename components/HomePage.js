@@ -873,7 +873,13 @@ export default function HomePage() {
 							},
 						}}>
 						<motion.div variants={fadeInUpVariants}>
-							<Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
+							<Box
+								sx={{
+									display: "flex",
+									alignItems: "center",
+									mb: 3,
+									display: { xs: "none", sm: "none", md: "flex" },
+								}}>
 								<Image
 									src="/images/jw/jw-logo.webp"
 									alt="JW Security"
