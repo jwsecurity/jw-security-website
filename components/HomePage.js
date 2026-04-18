@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, {
 	useState,
 	useRef,
@@ -25,7 +25,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import KeyIcon from "@mui/icons-material/Key";
 import PhoneIcon from "@mui/icons-material/Phone";
-import OptimizedImage from "./common/OptimizedImage";
 import HandymanIcon from "@mui/icons-material/Handyman";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
@@ -35,17 +34,6 @@ import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
 import { styled, keyframes, alpha, useTheme } from "@mui/material/styles";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import Image from "next/image";
-
-const fadeInUp = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
 
 const fadeIn = keyframes`
   from {
@@ -862,9 +850,10 @@ export default function HomePage() {
 					<Image
 						src="/images/jw/locksmith.webp"
 						alt="Professional locksmith services"
-						width={722}
-						height={481}
+						width={465}
+						height={310}
 						priority
+						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 						fetchPriority="high"
 						className="w-full h-full object-cover"
 					/>
@@ -890,8 +879,8 @@ export default function HomePage() {
 									alt="JW Security"
 									width={199}
 									height={70}
-									sizes=""
-									priority
+									fetchPriority="high"
+									sizes="199px"
 								/>
 							</Box>
 						</motion.div>
@@ -1033,18 +1022,13 @@ export default function HomePage() {
 								whileInView="visible"
 								viewport={{ once: true, amount: 0.3 }}
 								variants={fadeInLeftVariants}>
-								<OptimizedImage
+								<Image
 									src="/images/jw/locksmith.webp"
 									alt="Locksmith repairing door lock"
-									sx={{
-										width: "100%",
-										height: "auto",
-										borderRadius: "12px",
-										boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
-										maxHeight: { xs: "400px", md: "500px" },
-										objectFit: "cover",
-										objectPosition: "center",
-									}}
+									width={465}
+									height={310}
+									sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+									className="w-full h-full object-cover rounded-lg shadow-lg"
 								/>
 							</motion.div>
 						</Box>
