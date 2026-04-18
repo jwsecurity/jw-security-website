@@ -48,7 +48,7 @@ const FooterContainer = styled(Box)(({ theme }) => ({
 }));
 
 const FooterHeading = styled(Typography)(({ theme }) => ({
-	"fontFamily": "'Poppins', Arial, sans-serif",
+	"fontFamily": "var(--font-poppins), Arial, sans-serif",
 	"color": "white",
 	"fontWeight": 600,
 	"marginBottom": theme.spacing(3),
@@ -66,7 +66,7 @@ const FooterHeading = styled(Typography)(({ theme }) => ({
 }));
 
 const FooterLink = styled(Button)(({ theme }) => ({
-	"fontFamily": "'Open Sans', Arial, sans-serif",
+	"fontFamily": "var(--font-open-sans), Arial, sans-serif",
 	"display": "flex",
 	"alignItems": "center",
 	"justifyContent": "flex-start",
@@ -243,7 +243,7 @@ export default function Footer() {
 						</Box>
 						<Typography
 							sx={{
-								fontFamily: "'Open Sans', Arial, sans-serif",
+								fontFamily: "var(--font-open-sans), Arial, sans-serif",
 								mb: 3,
 								fontSize: "0.95rem",
 								maxWidth: 380,

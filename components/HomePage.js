@@ -169,7 +169,7 @@ const HeroContent = styled(Container)(({ theme }) => ({
 }));
 
 const HeroTitle = styled(Typography)(({ theme }) => ({
-	fontFamily: "'Poppins', Arial, sans-serif",
+	fontFamily: "var(--font-poppins), Arial, sans-serif",
 	fontWeight: 800,
 	fontSize: "3rem",
 	lineHeight: 1.2,
@@ -197,7 +197,7 @@ const HeroCallText = styled(Box)(({ theme }) => ({
 }));
 
 const HeroSubtitle = styled(Typography)(({ theme }) => ({
-	"fontFamily": "'Open Sans', Arial, sans-serif",
+	"fontFamily": "var(--font-open-sans), Arial, sans-serif",
 	"fontSize": "1.25rem",
 	"lineHeight": 1.5,
 	"fontWeight": 400,
@@ -214,7 +214,7 @@ const HeroSubtitle = styled(Typography)(({ theme }) => ({
 }));
 
 const HeroPhoneNumber = styled(Typography)(({ theme }) => ({
-	fontFamily: "'Poppins', Arial, sans-serif",
+	fontFamily: "var(--font-poppins), Arial, sans-serif",
 	fontSize: "1.5rem",
 	fontWeight: 700,
 	color: JW_CYAN,
@@ -230,7 +230,7 @@ const HeroPhoneNumber = styled(Typography)(({ theme }) => ({
 }));
 
 const HeroButton = styled(Button)(({ theme }) => ({
-	"fontFamily": "'Poppins', Arial, sans-serif",
+	"fontFamily": "var(--font-poppins), Arial, sans-serif",
 	"backgroundColor": "white",
 	"color": "#333",
 	"padding": "10px 35px",
@@ -272,7 +272,7 @@ const Section = styled(Box, {
 }));
 
 const SectionTitle = styled(Typography)(({ theme }) => ({
-	"fontFamily": "'Poppins', Arial, sans-serif",
+	"fontFamily": "var(--font-poppins), Arial, sans-serif",
 	"fontWeight": 700,
 	"marginBottom": theme.spacing(1),
 	"color": "#223555",
@@ -895,10 +895,11 @@ export default function HomePage() {
 								variant="h1"
 								sx={{
 									wordBreak: "break-word",
+									mt: 2,
 								}}>
-								Locksmith, Carpentry and
+								Locksmith, Carpentry
 								<br />
-								Fire Protection Specialists
+								and Fire Protection Specialists
 							</HeroTitle>
 						</motion.div>
 						<motion.div variants={fadeInUpVariants}>

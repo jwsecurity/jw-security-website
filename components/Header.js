@@ -68,7 +68,7 @@ const NavigationButton = styled(Button, {
 })(({ theme, active }) => ({
 	"color": "white",
 	"fontWeight": 500,
-	"fontFamily": "'Poppins', Arial, sans-serif",
+	"fontFamily": "var(--font-poppins), Arial, sans-serif",
 	"position": "relative",
 	"padding": theme.spacing(2, 1.8),
 	[theme.breakpoints.down("lg")]: {
@@ -100,7 +100,7 @@ const NavigationButton = styled(Button, {
 const ContactButton = styled(Button)(({ theme }) => ({
 	"backgroundColor": JW_CYAN,
 	"color": JW_BLUE,
-	"fontFamily": "'Poppins', Arial, sans-serif",
+	"fontFamily": "var(--font-poppins), Arial, sans-serif",
 	"boxShadow": "0 4px 10px rgba(0, 198, 215, 0.25)",
 	"fontWeight": 600,
 	"borderRadius": "6px",

@@ -18,45 +18,45 @@ const theme = createTheme({
 		},
 	},
 	typography: {
-		fontFamily: ["Open Sans", "Roboto", "Arial", "sans-serif"].join(","),
+		fontFamily: "var(--font-open-sans), Roboto, Arial, sans-serif",
 		h1: {
-			fontFamily: "Poppins, Arial, sans-serif",
+			fontFamily: "var(--font-poppins), Arial, sans-serif",
 			fontWeight: 700,
 			fontSize: "3rem",
 			letterSpacing: "-0.01em",
 		},
 		h2: {
-			fontFamily: "Poppins, Arial, sans-serif",
+			fontFamily: "var(--font-poppins), Arial, sans-serif",
 			fontWeight: 700,
 			fontSize: "2.5rem",
 			letterSpacing: "-0.01em",
 		},
 		h3: {
-			fontFamily: "Poppins, Arial, sans-serif",
+			fontFamily: "var(--font-poppins), Arial, sans-serif",
 			fontWeight: 600,
 			fontSize: "1.8rem",
 		},
 		h4: {
-			fontFamily: "Poppins, Arial, sans-serif",
+			fontFamily: "var(--font-poppins), Arial, sans-serif",
 			fontWeight: 600,
 			fontSize: "1.5rem",
 		},
 		h5: {
-			fontFamily: "Poppins, Arial, sans-serif",
+			fontFamily: "var(--font-poppins), Arial, sans-serif",
 			fontWeight: 600,
 			fontSize: "1.2rem",
 		},
 		h6: {
-			fontFamily: "Poppins, Arial, sans-serif",
+			fontFamily: "var(--font-poppins), Arial, sans-serif",
 			fontWeight: 600,
 			fontSize: "1rem",
 		},
 		subtitle1: {
-			fontFamily: "Poppins, Arial, sans-serif",
+			fontFamily: "var(--font-poppins), Arial, sans-serif",
 			fontWeight: 500,
 		},
 		button: {
-			fontFamily: "Poppins, Arial, sans-serif",
+			fontFamily: "var(--font-poppins), Arial, sans-serif",
 			fontWeight: 600,
 		},
 		body1: {
