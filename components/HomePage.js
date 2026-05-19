@@ -28,12 +28,14 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import HandymanIcon from "@mui/icons-material/Handyman";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import WarningOutlinedIcon from "@mui/icons-material/WarningOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
 import { styled, keyframes, alpha, useTheme } from "@mui/material/styles";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import Image from "next/image";
+import { Business } from "@mui/icons-material";
 
 const fadeIn = keyframes`
   from {
@@ -641,75 +643,71 @@ export default function HomePage() {
 
 	const securityNeeds = [
 		{
+			title: "Master Key Systems",
+			icon: <KeyIcon sx={{ fontSize: 36 }} />,
+			description:
+				"Master key systems for properties that need controlled access, better key management, and secure movement across shared, commercial, and managed buildings.",
+			link: "/services/key-cutting",
+		},
+		{
 			title: "Fire Protection",
 			icon: <WarningOutlinedIcon sx={{ fontSize: 36, color: JW_CYAN }} />,
 			description:
-				"Comprehensive fire safety solutions including risk assessments, alarm systems, emergency lighting, and fire extinguishers.",
+				"Fire protection work that helps property owners, landlords, and businesses improve safety and maintain the standard expected across residential and commercial buildings.",
 			link: "/services/fire-protection",
 		},
 		{
 			title: "Carpentry Solutions",
 			icon: <HandymanIcon sx={{ fontSize: 36, color: JW_CYAN }} />,
 			description:
-				"Expert carpentry services including fire door installation, custom woodwork, repairs, and maintenance for residential and commercial properties.",
+				"Carpentry work that supports property security, access, and maintenance, from door related repairs to structural improvements.",
 			link: "/services/carpentry",
 		},
 		{
 			title: "Emergency Door Opening",
 			icon: <KeyIcon sx={{ fontSize: 36 }} />,
 			description:
-				"Fast, non-destructive entry for homes and businesses when you're locked out. 24/7 rapid response.",
+				"Fast support when access becomes a problem, whether you are locked out, dealing with a failed lock, or need help securing the property again.",
 			link: "/services/emergency-door-opening",
 		},
 		{
-			title: "Mobile Key Cutting",
-			icon: <KeyIcon sx={{ fontSize: 36 }} />,
-			description:
-				"On-site key cutting service with registered key system. We come to you with our mobile workshop for convenient key duplication.",
-			link: "/services/key-cutting",
-		},
-		{
-			title: "UPVC Doors & Windows",
+			title: "UPVC Doors And Windows",
 			icon: <GridViewOutlinedIcon sx={{ fontSize: 36 }} />,
 			description:
-				"Specialist repair and replacement of UPVC door and window locks, handles, and mechanisms for enhanced security.",
+				"Repairs and security related work for UPVC doors and windows, helping restore function, fix common faults, and strengthen day to day security.",
 			link: "/services/upvc-doors-windows",
 		},
 		{
-			title: "Security Systems",
+			title: "Fire Risk Assessments",
 			icon: <SecurityOutlinedIcon sx={{ fontSize: 36 }} />,
 			description:
-				"Modern CCTV, alarm systems, and access control solutions professionally installed with premium materials.",
+				"Fire risk assessments that help property owners, landlords, and businesses understand potential hazards, improve safety, and support responsible building management.",
 			link: "/services/security",
 		},
 	];
 
 	const faqData = [
 		{
-			question: "How do I get a price quote for your services?",
+			question: "How Quickly Can You Attend An Emergency Callout?",
 			answer:
-				"You can get a free, no-obligation price quote by contacting us directly. We offer bespoke solutions, so every project begins with a free security check and insurance schedule review to understand your specific needs. This allows us to provide an accurate estimate. Call us or use the contact form on our website.",
+				"Fast response is available for urgent lock and access issues across London and surrounding areas.",
 		},
 		{
-			question:
-				"Can I become a regular customer or set up a maintenance contract?",
-			answer:
-				"Yes, we value long-term relationships with our clients. We work with many repeat customers, including residential properties, businesses, and managing agents. We can discuss regular maintenance schedules or ongoing security service agreements tailored to your requirements.",
+			question: "Do You Offer Free Quotes?",
+			answer: "Yes. We provide clear quotes for planned work.",
 		},
 		{
-			question: "What areas do you cover?",
-			answer:
-				"JW Security is based in Wandsworth and our mobile service covers the whole of London as well as Surrey. If you're unsure whether we cover your specific area, please don't hesitate to contact us.",
+			question: "What Areas Do You Cover?",
+			answer: "We work across London, Surrey, and surrounding areas.",
 		},
 		{
-			question: "Do you offer emergency call-out services?",
-			answer:
-				"Yes, we provide a 24/7 emergency call-out service for urgent issues such as lockouts, burglary repairs, or critical security system failures. Our team aims to respond quickly to ensure your property is secured.",
+			question: "Do You Work With Residential And Commercial Properties?",
+			answer: "Yes. We support homes, businesses, and managed buildings.",
 		},
 		{
-			question: "How long has JW Security been in business?",
+			question: "Are Your Engineers Qualified And Insured?",
 			answer:
-				"JW Security (previously known as 1st Call Security) was established in 1991. We have over 30 years of experience in providing locksmith and security related services to South London and Surrey.",
+				"Yes. Our team is qualified, insured, and focused on professional standards.",
 		},
 	];
 
@@ -1057,7 +1055,7 @@ export default function HomePage() {
 										textTransform: "uppercase",
 										fontWeight: "600",
 									}}>
-									Introducing Us
+									INTRODUCING US
 								</Typography>
 								<SectionTitle
 									variant="h3"
@@ -1068,7 +1066,7 @@ export default function HomePage() {
 										"fontSize": { xs: "2rem", sm: "2.3rem", md: "2.5rem" },
 										"mb": 3,
 									}}>
-									Security is Our Specialty
+									Security Is Our Specialty
 								</SectionTitle>
 								<Typography
 									paragraph
@@ -1077,9 +1075,10 @@ export default function HomePage() {
 										fontSize: { xs: "1.125rem", md: "1.05rem" },
 										lineHeight: 1.7,
 									}}>
-									JW Security provides an extensive range of locksmith and
-									security related services to South London and Surrey since
-									1991.
+									JW Security is a trusted locksmith and property security
+									specialist serving clients across London and Surrey. Our work
+									is built around safer access, stronger protection, and
+									reliable service for homes, businesses, and managed buildings.
 								</Typography>
 								<Typography
 									paragraph
@@ -1088,9 +1087,10 @@ export default function HomePage() {
 										fontSize: { xs: "1.125rem", md: "1.05rem" },
 										lineHeight: 1.7,
 									}}>
-									Everything we do is bespoke and our team of highly experienced
-									engineers pride themselves in their quality of work, level of
-									professionalism and exhaustive product knowledge.
+									From urgent access problems to planned work, our team is known
+									for honest advice, dependable service, and quality
+									workmanship. Every job is handled with care, proper
+									assessment, and attention to what the property actually needs.
 								</Typography>
 								<StyledButton
 									variant="contained"
@@ -1275,6 +1275,363 @@ export default function HomePage() {
 								</Box>
 							</motion.div>
 						))}
+					</Box>
+				</Container>
+			</Section>
+			<Box sx={{ py: { xs: 5, md: 8 } }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}
+						alignItems="center">
+						<Grid size={{ xs: 12, md: 6 }}>
+							<SectionTitle variant="h3">
+								Maintaining Premium Security Standards
+							</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
+								Good security depends on more than products alone. It comes from
+								experience, sound judgement, and careful workmanship. JW
+								Security supports properties that need dependable service,
+								professional standards, and work that holds up over time.
+							</Typography>
+							<Box
+								sx={{
+									textAlign: "center",
+									p: 2,
+									bgcolor: alpha(JW_CYAN, 0.1),
+									borderRadius: 2,
+								}}>
+								<Typography
+									variant="h4"
+									sx={{ fontWeight: 800, color: JW_BLUE }}>
+									30+ Years Of Hands On Experience
+								</Typography>
+								<Typography
+									variant="caption"
+									sx={{ fontWeight: 600 }}>
+									Qualified And Insured Team
+								</Typography>
+							</Box>
+						</Grid>
+						<Grid size={{ xs: 12, md: 6 }}>
+							<Box
+								component="img"
+								src="/images/jw/locksmith-in-installing-new-house-door-lock-hand-holds-the-screwdriver.webp"
+								alt="Specialized Security"
+								sx={{
+									width: "100%",
+									height: "auto",
+									borderRadius: "10px",
+									boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
+								}}
+							/>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+			<Box
+				sx={{
+					py: 12,
+					position: "relative",
+					backgroundImage:
+						'linear-gradient(rgba(28, 46, 74, 0.85), rgba(28, 46, 74, 0.85)), url("/images/jw/bunch-of-different-keys.webp")',
+					backgroundSize: "cover",
+					backgroundPosition: "center",
+					backgroundAttachment: "fixed",
+					color: "white",
+				}}>
+				<Container>
+					<Grid
+						container
+						spacing={6}>
+						<Grid size={{ xs: 12, md: 8 }}>
+							<Typography
+								variant="overline"
+								sx={{
+									color: "white",
+									fontWeight: 700,
+									mb: 1,
+									display: "block",
+								}}>
+								LOCAL KNOWLEDGE
+							</Typography>
+							<Typography
+								variant="h3"
+								sx={{ fontWeight: 800, mb: 3, color: "white" }}>
+								Understanding London&apos;s <br /> Security Challenges
+							</Typography>
+							<Typography
+								variant="h6"
+								sx={{ mb: 4, fontWeight: 400, opacity: 0.9, color: "white" }}>
+								From homes and managed buildings to commercial properties,
+								London sites come with different access, safety, and security
+								demands. JW Security brings local experience that supports
+								safer, more reliable property protection.
+							</Typography>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+			<Section odd>
+				<Container maxWidth="xl">
+					<Box
+						sx={{
+							display: "flex",
+							flexDirection: { xs: "column", lg: "row" },
+							alignItems: "center",
+							gap: { xs: 6, md: 8 },
+						}}>
+						<Box
+							sx={{
+								width: { xs: "100%", lg: "42%" },
+							}}>
+							<motion.div
+								initial="hidden"
+								whileInView="visible"
+								viewport={{ once: true, amount: 0.3 }}
+								variants={fadeInLeftVariants}>
+								<Typography
+									variant="subtitle2"
+									sx={{
+										color: JW_CYAN,
+										fontWeight: 700,
+										letterSpacing: 1.5,
+										textTransform: "uppercase",
+										mb: 2,
+										fontSize: "0.8rem",
+									}}>
+									WE WORK WITH
+								</Typography>
+
+								<Typography
+									variant="h3"
+									sx={{
+										fontWeight: 800,
+										lineHeight: 1.1,
+										mb: 3,
+										fontSize: {
+											xs: "2rem",
+											sm: "2.5rem",
+											md: "3rem",
+										},
+									}}>
+									Residential & <br />
+									Commercial Clients
+								</Typography>
+
+								<Typography
+									sx={{
+										color: "#555",
+										lineHeight: 1.8,
+										fontSize: {
+											xs: "1rem",
+											md: "1.05rem",
+										},
+										mb: 4,
+										maxWidth: "540px",
+									}}>
+									From homeowners to businesses and high-end properties, we
+									provide tailored security and fire protection solutions to
+									meet your needs.
+								</Typography>
+								<StyledButton
+									variant="contained"
+									component="a"
+									href="/about"
+									size="large">
+									Learn More
+								</StyledButton>
+							</motion.div>
+						</Box>
+						<Box
+							sx={{
+								width: { xs: "100%", lg: "58%" },
+								display: "grid",
+								gridTemplateColumns: {
+									xs: "1fr",
+									sm: "repeat(2,1fr)",
+								},
+								gap: 3,
+							}}>
+							<motion.div
+								initial="hidden"
+								whileInView="visible"
+								viewport={{ once: true, amount: 0.3 }}
+								variants={fadeInRightVariants}>
+								<Box
+									sx={{
+										"position": "relative",
+										"borderRadius": "10px",
+										"overflow": "hidden",
+										"height": { xs: 280, md: 340 },
+										"boxShadow": "0 12px 40px rgba(0,0,0,0.15)",
+										"cursor": "pointer",
+										"&:hover img": {
+											transform: "scale(1.08)",
+										},
+									}}>
+									<Box
+										component="img"
+										src="/images/jw/residential.webp"
+										alt="Residential security"
+										sx={{
+											width: "100%",
+											height: "100%",
+											objectFit: "cover",
+											transition: "0.5s ease",
+										}}
+									/>
+									<Box
+										sx={{
+											position: "absolute",
+											inset: 0,
+											background:
+												"linear-gradient(to top, rgba(0,17,34,0.95), rgba(0,0,0,0.15))",
+										}}
+									/>
+									<Box
+										sx={{
+											position: "absolute",
+											bottom: 0,
+											left: 0,
+											right: 0,
+											p: 3,
+											color: "#fff",
+										}}>
+										<Box
+											sx={{
+												display: "flex",
+												alignItems: "center",
+												gap: 1.5,
+												mb: 1.5,
+											}}>
+											<Box
+												sx={{
+													width: 44,
+													height: 44,
+													borderRadius: "50%",
+													background: JW_CYAN,
+													display: "flex",
+													alignItems: "center",
+													justifyContent: "center",
+													fontSize: "1.2rem",
+												}}>
+												<HomeOutlinedIcon />
+											</Box>
+
+											<Typography
+												variant="h6"
+												sx={{
+													color: "white",
+													fontWeight: 700,
+													fontSize: "1.1rem",
+												}}>
+												RESIDENTIAL
+											</Typography>
+										</Box>
+
+										<Typography
+											sx={{
+												color: "white",
+												lineHeight: 1.7,
+												fontSize: "0.95rem",
+											}}>
+											Keeping your home and family safe with trusted security
+											solutions.
+										</Typography>
+									</Box>
+								</Box>
+							</motion.div>
+							<motion.div
+								initial="hidden"
+								whileInView="visible"
+								viewport={{ once: true, amount: 0.3 }}
+								variants={fadeInRightVariants}>
+								<Box
+									sx={{
+										"position": "relative",
+										"borderRadius": "10px",
+										"overflow": "hidden",
+										"height": { xs: 280, md: 340 },
+										"boxShadow": "0 12px 40px rgba(0,0,0,0.15)",
+										"cursor": "pointer",
+										"&:hover img": {
+											transform: "scale(1.08)",
+										},
+									}}>
+									<Box
+										component="img"
+										src="/images/jw/commercial.webp"
+										alt="Commercial security"
+										sx={{
+											width: "100%",
+											height: "100%",
+											objectFit: "cover",
+											transition: "0.5s ease",
+										}}
+									/>
+									<Box
+										sx={{
+											position: "absolute",
+											inset: 0,
+											background:
+												"linear-gradient(to top, rgba(0,17,34,0.95), rgba(0,0,0,0.15))",
+										}}
+									/>
+									<Box
+										sx={{
+											position: "absolute",
+											bottom: 0,
+											left: 0,
+											right: 0,
+											p: 3,
+											color: "#fff",
+										}}>
+										<Box
+											sx={{
+												display: "flex",
+												alignItems: "center",
+												gap: 1.5,
+												mb: 1.5,
+											}}>
+											<Box
+												sx={{
+													width: 44,
+													height: 44,
+													borderRadius: "50%",
+													background: JW_CYAN,
+													display: "flex",
+													alignItems: "center",
+													justifyContent: "center",
+													fontSize: "1.2rem",
+												}}>
+												<Business />
+											</Box>
+											<Typography
+												variant="h6"
+												sx={{
+													color: "white",
+													fontWeight: 700,
+													fontSize: "1.1rem",
+												}}>
+												COMMERCIAL
+											</Typography>
+										</Box>
+										<Typography
+											sx={{
+												color: "white",
+												lineHeight: 1.7,
+												fontSize: "0.95rem",
+											}}>
+											Reliable security systems for offices, shops, retail, and
+											businesses.
+										</Typography>
+									</Box>
+								</Box>
+							</motion.div>
+						</Box>
 					</Box>
 				</Container>
 			</Section>
@@ -1508,7 +1865,7 @@ export default function HomePage() {
 											textShadow: "0 2px 10px rgba(0,0,0,0.2)",
 											color: "white",
 										}}>
-										Premium Security Solutions for High-End Properties
+										Trusted Security Support For Homes And Businesses
 									</Typography>
 									<Typography
 										sx={{
@@ -1518,9 +1875,10 @@ export default function HomePage() {
 											lineHeight: 1.7,
 											color: alpha("#fff", 0.9),
 										}}>
-										Our expert team provides bespoke security solutions with
-										meticulous attention to detail. Trust JW Security to protect
-										what matters most to you with over 30 years of experience.
+										Whether you need urgent help, planned fire protection work,
+										or wider property security improvements, JW Security offers
+										reliable service backed by decades of experience as a
+										trusted locksmith and fire safety specialist in London.
 									</Typography>
 									<Stack
 										direction={{ xs: "column", sm: "row" }}

@@ -27,6 +27,9 @@ import BusinessIcon from "@mui/icons-material/Business";
 import SecurityIcon from "@mui/icons-material/Security";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import Lock from "@mui/icons-material/Lock";
+import Key from "@mui/icons-material/Key";
+import { CarCrash } from "@mui/icons-material";
 
 const JW_BLUE = "#1c2e4a";
 const JW_CYAN = "#00c6d7";
@@ -95,38 +98,38 @@ const BrandCard = styled(Paper)(({ theme }) => ({
 export default function LocksmithServicesPage() {
 	const faqs = [
 		{
-			question: "How quickly can you arrive for emergency locksmith services?",
+			question: "What do you actually do?",
 			answer:
-				"Our emergency locksmith team typically arrives within 20-30 minutes for most London locations. We have mobile units strategically positioned across the city to ensure rapid response times, 24 hours a day, 7 days a week.",
+				"Lock repairs, new lock fitting, lock replacements, key cutting, and general property security work for homes and businesses.",
 		},
 		{
-			question: "Are your locksmiths qualified and insured?",
+			question: "Do you fix locks or just change them?",
 			answer:
-				"Yes, all JW Security locksmiths are Master Locksmiths Association (MLA) certified, DBS checked, and fully insured. We maintain comprehensive public liability insurance and all our work comes with a 12-month guarantee.",
+				"Depends what's wrong with it. If it's fixable, we'll fix it. If it's not, we'll replace it.",
 		},
 		{
-			question: "Can you open a lock without damaging it?",
+			question: "Do you work with landlords?",
 			answer:
-				"In most cases, yes. Our skilled locksmiths use non-destructive entry techniques whenever possible. We carry specialized tools and have extensive experience with various lock types. However, some high-security locks or damaged mechanisms may require drilling as a last resort.",
+				"Yeah. We do lock work for landlords, letting agents, and property managers all the time.",
 		},
 		{
-			question: "Do you work with smart locks and keyless entry systems?",
+			question: "Where do you cover?",
 			answer:
-				"Absolutely. We install, repair, and maintain all types of smart locks including Yale, August, Nuki, and other leading brands. Our technicians are trained in the latest digital security technologies and can integrate smart locks with your home automation systems.",
+				"South London, Surrey, and across London. Call us if you're not sure whether we cover your area.",
 		},
 		{
-			question: "What areas of London do you cover?",
+			question: "How fast can you get here?",
 			answer:
-				"We provide locksmith services across all London boroughs, with specialist teams in Central London, North London, South London, East London, and West London. We also serve Greater London areas including Surrey borders.",
+				"Depends where you are and what we've got on. Ring us and we'll let you know the expected arrival time.",
 		},
 	];
 
 	const locksmithServices = [
 		{
-			title: "Residential Locksmith",
-			icon: <HomeIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
+			title: "Lock Repairs",
+			icon: <Lock sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
-				"Complete home security solutions including lock installation, repair, and emergency services.",
+				"Stiff locks, jammed cylinders, broken springs, worn mechanisms. We'll have a look and tell you if it's worth fixing or needs replacing.",
 			services: [
 				"Lock installation and replacement",
 				"High-security lock upgrades",
@@ -137,24 +140,9 @@ export default function LocksmithServicesPage() {
 			],
 		},
 		{
-			title: "Commercial Locksmith",
-			icon: <BusinessIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
-			description:
-				"Professional security solutions for businesses of all sizes with minimal disruption.",
-			services: [
-				"Access control systems",
-				"Master key systems",
-				"Panic bar installation",
-				"Commercial grade locks",
-				"Key card systems",
-				"Security consultation",
-			],
-		},
-		{
-			title: "Emergency Services",
-			icon: <SecurityIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
-			description:
-				"24/7 emergency locksmith services for lockouts and urgent security needs.",
+			title: "Key Cutting ",
+			icon: <Key sx={{ fontSize: 35, color: JW_CYAN }} />,
+			description: "Need a spare? We cut keys on site for most lock types.",
 			services: [
 				"24/7 emergency response",
 				"Lockout assistance",
@@ -165,10 +153,25 @@ export default function LocksmithServicesPage() {
 			],
 		},
 		{
-			title: "Auto Locksmith",
-			icon: <KeyIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
+			title: "Lock Replacement",
+			icon: <Lock sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
-				"Specialist automotive locksmith services for all vehicle makes and models.",
+				"Old locks wear out. Sometimes they break. Sometimes you just want something better. We carry stock for most common types, so it's usually sorted the same day.",
+			services: [
+				"Access control systems",
+				"Master key systems",
+				"Panic bar installation",
+				"Commercial grade locks",
+				"Key card systems",
+				"Security consultation",
+			],
+		},
+
+		{
+			title: "Auto Locksmith",
+			icon: <CarCrash sx={{ fontSize: 35, color: JW_CYAN }} />,
+			description:
+				"Auto locksmith support for vehicle lock and key issues, helping drivers regain access and deal with common lock related problems.",
 			services: [
 				"Car key replacement",
 				"Transponder key programming",
@@ -243,8 +246,8 @@ export default function LocksmithServicesPage() {
 	return (
 		<>
 			<PageHero
-				title="Locksmith Services"
-				subtitle="Professional locksmith solutions for homes, businesses, and vehicles across London"
+				title="Locksmith Services In London"
+				subtitle="Lock broken? Need a new one fitted? We handle lock repairs, replacements, and installations for homes and businesses across London, and we do the job properly."
 				backgroundImage="/images/jw/locksmith-maintenance.webp"
 				minHeight="45vh"
 				centerContent={true}
@@ -271,32 +274,29 @@ export default function LocksmithServicesPage() {
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h4">
-								London&apos;s Trusted Master Locksmiths Since 1991
+								Locksmith Work Since 1991
 							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								When you&apos;re locked out at 2 AM or need urgent security
-								upgrades after a break-in, you need a locksmith you can trust.
-								JW Security has been London&apos;s go-to locksmith service for
-								over three decades, combining traditional craftsmanship with
-								cutting-edge security technology.
+								Locks break. Keys go missing. Cylinders jam up and won't turn.
+								When that happens, you need someone who'll fix it without making
+								things worse.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Our Master Locksmiths Association certified technicians arrive
-								fully equipped to handle any lock-related challenge. From period
-								property mortice locks in Victorian conversions to the latest
-								smart lock systems in modern apartments, we have the expertise
-								and tools to provide immediate solutions.
+								We've been doing locksmith jobs across London since 1991.
+								Houses, flats, offices, shops - if there's a lock problem, we've
+								probably dealt with it before.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								We provide fixed-price quotes before starting any work, with no
-								hidden call-out charges or surprise fees. Our 24/7 emergency
-								service means you&apos;re never left stranded across London.
+								We work with mortice locks, cylinder locks, multipoint systems,
+								Yale locks, and most other types fitted on London properties.
+								Quick repairs where possible. Replacements when needed. Honest
+								advice either way.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -316,14 +316,10 @@ export default function LocksmithServicesPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								We provide a wide range of specialized locksmithing for both
-								emergency and planned security needs.
-							</Typography>
-							<Typography
-								paragraph
-								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Our techniques focus on non-destructive entry and
-								high-durability hardware selection.
+								We provide locksmith support for planned work and urgent
+								callouts across London. Our service covers homes, businesses,
+								managed properties, and vehicles, with a focus on secure access,
+								dependable repairs, and properly fitted locks.
 							</Typography>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
@@ -376,19 +372,19 @@ export default function LocksmithServicesPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">Brands We Trust</SectionTitle>
+							<SectionTitle variant="h2">Why Use Us?</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Our experienced locksmiths work with all major lock
-								manufacturers and security brands to ensure the highest
-								standards.
+								Been doing this in London for over 30 years. Our locksmiths know
+								what they're doing, they're insured, and they've seen every type
+								of lock problem going.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								We carry stock for most common types to allow for immediate
-								replacement.
+								No call centers. No subcontractors showing up. Just London-based
+								locksmiths who know the job.
 							</Typography>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
