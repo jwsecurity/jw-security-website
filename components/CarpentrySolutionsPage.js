@@ -1,4 +1,5 @@
-﻿"use client";
+"use client";
+import React from "react";
 import {
 	Box,
 	Container,
@@ -11,6 +12,9 @@ import {
 	ListItemText,
 	Button,
 	Paper,
+	Accordion,
+	AccordionSummary,
+	AccordionDetails,
 } from "@mui/material";
 import PageHero from "./common/PageHero";
 import HomeIcon from "@mui/icons-material/Home";
@@ -21,6 +25,7 @@ import ContactSection from "./common/ContactSection";
 import KitchenIcon from "@mui/icons-material/Kitchen";
 import HandymanIcon from "@mui/icons-material/Handyman";
 import CarpenterIcon from "@mui/icons-material/Carpenter";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import DoorSlidingIcon from "@mui/icons-material/DoorSliding";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 
@@ -89,100 +94,124 @@ const MaterialCard = styled(Paper)(({ theme }) => ({
 }));
 
 export default function CarpentrySolutionsPage() {
+	const faqs = [
+		{
+			question: "What carpentry services do you offer?",
+			answer:
+				"Door fitting, window repairs, kitchen fitting, flooring, staircase work, bespoke joinery, and property maintenance carpentry across London and Surrey.",
+		},
+		{
+			question: "Do you offer door fitting in London?",
+			answer:
+				"Yes. Internal and external door fitting, including hanging, frame adjustment, and hardware fitting. Call 0208 646 7931 for a quote.",
+		},
+		{
+			question: "Can you help with internal door fitting?",
+			answer:
+				"Yes. We fit internal doors in homes, flats, offices, and managed buildings across South London and Surrey, including non-standard frame sizes.",
+		},
+		{
+			question: "Do you provide bespoke carpentry in London?",
+			answer:
+				"Yes. Fitted wardrobes, shelving, alcove units, and built-in storage built to the measurements of the room. Free site visit before any work is agreed.",
+		},
+		{
+			question: "What areas do you cover?",
+			answer:
+				"We cover London, Surrey, and surrounding areas, including Wimbledon, Clapham, Battersea, Putney, Chelsea, Kingston, Richmond, and nearby locations.",
+		},
+		{
+			question: "How much does carpentry cost in London?",
+			answer:
+				"Costs vary by job. A door rehang is usually one to two hours. Bespoke work is quoted after a free site visit. Written quotes provided before anything starts.",
+		},
+	];
+
 	const carpentryServices = [
 		{
-			title: "Door Installation & Repair",
+			title: "Door Installation And Repair",
 			icon: <DoorSlidingIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
-				"Expert installation and repair of interior and exterior doors, including frames and hardware.",
+				"Door fitting in London for internal and external doors, including repairs, adjustments, and new installations. Dropped hinges, swollen frames, misaligned latches: we diagnose the actual fault and sort it. Internal door fitting covers homes, flats, and commercial premises, including non-standard frame sizes common in older London properties.",
 			services: [
-				"Internal door hanging and fitting",
+				"Internal door fitting",
 				"External door installation",
-				"Door frame repair and replacement",
-				"Fire door installation and certification",
-				"Sliding and bi-fold door systems",
-				"Door furniture fitting",
+				"Door frame adjustment",
+				"Hinges, handles, and latch fitting",
+				"Door easing and alignment",
+				"General door repairs",
 			],
 		},
 		{
-			title: "Window Repairs & Replacement",
+			title: "Window Repairs And Replacement",
 			icon: <WindowIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
-				"Professional window repair, restoration, and replacement services for all property types.",
+				"Timber window repairs for frames, sashes, and fittings that have worn or shifted. In older properties, sash cords fail and frames swell with age. Where the timber is still good, we repair rather than replace.",
 			services: [
-				"Sash window repair and restoration",
-				"Window frame replacement",
-				"Double glazing unit replacement",
-				"Window furniture and hardware",
-				"Draught proofing solutions",
-				"Window security upgrades",
+				"Sash window repairs",
+				"Timber frame repairs",
+				"Section replacement",
+				"Window furniture fitting",
+				"Draught reduction work",
+				"Minor security upgrades",
 			],
 		},
 		{
 			title: "Kitchen Fitting",
 			icon: <KitchenIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
-				"Complete kitchen installation services from cabinet fitting to worktop installation.",
+				"Cabinet fitting, worktop cutting, trims, and plinth work. We fit kitchens from supply-only clients or alongside a kitchen supplier who needs a carpenter on site.",
 			services: [
-				"Kitchen cabinet installation",
-				"Worktop fitting and cutting",
-				"Kitchen island construction",
-				"Splashback installation",
-				"Plinth and cornice fitting",
-				"Appliance housing and integration",
+				"Cabinet fitting",
+				"Worktop cutting and fitting",
+				"End panels and trims",
+				"Plinth fitting",
+				"Appliance housing",
 			],
 		},
 		{
 			title: "Flooring Installation",
 			icon: <HomeIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
-				"Professional installation of various flooring types with precision and care.",
+				"Hardwood, laminate, and engineered wood flooring. We prepare the subfloor, fit the boards, and refit or replace skirting once the floor is down.",
 			services: [
-				"Hardwood floor installation",
-				"Laminate flooring fitting",
-				"Engineered wood flooring",
-				"Floor repair and restoration",
-				"Skirting board installation",
-				"Subfloor preparation and leveling",
+				"Hardwood, laminate, and engineered wood flooring",
+				"Floor repair work",
+				"Skirting board fitting",
+				"Subfloor preparation",
 			],
 		},
 		{
-			title: "Staircase & Balustrade",
+			title: "Staircases And Balustrades",
 			icon: <StairsIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
-				"Construction, repair, and renovation of staircases and balustrade systems.",
+				"Stair repairs for loose spindles, worn treads, and handrails that have worked themselves free. Common in managed blocks and period houses.",
 			services: [
-				"Staircase construction and repair",
-				"Handrail installation",
-				"Balustrade fitting",
+				"Stair and tread repairs",
+				"Handrail and balustrade fitting",
 				"Spindle replacement",
-				"Stair treads and risers",
-				"Under-stair storage solutions",
+				"Newel post repairs",
 			],
 		},
 		{
-			title: "Bespoke Furniture & Joinery",
+			title: "Bespoke Furniture And Joinery",
 			icon: <CarpenterIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
-				"Custom-made furniture and joinery solutions tailored to your specific requirements.",
+				"Bespoke carpentry in London for fitted wardrobes, alcove shelving, media units, and built-in storage. Built to the room's actual dimensions, not adapted from standard sizes.",
 			services: [
-				"Built-in wardrobes and storage",
-				"Custom shelving systems",
-				"Bespoke cabinet making",
-				"Office furniture and desks",
-				"Media units and entertainment centers",
-				"Alcove units and bookcases",
+				"Built-in wardrobes and alcove units",
+				"Custom shelving and fitted cabinets",
+				"Desk, office, and media units",
 			],
 		},
 	];
 
 	const additionalServices = [
-		"Decking and outdoor structures",
+		"Decking and outdoor timber work",
 		"Shop fitting and commercial joinery",
-		"Partition walls and stud work",
-		"Loft boarding and access",
-		"Garden sheds and storage",
-		"Fence repair and installation",
+		"Partition walls",
+		"Loft boarding",
+		"Fencing and gate repairs",
 		"Property maintenance carpentry",
 		"Emergency carpentry repairs",
 	];
@@ -201,8 +230,8 @@ export default function CarpentrySolutionsPage() {
 	return (
 		<>
 			<PageHero
-				title="Carpentry Solutions"
-				subtitle="Professional carpentry and joinery services for residential and commercial properties"
+				title="Carpentry Services In London"
+				subtitle="Reliable carpentry services in London for residential and commercial properties across London, Surrey, and surrounding areas. JW Security has provided door fitting, joinery repairs, and bespoke timber work since 1991."
 				backgroundImage="/images/jw/carpentry-plane-tool-for-woodworking-in-workshop.webp"
 				minHeight="45vh"
 				centerContent={true}
@@ -217,39 +246,24 @@ export default function CarpentrySolutionsPage() {
 							xs={12}
 							md={6}>
 							<SectionTitle variant="h4">
-								Master Carpenters Serving London Since 1991
+								Experienced Carpenters Working Across London Since 1991
 							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Whether you need a door that won&apos;t close properly fixed
-								today or are planning a complete home renovation, JW
-								Security&apos;s carpentry division delivers craftsmanship you
-								can trust. Our team of time-served carpenters brings decades of
-								experience to every project, from emergency repairs to bespoke
-								joinery installations.
-							</Typography>
-							<Typography
-								paragraph
-								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								We understand that quality carpentry is about more than just
-								wood and tools - it&apos;s about creating solutions that enhance
-								your property while standing the test of time. Our carpenters
-								are experts in both traditional techniques and modern methods,
-								allowing us to work seamlessly with period properties in
-								conservation areas as well as contemporary homes and offices.
+								JW Security&apos;s carpentry team works in homes, flats,
+								offices, shops, and managed buildings. Some jobs are quick fixes:
+								a door catching on the frame, a sash that no longer runs freely,
+								a floor section that has been lifted. Others take longer, like a
+								set of fitted wardrobes built around an awkward alcove or a
+								staircase that needs rebuilding from the newel post up.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								What truly sets us apart is our integrated approach. As part of
-								JW Security, we ensure all carpentry work complements your
-								property&apos;s security needs. Installing a new door?
-								We&apos;ll make sure it&apos;s fitted with appropriate locks and
-								meets insurance requirements. Need window repairs? We&apos;ll
-								check the security hardware while we&apos;re there. This
-								holistic approach saves you time and ensures nothing is
-								overlooked.
+								Each job gets the same attention. Our carpenters are employed
+								directly by us, not subcontracted. The work is measured, fitted,
+								and finished with care before we leave.
 							</Typography>
 						</Grid>
 						<Grid
@@ -378,8 +392,8 @@ export default function CarpentrySolutionsPage() {
 							</Grid>
 							<Typography
 								sx={{ mt: 3, fontStyle: "italic", color: alpha("#000", 0.6) }}>
-								We can source and work with specific materials based on your
-								project requirements.
+								We can work with materials on site or supply timber that suits
+								the job.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -411,42 +425,22 @@ export default function CarpentrySolutionsPage() {
 									Why Choose JW Security Carpentry?
 								</SectionTitle>
 								<List>
-									<ListItem sx={{ py: 1 }}>
-										<ListItemIcon>
-											<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-										</ListItemIcon>
-										<ListItemText primary="Over 30 years of carpentry experience" />
-									</ListItem>
-									<ListItem sx={{ py: 1 }}>
-										<ListItemIcon>
-											<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-										</ListItemIcon>
-										<ListItemText primary="Fully insured and qualified carpenters" />
-									</ListItem>
-									<ListItem sx={{ py: 1 }}>
-										<ListItemIcon>
-											<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-										</ListItemIcon>
-										<ListItemText primary="Free quotations and project consultations" />
-									</ListItem>
-									<ListItem sx={{ py: 1 }}>
-										<ListItemIcon>
-											<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-										</ListItemIcon>
-										<ListItemText primary="High-quality materials and finishes" />
-									</ListItem>
-									<ListItem sx={{ py: 1 }}>
-										<ListItemIcon>
-											<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-										</ListItemIcon>
-										<ListItemText primary="Clean, tidy, and respectful service" />
-									</ListItem>
-									<ListItem sx={{ py: 1 }}>
-										<ListItemIcon>
-											<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
-										</ListItemIcon>
-										<ListItemText primary="Competitive pricing with no hidden costs" />
-									</ListItem>
+									{[
+										"30+ years of carpentry experience in London and Surrey",
+										"Own team on every job, no subcontractors",
+										"Free site visits and written quotes",
+										"Clean finish in occupied properties",
+										"No hidden costs",
+									].map((feature, index) => (
+										<ListItem
+											key={index}
+											sx={{ py: 1 }}>
+											<ListItemIcon>
+												<CheckCircleOutlineIcon sx={{ color: JW_CYAN }} />
+											</ListItemIcon>
+											<ListItemText primary={feature} />
+										</ListItem>
+									))}
 								</List>
 								<Button
 									variant="contained"
@@ -460,13 +454,81 @@ export default function CarpentrySolutionsPage() {
 											backgroundColor: JW_BLUE,
 										},
 									}}>
-									Get a Free Carpentry Quote
+									Get A Free Carpentry Quote
 								</Button>
 							</Grid>
 						</Grid>
 					</Box>
 				</Container>
 			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}>
+						<Grid size={{ xs: 12, md: 5 }}>
+							<SectionTitle variant="h4">Common Questions</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Find answers to common questions about our carpentry services.
+							</Typography>
+							<Button
+								variant="contained"
+								size="large"
+								href="/contact"
+								sx={{
+									"fontWeight": 900,
+									"px": 4,
+									"py": 1.5,
+									"bgcolor": JW_CYAN,
+									"color": JW_BLUE,
+									"&:hover": { bgcolor: JW_BLUE, color: "white" },
+								}}>
+								STILL HAVE QUESTIONS?
+							</Button>
+						</Grid>
+						<Grid size={{ xs: 12, md: 7 }}>
+							{faqs.map((faq, index) => (
+								<Accordion
+									key={index}
+									sx={{
+										"mb": 1.5,
+										"boxShadow": "0 2px 8px rgba(0,0,0,0.05)",
+										"borderRadius": "8px !important",
+										"&::before": { display: "none" },
+									}}>
+									<AccordionSummary
+										expandIcon={<ExpandMoreIcon sx={{ color: JW_CYAN }} />}
+										sx={{
+											"px": 3,
+											"py": 0.5,
+											"&.Mui-expanded": { minHeight: 48 },
+										}}>
+										<Typography
+											variant="subtitle1"
+											sx={{ fontWeight: 700, color: JW_BLUE }}>
+											{faq.question}
+										</Typography>
+									</AccordionSummary>
+									<AccordionDetails sx={{ px: 3, pb: 3 }}>
+										<Typography
+											sx={{
+												lineHeight: 1.7,
+												color: alpha("#000", 0.6),
+												fontSize: "0.95rem",
+											}}>
+											{faq.answer}
+										</Typography>
+									</AccordionDetails>
+								</Accordion>
+							))}
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
 			<ContactSection
 				title="Need Carpentry Services?"
 				subtitle="Contact us today for a free consultation and quotation on your carpentry project"

@@ -11,6 +11,9 @@ import {
 	ListItemIcon,
 	ListItemText,
 	Button,
+	Accordion,
+	AccordionSummary,
+	AccordionDetails,
 } from "@mui/material";
 import PageHero from "./common/PageHero";
 import HomeIcon from "@mui/icons-material/Home";
@@ -22,6 +25,7 @@ import SecurityIcon from "@mui/icons-material/Security";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import LocalPoliceIcon from "@mui/icons-material/LocalPolice";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 
@@ -102,12 +106,40 @@ const EmergencyButton = styled(Button)(({ theme }) => ({
 }));
 
 export default function EmergencyServicesPage() {
+	const faqs = [
+		{
+			question: "How Quickly Can You Attend An Emergency Locksmith Callout?",
+			answer:
+				"Response time depends on your location and current demand, but we prioritise urgent lock and access problems across London and Surrey.",
+		},
+		{
+			question: "Do You Provide Emergency Door Opening?",
+			answer:
+				"Yes. We help with emergency door opening for homes, businesses, managed buildings, and other properties where urgent access is needed.",
+		},
+		{
+			question: "Can You Help If I Am Locked Out?",
+			answer:
+				"Yes. We deal with lockouts for houses, flats, offices, shops, and commercial properties.",
+		},
+		{
+			question: "What If My Lock Has Failed Or Broken?",
+			answer:
+				"We can inspect the lock, explain the fault, and deal with the urgent repair or replacement needed to secure the property.",
+		},
+		{
+			question: "Do You Help After Burglary Damage?",
+			answer:
+				"Yes. We provide urgent locksmith help for damaged locks, weak entry points, and doors that need securing after forced entry.",
+		},
+	];
+
 	const emergencyServices = [
 		{
-			title: "Emergency Lockout Service",
+			title: "Emergency Lockout",
 			icon: <LockOpenIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
-				"Locked out of your property? Our expert locksmiths provide rapid, non-destructive entry 24/7.",
+				"Locked out of your house, flat, office, shop, or managed building? We help you regain entry without unnecessary delay.",
 			features: [
 				"Average 20-30 minute response time",
 				"Non-destructive entry techniques",
@@ -117,10 +149,10 @@ export default function EmergencyServicesPage() {
 			],
 		},
 		{
-			title: "Burglary Damage Repair",
+			title: "Burglary Damage",
 			icon: <LocalPoliceIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
-				"Immediate response to secure your property after a break-in with emergency repairs and upgrades.",
+				"Urgent help for damaged locks, weak entry points, and doors that need securing after attempted or forced entry.",
 			features: [
 				"Emergency boarding services",
 				"Lock replacement and upgrades",
@@ -133,7 +165,7 @@ export default function EmergencyServicesPage() {
 			title: "Lost Key Replacement",
 			icon: <HomeIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
-				"Fast key cutting and lock replacement services when you've lost your keys.",
+				"Lost your keys or need access sorted quickly after keys go missing? We help you regain entry and secure the site.",
 			features: [
 				"On-site key cutting",
 				"Lock rekeying services",
@@ -160,27 +192,27 @@ export default function EmergencyServicesPage() {
 	const responseProcess = [
 		{
 			step: "1",
-			title: "Call Our Emergency Line",
+			title: "Call For Emergency Help",
 			description:
-				"Phone 020 7946 0125 any time, day or night. Our emergency team is always ready.",
+				"Tell us what has happened and where you are, and we will advise on the fastest next step.",
 		},
 		{
 			step: "2",
 			title: "Describe Your Situation",
 			description:
-				"Tell us your location and the nature of your emergency. We'll provide an estimated arrival time.",
+				"Locked out, broken lock, lost keys, failed mechanism, or door damage. We assess the issue before arrival.",
 		},
 		{
 			step: "3",
 			title: "Rapid Dispatch",
 			description:
-				"Our nearest available technician is immediately dispatched to your location.",
+				"Our team moves quickly to your location and arrives ready to deal with the problem.",
 		},
 		{
 			step: "4",
 			title: "Professional Resolution",
 			description:
-				"Our expert resolves your emergency quickly and efficiently, with transparent pricing.",
+				"We regain access, secure the property, and carry out the urgent locksmith work needed.",
 		},
 	];
 
@@ -196,8 +228,8 @@ export default function EmergencyServicesPage() {
 	return (
 		<>
 			<PageHero
-				title="24/7 Emergency Services"
-				subtitle="Immediate response when you need us most - Available every hour of every day"
+				title="24/7 Emergency Locksmith Services In London"
+				subtitle="Urgent locksmith help for lockouts, failed locks, lost keys, broken mechanisms, and emergency door security across London, Surrey, and surrounding areas."
 				backgroundImage="/images/jw/closeup-of-a-professional-locksmith-installing-a-new-lock-on-a-house-exterior-door-with-the-inside.webp"
 				minHeight="45vh"
 				centerContent={true}
@@ -248,10 +280,10 @@ export default function EmergencyServicesPage() {
 								<EmergencyButton
 									startIcon={<PhoneIcon />}
 									component="a"
-									href="tel:02079460125"
+									href="tel:02086467931"
 									fullWidth
 									sx={{ mt: 3, py: 1.5 }}>
-									020 7946 0125
+									0208 646 7931
 								</EmergencyButton>
 							</EmergencyCard>
 						</Grid>
@@ -260,23 +292,25 @@ export default function EmergencyServicesPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Being locked out of your home or discovering your property has
-								been broken into is stressful and frightening. JW Security
-								maintains a dedicated emergency team available 24 hours a day,
-								365 days a year.
+								Locked out of your property, dealing with a failed lock, or
+								unable to secure a door after damage? These situations need fast
+								action, not a delayed appointment.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Our locksmiths are strategically positioned across London. Each
-								technician carries a fully-stocked van to resolve most
-								emergencies in a single visit.
+								JW Security provides emergency locksmith services across London
+								for homes, businesses, managed buildings, and commercial
+								properties that need urgent access or immediate lock and door
+								attention.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								All our technicians are DBS checked and fully insured. We
-								provide upfront pricing with no hidden call-out charges.
+								From lost keys and broken locks to failed mechanisms and
+								emergency door opening, we focus on restoring access, securing
+								the property, and dealing with the problem in front of us as
+								quickly as possible.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -294,14 +328,8 @@ export default function EmergencyServicesPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								We handle all types of residential and commercial emergencies,
-								from lost keys to full burglary restoration.
-							</Typography>
-							<Typography
-								paragraph
-								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Our focus is on security restoration and peace of mind for every
-								client.
+								Fast help for urgent lockouts, failed locks, lost keys, and
+								access problems across residential and commercial properties.
 							</Typography>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
@@ -359,12 +387,13 @@ export default function EmergencyServicesPage() {
 						<Typography
 							variant="h4"
 							sx={{ fontWeight: 900, mb: 3 }}>
-							LOCKED OUT OR NEED URGENT SECURITY?
+							LOCKED OUT OR NEED URGENT SECURITY HELP?
 						</Typography>
 						<Typography
 							variant="h6"
 							sx={{ mb: 4, opacity: 0.9 }}>
-							Our rapid response team is standing by to assist you.
+							Our emergency locksmith team responds to urgent access and lock
+							problems across London.
 						</Typography>
 						<Button
 							variant="contained"
@@ -443,14 +472,24 @@ export default function EmergencyServicesPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Our streamlined dispatch system ensures that help arrives at
-								your doorstep with minimal delay.
+								Emergency locksmith work is different from planned work. The
+								priority is speed, safe access, and making sure the property is
+								not left exposed.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								We deal with house lockouts, office lockouts, failed locks,
+								snapped keys, jammed mechanisms, damaged doors, and urgent
+								situations where the property cannot be secured properly.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Simply call our emergency line, and a master technician will be
-								on their way to resolve your security crisis.
+								Where possible, we regain entry without damage to the door or
+								frame. If a lock, cylinder, or mechanism has failed, we explain
+								the issue and deal with what is needed to restore access or
+								security.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -517,9 +556,77 @@ export default function EmergencyServicesPage() {
 				</Container>
 			</Box>
 
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}>
+						<Grid size={{ xs: 12, md: 5 }}>
+							<SectionTitle variant="h4">Common Questions</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Find answers to common questions about our emergency locksmith
+								services.
+							</Typography>
+							<Button
+								variant="contained"
+								size="large"
+								href="/contact"
+								sx={{
+									"fontWeight": 900,
+									"px": 4,
+									"py": 1.5,
+									"bgcolor": JW_CYAN,
+									"color": JW_BLUE,
+									"&:hover": { bgcolor: JW_BLUE, color: "white" },
+								}}>
+								STILL HAVE QUESTIONS?
+							</Button>
+						</Grid>
+						<Grid size={{ xs: 12, md: 7 }}>
+							{faqs.map((faq, index) => (
+								<Accordion
+									key={index}
+									sx={{
+										"mb": 1.5,
+										"boxShadow": "0 2px 8px rgba(0,0,0,0.05)",
+										"borderRadius": "8px !important",
+										"&::before": { display: "none" },
+									}}>
+									<AccordionSummary
+										expandIcon={<ExpandMoreIcon sx={{ color: JW_CYAN }} />}
+										sx={{
+											"px": 3,
+											"py": 0.5,
+											"&.Mui-expanded": { minHeight: 48 },
+										}}>
+										<Typography
+											variant="subtitle1"
+											sx={{ fontWeight: 700, color: JW_BLUE }}>
+											{faq.question}
+										</Typography>
+									</AccordionSummary>
+									<AccordionDetails sx={{ px: 3, pb: 3 }}>
+										<Typography
+											sx={{
+												lineHeight: 1.7,
+												color: alpha("#000", 0.6),
+												fontSize: "0.95rem",
+											}}>
+											{faq.answer}
+										</Typography>
+									</AccordionDetails>
+								</Accordion>
+							))}
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
 			<ContactSection
 				title="Emergency? Call Us Now"
-				subtitle="020 7946 0125 - Available 24/7, 365 days a year"
+				subtitle="0208 646 7931 - Available 24/7, 365 days a year"
 			/>
 		</>
 	);

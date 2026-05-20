@@ -12,10 +12,14 @@ import {
 	ListItemText,
 	Button,
 	Paper,
+	Accordion,
+	AccordionSummary,
+	AccordionDetails,
 } from "@mui/material";
 import PageHero from "./common/PageHero";
 import { styled, alpha } from "@mui/material/styles";
 import ContactSection from "./common/ContactSection";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import DoorSlidingIcon from "@mui/icons-material/DoorSliding";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
 import FlashlightOnIcon from "@mui/icons-material/FlashlightOn";
@@ -87,7 +91,7 @@ export default function FireProtectionPage() {
 			title: "Fire Door Inspections",
 			icon: <DoorSlidingIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
-				"Regular inspections of fire doors to ensure they meet British Standards and provide adequate protection.",
+				"We check fire doors for fit, condition, closers, seals, hinges, latching, and gaps.",
 			details: [
 				"Visual inspection of door leaves, frames, and glazing",
 				"Checking of intumescent seals and smoke seals",
@@ -101,7 +105,7 @@ export default function FireProtectionPage() {
 			title: "Fire Door Maintenance",
 			icon: <WarningAmberIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
-				"Comprehensive maintenance services to keep fire doors functioning correctly and compliant with regulations.",
+				"We repair common fire door faults, including worn closers, damaged seals, loose hinges, and doors that do not close or latch properly.",
 			details: [
 				"Adjustment of door closers and hinges",
 				"Replacement of damaged seals and strips",
@@ -115,7 +119,7 @@ export default function FireProtectionPage() {
 			title: "Fire Door Installation",
 			icon: <LocalFireDepartmentIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
-				"Professional installation of new fire doors with certified products meeting all safety standards.",
+				"We fit new fire doors where existing doors cannot be repaired or brought up to standard.",
 			details: [
 				"FD30 and FD60 rated door installation",
 				"Complete door set supply and fit",
@@ -126,10 +130,10 @@ export default function FireProtectionPage() {
 			],
 		},
 		{
-			title: "Fire Alarm Systems",
+			title: "Fire Risk Assessments",
 			icon: <WarningAmberIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
-				"Design, installation, and maintenance of fire detection and alarm systems for all property types.",
+				"We review fire safety risks, escape routes, fire doors, and key problem areas, then provide a written report with recommendations.",
 			details: [
 				"Conventional and addressable systems",
 				"Wireless fire alarm solutions",
@@ -171,27 +175,55 @@ export default function FireProtectionPage() {
 
 	const complianceStandards = [
 		{
-			title: "Regulatory Reform (Fire Safety) Order 2005",
+			title: "Regulatory Reform Fire Safety Order 2005",
 			description:
-				"We ensure all our work complies with the Fire Safety Order requirements for commercial premises.",
+				"We help landlords, managing agents, and businesses understand their fire safety duties and take action where building risks are found.",
 		},
 		{
 			title: "British Standards Compliance",
 			description:
-				"All installations and maintenance work meets relevant British Standards including BS 476, BS 5839, and BS 5266.",
+				"Our fire door work follows relevant British Standards for fire resistance, fittings, closers, seals, and safe installation.",
 		},
 		{
 			title: "Building Regulations",
 			description:
-				"Our fire door installations comply with Approved Document B of the Building Regulations.",
+				"Fire door installation and remedial work is carried out with Building Regulations in mind, including Approved Document B where it applies.",
+		},
+	];
+
+	const faqs = [
+		{
+			question: "What fire protection services do you offer?",
+			answer:
+				"Fire door inspections, fire door maintenance, fire door installation, and fire risk assessments.",
+		},
+		{
+			question: "Do you work with managed buildings and landlords?",
+			answer:
+				"Yes. Most of our fire safety work is for landlords, managing agents, and property companies across London.",
+		},
+		{
+			question: "What if a fire door has already been flagged as a problem?",
+			answer:
+				"Call us. We'll come and look at it, tell you what's wrong, and sort it out.",
+		},
+		{
+			question: "Do you provide written fire risk assessments?",
+			answer:
+				"Yes. We carry out fire risk assessments and provide a written report with findings and recommendations.",
+		},
+		{
+			question: "What areas do you cover?",
+			answer:
+				"We cover London, Surrey, and surrounding areas. Call us if you are unsure whether we cover your location.",
 		},
 	];
 
 	return (
 		<>
 			<PageHero
-				title="Fire Protection Services"
-				subtitle="Comprehensive fire safety solutions including fire doors, alarms, and emergency systems"
+				title="Fire Protection Services In London"
+				subtitle="Fire door inspections, fire risk assessments, and fire safety work for London buildings that need safer, compliant protection."
 				backgroundImage="/images/jw/pexels-tima-miroshnichenko-6790761-scaled.webp"
 				minHeight="45vh"
 				centerContent={true}
@@ -217,30 +249,22 @@ export default function FireProtectionPage() {
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h4">
-								Complete Fire Protection Solutions
+								Fire Protection Work For London Buildings
 							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								JW Security provides comprehensive fire protection services to
-								safeguard your property and ensure compliance with all relevant
-								fire safety regulations. Our expert team specializes in the
-								installation, maintenance, and inspection of fire safety systems
-								throughout London.
+								Fire doors fail for a reason. Closers wear out. Gaps appear. Frames shift. When that happens in a managed building or commercial property, it can affect safety, compliance, and day to day building management.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								From fire door installations and inspections to complete fire
-								alarm systems and emergency lighting, we deliver solutions that
-								protect lives and property.
+								JW Security helps landlords, managing agents, and businesses across London with fire doors, maintenance, installations, and fire risk assessments.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								All our work is carried out by qualified technicians and
-								complies with British Standards and the Regulatory Reform (Fire
-								Safety) Order 2005.
+								Some of this work comes up during planned maintenance schedules. Some gets flagged during an inspection. Either way, we identify the issue, explain what it means, and complete the checks, repairs, or replacements needed to improve building safety.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -254,7 +278,7 @@ export default function FireProtectionPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">Professional Fire Safety</SectionTitle>
+							<SectionTitle variant="h4">What We Do</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
@@ -385,20 +409,16 @@ export default function FireProtectionPage() {
 							</Grid>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">Compliance & Standards</SectionTitle>
+							<SectionTitle variant="h4">Fire Safety Compliance Made Clear</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Safety is not just a priority, it&apos;s a requirement. We
-								ensure every piece of work meets the highest UK safety
-								certifications.
+								Fire safety regulations exist for a reason, but a lot of property owners get handed vague reports that don't tell them what to actually do next.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								From FD30 doors to addressable alarm systems, our solutions are
-								built to conform to British Standards BS 476, BS 5839, and BS
-								5266.
+								We keep the process simple. You get plain findings, useful recommendations , and work carried out by people who understand fire doors, fire safety, and building compliance. No vague wording. No unnecessary work added to the job.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -461,6 +481,74 @@ export default function FireProtectionPage() {
 									))}
 								</List>
 							</Box>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}>
+						<Grid size={{ xs: 12, md: 5 }}>
+							<SectionTitle variant="h4">Common Questions</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Find answers to common concerns about our professional locksmith
+								services.
+							</Typography>
+							<Button
+								variant="contained"
+								size="large"
+								href="/contact"
+								sx={{
+									"fontWeight": 900,
+									"px": 4,
+									"py": 1.5,
+									"bgcolor": JW_CYAN,
+									"color": JW_BLUE,
+									"&:hover": { bgcolor: JW_BLUE, color: "white" },
+								}}>
+								STILL HAVE QUESTIONS?
+							</Button>
+						</Grid>
+						<Grid size={{ xs: 12, md: 7 }}>
+							{faqs.map((faq, index) => (
+								<Accordion
+									key={index}
+									sx={{
+										"mb": 1.5,
+										"boxShadow": "0 2px 8px rgba(0,0,0,0.05)",
+										"borderRadius": "8px !important",
+										"&::before": { display: "none" },
+									}}>
+									<AccordionSummary
+										expandIcon={<ExpandMoreIcon sx={{ color: JW_CYAN }} />}
+										sx={{
+											"px": 3,
+											"py": 0.5,
+											"&.Mui-expanded": { minHeight: 48 },
+										}}>
+										<Typography
+											variant="subtitle1"
+											sx={{ fontWeight: 700, color: JW_BLUE }}>
+											{faq.question}
+										</Typography>
+									</AccordionSummary>
+									<AccordionDetails sx={{ px: 3, pb: 3 }}>
+										<Typography
+											sx={{
+												lineHeight: 1.7,
+												color: alpha("#000", 0.6),
+												fontSize: "0.95rem",
+											}}>
+											{faq.answer}
+										</Typography>
+									</AccordionDetails>
+								</Accordion>
+							))}
 						</Grid>
 					</Grid>
 				</Container>

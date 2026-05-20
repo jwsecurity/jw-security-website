@@ -1,4 +1,5 @@
 "use client";
+
 import {
 	Box,
 	Container,
@@ -10,9 +11,15 @@ import {
 	ListItemIcon,
 	ListItemText,
 	Button,
+	Accordion,
+	AccordionSummary,
+	AccordionDetails,
 } from "@mui/material";
 import PageHero from "../common/PageHero";
 import { styled, alpha } from "@mui/material/styles";
+import ContactSection from "../common/ContactSection";
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const CTABanner = styled(Box)(({ theme }) => ({
 	backgroundColor: "#00c6d7",
@@ -20,8 +27,6 @@ const CTABanner = styled(Box)(({ theme }) => ({
 	textAlign: "center",
 	color: "#1c2e4a",
 }));
-import ContactSection from "../common/ContactSection";
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 
 const JW_BLUE = "#1c2e4a";
 const JW_CYAN = "#00c6d7";
@@ -59,43 +64,77 @@ export default function EmergencyDoorOpeningPage() {
 		{
 			title: "Fast Response Time",
 			description:
-				"Our technicians are strategically located to provide quick emergency response throughout South London and Surrey.",
+				"Quick attendance for lockouts and urgent access issues across London and Surrey.",
 		},
 		{
-			title: "Non-Destructive Entry",
+			title: "Non Destructive Entry",
 			description:
-				"We use specialized tools and techniques to open doors with minimal or no damage to your property.",
+				"We use non destructive entry methods where possible to reduce unnecessary damage.",
 		},
 		{
 			title: "24/7 Availability",
 			description:
-				"Our emergency door opening service is available around the clock, including weekends and holidays.",
+				"Emergency door opening support for situations that cannot wait until later.",
 		},
 		{
 			title: "Fully Equipped Technicians",
 			description:
-				"Our locksmiths arrive with all necessary tools and components to resolve most lock emergencies on the first visit.",
+				"Our team arrives with the tools needed for common lock and door access problems.",
 		},
 	];
 
 	const benefits = [
-		"Quick response to minimize inconvenience",
-		"Expertly trained locksmiths for damage-free entry",
-		"Full security assessment during service",
-		"Replacement locks can be fitted immediately if required",
-		"All types of doors and locks handled",
-		"Competitive pricing with transparent quotes",
+		"Quick response to urgent lockout situations",
+		"Experienced locksmiths for residential and commercial properties",
+		"Non destructive entry where possible",
+		"Help with failed locks and jammed mechanisms",
+		"Access restored without unnecessary delay",
+		"Clear pricing before work starts",
+	];
+
+	const faqs = [
+		{
+			question: "Do You Provide Emergency Door Opening In London?",
+			answer:
+				"Yes. We provide emergency door opening in London for homes, flats, offices, shops, and commercial premises.",
+		},
+		{
+			question: "Can You Help If I Am Locked Out Of My House?",
+			answer:
+				"Yes. We attend house lockouts, flat lockouts, and other residential access problems across London and Surrey.",
+		},
+		{
+			question: "Do You Use Non Destructive Entry?",
+			answer:
+				"Where possible, yes. We assess the lock and door first and use the most suitable entry method for the situation.",
+		},
+		{
+			question: "What If The Lock Has Failed?",
+			answer:
+				"If the lock, cylinder, or mechanism has failed, we explain the fault and advise what needs to be done after access is regained.",
+		},
+		{
+			question: "Do You Work With Businesses And Managed Buildings?",
+			answer:
+				"Yes. We provide emergency door opening for offices, managed properties, communal entrances, and commercial buildings.",
+		},
+		{
+			question: "What Areas Do You Cover?",
+			answer:
+				"We cover London, Surrey, and surrounding areas. Call us if you want to confirm your location.",
+		},
 	];
 
 	return (
 		<>
 			<PageHero
-				title="Emergency Door Opening"
-				subtitle="Fast, professional assistance when you're locked out of your home or business"
+				title="Emergency Door Opening In London"
+				subtitle="Fast emergency door opening for homes, flats, offices, and business premises across London and Surrey when you are locked out or cannot regain access."
 				backgroundImage="/images/jw/locksmith-in-installing-new-house-door-lock-hand-holds-the-screwdriver.webp"
 				minHeight="45vh"
 				centerContent={true}
 			/>
+
 			<Box sx={{ py: { xs: 5, md: 8 } }}>
 				<Container>
 					<Grid
@@ -115,34 +154,38 @@ export default function EmergencyDoorOpeningPage() {
 								}}
 							/>
 						</Grid>
+
 						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h4">
 								Professional Emergency Door Opening Services
 							</SectionTitle>
+
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Being locked out of your home or business can be stressful and
-								disruptive. At JW Security, we provide fast, reliable emergency
-								door opening services with a focus on non-destructive entry
-								techniques to minimize damage to your property.
+								Getting locked out can happen without warning. Keys get left
+								inside. Locks fail. Doors close behind you. When that happens,
+								you need a fast response from someone who deals with access
+								problems every day.
 							</Typography>
+
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Our experienced locksmiths are equipped with specialized tools
-								and extensive training to handle all types of lock emergencies.
-								We can gain entry to virtually any locked door, including UPVC
-								doors, wooden doors, and composite doors with various locking
-								mechanisms.
+								JW Security provides emergency door opening in London for
+								residential and commercial properties that need urgent help
+								regaining entry. We attend lockouts for homes, flats, offices,
+								shops, and managed buildings, using the most suitable method for
+								the situation in front of us.
 							</Typography>
+
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								We understand that lockouts can happen at any time, which is why
-								our emergency door opening service is available 24 hours a day,
-								7 days a week. Simply call our emergency number, and we&apos;ll
-								dispatch the nearest available locksmith to your location.
+								Where possible, we aim for non destructive entry. If the issue
+								is caused by a failed lock, damaged cylinder, snapped key, or
+								faulty mechanism, we explain what has gone wrong and what needs
+								to happen next.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -162,12 +205,14 @@ export default function EmergencyDoorOpeningPage() {
 						</Box>{" "}
 						SECURITY QUOTE
 					</Typography>
+
 					<Typography
 						variant="h6"
 						sx={{ mb: 4, color: "white", opacity: 0.9 }}>
-						Join hundreds of local residents who trust JW Security for their
-						peace of mind.
+						Speak to JW Security for urgent access help and wider property
+						security work across London and Surrey.
 					</Typography>
+
 					<Button
 						variant="contained"
 						size="large"
@@ -194,24 +239,35 @@ export default function EmergencyDoorOpeningPage() {
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h4">
-								Why Choose Our Emergency Service
+								Why Choose Our Emergency Door Opening Service
 							</SectionTitle>
+
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								We pride ourselves on our rapid response and professional
-								approach. Our goal is to get you back inside your property as
-								quickly as possible, using the most efficient and least invasive
-								methods available today.
+								We focus on urgent access problems that need quick attention.
+								If you are locked out of your property, the priority is getting
+								you back inside without delay and without making the situation
+								worse.
 							</Typography>
+
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Our locksmiths are fully vetted and insured, providing you with
-								the peace of mind that your security is in expert hands even
-								during an emergency.
+								Our team deals with home lockouts, office lockouts, communal
+								entrance access issues, and other urgent door opening jobs
+								across London and Surrey.
+							</Typography>
+
+							<Typography
+								paragraph
+								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Because every lockout is different, we assess the door, lock,
+								and access point first, then use the most suitable method to
+								regain entry as safely as possible.
 							</Typography>
 						</Grid>
+
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Grid
 								container
@@ -239,6 +295,7 @@ export default function EmergencyDoorOpeningPage() {
 													sx={{ color: JW_CYAN, fontSize: 24 }}
 												/>
 											</Box>
+
 											<Box>
 												<Typography
 													variant="h6"
@@ -250,6 +307,7 @@ export default function EmergencyDoorOpeningPage() {
 													}}>
 													{feature.title}
 												</Typography>
+
 												<Typography
 													variant="body2"
 													sx={{ color: alpha("#000", 0.65) }}>
@@ -273,21 +331,24 @@ export default function EmergencyDoorOpeningPage() {
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h5">
-								What to Do When You&apos;re Locked Out
+								What To Do When You Are Locked Out
 							</SectionTitle>
+
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7, mb: 3 }}>
-								If you find yourself locked out, stay calm and follow these
-								steps to resolve the situation safely:
+								If you are locked out, the best thing to do is stay calm and
+								avoid forcing the door or damaging the lock. That often turns a
+								simple access issue into a bigger repair job.
 							</Typography>
+
 							<List sx={{ pl: 0 }}>
 								{[
-									"Call our emergency number immediately: 0208 646 7931",
-									"Provide your exact location and details about the lock mechanism",
-									"Our dispatcher will give you an accurate estimated arrival time",
-									"Wait in a safe, well-lit place nearby until our locksmith arrives",
-									"Have identification ready proving your residence or ownership",
+									"Call our emergency number and explain the situation",
+									"Tell us whether it is a home, flat, office, or commercial property",
+									"Let us know if the keys are lost, left inside, or if the lock has failed",
+									"Wait at the property until our locksmith arrives",
+									"Have identification ready where possible",
 								].map((text, idx) => (
 									<ListItem
 										key={idx}
@@ -302,6 +363,7 @@ export default function EmergencyDoorOpeningPage() {
 												sx={{ color: JW_CYAN, fontSize: 20 }}
 											/>
 										</ListItemIcon>
+
 										<ListItemText
 											primary={text}
 											primaryTypographyProps={{ fontSize: "1.05rem" }}
@@ -310,8 +372,10 @@ export default function EmergencyDoorOpeningPage() {
 								))}
 							</List>
 						</Grid>
+
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h5">Benefits of Our Service</SectionTitle>
+							<SectionTitle variant="h5">Benefits Of Our Service</SectionTitle>
+
 							<Box
 								sx={{
 									p: 3,
@@ -327,6 +391,7 @@ export default function EmergencyDoorOpeningPage() {
 											<ListItemIcon>
 												<CheckCircleOutlineIcon sx={{ color: JW_BLUE }} />
 											</ListItemIcon>
+
 											<ListItemText
 												primary={benefit}
 												primaryTypographyProps={{ fontWeight: 500 }}
@@ -335,6 +400,113 @@ export default function EmergencyDoorOpeningPage() {
 									))}
 								</List>
 							</Box>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
+			<CTABanner sx={{ py: 8 }}>
+				<Container>
+					<Typography
+						variant="h3"
+						sx={{ fontWeight: 800, mb: 3 }}>
+						Need Professional Access Assistance?
+					</Typography>
+
+					<Typography
+						variant="h6"
+						sx={{ mb: 4, fontWeight: 400, color: "white", opacity: 0.9 }}>
+						If you are locked out of your home, flat, office, shop, or managed
+						property, JW Security provides fast emergency door opening across
+						London and Surrey. Get in touch now for urgent access help or to speak
+						with our team about the issue.
+					</Typography>
+
+					<Button
+						variant="contained"
+						size="large"
+						href="/contact"
+						sx={{
+							"fontWeight": 900,
+							"px": 6,
+							"py": 2,
+							"fontSize": "1.1rem",
+							"bgcolor": JW_BLUE,
+							"color": "white",
+							"&:hover": { bgcolor: "white", color: JW_BLUE },
+						}}>
+						GET A FREE CONSULTATION
+					</Button>
+				</Container>
+			</CTABanner>
+
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}>
+						<Grid size={{ xs: 12, md: 5 }}>
+							<SectionTitle variant="h4">Common Questions</SectionTitle>
+
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Find answers to common questions about our emergency door
+								opening services.
+							</Typography>
+
+							<Button
+								variant="contained"
+								size="large"
+								href="/contact"
+								sx={{
+									"fontWeight": 900,
+									"px": 4,
+									"py": 1.5,
+									"bgcolor": JW_CYAN,
+									"color": JW_BLUE,
+									"&:hover": { bgcolor: JW_BLUE, color: "white" },
+								}}>
+								STILL HAVE QUESTIONS?
+							</Button>
+						</Grid>
+
+						<Grid size={{ xs: 12, md: 7 }}>
+							{faqs.map((faq, index) => (
+								<Accordion
+									key={index}
+									sx={{
+										"mb": 1.5,
+										"boxShadow": "0 2px 8px rgba(0,0,0,0.05)",
+										"borderRadius": "8px !important",
+										"&::before": { display: "none" },
+									}}>
+									<AccordionSummary
+										expandIcon={<ExpandMoreIcon sx={{ color: JW_CYAN }} />}
+										sx={{
+											"px": 3,
+											"py": 0.5,
+											"&.Mui-expanded": { minHeight: 48 },
+										}}>
+										<Typography
+											variant="subtitle1"
+											sx={{ fontWeight: 700, color: JW_BLUE }}>
+											{faq.question}
+										</Typography>
+									</AccordionSummary>
+
+									<AccordionDetails sx={{ px: 3, pb: 3 }}>
+										<Typography
+											sx={{
+												lineHeight: 1.7,
+												color: alpha("#000", 0.6),
+												fontSize: "0.95rem",
+											}}>
+											{faq.answer}
+										</Typography>
+									</AccordionDetails>
+								</Accordion>
+							))}
 						</Grid>
 					</Grid>
 				</Container>

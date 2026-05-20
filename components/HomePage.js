@@ -1439,7 +1439,7 @@ export default function HomePage() {
 								<StyledButton
 									variant="contained"
 									component="a"
-									href="/about"
+									href="/residential"
 									size="large">
 									Learn More
 								</StyledButton>

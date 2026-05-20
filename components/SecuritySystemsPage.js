@@ -12,7 +12,9 @@ import {
 	ListItemText,
 	Button,
 	Paper,
-	Chip,
+	Accordion,
+	AccordionSummary,
+	AccordionDetails,
 } from "@mui/material";
 import PageHero from "./common/PageHero";
 import BadgeIcon from "@mui/icons-material/Badge";
@@ -22,6 +24,7 @@ import ContactSection from "./common/ContactSection";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import HomeWorkIcon from "@mui/icons-material/HomeWork";
 import SmartphoneIcon from "@mui/icons-material/Smartphone";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 
@@ -90,12 +93,45 @@ const FeatureCard = styled(Paper)(({ theme }) => ({
 }));
 
 export default function SecuritySystemsPage() {
+	const faqs = [
+		{
+			question: "What Security Services Do You Offer?",
+			answer:
+				"We install CCTV systems, intruder alarms, access control, and integrated smart security systems for residential and commercial properties across London and Surrey.",
+		},
+		{
+			question: "Do You Provide CCTV Installation In London?",
+			answer:
+				"Yes. We carry out CCTV installation for homes, businesses, managed buildings, and commercial premises throughout London and Surrey.",
+		},
+		{
+			question: "Do You Install Alarm Systems?",
+			answer:
+				"Yes. We fit intruder alarm systems for homes and businesses, including wired and wireless options depending on the site.",
+		},
+		{
+			question: "Can You Install Access Control Systems?",
+			answer:
+				"Yes. We install fob systems, keypad entry, intercom systems, and secure door access for managed buildings, offices, and commercial premises.",
+		},
+		{
+			question: "Do You Work With Residential And Commercial Properties?",
+			answer:
+				"Yes. Our clients include homeowners, landlords, managing agents, offices, shops, residential blocks, and commercial premises of various sizes.",
+		},
+		{
+			question: "What Areas Do You Cover?",
+			answer:
+				"We work across London, Surrey, and surrounding areas. If you are not sure whether we cover your location, just call and we will confirm it.",
+		},
+	];
+
 	const securityServices = [
 		{
-			title: "CCTV Systems",
+			title: "CCTV Installation",
 			icon: <VideocamIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
-				"High-definition surveillance systems with remote viewing capabilities.",
+				"HD cameras fitted for homes, businesses, managed buildings, and commercial sites, with remote viewing set up where needed.",
 			features: [
 				"HD/4K camera systems",
 				"Night vision technology",
@@ -106,10 +142,10 @@ export default function SecuritySystemsPage() {
 			],
 		},
 		{
-			title: "Intruder Alarms",
+			title: "Intruder Alarm Installation",
 			icon: <NotificationsActiveIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
-				"Advanced alarm systems to detect and deter unauthorized access.",
+				"Wired and wireless alarm systems for homes and businesses, designed to detect break ins and reduce false alerts.",
 			features: [
 				"Wireless & wired systems",
 				"Pet-friendly sensors",
@@ -123,7 +159,7 @@ export default function SecuritySystemsPage() {
 			title: "Access Control",
 			icon: <BadgeIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
-				"Sophisticated entry management systems for enhanced security.",
+				"Fob systems, keypad entry, intercoms, and secure door access for shared entrances, staff areas, offices, and managed buildings.",
 			features: [
 				"Card & fob systems",
 				"Biometric readers",
@@ -134,9 +170,10 @@ export default function SecuritySystemsPage() {
 			],
 		},
 		{
-			title: "Smart Home Security",
+			title: "Smart Security Systems",
 			icon: <HomeWorkIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
-			description: "Integrated smart security solutions for modern homes.",
+			description:
+				"Connected CCTV, alarms, and access control managed from one place for larger sites or buildings with multiple access points.",
 			features: [
 				"Smart locks",
 				"Video doorbells",
@@ -146,86 +183,36 @@ export default function SecuritySystemsPage() {
 				"Unified app control",
 			],
 		},
-		{
-			title: "Commercial Security",
-			icon: <RouterIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
-			description:
-				"Comprehensive security solutions for businesses of all sizes.",
-			features: [
-				"Integrated systems",
-				"Multi-site management",
-				"Employee tracking",
-				"Visitor management",
-				"Perimeter protection",
-				"Security consulting",
-			],
-		},
-		{
-			title: "Mobile Solutions",
-			icon: <SmartphoneIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
-			description:
-				"Control and monitor your security from anywhere in the world.",
-			features: [
-				"Real-time alerts",
-				"Live video streaming",
-				"System arm/disarm",
-				"Event history",
-				"User management",
-				"Push notifications",
-			],
-		},
-	];
-
-	const systemBrands = [
-		"Hikvision",
-		"Dahua",
-		"Axis",
-		"Bosch",
-		"Honeywell",
-		"Ajax",
-		"Texecom",
-		"Pyronix",
-		"Videofied",
-		"Risco",
-		"Galaxy",
-		"HKC",
 	];
 
 	const benefits = [
 		{
 			title: "Crime Deterrent",
 			description:
-				"Visible security systems significantly reduce the likelihood of break-ins",
+				"Visible CCTV, alarms, and entry systems can help discourage unwanted access.",
 		},
 		{
 			title: "Remote Monitoring",
-			description: "Check your property from anywhere using smartphone apps",
+			description:
+				"Check live footage and recordings from your phone when remote viewing is enabled.",
 		},
 		{
 			title: "Evidence Collection",
 			description:
-				"High-quality footage for police investigations and insurance claims",
+				"Recorded footage can help with incident checks, internal review, or insurance claims.",
 		},
 		{
-			title: "Peace of Mind",
-			description: "24/7 protection whether you're home or away",
-		},
-		{
-			title: "Insurance Savings",
+			title: "Peace Of Mind",
 			description:
-				"Many insurers offer discounts for professionally installed systems",
-		},
-		{
-			title: "Scalable Solutions",
-			description: "Systems that grow with your changing security needs",
+				"A well set up system gives owners, staff, and residents more confidence day to day.",
 		},
 	];
 
 	return (
 		<>
 			<PageHero
-				title="Security Systems"
-				subtitle="Advanced security technology to protect what matters most"
+				title="Security Services In London"
+				subtitle="CCTV installation, intruder alarm installation, and access control for homes, businesses, and managed properties across London and Surrey. JW Security installs and configures systems built around how each site is used."
 				backgroundImage="/images/jw/security-camera.webp"
 				minHeight="45vh"
 				centerContent={true}
@@ -251,28 +238,35 @@ export default function SecuritySystemsPage() {
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h4">
-								State-of-the-Art Security Systems
+								Security Installation For London Properties
 							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								JW Security specializes in designing and installing
-								comprehensive security systems tailored to your specific needs.
-								With over 30 years of experience, we provide cutting-edge
-								solutions that offer maximum protection and peace of mind.
+								A camera pointed at the wrong angle misses what matters. An
+								alarm that goes off too often gets ignored. Access control that
+								lets in the wrong people defeats the point. Getting the setup
+								right from the start is what makes the system useful when it is
+								needed most.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Our systems combine the latest technology with professional
-								installation to create robust security solutions.
+								JW Security has been installing security systems across London
+								since 1991. We handle CCTV installation, intruder alarm
+								installation, and access control for residential and commercial
+								properties throughout London and Surrey. Jobs range from a
+								single camera on a front door to wider systems covering offices,
+								shops, managed buildings, and commercial premises with multiple
+								entry points.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Every installation begins with a free security assessment where
-								we identify vulnerabilities and recommend the most effective
-								solutions within your budget.
+								Every installation starts with a site review. We identify weak
+								points, understand how the building is used day to day, and set
+								up a system based on that. No unnecessary equipment pushed on
+								top.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -286,7 +280,7 @@ export default function SecuritySystemsPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">Integrated Solutions</SectionTitle>
+							<SectionTitle variant="h4">What We Install</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
@@ -304,7 +298,7 @@ export default function SecuritySystemsPage() {
 							<Grid
 								container
 								spacing={2}>
-								{securityServices.slice(0, 4).map((service, index) => (
+								{securityServices.map((service, index) => (
 									<Grid
 										size={{ xs: 12, sm: 6 }}
 										key={index}>
@@ -391,7 +385,7 @@ export default function SecuritySystemsPage() {
 							<Grid
 								container
 								spacing={2}>
-								{benefits.slice(0, 4).map((benefit, index) => (
+								{benefits.map((benefit, index) => (
 									<Grid
 										size={{ xs: 12, sm: 6 }}
 										key={index}>
@@ -423,14 +417,16 @@ export default function SecuritySystemsPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								A professional security system provides more than just
-								protection - it offers intelligence and control.
+								A well installed security system helps deter unwanted activity,
+								improves visibility, and gives you more control over how the
+								building is monitored.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								From reducing insurance premiums to providing verifiable
-								evidence, our systems are a long-term investment in your safety.
+								From CCTV and alarms to access control, the right setup supports
+								safer access and more useful information when something needs
+								checking later.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -492,6 +488,74 @@ export default function SecuritySystemsPage() {
 									))}
 								</List>
 							</Box>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}>
+						<Grid size={{ xs: 12, md: 5 }}>
+							<SectionTitle variant="h4">Common Questions</SectionTitle>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Find answers to common questions about our security installation
+								services.
+							</Typography>
+							<Button
+								variant="contained"
+								size="large"
+								href="/contact"
+								sx={{
+									"fontWeight": 900,
+									"px": 4,
+									"py": 1.5,
+									"bgcolor": JW_CYAN,
+									"color": JW_BLUE,
+									"&:hover": { bgcolor: JW_BLUE, color: "white" },
+								}}>
+								STILL HAVE QUESTIONS?
+							</Button>
+						</Grid>
+						<Grid size={{ xs: 12, md: 7 }}>
+							{faqs.map((faq, index) => (
+								<Accordion
+									key={index}
+									sx={{
+										"mb": 1.5,
+										"boxShadow": "0 2px 8px rgba(0,0,0,0.05)",
+										"borderRadius": "8px !important",
+										"&::before": { display: "none" },
+									}}>
+									<AccordionSummary
+										expandIcon={<ExpandMoreIcon sx={{ color: JW_CYAN }} />}
+										sx={{
+											"px": 3,
+											"py": 0.5,
+											"&.Mui-expanded": { minHeight: 48 },
+										}}>
+										<Typography
+											variant="subtitle1"
+											sx={{ fontWeight: 700, color: JW_BLUE }}>
+											{faq.question}
+										</Typography>
+									</AccordionSummary>
+									<AccordionDetails sx={{ px: 3, pb: 3 }}>
+										<Typography
+											sx={{
+												lineHeight: 1.7,
+												color: alpha("#000", 0.6),
+												fontSize: "0.95rem",
+											}}>
+											{faq.answer}
+										</Typography>
+									</AccordionDetails>
+								</Accordion>
+							))}
 						</Grid>
 					</Grid>
 				</Container>
