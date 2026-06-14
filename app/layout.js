@@ -103,6 +103,7 @@ const businessSchema = {
 };
 
 const GTM_ID = "GTM-K5R23XWC";
+const GA_TRACKING_ID = "G-650DFVCK9H"; // Google Analytics Measurement ID
 
 export default function RootLayout({ children }) {
 	return (
@@ -119,6 +120,26 @@ export default function RootLayout({ children }) {
 					href="https://fonts.gstatic.com"
 					crossOrigin="anonymous"
 				/>
+
+				{/* Google Analytics (gtag.js) Base Code */}
+				<Script
+					strategy="afterInteractive"
+					src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+				/>
+				<Script
+					id="google-analytics"
+					strategy="afterInteractive"
+					dangerouslySetInnerHTML={{
+						__html: `
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments);}
+							gtag('js', new Date());
+							gtag('config', '${GA_TRACKING_ID}');
+						`,
+					}}
+				/>
+
+				{/* Google Tag Manager (GTM) Container Code */}
 				<Script
 					id="gtm-script"
 					strategy="afterInteractive"

@@ -895,19 +895,17 @@ export default function HomePage() {
 									wordBreak: "break-word",
 									mt: 2,
 								}}>
-								Locksmith, Carpentry
+								Trusted Locksmith,
 								<br />
-								and Fire Protection Specialists
+								Security, And Fire Protection Services <br /> In London
 							</HeroTitle>
 						</motion.div>
 						<motion.div variants={fadeInUpVariants}>
-							<HeroCallText>
-								<HeroSubtitle>
-									<strong>Call us now</strong> for emergency call out
-									<br />
-									or a free estimate:
-								</HeroSubtitle>
-								<HeroPhoneNumber>0208 646 7931</HeroPhoneNumber>
+							<HeroCallText className="max-w-xl">
+								Locksmith, security, and fire protection services for homes,
+								businesses, and managed properties across London, Surrey, and
+								surrounding areas. Call JW Security for urgent help or request a
+								free quote.
 							</HeroCallText>
 						</motion.div>
 						<motion.div variants={fadeInUpVariants}>
@@ -948,7 +946,7 @@ export default function HomePage() {
 									fontSize: { xs: "12px", sm: "14px", md: "15px" },
 									textAlign: "center",
 								}}>
-								Locksmiths
+								Locksmith Services
 							</Typography>
 						</ServiceIconWrapper>
 					</motion.div>
@@ -1008,6 +1006,51 @@ export default function HomePage() {
 					</motion.div>
 				</ServiceIconsContainer>
 			</HeroSectionStyled>
+			<Section>
+				<Container sx={{ textAlign: "center", marginBottom: "-60px" }}>
+					<motion.div
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true, amount: 0.3 }}
+						variants={fadeInUpVariants}>
+						<SectionTitle
+							variant="h4"
+							component="h2"
+							sx={{ mb: 4, fontSize: "2.2rem" }}>
+							Trusted By Leading Names
+						</SectionTitle>
+					</motion.div>
+					<Grid
+						container
+						spacing={5}
+						justifyContent="center"
+						alignItems="center">
+						{clients.map((client, index) => (
+							<Grid
+								item
+								xs={6}
+								sm={4}
+								md={2}
+								key={index}>
+								<motion.div
+									initial="hidden"
+									whileInView="visible"
+									viewport={{ once: true, amount: 0.3 }}
+									variants={fadeInUpVariants}
+									transition={{ delay: index * 0.1 }}>
+									<Image
+										src={client.logo}
+										alt={client.name}
+										width={100}
+										height={100}
+										sizes=""
+									/>
+								</motion.div>
+							</Grid>
+						))}
+					</Grid>
+				</Container>
+			</Section>
 			<Section odd>
 				<Container maxWidth="xl">
 					<Box
@@ -1102,51 +1145,6 @@ export default function HomePage() {
 							</motion.div>
 						</Box>
 					</Box>
-				</Container>
-			</Section>
-			<Section>
-				<Container sx={{ textAlign: "center" }}>
-					<motion.div
-						initial="hidden"
-						whileInView="visible"
-						viewport={{ once: true, amount: 0.3 }}
-						variants={fadeInUpVariants}>
-						<SectionTitle
-							variant="h4"
-							component="h2"
-							sx={{ mb: 7, fontSize: "2.2rem" }}>
-							Trusted By Leading Names
-						</SectionTitle>
-					</motion.div>
-					<Grid
-						container
-						spacing={5}
-						justifyContent="center"
-						alignItems="center">
-						{clients.map((client, index) => (
-							<Grid
-								item
-								xs={6}
-								sm={4}
-								md={2}
-								key={index}>
-								<motion.div
-									initial="hidden"
-									whileInView="visible"
-									viewport={{ once: true, amount: 0.3 }}
-									variants={fadeInUpVariants}
-									transition={{ delay: index * 0.1 }}>
-									<Image
-										src={client.logo}
-										alt={client.name}
-										width={100}
-										height={100}
-										sizes=""
-									/>
-								</motion.div>
-							</Grid>
-						))}
-					</Grid>
 				</Container>
 			</Section>
 			<Section
