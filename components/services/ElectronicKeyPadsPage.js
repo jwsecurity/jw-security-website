@@ -98,80 +98,78 @@ export default function ElectronicKeyPadsPage() {
 		{
 			title: "Digital Code Keypads",
 			description:
-				"Simple electronic keypads with numeric codes for access, ideal for basic security needs without requiring keys.",
+				"Simple code based keypad locks for homes, offices, staff rooms, storage areas, and internal doors where key control needs to be easier.",
 			icon: <LockIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
-			applications: [
-				"Internal doors in offices",
-				"Store rooms and supply closets",
-				"Residential side entrances",
-				"Basic access control requirements",
-			],
 		},
 		{
 			title: "Advanced Smart Keypads",
 			description:
-				"Sophisticated access systems with multiple code options, temporary codes, audit trails, and remote management capabilities.",
+				"Smart keypad systems with multiple user codes, temporary codes, app based control where available, and better access management for busier sites.",
 			icon: <BusinessIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
-			applications: [
-				"Main business entrances",
-				"Secure areas requiring audit logs",
-				"Multi-user environments",
-				"Properties requiring remote management",
-			],
 		},
 		{
 			title: "Biometric Entry Systems",
 			description:
-				"High-security access control using fingerprint, facial recognition, or other biometric identifiers along with keypad functionality.",
+				"Biometric access options for properties that need extra control, including fingerprint access where suitable for the door, users, and site requirements.",
 			icon: <HomeIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
-			applications: [
-				"High-security areas",
-				"Executive offices",
-				"Valuable item storage",
-				"Sensitive data rooms",
-			],
 		},
 	];
 
 	const features = [
-		"Keyless entry - no more lost keys or lockouts",
-		"Multiple user codes for family members, staff, or temporary visitors",
-		"Audit trail capabilities to track access",
-		"Temporary code creation for one-time or limited-time access",
-		"Battery operation with low battery warnings",
-		"Mechanical key override for emergency access",
-		"Weather-resistant options for external installation",
-		"Integration with alarm and smart home systems",
+		"Keyless entry with no everyday keys to carry",
+		"Multiple user codes for family, staff, tenants, or visitors",
+		"Temporary codes for cleaners, contractors, or short term access",
+		"Code changes when staff leave or tenants move out",
+		"Audit trail options on selected systems",
+		"Battery powered options with low battery warnings",
+		"Mechanical key override on suitable models",
+		"Weather resistant options for external doors",
+		"Possible integration with alarms or smart systems where compatible",
 	];
 
 	const faqs = [
 		{
-			question: "Are electronic keypads secure?",
+			question: "Are Electronic Keypads Secure?",
 			answer:
-				"Yes, modern electronic keypads offer excellent security when properly installed and configured. They eliminate risks associated with lost or stolen keys and many models include anti-tamper features and lockout functions after multiple incorrect code entries. Advanced models also offer audit trails to monitor access attempts.",
+				"Yes, when the right keypad lock is fitted to the right door and set up correctly. We check the door, frame, lock type, and usage before recommending a system.",
 		},
 		{
-			question: "What happens if the batteries die?",
+			question: "Do You Provide Keypad Lock Installation In London?",
 			answer:
-				"Most electronic keypads include low battery warnings well before power failure. Additionally, quality models feature emergency override options such as external battery contacts or mechanical key backup systems to ensure you're never locked out due to power loss.",
+				"Yes. JW Security provides keypad lock installation in London for homes, offices, shops, managed buildings, and commercial properties.",
 		},
 		{
-			question: "Can electronic keypads be installed on any door?",
+			question: "Can You Install A Digital Lock On Any Door?",
 			answer:
-				"Electronic keypads can be installed on most standard doors, including wooden, UPVC, composite, and aluminum doors. During our assessment, we'll confirm compatibility with your specific door type and recommend the most suitable model. Some specialty doors may require custom mounting solutions.",
+				"Digital lock installation depends on the door type, frame, thickness, and existing hardware. We assess the door first and recommend a suitable option.",
 		},
 		{
-			question: "Can I change the access codes myself?",
+			question: "What Happens If The Batteries Die?",
 			answer:
-				"Yes, all electronic keypads we install allow simple user programming to change access codes. We provide full training during installation and leave behind user manuals with clear instructions. More advanced systems may offer app-based management for even easier code changes.",
+				"Most quality keypad locks give low battery warnings before power runs out. Many also include override options, depending on the model fitted.",
+		},
+		{
+			question: "Can I Change The Access Codes Yourself?",
+			answer:
+				"Yes. Most electronic keypad systems allow you to change user codes. We show you how to manage the basic settings after installation.",
+		},
+		{
+			question: "Are Keyless Entry Systems Good For Businesses?",
+			answer:
+				"Yes. A keyless entry system can help offices, shops, staff areas, and managed buildings control access without handing out lots of physical keys.",
+		},
+		{
+			question: "Do You Cover London And Surrey?",
+			answer:
+				"Yes. We install electronic keypads, digital locks, and keyless entry systems across London, Surrey, and surrounding areas.",
 		},
 	];
 
 	return (
 		<>
 			<PageHero
-				title="Electronic Key Pads"
-				subtitle="Modern keyless entry solutions for convenient and enhanced access control"
+				title="Electronic Keypads In London"
+				subtitle="Keypad lock installation, electronic lock installation, and keyless entry systems for homes, offices, managed buildings, and commercial properties across London and Surrey."
 				backgroundImage="/images/jw/home-ip-video-surveillance-concept.webp"
 				minHeight="45vh"
 				centerContent={true}
@@ -197,34 +195,27 @@ export default function ElectronicKeyPadsPage() {
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h4">
-								Advanced Keyless Entry Solutions
+								Electronic Lock Installation For Easier Access
 							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								JW Security supplies and installs a wide range of electronic
-								keypad systems to provide convenient, secure access control for
-								both residential and commercial properties. Our keyless entry
-								solutions eliminate the need for traditional keys, offering
-								enhanced security and flexibility.
+								Keys get lost. Copies get passed around. Staff change, tenants move out, and shared entrances become harder to manage over time.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Electronic keypads provide numerous advantages over conventional
-								locks, including the ability to create unique access codes for
-								different users, temporary codes for visitors, and detailed
-								access logs. They&apos;re ideal for properties that require
-								controlled access for multiple individuals or temporary staff.
+								Electronic keypads make access easier to control without relying on standard keys for every user. A code can be changed when needed, temporary access can be given to the right person, and doors can be managed more cleanly across homes, offices, rental properties, and shared buildings.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								JW Security provides keypad lock installation in London for residential and commercial properties. We install digital locks, electronic keypad systems, and keyless entry systems where controlled access is needed without the hassle of traditional keys.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Our expert technicians will assess your specific requirements
-								and recommend the most suitable electronic keypad system for
-								your needs. We handle everything from consultation and product
-								selection to professional installation and user training,
-								ensuring your new access system functions perfectly.
+								Before fitting anything, we check the door, frame, lock type, daily use, and access needs. Some sites need a simple digital keypad. Others need a smarter setup with user codes, audit trails, or integration with existing security systems.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -244,17 +235,12 @@ export default function ElectronicKeyPadsPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								We provide a variety of electronic access systems tailored to
-								different security levels and property types. From simple
-								numeric pads to biometric and smart-integrated systems, we
-								ensure you have the right level of control.
+								We supply and install electronic keypads for different doors, buildings, and access needs across London and Surrey.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Our solutions are designed for longevity and ease of use, with
-								features that cater to both families and high-traffic commercial
-								environments.
+								Some properties only need a basic code lock for one door. Others need a stronger keyless entry system for staff areas, shared entrances, or managed sites with several users.
 							</Typography>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
@@ -324,13 +310,11 @@ export default function ElectronicKeyPadsPage() {
 							/>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">Key Features & Benefits</SectionTitle>
+							<SectionTitle variant="h4">Key Features And Benefits</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Our electronic keypads are packed with features that make
-								security both more robust and easier to manage. Experience the
-								freedom of keyless living with professional-grade technology.
+								Electronic keypads are useful when too many people need access, keys keep going missing, or a door needs better control without making entry difficult for authorised users.
 							</Typography>
 							<Grid
 								container
@@ -422,13 +406,12 @@ export default function ElectronicKeyPadsPage() {
 							<Typography
 								variant="h6"
 								sx={{ fontWeight: 600, color: JW_BLUE, mb: 1 }}>
-								1. Consultation & Assessment
+								1. Consultation And Assessment
 							</Typography>
 							<Typography
 								variant="body1"
 								sx={{ mb: 3 }}>
-								We discuss your requirements, assess your property, and
-								recommend suitable electronic keypad options.
+								We look at the door, current lock, access needs, number of users, and whether the keypad is for a home, office, shared entrance, or commercial site.
 							</Typography>
 
 							<Typography
@@ -439,9 +422,7 @@ export default function ElectronicKeyPadsPage() {
 							<Typography
 								variant="body1"
 								sx={{ mb: 3 }}>
-								We help you select the most appropriate electronic keypad system
-								based on your security needs, budget, and property
-								specifications.
+								We recommend a suitable digital lock or electronic keypad system based on the door type, usage, budget, and level of control required.
 							</Typography>
 
 							<Typography
@@ -452,19 +433,16 @@ export default function ElectronicKeyPadsPage() {
 							<Typography
 								variant="body1"
 								sx={{ mb: 3 }}>
-								Our skilled technicians install your new electronic keypad
-								system, ensuring proper function and integration with existing
-								door hardware.
+								Our team installs the keypad lock, checks the fit, tests the mechanism, and makes sure the door opens, closes, and locks as it should.
 							</Typography>
 
 							<Typography
 								variant="h6"
 								sx={{ fontWeight: 600, color: JW_BLUE, mb: 1 }}>
-								4. System Programming & Training
+								4. Code Setup & User Guidance
 							</Typography>
 							<Typography variant="body1">
-								We program your new system with initial access codes and provide
-								comprehensive training on its operation and management.
+								We set up the initial access codes and show you how to use the system, change codes, and manage basic settings.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -502,7 +480,7 @@ export default function ElectronicKeyPadsPage() {
 
 			<ContactSection
 				title="Upgrade Your Access Control"
-				subtitle="Contact us to discuss electronic keypad solutions for your property. Our experts will guide you through the options and provide a free, no-obligation quote."
+				subtitle="Need a better way to manage entry without relying on standard keys? JW Security installs electronic keypads, digital locks, and keyless entry systems for homes, businesses, managed buildings, and commercial sites across London and Surrey."
 			/>
 		</>
 	);

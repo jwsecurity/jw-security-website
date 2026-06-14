@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import Link from "next/link";
 import { styled, alpha } from "@mui/material/styles";
 import { Box, Container, Typography, Button } from "@mui/material";

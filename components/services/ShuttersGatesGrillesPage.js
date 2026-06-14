@@ -79,38 +79,20 @@ export default function ShuttersGatesGrillesPage() {
 		{
 			title: "Security Shutters",
 			description:
-				"Custom-designed security shutters providing robust protection for windows, doors, and other openings. Available in manual or electric operation.",
-			features: [
-				"Excellent security for windows and doors",
-				"Visual deterrent to intruders",
-				"Insulation and noise reduction benefits",
-				"Light control and privacy",
-				"Weather protection",
-			],
+				"Security shutters for doors, windows, shopfronts, and other openings that need stronger protection. Manual and electric options are available depending on the site.",
+			features: [],
 		},
 		{
 			title: "Security Gates",
 			description:
-				"Heavy-duty gates for entrances, driveways, and perimeter security. We offer retractable, sliding, and swinging gate options to suit various requirements.",
-			features: [
-				"Controlled access to properties",
-				"Strong physical barrier",
-				"Available with various locking mechanisms",
-				"Optional automation systems",
-				"Durable materials for long-term security",
-			],
+				"Security gates for entrances, driveways, side access, rear yards, and commercial perimeters where controlled entry matters.",
+			features: [],
 		},
 		{
 			title: "Security Grilles",
 			description:
-				"Expandable or fixed grilles providing effective protection while maintaining visibility and ventilation. Ideal for commercial properties and ground-floor windows.",
-			features: [
-				"Effective security with visibility",
-				"Allows for ventilation",
-				"Retractable options available",
-				"Custom sizing for any opening",
-				"Various designs and finishes",
-			],
+				"Fixed and retractable security grilles for windows, doors, and internal openings where visibility and airflow still need to be maintained.",
+			features: [],
 		},
 	];
 
@@ -118,51 +100,53 @@ export default function ShuttersGatesGrillesPage() {
 		{
 			type: "Residential Applications",
 			examples: [
-				"Front and rear door security",
-				"Ground floor and basement windows",
-				"Patio doors and French windows",
-				"Entrance gates for driveways",
-				"Garden and side access security",
+				"Front and rear door protection",
+				"Ground floor windows",
+				"Basement windows",
+				"Patio doors",
+				"French doors",
+				"Side gates and garden access",
 			],
 		},
 		{
 			type: "Commercial Applications",
 			examples: [
-				"Shop fronts and display windows",
-				"Office entrances and windows",
-				"Warehouse loading bays",
-				"Commercial property perimeters",
-				"Server rooms and restricted areas",
+				"Shopfronts and display windows",
+				"Office entrances",
+				"Staff access doors",
+				"Warehouse doors",
+				"Loading bays",
+				"Storage areas",
 			],
 		},
 		{
 			type: "Specialized Applications",
 			examples: [
-				"Listed buildings requiring discreet security",
-				"High-value storage areas",
-				"Properties in high-risk locations",
-				"Temporary security for vacant properties",
-				"Seasonal properties with periodic occupation",
+				"Listed buildings needing discreet protection",
+				"High value storage areas",
+				"Properties in higher risk locations",
+				"Internal security zones",
+				"Shared access points",
 			],
 		},
 	];
 
 	const benefits = [
-		"Enhanced physical security against break-ins",
-		"Powerful visual deterrent to potential intruders",
-		"Custom designed to fit your property perfectly",
-		"Multiple operation options (manual, electric, remote control)",
-		"Various finishes to complement your property's aesthetics",
-		"Professional installation ensuring optimal performance",
-		"Durable materials for long-lasting protection",
-		"May help reduce insurance premiums",
+		"Stronger physical protection against forced entry",
+		"Visible deterrent for vulnerable doors, windows, and shopfronts",
+		"Security shutters London for residential and commercial sites",
+		"Security grilles London for windows, doors, and shared access areas",
+		"Manual and electric shutter options available",
+		"Roller shutter repair London for damaged or faulty shutters",
+		"Shutter lock repair London where locking parts have failed",
+		"Security grilles installation London for fixed or retractable protection",
 	];
 
 	return (
 		<>
 			<PageHero
-				title="Shutters, Gates & Grilles"
-				subtitle="Custom-designed physical security barriers to protect your property"
+				title="Shutters, Gates And Grilles In London"
+				subtitle="Security shutters, gates, and grilles for homes, shops, offices, and commercial properties across London and Surrey."
 				backgroundImage="/images/jw/symmetric-security-cameras.webp"
 				minHeight="45vh"
 				centerContent={true}
@@ -188,34 +172,31 @@ export default function ShuttersGatesGrillesPage() {
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h4">
-								Premium Physical Security Solutions
+								Physical Security Barriers For London Properties
 							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								JW Security provides high-quality security shutters, gates, and
-								grilles to create robust physical barriers protecting your
-								property from unauthorized access. Our solutions are
-								custom-designed to meet your specific security requirements
-								while complementing the aesthetics of your property.
+								Some properties need more than a lock or alarm. A shopfront,
+								rear entrance, ground floor window, loading bay, or storage
+								area can need a physical barrier that makes forced access harder.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								We offer a comprehensive service including consultation, design,
-								manufacturing, and professional installation. Our experts will
-								assess your property and recommend the most suitable security
-								solutions based on your vulnerability assessment, usage
-								patterns, and budget.
+								JW Security supplies, installs, and repairs shutters, gates, and
+								grilles across London and Surrey. We work with homeowners,
+								landlords, managing agents, shops, offices, and commercial
+								premises that need stronger protection without making the building
+								difficult to use.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								All our products are constructed using durable materials and
-								quality components to ensure reliable performance and long-term
-								security. We work with both residential and commercial clients
-								to enhance property protection through effective physical
-								security barriers.
+								From new security shutters in London to roller shutter repair,
+								shutter lock repair, and security grilles installation, we look
+								at the opening, the daily use of the site, and the level of
+								protection needed before recommending the right option.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -233,15 +214,14 @@ export default function ShuttersGatesGrillesPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								From high-street shop fronts to residential driveway entrances,
-								we provide the physical deterrence you need.
+								From shopfronts to residential entrances, we provide physical
+								security barriers that help protect vulnerable access points.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Our barrier solutions are built to withstand the toughest
-								conditions while maintaining a professional and clean appearance
-								for your property.
+								The aim is simple. Make the property harder to target while
+								keeping access, appearance, and daily use in mind.
 							</Typography>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
@@ -338,8 +318,9 @@ export default function ShuttersGatesGrillesPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Our systems are flexible enough for any setting, providing peace
-								of mind for varied environments.
+								Our shutters, gates, and grilles can be used across residential,
+								commercial, and higher risk sites where visible physical protection
+								is needed.
 							</Typography>
 							<Grid
 								container
@@ -397,19 +378,19 @@ export default function ShuttersGatesGrillesPage() {
 								{[
 									{
 										t: "Consultation",
-										d: "Thorough property assessment to understand your unique security needs.",
+										d: "We look at the access point, the type of property, and the level of protection you need.",
 									},
 									{
-										t: "Custom Design",
-										d: "Precision engineering to ensure your barriers fit perfectly and look great.",
+										t: "Measure And Design",
+										d: "The shutter, gate, or grille is measured for the opening so it fits the site and works as expected.",
 									},
 									{
-										t: "Installation",
-										d: "Efficient, professional fitting with minimal disruption to your daily life.",
+										t: "Installation Or Repair",
+										d: "Our team carries out fitting, roller shutter repair, shutter lock repair, or grille installation with care.",
 									},
 									{
-										t: "Quality Check",
-										d: "Rigorous testing to guarantee the integrity of your new security barrier.",
+										t: "Final Check",
+										d: "We test the barrier, check movement and locking, and make sure you know how to use it.",
 									},
 								].map((step, idx) => (
 									<Box
@@ -442,7 +423,7 @@ export default function ShuttersGatesGrillesPage() {
 							</Box>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h5">Benefits of Our Barriers</SectionTitle>
+							<SectionTitle variant="h5">Benefits Of Our Barriers</SectionTitle>
 							<Box
 								sx={{
 									p: 3,
@@ -477,8 +458,8 @@ export default function ShuttersGatesGrillesPage() {
 			</Box>
 
 			<ContactSection
-				title="Enhance Your Property Security"
-				subtitle="Contact our team to discuss custom security barriers for your home or business. We provide free consultations and competitive quotes for all our security solutions."
+				title="Need shutters, gates, or grilles fitted or repaired?"
+				subtitle="JW Security helps homes, shops, offices, landlords, and commercial sites across London and Surrey protect vulnerable openings with fitted physical barriers. For 24/7 urgent assistance, call our emergency hotline: 0208 646 7931."
 			/>
 		</>
 	);

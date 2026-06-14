@@ -1420,7 +1420,6 @@ export default function HomePage() {
 									Residential & <br />
 									Commercial Clients
 								</Typography>
-
 								<Typography
 									sx={{
 										color: "#555",

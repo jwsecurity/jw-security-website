@@ -91,77 +91,77 @@ export default function KeyCuttingPage() {
 		{
 			title: "Mobile Key Cutting",
 			description:
-				"We come to you with our fully equipped mobile workshop, cutting keys on-site for maximum convenience.",
+				"We come to you with key cutting equipment, saving time for homeowners, landlords, offices, and managed properties.",
 			icon: <DirectionsCarIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "Registered Key Systems",
 			description:
-				"We offer unique registered key systems that can only be duplicated with proper authorization.",
+				"Registered key systems help control who can request copies, reducing the risk of unauthorised duplication.",
 			icon: <VerifiedUserIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "All Key Types",
 			description:
-				"From standard house keys to high-security keys, we can duplicate virtually any key type.",
+				"We cut a wide range of key types, including cylinder keys, mortice keys, padlock keys, cabinet keys, and window lock keys.",
 			icon: <VpnKeyIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "While You Wait Service",
 			description:
-				"Most keys cut within minutes while you wait, minimizing disruption to your day.",
+				"Many standard keys can be cut on site while you wait, depending on the key type and blank availability.",
 			icon: <AccessTimeIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 	];
 
 	const keyTypes = [
 		"Standard cylinder keys",
-		"Mortise lock keys",
 		"Yale type keys",
-		"High-security keys",
 		"Restricted profile keys",
-		"Master key systems",
 		"Padlock keys",
-		"Window lock keys",
 		"Cabinet and furniture keys",
+		"Car keys, non transponder",
+		"Mortice lock keys",
+		"High security keys",
+		"Master key systems",
+		"Window lock keys",
 		"Safe keys",
-		"Car keys (non-transponder)",
 		"Garage and shed keys",
 	];
 
 	const benefits = [
-		"Convenient mobile service - we come to you",
-		"Professional key cutting equipment on board",
-		"Registered key systems for enhanced security",
-		"Experienced technicians ensure perfect cuts",
-		"Competitive pricing with no call-out charges",
-		"Same-day service available",
-		"All keys tested before we leave",
+		"On site key cutting where available",
+		"Duplicate key cutting for homes and businesses",
+		"Restricted key cutting for authorised users",
+		"Registered key systems for better key control",
+		"Experienced technicians with suitable equipment",
+		"Most standard keys cut while you wait",
+		"All keys checked before we leave",
 	];
 
 	const registeredKeyFeatures = [
 		{
 			title: "Enhanced Security",
 			description:
-				"Keys can only be duplicated by authorized personnel with proper identification",
+				"Restricted keys can only be copied by authorised users with the correct details.",
 			icon: <VerifiedUserIcon />,
 		},
 		{
 			title: "Control Over Key Copies",
 			description:
-				"You decide who can have keys cut, preventing unauthorized duplication",
+				"You decide who can request duplicate keys and help prevent unwanted copies.",
 			icon: <VpnKeyIcon />,
 		},
 		{
 			title: "Unique Key Profiles",
 			description:
-				"Registered keys use patented profiles that standard key cutters cannot duplicate",
+				"Registered or restricted key profiles make standard high street duplication much harder.",
 			icon: <ContentCutIcon />,
 		},
 		{
-			title: "Perfect for Businesses",
+			title: "Perfect For Businesses",
 			description:
-				"Ideal for commercial properties where key control is essential",
+				"Useful for offices, commercial properties, landlords, and managed buildings where key control matters.",
 			icon: <LocationOnIcon />,
 		},
 	];
@@ -169,8 +169,8 @@ export default function KeyCuttingPage() {
 	return (
 		<>
 			<PageHero
-				title="Mobile Key Cutting Service"
-				subtitle="Professional on-site key cutting with our fully equipped mobile workshop"
+				title="Mobile Key Cutting Service In London"
+				subtitle="On-site key cutting in London for homes, businesses, landlords, and managed properties, including duplicate keys, restricted keys, and common lock key types."
 				backgroundImage="/images/jw/keys-set-on-blue-background-door-lock-keys-and-safes-for-property-security-and-house-protection.webp"
 				minHeight="45vh"
 				centerContent={true}
@@ -201,26 +201,17 @@ export default function KeyCuttingPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								JW Security offers a comprehensive mobile key cutting service
-								throughout South London and Surrey. Our fully equipped vans
-								carry professional key cutting equipment, allowing us to cut
-								keys at your location for ultimate convenience.
+								Need spare keys without taking time out to visit a shop? JW Security provides mobile key cutting in London and Surrey, bringing the equipment to your property where possible.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Whether you need spare keys for your home, business, or are
-								locked out and need immediate assistance, our mobile service
-								saves you time and hassle. We carry a wide range of key blanks
-								and can cut most keys on the spot.
+								We cut keys for homeowners, landlords, managing agents, offices, shops, and commercial sites. Whether you need a few spare keys for staff, duplicate key cutting for a managed property, or replacement keys for everyday locks, our team can help.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								For enhanced security, we also offer registered key systems
-								where keys can only be duplicated with proper authorization.
-								This gives you complete control over who has access to your
-								property.
+								We also offer restricted key cutting in London where authorised key control is needed. This helps businesses, landlords, and security conscious property owners manage who can copy keys and who has access.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -238,17 +229,12 @@ export default function KeyCuttingPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								We provide a wide array of specialized key cutting solutions
-								on-site. From standard residential locks to advanced
-								high-security systems, our mobile workshops are ready for
-								anything.
+								We provide key cutting for common residential and commercial lock types, from everyday cylinder keys to restricted profiles and master key systems.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Our quick and efficient service ensures that your day remains
-								uninterrupted, with most keys cut accurately in just minutes
-								while you wait.
+								Most standard keys can be cut quickly, while restricted or registered keys may need proof of authorisation before duplication.
 							</Typography>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
@@ -309,16 +295,12 @@ export default function KeyCuttingPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Our unique registered key system provides the highest level of
-								key control for your property. Perfect for businesses,
-								landlords, and security-conscious homeowners.
+								A registered key system gives you better control over key copies. Instead of anyone being able to duplicate a key, copies are only supplied to authorised people.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								By ensuring that duplication is only available to registered
-								holders, we provide a definitive barrier against unauthorized
-								access and key theft.
+								This is useful for businesses, landlords, managed buildings, offices, and properties where access needs to be controlled more carefully.
 							</Typography>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
@@ -460,8 +442,7 @@ export default function KeyCuttingPage() {
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", mb: 3 }}>
-								Our mobile key cutting service covers all areas of South London
-								and Surrey
+								Our mobile key cutting service covers London, Surrey, and surrounding areas.
 							</Typography>
 							<Box
 								sx={{
@@ -502,7 +483,7 @@ export default function KeyCuttingPage() {
 
 			<ContactSection
 				title="Need Keys Cut Today?"
-				subtitle="Contact us for fast, professional mobile key cutting service. We come to you with all the equipment needed to cut your keys on-site."
+				subtitle="Need spare keys, duplicate keys, or restricted key cutting in London? JW Security provides mobile key cutting for homes, businesses, landlords, offices, shops, and managed properties across London and Surrey."
 			/>
 		</>
 	);

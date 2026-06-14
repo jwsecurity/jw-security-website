@@ -11,6 +11,9 @@ import {
 	ListItemIcon,
 	ListItemText,
 	Button,
+	Accordion,
+	AccordionSummary,
+	AccordionDetails,
 } from "@mui/material";
 import PageHero from "../common/PageHero";
 import HomeIcon from "@mui/icons-material/Home";
@@ -26,6 +29,7 @@ import ContactSection from "../common/ContactSection";
 import BusinessIcon from "@mui/icons-material/Business";
 import AssessmentIcon from "@mui/icons-material/Assessment";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const JW_BLUE = "#1c2e4a";
 const JW_CYAN = "#00c6d7";
@@ -89,19 +93,19 @@ export default function SecuritySurveysPage() {
 		{
 			title: "Residential Security Surveys",
 			description:
-				"Comprehensive assessments of home security vulnerabilities with tailored recommendations for families and homeowners.",
+				"Checks for houses, flats, landlords, and residential blocks where doors, windows, side gates, lighting, alarms, and entry points need review.",
 			icon: <HomeIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "Commercial Security Surveys",
 			description:
-				"Detailed evaluation of business premises to identify security risks and compliance issues, with custom solutions.",
+				"Checks for offices, shops, warehouses, and business premises where staff entrances, visitor access, stock rooms, CCTV, and access control need attention.",
 			icon: <BusinessIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
-			title: "Post-Incident Security Assessments",
+			title: "Post Incident Security Assessments",
 			description:
-				"Specialized surveys after break-ins or security breaches to identify weaknesses and prevent future incidents.",
+				"A closer look after a break in, attempted entry, or repeated concern, with advice on weak points and what should be improved next.",
 			icon: <AssessmentIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 	];
@@ -110,48 +114,101 @@ export default function SecuritySurveysPage() {
 		{
 			step: "Initial Consultation",
 			description:
-				"We discuss your security concerns, requirements, and budget to understand your needs.",
+				"We ask what has happened, what you are worried about, and what type of building you want checked.",
 		},
 		{
-			step: "On-Site Assessment",
+			step: "On Site Assessment",
 			description:
-				"Our security expert conducts a thorough examination of your property, identifying vulnerabilities and security gaps.",
+				"We look at doors, windows, locks, lighting, CCTV angles, alarms, access control, shared entrances, and any weak points around the site.",
 		},
 		{
-			step: "Detailed Report",
+			step: "Findings And Next Steps",
 			description:
-				"You receive a comprehensive security assessment with clear recommendations and prioritized actions.",
+				"You receive the main findings in plain language, with the most important fixes listed first.",
 		},
 		{
-			step: "Solution Implementation",
+			step: "Security Improvements",
 			description:
-				"Optional implementation of recommended security measures by our experienced technicians.",
+				"If you want the work carried out, we can help with suitable repairs, upgrades, or new security installation where needed.",
 		},
 		{
-			step: "Follow-Up Verification",
+			step: "Follow Up Check",
 			description:
-				"Post-implementation check to ensure all security measures are functioning correctly.",
+				"Where needed, we can return after the work is complete to make sure the agreed changes are in place and working as expected.",
 		},
 	];
 
+	const whenToConsider = [
+		"Moving into a new home or business premises",
+		"After a break in or attempted entry",
+		"Before upgrading locks, CCTV, alarms, or access control",
+		"When managing a residential block or commercial site",
+		"If staff, tenants, or visitors use shared access points",
+		"When storing stock, tools, equipment, or sensitive information",
+		"Before reviewing insurance or landlord safety requirements",
+	];
+
 	const surveyBenefits = [
-		"Identification of security vulnerabilities before they can be exploited",
-		"Professional recommendations based on industry best practices",
-		"Prioritized security improvements to match your budget",
-		"Compliance with insurance requirements",
-		"Peace of mind knowing your security has been professionally assessed",
-		"Documentation of security measures for insurance purposes",
+		"Weak doors, windows, lighting, and access points checked before they become bigger problems",
+		"Advice based on how the building is actually used",
+		"Main security issues listed in order of importance",
+		"Better understanding of locks, CCTV, alarms, entry points, and shared areas",
+		"Useful notes for landlords, managing agents, homeowners, and business owners",
+		"Guidance that can help with insurance, site management, and future security planning",
+	];
+
+	const faqs = [
+		{
+			question: "What Is A Security Survey?",
+			answer:
+				"A security survey is a check of your building’s doors, windows, locks, lighting, CCTV, alarms, access points, and other weak areas.",
+		},
+		{
+			question: "Do You Provide Security Surveys In London?",
+			answer:
+				"Yes. JW Security provides security surveys in London for homes, businesses, landlords, managed buildings, and commercial premises.",
+		},
+		{
+			question: "What Does A Property Security Assessment Include?",
+			answer:
+				"It can include doors, windows, locks, lighting, CCTV coverage, alarms, access control, shared entrances, side gates, and any area that may create a security concern.",
+		},
+		{
+			question: "Do You Offer Home Security Surveys?",
+			answer:
+				"Yes. We carry out home security surveys in London for houses, flats, landlords, and residential blocks.",
+		},
+		{
+			question: "Can You Survey A Commercial Property?",
+			answer:
+				"Yes. We provide commercial security surveys for offices, shops, warehouses, managed sites, and business premises.",
+		},
+		{
+			question: "Will You Recommend Security Upgrades?",
+			answer:
+				"Yes, but only where they make sense. We explain what should be fixed first and what can wait.",
+		},
+		{
+			question: "What Areas Do You Cover?",
+			answer:
+				"We cover London, Surrey, and surrounding areas. Call us if you want to confirm your location.",
+		},
 	];
 
 	return (
 		<>
 			<PageHero
-				title="Full Security Surveys"
-				subtitle="Comprehensive property assessments to identify vulnerabilities and enhance your security"
+				title="Security Surveys In London"
+				subtitle="Site checks for homes, businesses, and managed buildings across London and Surrey where doors, access points, lighting, alarms, and CCTV coverage need a closer look."
 				backgroundImage="/images/jw/maintenance-concept-focused-serious-young-locksmith-with-tattoo-on-hand-wearing-blue-uniform.webp"
 				minHeight="45vh"
 				centerContent={true}
+				ctaButton={true}
+				ctaText="Get A Free Quote"
+				ctaLink="/contact"
 			/>
+
+			{/* Section 1: Security Checks For Real Buildings */}
 			<Box sx={{ py: { xs: 5, md: 8 } }}>
 				<Container>
 					<Grid
@@ -173,39 +230,46 @@ export default function SecuritySurveysPage() {
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h4">
-								Professional Security Survey Services
+								Security Checks For Real Buildings
 							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								At JW Security, we offer comprehensive security surveys to help
-								identify vulnerabilities in your property&apos;s defenses. Our
-								professional assessments provide you with actionable insights
-								and recommendations to enhance your security setup.
+								Not every weak point stands out straight away.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Whether you&apos;re concerned about the security of your home,
-								business premises, or have recently experienced a security
-								breach, our thorough surveys can highlight areas for improvement
-								and help protect what matters most to you.
+								Sometimes it is a rear door that does not close tightly.
+								Sometimes it is poor lighting near a side entrance, a camera
+								that misses the main walkway, or an old alarm that nobody really
+								trusts anymore.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								JW Security carries out security surveys in London for
+								homeowners, landlords, managing agents, and businesses that want
+								to understand where their building may be exposed.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								We look at how the site is used, where people come in and out,
+								what security is already in place, and where the gaps are.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Each security survey is conducted by our experienced specialists
-								who bring years of expertise in identifying vulnerabilities that
-								others might miss. We take a comprehensive approach, examining
-								physical security, access points, existing systems, and
-								procedural aspects to provide you with a complete security
-								picture.
+								You get a straight answer on what looks secure, what does not,
+								and which fixes should come first.
 							</Typography>
 						</Grid>
 					</Grid>
 				</Container>
 			</Box>
 
+			{/* Section 2: Our Security Survey Services */}
 			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
 				<Container>
 					<Grid
@@ -219,16 +283,17 @@ export default function SecuritySurveysPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								We provide specialized assessments for different environments,
-								ensuring that our security strategies are tailored to the unique
-								risks of your property type.
+								We carry out site checks for different types of properties
+								across London and Surrey, from private homes and flats to shops,
+								offices, residential blocks, and commercial premises.
 							</Typography>
 							<Typography
 								paragraph
-								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								From family homes to large commercial complexes, our surveys
-								deliver the clarity and evidence-based guidance you need to
-								improve your defenses.
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								The risks are not the same everywhere. A family home may have
+								weak windows or poor rear access. A shop may need better camera
+								coverage near stock areas. A managed block may have issues
+								around shared entrances, visitor access, or communal doors.
 							</Typography>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
@@ -285,29 +350,34 @@ export default function SecuritySurveysPage() {
 				</Container>
 			</Box>
 
+			{/* First Banner: Need A Security Survey For Your Property? */}
 			<CTABanner sx={{ py: 8 }}>
 				<Container>
 					<Typography
 						variant="h3"
 						sx={{ fontWeight: 800, mb: 3 }}>
-						SCHEDULE A{" "}
-						<Box
-							component="span"
-							sx={{ color: "white" }}>
-							FREE
-						</Box>{" "}
-						SECURITY QUOTE
+						NEED A SECURITY SURVEY FOR YOUR PROPERTY?
 					</Typography>
 					<Typography
 						variant="h6"
-						sx={{ mb: 4, color: "white", opacity: 0.9 }}>
-						Join hundreds of local residents who trust JW Security for their
-						peace of mind.
+						sx={{
+							mb: 4,
+							color: "white",
+							opacity: 0.9,
+							maxWidth: "800px",
+							mx: "auto",
+							fontWeight: 400,
+							lineHeight: 1.6,
+						}}>
+						If you are not sure whether your building is secure enough, JW
+						Security can inspect the site and explain what needs looking at.
+						Book a home security survey, commercial security survey, or full
+						property security assessment across London and Surrey.
 					</Typography>
 					<Button
 						variant="contained"
 						size="large"
-						href="tel:02086467931"
+						href="/contact"
 						sx={{
 							"fontWeight": 900,
 							"px": 6,
@@ -317,11 +387,12 @@ export default function SecuritySurveysPage() {
 							"color": "white",
 							"&:hover": { bgcolor: "white", color: JW_BLUE },
 						}}>
-						CALL US TODAY: 0208 646 7931
+						GET A FREE CONSULTATION
 					</Button>
 				</Container>
 			</CTABanner>
 
+			{/* Section 3: Our Security Survey Process */}
 			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_CYAN, 0.05) }}>
 				<Container>
 					<Grid
@@ -335,8 +406,8 @@ export default function SecuritySurveysPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Our structured approach ensures that no detail is overlooked,
-								from the first conversation to the final verification.
+								We keep the process simple. First we listen, then we check the
+								site, then we explain what we found.
 							</Typography>
 							<Box
 								component="img"
@@ -394,6 +465,7 @@ export default function SecuritySurveysPage() {
 				</Container>
 			</Box>
 
+			{/* Section 4: When To Consider A Survey & Benefits Of Our Expert Assessments */}
 			<Box sx={{ py: { xs: 5, md: 8 } }}>
 				<Container>
 					<Grid
@@ -402,23 +474,17 @@ export default function SecuritySurveysPage() {
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h5">
-								When to Consider a Survey
+								When To Consider A Survey
 							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								A professional survey is particularly valuable in these critical
-								situations:
+								A property security assessment in London can help when something
+								has changed, when a weakness has been noticed, or before you
+								spend money on new equipment.
 							</Typography>
 							<List sx={{ pl: 0 }}>
-								{[
-									"Moving into a new home or business premises",
-									"After a security breach or burglary attempt",
-									"Storing valuable items or sensitive data",
-									"Renovating or expanding your property",
-									"An increase in local criminal activity",
-									"Compliance with insurance requirements",
-								].map((text, idx) => (
+								{whenToConsider.map((text, idx) => (
 									<ListItem
 										key={idx}
 										sx={{
@@ -442,7 +508,7 @@ export default function SecuritySurveysPage() {
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h5">
-								Benefits of Our Expert Assessments
+								Benefits Of Our Expert Assessments
 							</SectionTitle>
 							<Box
 								sx={{
@@ -467,6 +533,119 @@ export default function SecuritySurveysPage() {
 									))}
 								</List>
 							</Box>
+						</Grid>
+					</Grid>
+				</Container>
+			</Box>
+
+			{/* Second Banner: 24/7 Emergency Service */}
+			<CTABanner sx={{ py: 8 }}>
+				<Container>
+					<Typography
+						variant="h3"
+						sx={{ fontWeight: 800, mb: 3 }}>
+						24/7 EMERGENCY SERVICE
+					</Typography>
+					<Typography
+						variant="h6"
+						sx={{
+							mb: 4,
+							color: "white",
+							opacity: 0.9,
+							maxWidth: "800px",
+							mx: "auto",
+							fontWeight: 400,
+							lineHeight: 1.6,
+						}}>
+						Need urgent help instead of a planned survey? Call our emergency
+						team for urgent access or security help.
+					</Typography>
+					<Button
+						variant="contained"
+						size="large"
+						href="tel:02086467931"
+						sx={{
+							"fontWeight": 900,
+							"px": 6,
+							"py": 2,
+							"fontSize": "1.1rem",
+							"bgcolor": JW_BLUE,
+							"color": "white",
+							"&:hover": { bgcolor: "white", color: JW_BLUE },
+						}}>
+						CALL OUR EMERGENCY HOTLINE: 0208 646 7931
+					</Button>
+				</Container>
+			</CTABanner>
+
+			{/* Section 5: Common Questions (FAQs) */}
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
+					<Grid
+						container
+						spacing={6}>
+						<Grid size={{ xs: 12, md: 5 }}>
+							<SectionTitle variant="h4">Common Questions</SectionTitle>
+
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								Find answers to common questions about our security survey
+								services in London.
+							</Typography>
+
+							<Button
+								variant="contained"
+								size="large"
+								href="/contact"
+								sx={{
+									"fontWeight": 900,
+									"px": 4,
+									"py": 1.5,
+									"bgcolor": JW_CYAN,
+									"color": JW_BLUE,
+									"&:hover": { bgcolor: JW_BLUE, color: "white" },
+								}}>
+								STILL HAVE QUESTIONS?
+							</Button>
+						</Grid>
+
+						<Grid size={{ xs: 12, md: 7 }}>
+							{faqs.map((faq, index) => (
+								<Accordion
+									key={index}
+									sx={{
+										"mb": 1.5,
+										"boxShadow": "0 2px 8px rgba(0,0,0,0.05)",
+										"borderRadius": "8px !important",
+										"&::before": { display: "none" },
+									}}>
+									<AccordionSummary
+										expandIcon={<ExpandMoreIcon sx={{ color: JW_CYAN }} />}
+										sx={{
+											"px": 3,
+											"py": 0.5,
+											"&.Mui-expanded": { minHeight: 48 },
+										}}>
+										<Typography
+											variant="subtitle1"
+											sx={{ fontWeight: 700, color: JW_BLUE }}>
+											{faq.question}
+										</Typography>
+									</AccordionSummary>
+
+									<AccordionDetails sx={{ px: 3, pb: 3 }}>
+										<Typography
+											sx={{
+												lineHeight: 1.7,
+												color: alpha("#000", 0.6),
+												fontSize: "0.95rem",
+											}}>
+											{faq.answer}
+										</Typography>
+									</AccordionDetails>
+								</Accordion>
+							))}
 						</Grid>
 					</Grid>
 				</Container>

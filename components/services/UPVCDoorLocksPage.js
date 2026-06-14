@@ -97,25 +97,25 @@ export default function UPVCDoorsWindowsPage() {
 		{
 			title: "UPVC Door Lock Repair",
 			description:
-				"We diagnose and fix issues with jammed, misaligned, or damaged UPVC door locks to restore proper functionality.",
+				"uPVC door repair in London for jammed locks, failed gearboxes, stiff handles, and multi point systems that no longer engage properly.",
 			icon: <BuildIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "Window Lock & Handle Repair",
 			description:
-				"Expert repair of UPVC window locks, handles, and espagnolette mechanisms for secure and smooth operation.",
+				"uPVC window repair in London for broken handles, faulty window locks, seized mechanisms, and windows that no longer open or close smoothly.",
 			icon: <SecurityIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "Lock Replacement & Upgrades",
 			description:
-				"We replace worn or outdated door and window locks with high-security alternatives that meet modern standards.",
+				"Replacement locks, cylinders, handles, and security hardware for uPVC doors and windows where the existing parts are worn, damaged, or outdated.",
 			icon: <HandymanIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "Emergency Services",
 			description:
-				"Fast response for lock failures and lockouts, gaining access with minimal damage to your doors or windows.",
+				"Fast help for uPVC doors or windows that cannot be locked, opened, closed, or secured properly.",
 			icon: <ErrorOutlineIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 	];
@@ -124,51 +124,46 @@ export default function UPVCDoorsWindowsPage() {
 		{
 			problem: "Door lock sticking or jamming",
 			solution:
-				"Professional lubrication and mechanism adjustment to ensure smooth operation",
+				"Mechanism adjustment, lubrication, or gearbox repair where the lock is stiff or hard to operate.",
 		},
 		{
 			problem: "Window handle not engaging or turning freely",
 			solution:
-				"Repair or replacement of window gearbox and espagnolette mechanism",
+				"Repair or replacement of window handles, espagnolette mechanisms, and locking parts.",
 		},
 		{
 			problem: "Handle lifting required to engage door locks",
 			solution:
-				"Realignment of the multi-point locking system and adjustment of the gearbox",
+				"Realignment of the multi point locking system and adjustment of hinges or gearbox parts.",
 		},
 		{
-			problem: "Window not closing properly or staying shut",
+			problem: "Door not closing properly",
 			solution:
-				"Adjustment of window hinges and realignment with frame for proper seal",
+				"Hinge adjustment, frame checks, and lock alignment to help the door close and secure correctly.",
 		},
 		{
-			problem: "Key difficult to turn or stuck in lock",
+			problem: "Window will not open or shut",
 			solution:
-				"Lock cylinder cleaning, lubrication, or replacement if worn or damaged",
-		},
-		{
-			problem: "Door or window dropping and misaligning",
-			solution:
-				"Hinge adjustment and alignment to properly engage with the frame and keep locks aligned",
+				"Checks for seized hinges, faulty locks, damaged handles, or failed internal window mechanisms.",
 		},
 	];
 
 	const benefits = [
-		"Expertise with all major UPVC door and window brands",
-		"Non-destructive repair techniques where possible",
-		"Emergency service for lockouts and failures",
-		"Upgrade options for enhanced security",
-		"All work fully guaranteed",
-		"Insurance-approved locks available",
-		"Fast response time to minimize inconvenience",
-		"Comprehensive service for both doors and windows",
+		"Experience with major uPVC door and window brands",
+		"uPVC door lock repair for failed or jammed mechanisms",
+		"Help with uPVC window repair and double glazing repair issues",
+		"Non destructive repair methods where possible",
+		"Replacement parts available for common lock and handle faults",
+		"Emergency help when doors or windows cannot be secured",
+		"Clear advice before repair or replacement work begins",
+		"Support for homes, landlords, and managed buildings",
 	];
 
 	return (
 		<>
 			<PageHero
-				title="UPVC Doors & Windows"
-				subtitle="Specialist repair and replacement services for UPVC door locks and window mechanisms"
+				title="UPVC Door And Window Repair In London"
+				subtitle="Specialist uPVC door repair, uPVC window repair, door lock repair, and double glazing repair support for homes, landlords, and managed properties across London and Surrey."
 				backgroundImage="/images/jw/a-japanese-male-worker-checks-the-locks-on-a-house.webp"
 				minHeight="45vh"
 				centerContent={true}
@@ -194,35 +189,27 @@ export default function UPVCDoorsWindowsPage() {
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h4">
-								UPVC Doors & Windows Specialists
+								UPVC Door And Window Specialists
 							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								JW Security specializes in the comprehensive repair,
-								maintenance, and replacement of UPVC door locks and window
-								mechanisms for residential and commercial properties. Our
-								experienced technicians are familiar with all major brands,
-								providing expert solutions for all UPVC security issues.
+								uPVC doors and windows can fail in small ways at first. A handle starts feeling stiff. A window will not close properly. A door needs lifting before the lock engages. Over time, these small faults can turn into a bigger access or security problem.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								UPVC doors and windows feature complex locking systems that
-								require specialized knowledge to service effectively. From
-								multi-point door locks to window espagnolette mechanisms,
-								whether you&apos;re experiencing difficulties with your existing
-								hardware or looking to upgrade your security, our team delivers
-								professional, reliable service.
+								JW Security provides uPVC door repair in London for homes, flats, landlords, and managed buildings where doors, windows, locks, handles, hinges, or mechanisms need attention.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								We deal with multi point locking systems, failed gearboxes, jammed handles, dropped doors, worn hinges, window locks, and double glazing related faults where the frame, handle, or locking system is no longer working as it should.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								We pride ourselves on using non-destructive techniques wherever
-								possible, ensuring your doors and windows remain undamaged
-								during repairs or replacements. Our goal is to restore full
-								functionality and security with minimal disruption to your
-								property.
+								The aim is to repair the fault where possible before recommending replacement. If a part has failed, we explain what has gone wrong and what needs to be changed.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -236,19 +223,16 @@ export default function UPVCDoorsWindowsPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">Our Specialized Services</SectionTitle>
+							<SectionTitle variant="h4">Our Specialised Services</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								We offer targeted solutions for the unique challenges of UPVC
-								security hardware.
+								We repair and replace common uPVC door and window parts, especially where the locking system, handle, hinge, or mechanism has stopped working correctly.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Our tools and techniques are specifically designed for
-								high-precision adjustments and repairs on modern multi-point
-								systems.
+								Our tools and techniques are specifically designed for high-precision adjustments and repairs on modern multi-point systems.
 							</Typography>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
@@ -338,12 +322,11 @@ export default function UPVCDoorsWindowsPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">Problems & Solutions</SectionTitle>
+							<SectionTitle variant="h4">Problems And Solutions</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								UPVC mechanisms are prone to specific wear patterns. Here is how
-								we address the most frequent issues.
+								uPVC mechanisms often fail because parts wear, shift, or fall out of alignment. Here are some of the common issues we deal with.
 							</Typography>
 							<Box sx={{ maxHeight: "400px", overflowY: "auto", pr: 1 }}>
 								{commonProblems.map((item, index) => (

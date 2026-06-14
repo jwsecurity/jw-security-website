@@ -34,8 +34,8 @@ const ContactSectionWrapper = styled(Box)(({ theme }) => ({
 }));
 
 export default function ContactSection({
-	title = "Need Professional Security Assistance?",
-	subtitle = "Our expert team provides bespoke security solutions with meticulous attention to detail. Contact us for a free consultation.",
+	title = "Need A Security Survey For Your Property?",
+	subtitle = "If you are not sure whether your building is secure enough, JW Security can inspect the site and explain what needs looking at. Book a home security survey, commercial security survey, or full property security assessment across London and Surrey.",
 	showPhone = true,
 	phoneNumber = "0208 646 7931",
 }) {
@@ -55,8 +55,8 @@ export default function ContactSection({
 							sx={{
 								display: "flex",
 								flexDirection: "column",
-								alignItems: { xs: "center", md: "flex-start" },
-								textAlign: { xs: "center", md: "left" },
+								alignItems: "center",
+								textAlign: "center",
 							}}>
 							<Typography
 								variant="h3"
@@ -73,7 +73,7 @@ export default function ContactSection({
 								sx={{
 									fontSize: { xs: "1.125rem", md: "1.1rem" },
 									mb: { xs: 3, md: 5 },
-									maxWidth: "600px",
+									maxWidth: "800px",
 									lineHeight: 1.7,
 									color: alpha("#fff", 0.9),
 								}}>
@@ -102,7 +102,7 @@ export default function ContactSection({
 									},
 									"transition": "all 0.3s ease",
 								}}>
-								Get a Free Consultation
+								Get A Free Consultation
 							</Button>
 						</Box>
 					</Grid>
@@ -129,9 +129,15 @@ export default function ContactSection({
 									sx={{ fontWeight: 600, mb: 3, color: "white" }}>
 									24/7 Emergency Service
 								</Typography>
-								<Typography sx={{ mb: 1, fontSize: "1.1rem", lineHeight: 1.7 }}>
-									Need urgent assistance? Call our emergency hotline for
-									immediate support.
+								<Typography
+									sx={{
+										mb: 1,
+										fontSize: "1.1rem",
+										lineHeight: 1.7,
+										maxWidth: "700px",
+									}}>
+									Need urgent help instead of a planned survey? Call our
+									emergency team for urgent access or security help.
 								</Typography>
 								<Box
 									sx={{
@@ -156,7 +162,7 @@ export default function ContactSection({
 									<Box>
 										<Typography
 											sx={{ fontSize: "0.9rem", color: alpha("#fff", 0.85) }}>
-											Call our emergency hotline
+											Call Our Emergency Hotline
 										</Typography>
 										<Typography
 											sx={{

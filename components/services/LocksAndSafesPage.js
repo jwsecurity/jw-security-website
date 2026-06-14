@@ -82,77 +82,82 @@ const LockTypeItem = styled(Box)(({ theme }) => ({
 export default function LocksAndSafesPage() {
 	const lockProducts = [
 		{
-			title: "High-Security Door Locks",
+			title: "High Security Door Locks",
 			description:
-				"Advanced locking mechanisms offering exceptional protection against picking, bumping, and other entry methods.",
+				"Strong door locks for homes, flats, offices, shops, and shared entrances where basic hardware is no longer enough.",
 			image: "/images/jw/locksmith.webp",
 		},
 		{
 			title: "Digital Smart Locks",
 			description:
-				"Keyless entry systems with PIN codes, fingerprint access, or mobile app control for convenient security.",
+				"Smart locks, keypad systems, and digital entry options for properties that need keyless access and easier control.",
 			image: "/images/jw/tools-to-repair-in-old-locksmiths-workshop.webp",
 		},
 		{
 			title: "Home Safes",
 			description:
-				"Secure storage for valuables, documents, and other important items with fire and theft protection.",
+				"Home safes for valuables, documents, jewellery, keys, and personal items that need secure storage inside the property.",
 			image:
 				"/images/jw/ancient-tools-and-spare-parts-in-old-locksmiths-workshop.webp",
 		},
 		{
 			title: "Commercial Grade Safes",
 			description:
-				"Heavy-duty safes for businesses with advanced security features and customizable options.",
+				"Safes for offices, shops, and business premises that need secure storage for cash, documents, stock, or sensitive items.",
 			image:
 				"/images/jw/keys-set-on-blue-background-door-lock-keys-and-safes-for-property-security-and-house-protection.webp",
 		},
 	];
 
 	const lockTypes = [
-		"Mortice Locks",
-		"Cylinder Locks",
-		"Euro Profile Cylinders",
-		"Rim Cylinders",
-		"Night Latches",
-		"Multi-point Locks",
+		"Mortice locks",
+		"Cylinder locks",
+		"Euro profile cylinders",
+		"Rim cylinders",
+		"Night latches",
+		"Multi point locks",
 		"Deadbolts",
-		"Digital Locks",
-		"Smart Locks",
+		"Digital locks",
+		"Smart locks",
 		"Padlocks",
-		"Cabinet Locks",
-		"Window Locks",
+		"Cabinet locks",
+		"Window locks",
 	];
 
 	const safeTypes = [
-		"Home Safes",
-		"Wall Safes",
-		"Floor Safes",
-		"Fire-resistant Safes",
-		"Data Safes",
-		"Deposit Safes",
-		"Gun Safes",
-		"Hotel Safes",
-		"Commercial Grade Safes",
+		"Home safes",
+		"Wall safes",
+		"Wall safe installation",
+		"Floor safes",
+		"Floor safe fitting",
+		"Fire resistant safes",
+		"Data safes",
+		"Deposit safes",
+		"Hotel safes",
+		"Commercial grade safes",
+		"Safe opening and repair",
 	];
 
 	const services = [
-		"Supply and installation of high-security locks",
+		"Supply and fitting of high security locks",
 		"Lock repair and maintenance",
 		"Lock replacement and upgrades",
 		"Key cutting and duplication",
-		"Master key system implementation",
-		"Safe installation and securing",
-		"Safe unlocking and repair",
-		"Security assessments and recommendations",
-		"Emergency lockout assistance",
+		"Master key system setup",
+		"Safe installation London for home and commercial safes",
+		"Safe opening London for lost keys, failed locks, or access issues",
+		"Wall safe installation for homes, offices, and managed properties",
+		"Floor safe fitting for secure storage needs",
+		"Security product advice",
+		"Lock and safe upgrades",
+		"Help with lost safe keys or codes",
 	];
 
 	return (
 		<>
 			<PageHero
-				title="Locks & Safes"
-				subtitle="High-quality security products from trusted brands, professionally installed"
+				title="Locks And Safes In London"
+				subtitle="Locks, safes, smart locks, and security hardware supplied and fitted for homes, businesses, and managed properties across London and Surrey, including safe installation, wall safe installation, and floor safe fitting."
 				backgroundImage="/images/jw/small-locksmiths-workshop-with-ancient-tools.webp"
 				minHeight="45vh"
 				centerContent={true}
@@ -177,33 +182,26 @@ export default function LocksAndSafesPage() {
 							/>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">Premium Locks & Safes</SectionTitle>
+							<SectionTitle variant="h4">Locks And Safes Supplied And Fitted</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								JW Security supplies and installs a comprehensive range of
-								high-quality locks and safes to protect your valuable
-								possessions and ensure the security of your property. We work
-								with leading security brands to provide reliable, durable
-								solutions for both residential and commercial clients.
+								The right lock or safe depends on what you need to protect, how the space is used, and who needs access.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Our experts can advise on the most suitable security products
-								for your specific needs, whether you require advanced door
-								locks, window security, or safes for storing valuables. We pride
-								ourselves on offering products that meet or exceed insurance
-								standards, giving you peace of mind.
+								A front door needs a different setup from a stock room, office cabinet, shared entrance, or home safe. Some properties need stronger cylinders. Others need digital access, restricted keys, or a safe fixed securely in the right place.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
+								JW Security supplies and fits locks and safes in London for homeowners, landlords, managing agents, offices, shops, and commercial premises.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								In addition to product supply, we provide professional
-								installation services to ensure your new locks and safes are
-								correctly fitted for optimal security performance. Our skilled
-								technicians can also maintain, repair, or upgrade existing
-								security hardware.
+								We help you choose suitable products, fit them correctly, and make sure they are ready for day to day use before we leave.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -221,17 +219,12 @@ export default function LocksAndSafesPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								We offer an extensive selection of physical security hardware
-								designed to meet the highest industry standards. Whether
-								you&apos;re upgrading your home&apos;s entry points or securing
-								valuable business assets, we have the right equipment.
+								We supply and fit physical security products for homes, businesses, and managed properties that need stronger access control, safer storage, or better protection at key entry points.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Our range includes everything from smart, keyless entry systems
-								to heavy-duty commercial safes that are fire and theft
-								resistant.
+								From high security locks and smart lock systems to home safes and commercial grade safes, we help match the product to the building rather than pushing a standard option.
 							</Typography>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
@@ -299,13 +292,11 @@ export default function LocksAndSafesPage() {
 							/>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">Types of Locks We Supply</SectionTitle>
+							<SectionTitle variant="h4">Types Of Locks We Supply</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								We offer every major type of lock used in modern security. From
-								traditional mortice locks for heritage properties to multi-point
-								systems for UPVC and composite doors.
+								We supply and fit many of the lock types commonly used across London homes, flats, offices, shops, and managed buildings.
 							</Typography>
 							<Grid
 								container
@@ -380,8 +371,7 @@ export default function LocksAndSafesPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Protect your physical assets with our expert safe selection and
-								installation services.
+								We help with safe installation in London, safe opening, safe repair, and secure fitting for residential and commercial use, including wall safes, floor safes, and commercial grade safes.
 							</Typography>
 							<Grid
 								container
@@ -426,7 +416,7 @@ export default function LocksAndSafesPage() {
 					<SectionTitle
 						variant="h4"
 						sx={{ mb: 4 }}>
-						Our Locks & Safes Services
+						Our Locks And Safes Services
 					</SectionTitle>
 					<Grid
 						container
@@ -468,8 +458,8 @@ export default function LocksAndSafesPage() {
 			</Box>
 
 			<ContactSection
-				title="Need Expert Advice on Locks or Safes?"
-				subtitle="Our security specialists can help you select the right products for your property's specific requirements. Contact us for a personalized consultation."
+				title="Need Expert Advice On Locks Or Safes?"
+				subtitle="Not sure which lock, cylinder, smart lock, or safe is right for your property? JW Security can advise on suitable options for homes, landlords, offices, shops, managed buildings, and commercial premises across London and Surrey."
 			/>
 		</>
 	);
