@@ -254,17 +254,25 @@ export default function FireProtectionPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Fire doors fail for a reason. Closers wear out. Gaps appear. Frames shift. When that happens in a managed building or commercial property, it can affect safety, compliance, and day to day building management.
+								Fire doors fail for a reason. Closers wear out. Gaps appear.
+								Frames shift. When that happens in a managed building or
+								commercial property, it can affect safety, compliance, and day
+								to day building management.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								JW Security helps landlords, managing agents, and businesses across London with fire doors, maintenance, installations, and fire risk assessments.
+								JW Security helps landlords, managing agents, and businesses
+								across London with fire doors, maintenance, installations, and
+								fire risk assessments.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Some of this work comes up during planned maintenance schedules. Some gets flagged during an inspection. Either way, we identify the issue, explain what it means, and complete the checks, repairs, or replacements needed to improve building safety.
+								Some of this work comes up during planned maintenance schedules.
+								Some gets flagged during an inspection. Either way, we identify
+								the issue, explain what it means, and complete the checks,
+								repairs, or replacements needed to improve building safety.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -409,16 +417,23 @@ export default function FireProtectionPage() {
 							</Grid>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">Fire Safety Compliance Made Clear</SectionTitle>
+							<SectionTitle variant="h4">
+								Fire Safety Compliance Made Clear
+							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
-								Fire safety regulations exist for a reason, but a lot of property owners get handed vague reports that don't tell them what to actually do next.
+								Fire safety regulations exist for a reason, but a lot of
+								property owners get handed vague reports that don't tell them
+								what to actually do next.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.05rem", lineHeight: 1.7 }}>
-								We keep the process simple. You get plain findings, useful recommendations , and work carried out by people who understand fire doors, fire safety, and building compliance. No vague wording. No unnecessary work added to the job.
+								We keep the process simple. You get plain findings, useful
+								recommendations , and work carried out by people who understand
+								fire doors, fire safety, and building compliance. No vague
+								wording. No unnecessary work added to the job.
 							</Typography>
 						</Grid>
 					</Grid>
