@@ -549,9 +549,13 @@ export default function Header() {
 												sx={{ fontSize: "0.8rem", color: alpha("#fff", 0.8) }}>
 												24/7 Emergency Service
 											</Typography>
-											<Typography sx={{ fontWeight: 600, color: JW_CYAN }}>
-												0208 646 7931
-											</Typography>
+											<Link
+												href="tel:02086467931"
+												passHref>
+												<Typography sx={{ fontWeight: 600, color: JW_CYAN }}>
+													0208 646 7931
+												</Typography>
+											</Link>
 										</Box>
 									</Box>
 									<Box

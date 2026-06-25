@@ -12,7 +12,9 @@ import {
 	Divider,
 	CircularProgress,
 } from "@mui/material";
+import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import SendIcon from "@mui/icons-material/Send";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
@@ -118,6 +120,7 @@ const DecorativeLine = styled(Box)(({ theme }) => ({
 }));
 
 export default function ContactPage() {
+	const router = useRouter();
 	const [formData, setFormData] = useState({
 		name: "",
 		email: "",
@@ -173,6 +176,9 @@ export default function ContactPage() {
 						"Thank you for your enquiry! We'll get back to you within 24 hours.",
 					severity: "success",
 				});
+
+				// Redirect to thank you page
+				router.push("/contact/thank-you");
 			} else {
 				throw new Error(result.error || "Failed to send message");
 			}
@@ -300,13 +306,24 @@ export default function ContactPage() {
 															sx={{ fontWeight: 700, mb: 0.5, color: JW_BLUE }}>
 															Phone
 														</Typography>
-														<Typography sx={{ mb: 0.5, fontWeight: 500 }}>
-															0208 646 7931
-														</Typography>
+														<Link
+															href="tel:02086467931"
+															passHref>
+															<Typography sx={{ mb: 0.5, fontWeight: 500 }}>
+																0208 646 7931
+															</Typography>
+														</Link>
 														<Typography
 															variant="body2"
 															sx={{ color: alpha("#000", 0.6) }}>
-															For emergency services: 07860 606 151
+															For emergency services:{" "}
+															<Link
+																href="tel:07860606151"
+																passHref>
+																<Typography sx={{ mb: 0.5, fontWeight: 500 }}>
+																	07860 606 151
+																</Typography>
+															</Link>
 														</Typography>
 													</Box>
 												</Box>
@@ -342,9 +359,14 @@ export default function ContactPage() {
 															sx={{ fontWeight: 700, mb: 0.5, color: JW_BLUE }}>
 															Email
 														</Typography>
-														<Typography sx={{ mb: 0.5, fontWeight: 500 }}>
-															help@jwsecurity.co.uk
-														</Typography>
+														<Link
+															href="mailto:help@jwsecurity.co.uk"
+															passHref>
+															<Typography
+																sx={{ fontWeight: 600, color: JW_CYAN }}>
+																help@jwsecurity.co.uk
+															</Typography>
+														</Link>
 														<Typography
 															variant="body2"
 															sx={{ color: alpha("#000", 0.6) }}>
@@ -375,19 +397,25 @@ export default function ContactPage() {
 														/>
 													</Box>
 													<Box>
-														<Typography
-															variant="h6"
-															sx={{ fontWeight: 700, mb: 0.5, color: JW_BLUE }}>
-															Service Areas
-														</Typography>
-														<Typography sx={{ mb: 0.5, fontWeight: 500 }}>
-															All of London & Surrey
-														</Typography>
-														<Typography
-															variant="body2"
-															sx={{ color: alpha("#000", 0.6) }}>
-															Based in Wandsworth, serving the whole of London
-														</Typography>
+														<Link href="https://maps.app.goo.gl/A9WadoTL9X5ttWoS6">
+															<Typography
+																variant="h6"
+																sx={{
+																	fontWeight: 700,
+																	mb: 0.5,
+																	color: JW_BLUE,
+																}}>
+																Service Areas
+															</Typography>
+															<Typography sx={{ mb: 0.5, fontWeight: 500 }}>
+																All of London & Surrey
+															</Typography>
+															<Typography
+																variant="body2"
+																sx={{ color: alpha("#000", 0.6) }}>
+																Based in Wandsworth, serving the whole of London
+															</Typography>
+														</Link>
 													</Box>
 												</Box>
 											</ContactInfoCard>

@@ -371,13 +371,20 @@ export default function Footer() {
 									<PhoneIcon sx={{ color: JW_CYAN, fontSize: 16 }} />
 								</ContactIcon>
 								<Box>
-									<Typography
-										sx={{ fontSize: "0.95rem", fontWeight: 500, mb: 0.3 }}>
-										Office Tel: 0208 646 7931
-									</Typography>
-									<Typography sx={{ fontSize: "0.9rem" }}>
-										Emergency call out: 0208 646 7931
-									</Typography>
+									<Link
+										href="tel:02086467931"
+										passHref>
+										<Typography sx={{ fontWeight: 600, color: JW_CYAN }}>
+											Office Tel: 0208 646 7931
+										</Typography>
+									</Link>
+									<Link
+										href="tel:02086467931"
+										passHref>
+										<Typography sx={{ fontSize: "0.9rem" }}>
+											Emergency call out: 0208 646 7931
+										</Typography>
+									</Link>
 								</Box>
 							</ContactInfoItem>
 							<ContactInfoItem>
@@ -385,9 +392,13 @@ export default function Footer() {
 									<EmailIcon sx={{ color: JW_CYAN, fontSize: 16 }} />
 								</ContactIcon>
 								<Box>
-									<Typography sx={{ fontSize: "0.95rem", fontWeight: 500 }}>
-										help@jwsecurity.co.uk
-									</Typography>
+									<Link
+										href="mailto:help@jwsecurity.co.uk"
+										passHref>
+										<Typography sx={{ fontSize: "0.95rem", fontWeight: 500 }}>
+											help@jwsecurity.co.uk
+										</Typography>
+									</Link>
 								</Box>
 							</ContactInfoItem>
 							<ContactInfoItem>
@@ -395,13 +406,13 @@ export default function Footer() {
 									<LocationOnIcon sx={{ color: JW_CYAN, fontSize: 16 }} />
 								</ContactIcon>
 								<Box>
-									<Typography
-										sx={{ fontSize: "0.95rem", fontWeight: 500, mb: 0.3 }}>
-										JW Security
-									</Typography>
-									<Typography sx={{ fontSize: "0.9rem" }}>
-										Locksmiths & Security Specialists
-									</Typography>
+									<Link href="https://maps.app.goo.gl/A9WadoTL9X5ttWoS6">
+										<Typography
+											sx={{ fontSize: "0.95rem", fontWeight: 500, mb: 0.3 }}>
+											JW Security <br />
+											Locksmiths & Security Specialists
+										</Typography>
+									</Link>
 								</Box>
 							</ContactInfoItem>
 						</Box>
