@@ -198,39 +198,6 @@ const HeroCallText = styled(Box)(({ theme }) => ({
 	},
 }));
 
-const HeroSubtitle = styled(Typography)(({ theme }) => ({
-	"fontFamily": "var(--font-open-sans), Arial, sans-serif",
-	"fontSize": "1.25rem",
-	"lineHeight": 1.5,
-	"fontWeight": 400,
-	"color": "white",
-	"& strong": {
-		fontWeight: 600,
-	},
-	[theme.breakpoints.down("md")]: {
-		fontSize: "1.125rem",
-	},
-	[theme.breakpoints.down("sm")]: {
-		fontSize: "1.125rem",
-	},
-}));
-
-const HeroPhoneNumber = styled(Typography)(({ theme }) => ({
-	fontFamily: "var(--font-poppins), Arial, sans-serif",
-	fontSize: "1.5rem",
-	fontWeight: 700,
-	color: JW_CYAN,
-	fontStyle: "italic",
-	textShadow: "1px 1px 2px rgba(0,0,0,0.3)",
-	marginTop: "0.3125rem",
-	[theme.breakpoints.down("md")]: {
-		fontSize: "1.375rem",
-	},
-	[theme.breakpoints.down("sm")]: {
-		fontSize: "1.25rem",
-	},
-}));
-
 const HeroButton = styled(Button)(({ theme }) => ({
 	"fontFamily": "var(--font-poppins), Arial, sans-serif",
 	"backgroundColor": "white",
