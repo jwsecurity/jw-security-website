@@ -1779,6 +1779,16 @@ export default function HomePage() {
 					</Box>
 				</Container>
 			</Section>
+			<Box sx={{ p: { xs: 5, md: 8 } }}>
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d159128.27140766854!2d-0.4825637933054258!3d51.451193159165534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1782846062024!5m2!1sen!2s"
+					width={"100%"}
+					height="450"
+					style={{ border: "0" }}
+					allowFullScreen=""
+					loading="lazy"
+					referrerPolicy="strict-origin-when-cross-origin"></iframe>
+			</Box>
 			<Box
 				sx={{
 					"py": { xs: 8, md: 10 },
