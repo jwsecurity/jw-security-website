@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import {
 	Box,
 	Grid,
@@ -10,17 +10,22 @@ import {
 	ListItemIcon,
 	ListItemText,
 	List,
+	Accordion,
+	AccordionSummary,
+	AccordionDetails,
 } from "@mui/material";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import PageHero from "./common/PageHero";
+import ContactSection from "./common/ContactSection";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import SecurityIcon from "@mui/icons-material/Security";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import DoorFrontIcon from "@mui/icons-material/DoorFront";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { styled, alpha, useTheme } from "@mui/material/styles";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
@@ -112,13 +117,55 @@ export default function CommercialPage() {
 			title: "Master Key Systems",
 			icon: <VpnKeyIcon />,
 			desc: "Master key systems for landlords, schools, offices, facilities teams, and managed buildings that need controlled key access.",
-			link: "/services/locks-and-safes",
+			link: "/services/master-key-systems",
 		},
 		{
 			title: "Emergency Response",
 			icon: <AccessTimeIcon />,
 			desc: "Urgent help for commercial lockouts, forced entry damage, failed locks, and emergency securing across London.",
 			link: "/services/emergency-door-opening",
+		},
+	];
+
+	const whyChooseUs = [
+		"Commercial locksmith support across London and Surrey",
+		"Access control installation for offices, schools, estates, and managed sites",
+		"Commercial lock change work for staff changes, lost keys, or security concerns",
+		"CCTV, alarms, fire doors, master key systems, and emergency response available",
+		"Support for managing agents, landlords, facilities teams, and business owners",
+		"Clear quotes before planned work begins",
+	];
+
+	const faqData = [
+		{
+			question: "Do You Provide Commercial Locksmith Services In London?",
+			answer:
+				"Yes. JW Security provides commercial locksmith services in London for offices, schools, estates, landlords, managing agents, and business premises.",
+		},
+		{
+			question: "Can You Help With A Commercial Lock Change?",
+			answer:
+				"Yes. We carry out commercial lock change work for staff changes, lost keys, damaged locks, tenant changes, and wider security concerns.",
+		},
+		{
+			question: "Do You Provide Access Control Installation In London?",
+			answer:
+				"Yes. We install access control systems for offices, schools, shared entrances, staff areas, estates, and commercial buildings.",
+		},
+		{
+			question: "Do You Work With Managing Agents And Landlords?",
+			answer:
+				"Yes. We regularly work with managing agents, landlords, estate teams, facilities teams, and commercial property owners.",
+		},
+		{
+			question: "Can You Help In An Emergency?",
+			answer:
+				"Yes. We provide urgent help for commercial lockouts, failed locks, forced entry damage, and emergency securing across London.",
+		},
+		{
+			question: "What Areas Do You Cover?",
+			answer:
+				"We cover London, Surrey, and surrounding areas. Call us if you want to confirm your location.",
 		},
 	];
 
@@ -131,6 +178,8 @@ export default function CommercialPage() {
 				minHeight="40vh"
 				centerContent
 			/>
+
+			{/* Intro Section */}
 			<Section odd>
 				<Container maxWidth="xl">
 					<Box
@@ -152,7 +201,7 @@ export default function CommercialPage() {
 								variants={fadeInLeftVariants}>
 								<Image
 									src="/images/jw/locksmith.webp"
-									alt="Locksmith repairing door lock"
+									alt="Commercial locksmith at work"
 									width={465}
 									height={310}
 									sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -220,6 +269,8 @@ export default function CommercialPage() {
 					</Box>
 				</Container>
 			</Section>
+
+			{/* Services Grid */}
 			<Section
 				odd
 				sx={{ py: { xs: 6, md: 8 } }}>
@@ -351,6 +402,8 @@ export default function CommercialPage() {
 					</Box>
 				</Container>
 			</Section>
+
+			{/* Commercial Locksmith And Access Control Section */}
 			<Section odd>
 				<Container maxWidth="xl">
 					<Box
@@ -433,7 +486,7 @@ export default function CommercialPage() {
 								variants={fadeInLeftVariants}>
 								<Image
 									src="/images/jw/locksmith-in-installing-new-house-door-lock-hand-holds-the-screwdriver.webp"
-									alt="Locksmith repairing door lock"
+									alt="Commercial locksmith installing access control"
 									width={465}
 									height={310}
 									sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -445,6 +498,7 @@ export default function CommercialPage() {
 				</Container>
 			</Section>
 
+			{/* Why Choose Us Section */}
 			<Box sx={{ py: { xs: 5, md: 8 } }}>
 				<Container>
 					<Grid
@@ -454,19 +508,14 @@ export default function CommercialPage() {
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box sx={{ p: 3 }}>
 								<SectionTitle variant="h4">
-									Who Needs A Fire Risk Assessment?
+									Why Commercial Clients Choose JW Security
 								</SectionTitle>
 								<Typography
 									paragraph
-									sx={{ mb: 2, opacity: 0.9 }}>
-									A fire risk assessment is important for properties where
-									landlords, business owners, or managing agents have
-									responsibility for fire safety.
-								</Typography>
-								<Typography
-									paragraph
-									sx={{ mb: 2, opacity: 0.9 }}>
-									This includes:
+									sx={{ mb: 2, opacity: 0.9, fontSize: "1.05rem", lineHeight: 1.7 }}>
+									We work with offices, schools, estates, NHS sites, managing
+									agents, landlords, and commercial premises that need security
+									they can depend on.
 								</Typography>
 							</Box>
 						</Grid>
@@ -479,14 +528,7 @@ export default function CommercialPage() {
 									border: `1px solid ${alpha(JW_CYAN, 0.1)}`,
 								}}>
 								<List>
-									{[
-										"Commercial locksmith support across London and Surrey",
-										"Access control installation for offices, schools, estates, and managed sites",
-										"Commercial lock change work for staff changes, lost keys, or security concerns",
-										"CCTV, alarms, fire doors, master key systems, and emergency response available",
-										"Support for managing agents, landlords, facilities teams, and business owners",
-										"Clear quotes before planned work begins",
-									].map((feature, index) => (
+									{whyChooseUs.map((feature, index) => (
 										<ListItem
 											key={index}
 											sx={{ py: 0.8 }}>
@@ -510,6 +552,113 @@ export default function CommercialPage() {
 					</Grid>
 				</Container>
 			</Box>
+
+			{/* FAQ Section */}
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
+					<Box sx={{ textAlign: "center", mb: 6 }}>
+						<motion.div
+							initial="hidden"
+							whileInView="visible"
+							viewport={{ once: true, amount: 0.3 }}
+							variants={fadeInUpVariants}>
+							<Typography
+								variant="h3"
+								component="h2"
+								sx={{
+									fontWeight: 700,
+									fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.5rem" },
+									color: JW_BLUE,
+									mb: 2,
+								}}>
+								Common Questions
+							</Typography>
+							<Typography
+								sx={{
+									maxWidth: "700px",
+									mx: "auto",
+									mt: 2,
+									color: alpha("#000", 0.6),
+									fontSize: "1.05rem",
+								}}>
+								Answers to frequently asked questions about our commercial
+								security services in London
+							</Typography>
+						</motion.div>
+					</Box>
+					<Box
+						sx={{
+							"maxWidth": "900px",
+							"mx": "auto",
+							"& .MuiAccordion-root": {
+								"bgcolor": "white",
+								"borderRadius": "8px",
+								"boxShadow": "0 5px 20px rgba(0,0,0,0.05)",
+								"&:not(:last-child)": {
+									mb: 2,
+								},
+								"&:before": {
+									display: "none",
+								},
+							},
+							"& .MuiAccordionSummary-root": {
+								px: 3,
+								py: 1.5,
+							},
+							"& .MuiAccordionDetails-root": {
+								px: 3,
+								py: 2,
+								borderTop: `1px solid ${alpha("#000", 0.08)}`,
+							},
+						}}>
+						{faqData.map((faq, index) => (
+							<motion.div
+								key={index}
+								initial="hidden"
+								whileInView="visible"
+								viewport={{ once: true, amount: 0.1 }}
+								variants={fadeInUpVariants}
+								transition={{ delay: index * 0.1 }}>
+								<Accordion
+									disableGutters
+									elevation={0}
+									sx={{
+										"overflow": "hidden",
+										"transition": "all 0.3s ease",
+										"&:hover": {
+											boxShadow: "0 8px 25px rgba(0,0,0,0.08)",
+										},
+									}}>
+									<AccordionSummary
+										expandIcon={
+											<ExpandMoreIcon sx={{ color: JW_CYAN }} />
+										}>
+										<Typography
+											sx={{
+												fontWeight: 600,
+												color: JW_BLUE,
+												fontSize: "1rem",
+											}}>
+											{faq.question}
+										</Typography>
+									</AccordionSummary>
+									<AccordionDetails>
+										<Typography
+											sx={{
+												color: alpha("#000", 0.7),
+												lineHeight: 1.7,
+											}}>
+											{faq.answer}
+										</Typography>
+									</AccordionDetails>
+								</Accordion>
+							</motion.div>
+						))}
+					</Box>
+				</Container>
+			</Box>
+
+			{/* CTA Parallax Banner */}
 			<Box
 				sx={{
 					py: 12,
@@ -526,33 +675,72 @@ export default function CommercialPage() {
 						container
 						spacing={6}>
 						<Grid size={{ xs: 12, md: 8 }}>
-							<Typography
-								variant="overline"
-								sx={{
-									color: "white",
-									fontWeight: 700,
-									mb: 1,
-									display: "block",
-								}}>
-								Need A Proposal For Your Site?
-							</Typography>
-							<Typography
-								variant="h3"
-								sx={{ fontWeight: 800, mb: 3, color: "white" }}>
-								JW Security supports commercial properties across London with
-								planned security work, urgent locksmith support, commercial lock
-								change services, and access control installation.
-							</Typography>
-							<Typography
-								variant="h6"
-								sx={{ mb: 4, fontWeight: 400, opacity: 0.9, color: "white" }}>
-								Tell us what type of site you manage and what needs attention.
-								We can provide a quote or arrange a visit where needed.
-							</Typography>
+							<motion.div
+								initial="hidden"
+								whileInView="visible"
+								viewport={{ once: true, amount: 0.3 }}
+								variants={fadeInLeftVariants}>
+								<Typography
+									variant="overline"
+									sx={{
+										color: "white",
+										fontWeight: 700,
+										mb: 1,
+										display: "block",
+									}}>
+									Need A Proposal For Your Site?
+								</Typography>
+								<Typography
+									variant="h3"
+									sx={{ fontWeight: 800, mb: 3, color: "white" }}>
+									JW Security supports commercial properties across London with
+									planned security work, urgent locksmith support, commercial
+									lock change services, and access control installation.
+								</Typography>
+								<Typography
+									variant="h6"
+									sx={{ mb: 4, fontWeight: 400, opacity: 0.9, color: "white" }}>
+									Tell us what type of site you manage and what needs attention.
+									We can provide a quote or arrange a visit where needed.
+								</Typography>
+								<Link
+									href="/contact"
+									passHref>
+									<Button
+										component="span"
+										variant="contained"
+										size="large"
+										sx={{
+											"bgcolor": JW_CYAN,
+											"color": JW_BLUE,
+											"fontWeight": 600,
+											"px": 4,
+											"py": 1.5,
+											"fontSize": "1rem",
+											"borderRadius": "6px",
+											"textTransform": "none",
+											"boxShadow": "0 5px 15px rgba(0, 198, 215, 0.3)",
+											"&:hover": {
+												bgcolor: alpha(JW_CYAN, 0.9),
+												boxShadow: "0 8px 25px rgba(0, 198, 215, 0.4)",
+												transform: "translateY(-3px)",
+											},
+											"transition": "all 0.3s ease",
+										}}>
+										Request A Quote
+									</Button>
+								</Link>
+							</motion.div>
 						</Grid>
 					</Grid>
 				</Container>
 			</Box>
+
+			{/* Contact Section */}
+			<ContactSection
+				title="Need Commercial Security Support?"
+				subtitle="JW Security provides commercial locksmith, access control, CCTV, fire door, and emergency security services for offices, schools, estates, NHS sites, managing agents, and commercial premises across London and Surrey."
+			/>
 		</>
 	);
 }

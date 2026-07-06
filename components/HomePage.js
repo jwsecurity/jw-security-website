@@ -22,8 +22,10 @@ import {
 	useMediaQuery,
 } from "@mui/material";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import KeyIcon from "@mui/icons-material/Key";
+import { Business } from "@mui/icons-material";
 import PhoneIcon from "@mui/icons-material/Phone";
 import HandymanIcon from "@mui/icons-material/Handyman";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -34,8 +36,6 @@ import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
 import { styled, keyframes, alpha, useTheme } from "@mui/material/styles";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import Image from "next/image";
-import { Business } from "@mui/icons-material";
 
 const fadeIn = keyframes`
   from {
