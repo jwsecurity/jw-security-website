@@ -11,6 +11,9 @@ import {
 	ListItemText,
 	Button,
 	Paper,
+	Accordion,
+	AccordionSummary,
+	AccordionDetails,
 } from "@mui/material";
 import PageHero from "../common/PageHero";
 import LockIcon from "@mui/icons-material/Lock";
@@ -21,6 +24,7 @@ import SecurityIcon from "@mui/icons-material/Security";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const JW_BLUE = "#1c2e4a";
 const JW_CYAN = "#00c6d7";
@@ -63,80 +67,60 @@ const ServiceCard = styled(Card)(({ theme }) => ({
 	},
 }));
 
-const AreaCard = styled(Paper)(({ theme }) => ({
-	padding: theme.spacing(3),
-	backgroundColor: alpha(JW_BLUE, 0.03),
-	borderRadius: "8px",
-	border: `1px solid ${alpha(JW_BLUE, 0.1)}`,
-	marginBottom: theme.spacing(2),
-}));
-
 export default function ChelseaPage() {
 	const localAreas = [
-		{
-			name: "Kings Road",
-			landmarks: [
-				"Saatchi Gallery",
-				"Duke of York Square",
-				"Chelsea Old Town Hall",
-			],
-			description:
-				"The heart of Chelsea with luxury boutiques, galleries, and prestigious residential properties.",
-		},
-		{
-			name: "Chelsea Harbour",
-			landmarks: [
-				"Chelsea Harbour Marina",
-				"Design Centre",
-				"Luxury apartments",
-			],
-			description:
-				"Exclusive waterfront development with high-end residences requiring sophisticated security.",
-		},
-		{
-			name: "Sloane Square",
-			landmarks: ["Royal Court Theatre", "Peter Jones", "Sloane Gardens"],
-			description:
-				"Upscale area bordering Belgravia with Georgian terraces and modern luxury developments.",
-		},
-		{
-			name: "World's End",
-			landmarks: ["World's End Estate", "Chelsea Studios", "Cremorne Gardens"],
-			description:
-				"Diverse neighbourhood mixing social housing with period conversions and new developments.",
-		},
+		"Kings Road",
+		"Sloane Square",
+		"Chelsea Harbour",
+		"World’s End",
+		"Chelsea Embankment",
+		"Cheyne Walk",
+		"Fulham Road",
+		"Royal Hospital Road"
 	];
 
-	const specializedServices = [
+	const residentialServices = [
+		"Lock changes and lock replacement",
+		"BS3621 locks where suitable",
+		"Window lock fitting",
+		"Keypad and keyless entry systems",
+		"Master key systems for managed homes",
+		"Emergency door opening",
+		"Burglary repairs and securing work"
+	];
+
+	const faqData = [
 		{
-			title: "Luxury Property Security",
-			description:
-				"Bespoke security solutions for Chelsea's premium residences, combining discretion with effectiveness.",
-			features: [
-				"Invisible security grilles and shutters",
-				"Biometric and keyless entry systems",
-				"Integration with home automation",
-				"Panic room installations",
-			],
+			question: "Do You Provide Locksmith Services In Chelsea?",
+			answer: "Yes. JW Security provides locksmith Chelsea services for homes, flats, shops, offices, galleries, landlords, and managed buildings."
 		},
 		{
-			title: "Period Property Expertise",
-			description:
-				"Specialist knowledge of Chelsea's historic architecture and appropriate security enhancements.",
-			features: [
-				"Conservation-compliant lock upgrades",
-				"Sash window security solutions",
-				"Period-appropriate hardware",
-				"Listed building experience",
-			],
+			question: "Are You A Trusted Locksmith In Chelsea?",
+			answer: "Yes. JW Security has worked across London since 1991 and supports residential and commercial clients with locksmith and security services."
 		},
+		{
+			question: "Do You Offer Affordable Locksmith Services In Chelsea?",
+			answer: "Yes. We provide clear pricing before planned work begins, with locksmith support for lock changes, access issues, repairs, and upgrades."
+		},
+		{
+			question: "Can You Help With Emergency Lockouts In Chelsea?",
+			answer: "Yes. We help with house lockouts, flat lockouts, office lockouts, failed locks, and urgent access problems across Chelsea."
+		},
+		{
+			question: "Do You Work With Chelsea Landlords And Managing Agents?",
+			answer: "Yes. We support landlords, estate teams, managing agents, and residential blocks with lock changes, key control, access issues, and wider security work."
+		},
+		{
+			question: "What Areas Of Chelsea Do You Cover?",
+			answer: "We cover Kings Road, Sloane Square, Chelsea Harbour, World’s End, Chelsea Embankment, Cheyne Walk, Fulham Road, Royal Hospital Road, SW3, SW10, and nearby areas."
+		}
 	];
 
 	return (
 		<>
 			<PageHero
 				title="Locksmith & Security Services in Chelsea"
-				subtitle="Premium security solutions for one of London's most exclusive neighbourhoods"
+				subtitle="Trusted locksmith Chelsea services for homes, flats, shops, galleries, landlords, and managed buildings across SW3, SW10, and nearby Chelsea areas."
 				backgroundImage="/images/jw/pexels-cottonbro-5089178-scaled.webp"
 				minHeight="45vh"
 				centerContent={true}
@@ -164,24 +148,22 @@ export default function ChelseaPage() {
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h3">
-								Chelsea&apos;s Trusted Security Experts
+								Chelsea’s Trusted Locksmith And Security Team
 							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security has been safeguarding Chelsea&apos;s prestigious
-								properties for over 30 years. From the boutique-lined Kings Road
-								to the exclusive riverside developments at Chelsea Harbour, we
-								understand the unique security requirements of this
-								distinguished area.
+								JW Security provides locksmith and security services across Chelsea for homeowners, landlords, businesses, managing agents, and private residences that need reliable work without delays.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ mb: 3, fontSize: "1.1rem", lineHeight: 1.8 }}>
+								From Kings Road and Sloane Square to Chelsea Harbour and World’s End, we understand the mix of period homes, mansion blocks, luxury apartments, shops, galleries, and managed buildings found across the area.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Our Chelsea specialists combine traditional craftsmanship with
-								innovative security technology. We deliver solutions that match
-								Chelsea&apos;s exceptional standards, ensuring your home or
-								business remains secure around the clock.
+								Our team handles lock changes, emergency access, security upgrades, access control, key cutting, burglary repairs, and wider property security work. Whether you need a trusted locksmith in Chelsea for a flat, townhouse, boutique, or commercial site, we keep the service straightforward and respectful of the property.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -196,20 +178,16 @@ export default function ChelseaPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h3">Serving All of Chelsea</SectionTitle>
+							<SectionTitle variant="h3">Serving All Of Chelsea</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								We take pride in our discrete, professional service that
-								respects the privacy and sophistication our Chelsea clients
-								expect. Our rapid response team knows every street and square,
-								ensuring we reach you quickly in emergencies - typically within
-								20-30 minutes.
+								JW Security covers Chelsea and nearby areas for planned locksmith work, urgent access problems, and property security improvements.
 							</Typography>
 							<Typography
 								variant="h6"
 								sx={{ fontWeight: 600, mb: 2, color: JW_BLUE }}>
-								Most Popular Service Areas:
+								We regularly support clients across:
 							</Typography>
 							<Grid
 								container
@@ -228,7 +206,7 @@ export default function ChelseaPage() {
 													flexShrink: 0,
 												}}
 											/>
-											<Typography variant="body1">{area.name}</Typography>
+											<Typography variant="body1">{area}</Typography>
 										</Box>
 									</Grid>
 								))}
@@ -254,17 +232,18 @@ export default function ChelseaPage() {
 								<Typography
 									variant="h3"
 									sx={{ fontWeight: 800, color: JW_CYAN, mb: 1 }}>
-									020 7946 0125
+									0208 646 7931
 								</Typography>
 								<Typography
 									variant="body2"
 									sx={{ color: "text.secondary", mb: 4 }}>
-									24/7 Rapid Response in Chelsea & SW3/SW10 area
+									Fast locksmiths help across Chelsea, SW3, SW10, and nearby locations.
 								</Typography>
 								<Button
 									variant="contained"
 									fullWidth
 									size="large"
+									href="/contact"
 									sx={{
 										"bgcolor": JW_BLUE,
 										"py": 2,
@@ -278,9 +257,7 @@ export default function ChelseaPage() {
 				</Container>
 			</Box>
 
-			{/* Section 3: CTA Banner */}
-
-			{/* Section 4: Specialized Services (Text Left, Image Right) */}
+			{/* Section 4: Maintaining Standards (Text Left, Image Right) */}
 			<Box sx={{ py: { xs: 5, md: 8 } }}>
 				<Container>
 					<Grid
@@ -289,14 +266,17 @@ export default function ChelseaPage() {
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h3">
-								Maintaining Premium Security Standards
+								Maintaining Reliable Security Standards
 							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Chelsea properties require more than just standard locks. We
-								specialize in high-end security maintenance and installation for
-								one of London&apos;s most demanding areas.
+								Chelsea properties often need more than a basic lock change. Older doors, listed style fittings, high value interiors, shared entrances, and busy commercial sites all need the right approach.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
+								JW Security works with homes, flats, offices, galleries, boutiques, landlords, and managing agents across Chelsea. We can help with lock replacement, BS3621 locks, window locks, access control, CCTV, master key systems, and emergency locksmith work. Our aim is simple. Secure the property properly, keep the finish neat, and explain the work before anything begins.
 							</Typography>
 							<Grid
 								container
@@ -310,14 +290,14 @@ export default function ChelseaPage() {
 											borderRadius: 2,
 										}}>
 										<Typography
-											variant="h4"
+											variant="h5"
 											sx={{ fontWeight: 800, color: JW_BLUE }}>
-											4.7
+											30+ Years
 										</Typography>
 										<Typography
 											variant="caption"
 											sx={{ fontWeight: 600 }}>
-											GOOGLE RATING
+											OF EXPERIENCE
 										</Typography>
 									</Box>
 								</Grid>
@@ -330,14 +310,14 @@ export default function ChelseaPage() {
 											borderRadius: 2,
 										}}>
 										<Typography
-											variant="h4"
+											variant="h5"
 											sx={{ fontWeight: 800, color: JW_CYAN }}>
-											A+
+											Qualified
 										</Typography>
 										<Typography
 											variant="caption"
 											sx={{ fontWeight: 600 }}>
-											MLA APPROVED
+											& INSURED TEAM
 										</Typography>
 									</Box>
 								</Grid>
@@ -359,6 +339,8 @@ export default function ChelseaPage() {
 					</Grid>
 				</Container>
 			</Box>
+
+			{/* Local Knowledge Parallax-style Banner */}
 			<Box
 				sx={{
 					py: 12,
@@ -388,21 +370,19 @@ export default function ChelseaPage() {
 							<Typography
 								variant="h3"
 								sx={{ fontWeight: 800, mb: 3, color: "white" }}>
-								Understanding Chelsea&apos;s <br /> Unique Challenges
+								Understanding Chelsea’s Security Needs
 							</Typography>
 							<Typography
 								variant="h6"
-								sx={{ mb: 4, fontWeight: 400, opacity: 0.9, color: "white" }}>
-								From the Chelsea Flower Show footfall to the specific security
-								needs of river Thames properties, our expert team has local
-								insights that keep you safer.
+								sx={{ mb: 4, fontWeight: 400, opacity: 0.9, color: "white", lineHeight: 1.8 }}>
+								Chelsea has a mix of high value homes, period buildings, rental flats, boutique shops, galleries, offices, and riverside developments. Each one brings different access and security concerns. JW Security brings local experience to these situations, helping clients choose security that fits the building rather than forcing a standard setup.
 							</Typography>
 						</Grid>
 					</Grid>
 				</Container>
 			</Box>
 
-			{/* Section 6: Residential (Image Left, Text Right) */}
+			{/* Section 6: Residential Services (Image Left, Text Right) */}
 			<Box sx={{ py: { xs: 5, md: 8 } }}>
 				<Container>
 					<Grid
@@ -423,18 +403,14 @@ export default function ChelseaPage() {
 							/>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h3">Luxury Property Security</SectionTitle>
+							<SectionTitle variant="h3">Residential And Luxury Property Security</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								We provide bespoke security solutions for Chelsea&apos;s premium
-								residences, combining discretion with high-level effectiveness.
-								Whether it&apos;s biometric entry or period-appropriate
-								hardware, we protect your home without compromising its
-								aesthetic.
+								We provide locksmith Chelsea services for homes, flats, townhouses, landlords, and private residences where security needs to be reliable without affecting the look of the property. Whether you need a lock change after moving in, BS3621 locks, window lock fitting, keyless entry, or a security review, our team can advise on suitable options for the door, frame, and property type.
 							</Typography>
 							<List sx={{ mb: 4 }}>
-								{specializedServices[0].features.map((feature, idx) => (
+								{residentialServices.map((feature, idx) => (
 									<ListItem
 										key={idx}
 										sx={{ py: 0.5, px: 0 }}>
@@ -449,6 +425,8 @@ export default function ChelseaPage() {
 					</Grid>
 				</Container>
 			</Box>
+
+			{/* Section 7: Commercial Security */}
 			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_CYAN, 0.05) }}>
 				<Container>
 					<Grid
@@ -457,15 +435,17 @@ export default function ChelseaPage() {
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h3">
-								Commercial & Private Gallery Security
+								Commercial And Gallery Security
 							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Chelsea&apos;s thriving arts scene and boutique businesses
-								require specialized security for valuable assets. We offer
-								discrete monitoring systems and advanced access control suitable
-								for galleries and luxury retail.
+								Chelsea’s shops, galleries, offices, studios, and luxury retail spaces need security that protects the site without disrupting daily use. JW Security supports commercial clients with access control, CCTV, alarm systems, master key systems, lock changes, emergency response, and security surveys.
+							</Typography>
+							<Typography
+								paragraph
+								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
+								Whether you manage a gallery, boutique, office, or shared commercial building, we can help improve access, protect valuable stock, and reduce weak points around the site.
 							</Typography>
 							<Button
 								variant="contained"
@@ -492,7 +472,7 @@ export default function ChelseaPage() {
 				</Container>
 			</Box>
 
-			{/* Section 8: Emergency Highlights */}
+			{/* Section 8: Partner Highlights */}
 			<Box sx={{ py: 10 }}>
 				<Container>
 					<Typography
@@ -503,7 +483,7 @@ export default function ChelseaPage() {
 							mb: 6,
 							textAlign: "center",
 						}}>
-						Chelsea&apos;s 24/7 Security Partner
+						Chelsea’s 24/7 Security Partner
 					</Typography>
 					<Grid
 						container
@@ -523,8 +503,7 @@ export default function ChelseaPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									Average arrival time of 20-30 minutes across all Chelsea
-									neighborhoods, day or night.
+									Urgent locksmith help for lockouts, failed locks, lost keys, and damaged entry points across Chelsea and nearby areas.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -535,14 +514,13 @@ export default function ChelseaPage() {
 									<Typography
 										variant="h5"
 										sx={{ fontWeight: 700, color: JW_BLUE }}>
-										Accredited Experts
+										Trained Technicians
 									</Typography>
 								</Box>
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									All our locksmiths are fully vetted, insured, and highly
-									trained in high-security systems.
+									Qualified and insured locksmiths with experience in homes, flats, shops, galleries, and managed buildings.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -553,14 +531,13 @@ export default function ChelseaPage() {
 									<Typography
 										variant="h5"
 										sx={{ fontWeight: 700, color: JW_BLUE }}>
-										Fixed Pricing
+										Clear Pricing
 									</Typography>
 								</Box>
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									No call-out charges and transparent, upfront quotes before any
-									work begins on your property.
+									Affordable locksmith Chelsea support with clear quotes before planned work begins.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -568,7 +545,98 @@ export default function ChelseaPage() {
 				</Container>
 			</Box>
 
-			{/* Section 9: Bottom CTA Banner */}
+			{/* Section 9: FAQ Accordions */}
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
+					<Box sx={{ textAlign: "center", mb: 6 }}>
+						<Typography
+							variant="h3"
+							component="h2"
+							sx={{
+								fontWeight: 700,
+								fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.5rem" },
+								color: JW_BLUE,
+								mb: 2,
+							}}>
+							Common Questions
+						</Typography>
+						<Typography
+							sx={{
+								maxWidth: "700px",
+								mx: "auto",
+								mt: 2,
+								color: alpha("#000", 0.6),
+								fontSize: "1.05rem",
+							}}>
+							Answers to frequently asked questions about our Chelsea locksmith services
+						</Typography>
+					</Box>
+					<Box
+						sx={{
+							"maxWidth": "900px",
+							"mx": "auto",
+							"& .MuiAccordion-root": {
+								"bgcolor": "white",
+								"borderRadius": "8px",
+								"boxShadow": "0 5px 20px rgba(0,0,0,0.05)",
+								"&:not(:last-child)": {
+									mb: 2,
+								},
+								"&:before": {
+									display: "none",
+								},
+							},
+							"& .MuiAccordionSummary-root": {
+								px: 3,
+								py: 1.5,
+							},
+							"& .MuiAccordionDetails-root": {
+								px: 3,
+								py: 2,
+								borderTop: `1px solid ${alpha("#000", 0.08)}`,
+							},
+						}}>
+						{faqData.map((faq, index) => (
+							<Accordion
+								key={index}
+								disableGutters
+								elevation={0}
+								sx={{
+									"overflow": "hidden",
+									"transition": "all 0.3s ease",
+									"&:hover": {
+										boxShadow: "0 8px 25px rgba(0,0,0,0.08)",
+									},
+								}}>
+								<AccordionSummary
+									expandIcon={
+										<ExpandMoreIcon sx={{ color: JW_CYAN }} />
+									}>
+									<Typography
+										sx={{
+											fontWeight: 600,
+											color: JW_BLUE,
+											fontSize: "1rem",
+										}}>
+										{faq.question}
+									</Typography>
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography
+										sx={{
+											color: alpha("#000", 0.7),
+											lineHeight: 1.7,
+										}}>
+										{faq.answer}
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+						))}
+					</Box>
+				</Container>
+			</Box>
+
+			{/* Section 10: Bottom CTA Banner */}
 			<CTABanner sx={{ py: 8 }}>
 				<Container>
 					<Typography
@@ -585,8 +653,7 @@ export default function ChelseaPage() {
 					<Typography
 						variant="h6"
 						sx={{ mb: 4, color: "white", opacity: 0.9 }}>
-						Join hundreds of Chelsea residents who trust JW Security for their
-						peace of mind.
+						Join hundreds of Chelsea residents who trust JW Security for their peace of mind.
 					</Typography>
 					<Button
 						variant="contained"
@@ -598,7 +665,7 @@ export default function ChelseaPage() {
 							py: 2,
 							fontSize: "1.1rem",
 						}}>
-						CALL US TODAY: 020 7946 0125
+						CALL US TODAY: 0208 646 7931
 					</Button>
 				</Container>
 			</CTABanner>

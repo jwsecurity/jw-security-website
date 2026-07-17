@@ -172,7 +172,24 @@ export default function Footer() {
 		{ label: "Chelsea", path: "/locations/chelsea" },
 		{ label: "Kensington", path: "/locations/kensington" },
 		{ label: "Mayfair", path: "/locations/mayfair" },
+		{ label: "Balham", path: "/locations/balham" },
+		{ label: "Clapham", path: "/locations/clapham" },
+		{ label: "Streatham", path: "/locations/streatham" },
+		{ label: "Surrey", path: "/locations/surrey" },
+		{ label: "Tooting", path: "/locations/tooting" },
+		{ label: "Wimbledon", path: "/locations/wimbledon" },
+		{ label: "Camden", path: "/locations/camden" },
+		{ label: "Colliers Wood", path: "/locations/colliers-wood" },
+		{ label: "Earlsfield", path: "/locations/earlsfield" },
+		{ label: "Fulham", path: "/locations/fulham" },
+		{ label: "Hammersmith", path: "/locations/hammersmith" },
+		{ label: "Islington", path: "/locations/islington" },
+		{ label: "Putney", path: "/locations/putney" },
+		{ label: "Richmond", path: "/locations/richmond" },
+		{ label: "Southfields", path: "/locations/southfields" },
 	];
+
+
 
 	const handleSubscribe = async (e) => {
 		e.preventDefault();

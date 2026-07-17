@@ -2,11 +2,11 @@ import Script from "next/script";
 import KensingtonPage from "@/components/locations/KensingtonPage";
 
 export const metadata = {
-	title: "Locksmith Kensington | 24/7 Emergency Locksmith & Security Services",
+	title: "Locksmith Kensington | 24/7 Emergency Locksmith & Security Services W8",
 	description:
-		"Professional locksmith services in Kensington, London. 24/7 emergency response, high-security locks, CCTV installation. Serving South Kensington, Holland Park & surrounding areas. Call 020 7946 0125.",
+		"Professional locksmith services in Kensington, W8. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Kensington High Street, South Kensington, and Holland Park. Call 0208 646 7931.",
 	keywords:
-		"locksmith Kensington, emergency locksmith Kensington, Kensington security services, South Kensington locksmith, Holland Park locksmith, 24 hour locksmith Kensington",
+		"locksmith Kensington, emergency locksmith Kensington W8, Kensington security services, Kensington High Street locksmith, South Kensington locksmith, Holland Park locksmith",
 	canonical: "https://jwsecurity.co.uk/locations/kensington",
 };
 
@@ -17,10 +17,10 @@ export default function Kensington() {
 		"name": "JW Security - Kensington Locksmith & Security Services",
 		"image": "https://jwsecurity.co.uk/images/jw/jw-logo.webp",
 		"description":
-			"Professional locksmith and security services in Kensington. 24/7 emergency response, high-security locks, CCTV installation, and fire door services for residential and commercial properties.",
+			"Expert locksmith and security services in Kensington, London. 24/7 emergency response, lock changes, key cutting, and property security. Serving Kensington High Street, South Kensington, and Holland Park.",
 		"@id": "https://jwsecurity.co.uk/locations/kensington",
 		"url": "https://jwsecurity.co.uk/locations/kensington",
-		"telephone": "020 7946 0125",
+		"telephone": "0208 646 7931",
 		"address": {
 			"@type": "PostalAddress",
 			"addressLocality": "Kensington",
@@ -30,8 +30,8 @@ export default function Kensington() {
 		},
 		"geo": {
 			"@type": "GeoCoordinates",
-			"latitude": 51.4994,
-			"longitude": -0.1967,
+			"latitude": 51.5014,
+			"longitude": -0.1921,
 		},
 		"openingHoursSpecification": {
 			"@type": "OpeningHoursSpecification",
@@ -51,6 +51,10 @@ export default function Kensington() {
 		"areaServed": [
 			{
 				"@type": "Place",
+				"name": "Kensington High Street",
+			},
+			{
+				"@type": "Place",
 				"name": "South Kensington",
 			},
 			{
@@ -59,19 +63,15 @@ export default function Kensington() {
 			},
 			{
 				"@type": "Place",
-				"name": "High Street Kensington",
-			},
-			{
-				"@type": "Place",
-				"name": "Notting Hill Gate",
+				"name": "Gloucester Road",
 			},
 		],
 		"serviceArea": {
 			"@type": "GeoCircle",
 			"geoMidpoint": {
 				"@type": "GeoCoordinates",
-				"latitude": 51.4994,
-				"longitude": -0.1967,
+				"latitude": 51.5014,
+				"longitude": -0.1921,
 			},
 			"geoRadius": "3000",
 		},
@@ -82,7 +82,9 @@ export default function Kensington() {
 			<Script
 				id="kensington-json-ld"
 				type="application/ld+json"
-				dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify(jsonLd),
+				}}
 			/>
 			<KensingtonPage />
 		</>

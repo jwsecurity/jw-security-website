@@ -67,18 +67,16 @@ const ServiceCard = styled(Card)(({ theme }) => ({
 	},
 }));
 
-export default function KensingtonPage() {
+export default function TootingPage() {
 	const localAreas = [
-		"Kensington High Street",
-		"South Kensington",
-		"Gloucester Road",
-		"Earl’s Court",
-		"Holland Park",
-		"Notting Hill Gate",
-		"Kensington Gardens",
-		"Queen’s Gate",
-		"Cromwell Road",
-		"W8"
+		"Tooting Broadway",
+		"Tooting Bec",
+		"Upper Tooting Road",
+		"Mitcham Road",
+		"Garratt Lane",
+		"St George’s Hospital Area",
+		"Furzedown",
+		"Wandsworth Common"
 	];
 
 	const residentialServices = [
@@ -93,40 +91,36 @@ export default function KensingtonPage() {
 
 	const faqData = [
 		{
-			question: "Do You Provide Locksmith Services In Kensington?",
-			answer: "Yes. JW Security provides locksmith Kensington services for homes, flats, shops, offices, landlords, and managed buildings."
+			question: "Do You Provide Locksmith Services In Tooting?",
+			answer: "Yes. JW Security provides locksmith Tooting services for homes, flats, shops, offices, landlords, and managed buildings."
 		},
 		{
-			question: "Do You Cover Kensington W8?",
-			answer: "Yes. We provide locksmith Kensington W8 services, including lock changes, emergency access, key cutting, lock replacement, and property security work."
+			question: "Do You Cover Tooting SW17?",
+			answer: "Yes. We provide locksmith Tooting SW17 services, including lock changes, emergency access, key cutting, lock replacement, and property security work."
 		},
 		{
-			question: "Are You A Local Locksmith In Kensington?",
-			answer: "Yes. JW Security provides local locksmith Kensington services for residential and commercial properties across Kensington, W8, and nearby areas."
+			question: "Are You A Professional Locksmith In Tooting?",
+			answer: "Yes. JW Security has worked across London since 1991 and provides professional locksmith Tooting services for residential and commercial properties."
 		},
 		{
-			question: "Are You A Trusted Locksmith In Kensington?",
-			answer: "Yes. JW Security has worked across London since 1991 and provides trusted locksmith Kensington services for homes, businesses, landlords, and managed buildings."
-		},
-		{
-			question: "Can You Help With Lockouts In Kensington?",
-			answer: "Yes. We help with house lockouts, flat lockouts, office lockouts, failed locks, lost keys, and urgent access problems across Kensington."
+			question: "Can You Help With Lockouts In Tooting?",
+			answer: "Yes. We help with house lockouts, flat lockouts, office lockouts, failed locks, lost keys, and urgent access problems across Tooting."
 		},
 		{
 			question: "Do You Work With Landlords And Managing Agents?",
 			answer: "Yes. We support landlords, letting agents, managing agents, and residential blocks with lock changes, key control, access issues, and wider security work."
 		},
 		{
-			question: "What Areas Near Kensington Do You Cover?",
-			answer: "We cover Kensington High Street, South Kensington, Gloucester Road, Earl’s Court, Holland Park, Notting Hill Gate, Kensington Gardens, Queen’s Gate, Cromwell Road, W8, and nearby areas."
+			question: "What Areas Near Tooting Do You Cover?",
+			answer: "We cover Tooting Broadway, Tooting Bec, Upper Tooting Road, Mitcham Road, Garratt Lane, Furzedown, Wandsworth Common, SW17, and nearby areas."
 		}
 	];
 
 	return (
 		<>
 			<PageHero
-				title="Locksmith & Security Services in Kensington"
-				subtitle="Trusted locksmith Kensington services for homes, flats, shops, landlords, and managed buildings across Kensington, W8, and nearby areas."
+				title="Locksmith & Security Services in Tooting"
+				subtitle="Professional locksmith Tooting services for homes, flats, shops, landlords, and managed buildings across Tooting, SW17, and nearby areas."
 				backgroundImage="/images/jw/pexels-cottonbro-5089178-scaled.webp"
 				minHeight="45vh"
 				centerContent={true}
@@ -143,7 +137,7 @@ export default function KensingtonPage() {
 							<Box
 								component="img"
 								src="/images/jw/locksmith-hands-maintenance-and-handyman-with-tools-home-renovation-and-fixing-change-door-locks.webp"
-								alt="Kensington Security Experts"
+								alt="Tooting Security Experts"
 								sx={{
 									width: "100%",
 									height: "auto",
@@ -154,22 +148,22 @@ export default function KensingtonPage() {
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h3">
-								Kensington’s Trusted Locksmith And Security Team
+								Tooting’s Trusted Locksmith And Security Team
 							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security provides locksmith and security services across Kensington for homeowners, tenants, landlords, businesses, managing agents, and residential blocks that need reliable help without delays.
+								JW Security provides locksmith and security services across Tooting for homeowners, tenants, landlords, businesses, managing agents, and residential blocks that need reliable help without delays.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								From lock changes and emergency access to key cutting, lock replacement, burglary repairs, and wider security improvements, our team supports properties across Kensington and W8 with work that suits the building.
+								From lock changes and emergency access to key cutting, lock replacement, burglary repairs, and wider security improvements, our team supports properties across Tooting and SW17 with work that fits the building.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Whether you need a local locksmith in Kensington for a flat near Kensington High Street, a house close to Holland Park, a shop near Gloucester Road, or a managed building near South Kensington, we keep the service clear, tidy, and focused on the issue in front of us.
+								Whether you need a local locksmith in Tooting for a flat near Tooting Broadway, a house close to Tooting Bec, a shop on Upper Tooting Road, or a managed property near Mitcham Road, we keep the service clear, tidy, and focused on the issue in front of us.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -184,11 +178,11 @@ export default function KensingtonPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h3">Serving Kensington And Nearby Areas</SectionTitle>
+							<SectionTitle variant="h3">Serving Tooting And Nearby Areas</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security covers Kensington and nearby locations for planned locksmith work, urgent access issues, and property security improvements.
+								JW Security covers Tooting and nearby locations for planned locksmith work, urgent access issues, and property security improvements.
 							</Typography>
 							<Typography
 								variant="h6"
@@ -243,7 +237,7 @@ export default function KensingtonPage() {
 								<Typography
 									variant="body2"
 									sx={{ color: "text.secondary", mb: 4 }}>
-									Fast locksmith help across Kensington, W8, and nearby areas.
+									Fast locksmiths help across Tooting, SW17, and nearby areas.
 								</Typography>
 								<Button
 									variant="contained"
@@ -277,12 +271,12 @@ export default function KensingtonPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Kensington has a mix of period homes, mansion blocks, luxury flats, rental properties, embassies, shops, offices, galleries, and managed buildings. Each property has different lock, access, and security needs.
+								Tooting has a mix of family homes, rental flats, shared houses, shops, clinics, offices, and managed buildings. Each property type comes with different access and security needs.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security works with homes, flats, landlords, offices, shops, and managed properties across Kensington. We can help with lock replacement, BS3621 locks, window locks, emergency locksmith work, key control, and wider security upgrades. Our aim is simple. Make the property secure, keep the work neat, and explain the options before anything begins.
+								JW Security works with homes, flats, landlords, offices, shops, and managed buildings across Tooting. We can help with lock replacement, BS3621 locks, window locks, emergency locksmith work, key control, and wider security upgrades. Our aim is simple. Make the property secure, keep the work neat, and explain the options before anything begins.
 							</Typography>
 							<Grid
 								container
@@ -376,12 +370,12 @@ export default function KensingtonPage() {
 							<Typography
 								variant="h3"
 								sx={{ fontWeight: 800, mb: 3, color: "white" }}>
-								Understanding Kensington’s Security Needs
+								Understanding Tooting’s Security Needs
 							</Typography>
 							<Typography
 								variant="h6"
 								sx={{ mb: 4, fontWeight: 400, opacity: 0.9, color: "white", lineHeight: 1.8 }}>
-								Kensington includes private homes, converted flats, mansion blocks, high value apartments, retail spaces, offices, galleries, and managed residential buildings. A locksmith job here can be anything from a simple lock change to a wider security review. JW Security brings local experience to these situations, helping clients choose the right level of security without making the job more complicated than it needs to be.
+								Tooting is a busy South London area with homes, converted flats, rental properties, small businesses, clinics, shops, restaurants, and shared buildings. A locksmith job here can be anything from a simple lock change to urgent help after a failed mechanism. JW Security brings local experience to these situations, helping clients choose the right level of security without overcomplicating the job.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -409,11 +403,11 @@ export default function KensingtonPage() {
 							/>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h3">Residential Locksmith Services In Kensington</SectionTitle>
+							<SectionTitle variant="h3">Residential Locksmith Services In Tooting</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								We provide locksmith Kensington services for houses, flats, landlords, tenants, mansion blocks, and residential buildings where access needs to be safe and easy to manage. Whether you need a lock change, BS3621 locks, window lock fitting, key cutting, emergency door opening, or a security review, our team can advise on suitable options for the door, frame, and property type.
+								We provide locksmith Tooting services for houses, flats, landlords, tenants, and residential blocks where access needs to be safe and easy to manage. Whether you need a lock change, BS3621 locks, window lock fitting, key cutting, emergency door opening, or a security review, our team can advise on suitable options for the door, frame, and property type.
 							</Typography>
 							<List sx={{ mb: 4 }}>
 								{residentialServices.map((feature, idx) => (
@@ -441,17 +435,17 @@ export default function KensingtonPage() {
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle variant="h3">
-								Commercial Security In Kensington
+								Commercial Security In Tooting
 							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Kensington businesses, shops, galleries, offices, hotels, and managed sites need security that protects the building without disrupting daily use. JW Security supports commercial clients with access control, CCTV, alarm systems, master key systems, commercial lock changes, emergency response, and security surveys.
+								Tooting businesses, shops, clinics, offices, restaurants, and managed sites need security that works around daily use. JW Security supports commercial clients with access control, CCTV, alarm systems, master key systems, commercial lock changes, emergency response, and security surveys.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Whether you manage a shop near Kensington High Street, an office near Gloucester Road, a gallery close to South Kensington, or a shared commercial building, we can help improve access, protect entry points, and deal with weak spots around the property.
+								Whether you manage a shop on Upper Tooting Road, an office near Tooting Broadway, a healthcare site, or a shared commercial building, we can help improve access, protect entry points, and deal with weak spots around the property.
 							</Typography>
 							<Button
 								variant="contained"
@@ -489,7 +483,7 @@ export default function KensingtonPage() {
 							mb: 6,
 							textAlign: "center",
 						}}>
-						Kensington’s Local Locksmith Partner
+						Tooting’s Local Locksmith Partner
 					</Typography>
 					<Grid
 						container
@@ -509,7 +503,7 @@ export default function KensingtonPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									Locksmith Kensington W8 help for lockouts, lost keys, failed locks, damaged locks, and urgent access problems.
+									Locksmith Tooting SW17 help for lockouts, lost keys, failed locks, damaged locks, and urgent access problems.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -526,7 +520,7 @@ export default function KensingtonPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									Qualified and insured locksmiths with experience in homes, shops, offices, galleries, hotels, and managed buildings.
+									Qualified and insured locksmiths with experience in homes, shops, offices, clinics, and managed buildings.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -543,7 +537,7 @@ export default function KensingtonPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									Trusted locksmith Kensington service with clear quotes before planned work begins.
+									Professional locksmith Tooting service with clear quotes before planned work begins.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -574,7 +568,7 @@ export default function KensingtonPage() {
 								color: alpha("#000", 0.6),
 								fontSize: "1.05rem",
 							}}>
-							Answers to frequently asked questions about our Kensington locksmith services
+							Answers to frequently asked questions about our Tooting locksmith services
 						</Typography>
 					</Box>
 					<Box
@@ -659,7 +653,7 @@ export default function KensingtonPage() {
 					<Typography
 						variant="h6"
 						sx={{ mb: 4, color: "white", opacity: 0.9 }}>
-						Join hundreds of Kensington residents who trust JW Security for their peace of mind.
+						Join hundreds of Tooting residents who trust JW Security for their peace of mind.
 					</Typography>
 					<Button
 						variant="contained"
@@ -688,7 +682,7 @@ export default function KensingtonPage() {
 			</Box>
 
 			<ContactSection
-				title="Need a Locksmith in Kensington?"
+				title="Need a Locksmith in Tooting?"
 				subtitle="Available 24/7 for emergencies or to schedule a security consultation"
 			/>
 		</>

@@ -4,7 +4,7 @@ import ChelseaPage from "@/components/locations/ChelseaPage";
 export const metadata = {
 	title: "Locksmith Chelsea | 24/7 Emergency Locksmith & Security Services SW3",
 	description:
-		"Professional locksmith services in Chelsea, SW3. 24/7 emergency response, luxury property security, period property specialists. Serving Kings Road, Sloane Square & Chelsea Harbour. Call 020 7946 0125.",
+		"Trusted locksmith Chelsea services for homes, flats, shops, galleries, landlords, and managed buildings across SW3, SW10, and nearby Chelsea areas. Call 0208 646 7931.",
 	keywords:
 		"locksmith Chelsea, emergency locksmith Chelsea SW3, Chelsea security services, Kings Road locksmith, Sloane Square locksmith, luxury property security Chelsea",
 	canonical: "https://jwsecurity.co.uk/locations/chelsea",
@@ -20,7 +20,7 @@ export default function Chelsea() {
 			"Expert locksmith and security services in Chelsea, London. 24/7 emergency response, luxury property security, period property specialists. Serving Kings Road, Sloane Square, and Chelsea Harbour.",
 		"@id": "https://jwsecurity.co.uk/locations/chelsea",
 		"url": "https://jwsecurity.co.uk/locations/chelsea",
-		"telephone": "020 7946 0125",
+		"telephone": "0208 646 7931",
 		"address": {
 			"@type": "PostalAddress",
 			"addressLocality": "Chelsea",
