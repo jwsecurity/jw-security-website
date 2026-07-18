@@ -11,6 +11,7 @@ import {
 	Alert,
 	Divider,
 	CircularProgress,
+	IconButton,
 } from "@mui/material";
 import Link from "next/link";
 import { useState } from "react";
@@ -20,8 +21,10 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import { styled, alpha } from "@mui/material/styles";
 import ReCaptcha from "@/components/common/ReCaptcha";
+import CancelIcon from "@mui/icons-material/Cancel";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 
 const JW_CYAN = "#00c6d7";
 const JW_BLUE = "#1c2e4a";
@@ -125,9 +128,69 @@ export default function ContactPage() {
 		name: "",
 		email: "",
 		phone: "",
+		zipCode: "",
 		subject: "",
 		message: "",
+		images: [],
 	});
+
+	const [uploading, setUploading] = useState(false);
+
+	const handleImageUpload = async (e) => {
+		const files = Array.from(e.target.files);
+		if (files.length === 0) return;
+
+		setUploading(true);
+		const newImages = [...formData.images];
+
+		try {
+			for (const file of files) {
+				const data = new FormData();
+				data.append("image", file);
+
+				const response = await fetch("/api/upload-public", {
+					method: "POST",
+					body: data,
+				});
+
+				const result = await response.json();
+
+				if (response.ok && result.url) {
+					newImages.push(result.url);
+				} else {
+					throw new Error(result.error || "Upload failed");
+				}
+			}
+
+			setFormData((prev) => ({
+				...prev,
+				images: newImages,
+			}));
+
+			setSnackbar({
+				open: true,
+				message: "Image(s) uploaded successfully.",
+				severity: "success",
+			});
+		} catch (error) {
+			console.error("Upload error:", error);
+			setSnackbar({
+				open: true,
+				message:
+					error.message || "Failed to upload image(s). Please try again.",
+				severity: "error",
+			});
+		} finally {
+			setUploading(false);
+		}
+	};
+
+	const handleRemoveImage = (indexToRemove) => {
+		setFormData((prev) => ({
+			...prev,
+			images: prev.images.filter((_, idx) => idx !== indexToRemove),
+		}));
+	};
 
 	const [snackbar, setSnackbar] = useState({
 		open: false,
@@ -166,8 +229,10 @@ export default function ContactPage() {
 					name: "",
 					email: "",
 					phone: "",
+					zipCode: "",
 					subject: "",
 					message: "",
+					images: [],
 				});
 
 				setSnackbar({
@@ -476,6 +541,14 @@ export default function ContactPage() {
 											/>
 											<StyledTextField
 												fullWidth
+												label="Postcode / Zip Code"
+												name="zipCode"
+												value={formData.zipCode}
+												onChange={handleChange}
+												disabled={isSubmitting}
+											/>
+											<StyledTextField
+												fullWidth
 												label="Subject"
 												name="subject"
 												value={formData.subject}
@@ -494,6 +567,101 @@ export default function ContactPage() {
 												required
 												disabled={isSubmitting}
 											/>
+											<Box sx={{ mt: 1 }}>
+												<Typography
+													variant="subtitle2"
+													sx={{ mb: 1, fontWeight: 600, color: JW_BLUE }}>
+													Pictures of Lock (Optional)
+												</Typography>
+												<Typography
+													variant="body2"
+													sx={{ mb: 2, color: alpha("#000", 0.5) }}>
+													Uploading pictures helps our locksmiths understand the
+													issue and provide a more accurate quote/solution.
+												</Typography>
+
+												<Button
+													variant="outlined"
+													component="label"
+													disabled={isSubmitting || uploading}
+													startIcon={
+														uploading ? (
+															<CircularProgress size={20} />
+														) : (
+															<CloudUploadIcon />
+														)
+													}
+													sx={{
+														"borderColor": alpha(JW_BLUE, 0.2),
+														"color": JW_BLUE,
+														"py": 1.5,
+														"px": 3,
+														"textTransform": "none",
+														"&:hover": {
+															borderColor: JW_CYAN,
+															backgroundColor: alpha(JW_CYAN, 0.05),
+														},
+													}}>
+													{uploading ? "Uploading..." : "Select Images"}
+													<input
+														type="file"
+														multiple
+														accept="image/*"
+														hidden
+														onChange={handleImageUpload}
+													/>
+												</Button>
+
+												{formData.images.length > 0 && (
+													<Box
+														sx={{
+															display: "flex",
+															flexWrap: "wrap",
+															gap: 2,
+															mt: 3,
+														}}>
+														{formData.images.map((url, idx) => (
+															<Box
+																key={idx}
+																sx={{
+																	position: "relative",
+																	width: 90,
+																	height: 90,
+																	borderRadius: "8px",
+																	overflow: "hidden",
+																	border: `1px solid ${alpha(JW_BLUE, 0.1)}`,
+																}}>
+																<Box
+																	component="img"
+																	src={url}
+																	alt="Lock Preview"
+																	sx={{
+																		width: "100%",
+																		height: "100%",
+																		objectFit: "cover",
+																	}}
+																/>
+																<IconButton
+																	size="small"
+																	onClick={() => handleRemoveImage(idx)}
+																	sx={{
+																		"position": "absolute",
+																		"top": 2,
+																		"right": 2,
+																		"backgroundColor": "rgba(0, 0, 0, 0.6)",
+																		"color": "white",
+																		"padding": "2px",
+																		"&:hover": {
+																			backgroundColor: "rgba(255, 0, 0, 0.8)",
+																		},
+																	}}>
+																	<CancelIcon sx={{ fontSize: 16 }} />
+																</IconButton>
+															</Box>
+														))}
+													</Box>
+												)}
+											</Box>
 											<ReCaptcha
 												onVerify={(token) => setRecaptchaToken(token)}
 											/>

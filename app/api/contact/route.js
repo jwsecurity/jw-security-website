@@ -3,7 +3,6 @@ import { verifyRecaptchaToken } from "@/lib/recaptcha";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-// HTML escape function to prevent XSS
 function escapeHtml(text) {
 	if (!text) return "";
 	return text
@@ -29,7 +28,16 @@ function sanitizeHeaderValue(value) {
 export async function POST(request) {
 	try {
 		const body = await request.json();
-		const { name, email, phone, subject, message, recaptchaToken } = body;
+		const {
+			name,
+			email,
+			phone,
+			zipCode,
+			subject,
+			message,
+			recaptchaToken,
+			images,
+		} = body;
 
 		// Verify reCAPTCHA Token
 		const isVerified = await verifyRecaptchaToken(recaptchaToken);
@@ -61,8 +69,30 @@ export async function POST(request) {
 		const escapedName = escapeHtml(name);
 		const escapedEmail = escapeHtml(email);
 		const escapedPhone = escapeHtml(phone || "Not provided");
+		const escapedZipCode = escapeHtml(zipCode || "Not provided");
 		const escapedSubject = escapeHtml(subject);
 		const escapedMessage = escapeHtml(message);
+
+		// Build images HTML block if images exist
+		let imagesHtml = "";
+		if (images && Array.isArray(images) && images.length > 0) {
+			imagesHtml = `
+            <div style="background-color: white; padding: 20px; border-radius: 8px; margin-top: 20px;">
+              <h3 style="color: #1c2e4a; margin-top: 0;">Uploaded Lock Pictures</h3>
+              <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                ${images
+									.map(
+										(url) => `
+                  <a href="${escapeHtml(url)}" target="_blank" style="display: inline-block;">
+                    <img src="${escapeHtml(url)}" alt="Lock Picture" style="width: 120px; height: 120px; object-fit: cover; border: 1px solid #ddd; border-radius: 6px;" />
+                  </a>
+                `,
+									)
+									.join("")}
+              </div>
+            </div>
+			`;
+		}
 
 		const adminEmails = [
 			"Luca@jwsecurity.co.uk",
@@ -92,6 +122,7 @@ export async function POST(request) {
               <p style="margin: 10px 0;"><strong>Name:</strong> ${escapedName}</p>
               <p style="margin: 10px 0;"><strong>Email:</strong> <a href="mailto:${escapedEmail}">${escapedEmail}</a></p>
               <p style="margin: 10px 0;"><strong>Phone:</strong> ${escapedPhone}</p>
+              <p style="margin: 10px 0;"><strong>Postcode / Zip Code:</strong> ${escapedZipCode}</p>
               <p style="margin: 10px 0;"><strong>Subject:</strong> ${escapedSubject}</p>
             </div>
 
@@ -99,6 +130,8 @@ export async function POST(request) {
               <h3 style="color: #1c2e4a; margin-top: 0;">Message</h3>
               <p style="white-space: pre-wrap; line-height: 1.6;">${escapedMessage}</p>
             </div>
+            
+            ${imagesHtml}
           </div>
 
           <div style="background-color: #00c6d7; color: white; padding: 15px; text-align: center;">
@@ -133,8 +166,10 @@ export async function POST(request) {
 
             <div style="background-color: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
               <h3 style="color: #1c2e4a; margin-top: 0;">Your Message</h3>
+              <p style="margin: 10px 0;"><strong>Postcode / Zip Code:</strong> ${escapedZipCode}</p>
               <p style="margin: 10px 0;"><strong>Subject:</strong> ${escapedSubject}</p>
               <p style="white-space: pre-wrap; line-height: 1.6;">${escapedMessage}</p>
+              ${imagesHtml}
             </div>
 
             <p style="font-size: 16px; line-height: 1.6;">
