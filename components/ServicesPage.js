@@ -9,15 +9,33 @@ import {
 	Button,
 	useMediaQuery,
 } from "@mui/material";
+import React from "react";
 import PageHero from "./common/PageHero";
 import { alpha } from "@mui/material/styles";
-import LockIcon from "@mui/icons-material/Lock";
-import BuildIcon from "@mui/icons-material/Build";
 import ContactSection from "./common/ContactSection";
 import { styled, useTheme } from "@mui/material/styles";
+
+// Material UI Icons
+import LockIcon from "@mui/icons-material/Lock";
+import BuildIcon from "@mui/icons-material/Build";
 import SecurityIcon from "@mui/icons-material/Security";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
+import DoorFrontIcon from "@mui/icons-material/DoorFront";
+import FactCheckIcon from "@mui/icons-material/FactCheck";
+import HomeRepairServiceIcon from "@mui/icons-material/HomeRepairService";
+import AssignmentLateIcon from "@mui/icons-material/AssignmentLate";
+import VpnKeyIcon from "@mui/icons-material/VpnKey";
+import KeyIcon from "@mui/icons-material/Key";
+import NotificationImportantIcon from "@mui/icons-material/NotificationImportant";
+import MeetingRoomIcon from "@mui/icons-material/MeetingRoom";
+import ConstructionIcon from "@mui/icons-material/Construction";
+import ManageSearchIcon from "@mui/icons-material/ManageSearch";
+import EnhancedEncryptionIcon from "@mui/icons-material/EnhancedEncryption";
+import FenceIcon from "@mui/icons-material/Fence";
+import WindowIcon from "@mui/icons-material/Window";
+import DialpadIcon from "@mui/icons-material/Dialpad";
+import ContentCutIcon from "@mui/icons-material/ContentCut";
 
 const JW_BLUE = "#1c2e4a";
 const JW_CYAN = "#00c6d7";
@@ -77,6 +95,7 @@ const ServiceIconBox = styled(Box)(({ theme }) => ({
 	justifyContent: "center",
 	marginBottom: theme.spacing(2),
 	transition: "all 0.3s ease",
+	color: JW_BLUE,
 }));
 
 const CategorySection = styled(Box)(({ theme }) => ({
@@ -90,96 +109,176 @@ export default function ServicesPage() {
 	const theme = useTheme();
 	const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
+	// All 20 services grouped by appropriate categories with Icons
 	const allServices = [
+		// Core Services
 		{
 			title: "Fire Protection",
 			description:
-				"Comprehensive fire safety solutions including fire door inspections, maintenance, installation, alarm systems, emergency lighting, and extinguisher services.",
+				"Comprehensive fire safety solutions including alarm systems, emergency lighting, and extinguisher services.",
 			icon: <LocalFireDepartmentIcon sx={{ fontSize: 30 }} />,
 			link: "/services/fire-protection",
 			category: "core",
 			featured: true,
 		},
 		{
-			title: "Locksmith Services",
+			title: "Fire Door Inspection",
 			description:
-				"Professional locksmith solutions with 24/7 emergency access, master key systems, and high-security locks for homes and businesses.",
+				"Thorough inspections by certified professionals to ensure your fire doors meet all current safety regulations.",
+			icon: <FactCheckIcon sx={{ fontSize: 30 }} />,
+			link: "/services/fire-door-inspection",
+			category: "core",
+		},
+		{
+			title: "Fire Door Installation",
+			description:
+				"Professional installation of certified fire doors for optimal safety, compliance, and peace of mind.",
+			icon: <DoorFrontIcon sx={{ fontSize: 30 }} />,
+			link: "/services/fire-door-installation",
+			category: "core",
+		},
+		{
+			title: "Fire Door Maintenance",
+			description:
+				"Regular maintenance, adjustments, and repairs to keep your fire doors functioning perfectly over time.",
+			icon: <HomeRepairServiceIcon sx={{ fontSize: 30 }} />,
+			link: "/services/fire-door-maintenance",
+			category: "core",
+		},
+		{
+			title: "Fire Risk Assessment",
+			description:
+				"Expert assessments to identify and mitigate potential fire hazards in your commercial or residential property.",
+			icon: <AssignmentLateIcon sx={{ fontSize: 30 }} />,
+			link: "/services/fire-risk-assessment",
+			category: "core",
+		},
+		{
+			title: "Locksmith",
+			description:
+				"Professional locksmith solutions with 24/7 emergency access and high-security locks for homes and businesses.",
 			icon: <LockIcon sx={{ fontSize: 30 }} />,
 			link: "/services/locksmith",
 			category: "core",
 			featured: true,
 		},
 		{
-			title: "Security Systems",
+			title: "Lock Replacement",
 			description:
-				"Modern CCTV, alarm systems, and access control solutions professionally installed to protect your property.",
-			icon: <SecurityIcon sx={{ fontSize: 30 }} />,
-			link: "/services/security",
+				"Quick and secure lock replacement and upgrade services to instantly enhance your property's security.",
+			icon: <VpnKeyIcon sx={{ fontSize: 30 }} />,
+			link: "/services/lock-replacement",
 			category: "core",
-			featured: true,
 		},
 		{
-			title: "Carpentry Solutions",
+			title: "Master Key Systems",
 			description:
-				"Expert carpentry and joinery services including door installation, window repairs, kitchen fitting, and bespoke furniture.",
+				"Custom master key suites designed for convenient, tiered, and controlled access across your building.",
+			icon: <KeyIcon sx={{ fontSize: 30 }} />,
+			link: "/services/master-key-systems",
+			category: "core",
+		},
+		{
+			title: "Carpentry",
+			description:
+				"Expert carpentry and joinery services including door installation, window repairs, and kitchen fitting.",
 			icon: <BuildIcon sx={{ fontSize: 30 }} />,
 			link: "/services/carpentry",
 			category: "core",
 			featured: true,
 		},
+
+		// Emergency Services
+		{
+			title: "Emergency Response",
+			description:
+				"Rapid response services for all your urgent security, access, and locksmithing needs, day or night.",
+			icon: <NotificationImportantIcon sx={{ fontSize: 30 }} />,
+			link: "/services/emergency",
+			category: "emergency",
+		},
 		{
 			title: "Emergency Door Opening",
 			description:
-				"Fast, reliable emergency locksmith services available 24/7. We'll get you back inside with minimal damage to your property.",
+				"Fast, reliable emergency locksmith services available 24/7. We'll get you back inside with minimal damage.",
+			icon: <MeetingRoomIcon sx={{ fontSize: 30 }} />,
 			link: "/services/emergency-door-opening",
 			category: "emergency",
 		},
 		{
 			title: "Burglary Repairs",
 			description:
-				"Immediate response to secure your property after a break-in. We repair damaged doors, frames, windows, and locks.",
+				"Immediate response to secure your property after a break-in. We quickly repair damaged doors, frames, and locks.",
+			icon: <ConstructionIcon sx={{ fontSize: 30 }} />,
 			link: "/services/burglary-repairs",
 			category: "emergency",
+		},
+
+		// Security Solutions
+		{
+			title: "Security Systems",
+			description:
+				"Modern CCTV, alarm systems, and access control solutions professionally installed to protect your property.",
+			icon: <SecurityIcon sx={{ fontSize: 30 }} />,
+			link: "/services/security",
+			category: "security",
+			featured: true,
 		},
 		{
 			title: "Security Surveys",
 			description:
 				"Professional security assessments to identify vulnerabilities and provide recommendations for enhanced protection.",
+			icon: <ManageSearchIcon sx={{ fontSize: 30 }} />,
 			link: "/services/security-surveys",
 			category: "security",
 		},
 		{
-			title: "Locks & Safes",
+			title: "Locks and Safes",
 			description:
-				"Supply and installation of high-quality locks and safes from trusted brands to secure your valuables.",
+				"Supply and installation of high-quality locks and safes from trusted brands to secure your most prized valuables.",
+			icon: <EnhancedEncryptionIcon sx={{ fontSize: 30 }} />,
 			link: "/services/locks-and-safes",
 			category: "security",
 		},
 		{
 			title: "Shutters, Gates & Grilles",
 			description:
-				"Custom-designed security shutters, gates, and grilles for enhanced property protection.",
+				"Custom-designed security shutters, physical gates, and window grilles for enhanced perimeter protection.",
+			icon: <FenceIcon sx={{ fontSize: 30 }} />,
 			link: "/services/shutters-gates-grilles",
 			category: "security",
 		},
+
+		// Specialist Services
 		{
 			title: "UPVC Doors & Windows",
 			description:
-				"Specialist repair and replacement of UPVC door locks and window mechanisms including Schuco for balcony doors.",
+				"Specialist repair and replacement of UPVC door mechanisms, window hinges, and handles.",
+			icon: <WindowIcon sx={{ fontSize: 30 }} />,
 			link: "/services/upvc-doors-windows",
+			category: "specialist",
+		},
+		{
+			title: "UPVC Door Locks",
+			description:
+				"Expert diagnosis, repair, replacement, and upgrades specifically tailored for all types of UPVC door locks.",
+			icon: <LockIcon sx={{ fontSize: 30 }} />,
+			link: "/services/upvc-door-locks",
 			category: "specialist",
 		},
 		{
 			title: "Electronic Key Pads",
 			description:
-				"Modern keyless entry systems for convenient and secure access control in residential and commercial properties.",
+				"Modern keyless entry systems installed for highly convenient and secure access control in any property.",
+			icon: <DialpadIcon sx={{ fontSize: 30 }} />,
 			link: "/services/electronic-key-pads",
 			category: "specialist",
 		},
 		{
-			title: "Key Cutting Service",
+			title: "Key Cutting",
 			description:
 				"Professional key cutting and duplication services for all types of keys including specialized and security keys.",
+			icon: <ContentCutIcon sx={{ fontSize: 30 }} />,
 			link: "/services/key-cutting",
 			category: "specialist",
 		},
@@ -189,7 +288,7 @@ export default function ServicesPage() {
 		{
 			id: "core",
 			title: "Core Services",
-			description: "Our primary security and safety solutions",
+			description: "Our primary security, fire safety, and carpentry solutions",
 		},
 		{
 			id: "emergency",
@@ -199,12 +298,12 @@ export default function ServicesPage() {
 		{
 			id: "security",
 			title: "Security Solutions",
-			description: "Advanced security systems and assessments",
+			description: "Advanced security systems and perimeter assessments",
 		},
 		{
 			id: "specialist",
 			title: "Specialist Services",
-			description: "Specialized security and access solutions",
+			description: "Specialized locking mechanisms and access solutions",
 		},
 	];
 
@@ -218,7 +317,7 @@ export default function ServicesPage() {
 				centerContent={true}
 			/>
 			<Box sx={{ py: { xs: 5, md: 8 } }}>
-				<Container>
+				<Container maxWidth="lg">
 					<Box sx={{ mb: 6, textAlign: "center" }}>
 						<SectionTitle
 							variant="h4"
@@ -248,6 +347,8 @@ export default function ServicesPage() {
 							(service) => service.category === category.id,
 						);
 
+						if (categoryServices.length === 0) return null;
+
 						return (
 							<CategorySection key={category.id}>
 								<Box sx={{ mb: 4 }}>
@@ -263,22 +364,26 @@ export default function ServicesPage() {
 
 								<Grid
 									container
-									spacing={6}
-									alignItems="center">
+									spacing={4}>
 									{categoryServices.map((service, index) => (
 										<Grid
-											size={{ xs: 12, md: 6 }}
+											size={{ xs: 12, sm: 6, md: 4 }}
 											key={index}>
 											<ServiceCard>
 												{service.icon && (
-													<CardContent sx={{ pb: 0 }}>
+													<CardContent sx={{ pb: 0, pt: 3 }}>
 														<ServiceIconBox className="service-icon">
 															{service.icon}
 														</ServiceIconBox>
 													</CardContent>
 												)}
 												<CardContent
-													sx={{ flexGrow: 1, pt: service.icon ? 0 : 3 }}>
+													sx={{
+														flexGrow: 1,
+														pt: service.icon ? 1 : 3,
+														display: "flex",
+														flexDirection: "column",
+													}}>
 													<Typography
 														variant="h6"
 														component="h3"
@@ -296,7 +401,7 @@ export default function ServicesPage() {
 															mb: 3,
 															color: "text.secondary",
 															lineHeight: 1.6,
-															minHeight: { xs: "auto", md: "72px" },
+															flexGrow: 1,
 														}}>
 														{service.description}
 													</Typography>
@@ -305,6 +410,7 @@ export default function ServicesPage() {
 															display: "flex",
 															alignItems: "center",
 															gap: 0.5,
+															mt: "auto",
 														}}>
 														<Typography
 															component="a"

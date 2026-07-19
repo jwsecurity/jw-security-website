@@ -76,6 +76,7 @@ const FooterLink = styled(Button)(({ theme }) => ({
 	"fontSize": "0.95rem",
 	"fontWeight": 400,
 	"color": alpha("#fff", 0.85),
+	"textTransform": "capitalize",
 	"&:hover": {
 		color: JW_CYAN,
 		transform: "translateX(5px)",
@@ -147,12 +148,35 @@ export default function Footer() {
 	const [recaptchaToken, setRecaptchaToken] = React.useState("");
 
 	const services = [
-		{ label: "Locksmith Services", path: "/services/locksmith" },
+		{ label: "Burglary Repairs", path: "/services/burglary-repairs" },
+		{ label: "Carpentry", path: "/services/carpentry" },
+		{ label: "Electronic Key Pads", path: "/services/electronic-key-pads" },
+		{ label: "Emergency", path: "/services/emergency" },
+		{
+			label: "Emergency Door Opening",
+			path: "/services/emergency-door-opening",
+		},
+		{ label: "Fire Door Inspection", path: "/services/fire-door-inspection" },
+		{
+			label: "Fire Door Installation",
+			path: "/services/fire-door-installation",
+		},
+		{ label: "Fire Door Maintenance", path: "/services/fire-door-maintenance" },
 		{ label: "Fire Protection", path: "/services/fire-protection" },
-		{ label: "Security Systems", path: "/services/security" },
-		{ label: "Emergency Call Out", path: "/services/emergency" },
+		{ label: "Fire Risk Assessment", path: "/services/fire-risk-assessment" },
 		{ label: "Key Cutting", path: "/services/key-cutting" },
-		{ label: "Commercial Security", path: "/commercial" },
+		{ label: "Lock Replacement", path: "/services/lock-replacement" },
+		{ label: "Locks and Safes", path: "/services/locks-and-safes" },
+		{ label: "Locksmith", path: "/services/locksmith" },
+		{ label: "Master Key Systems", path: "/services/master-key-systems" },
+		{ label: "Security", path: "/services/security" },
+		{ label: "Security Surveys", path: "/services/security-surveys" },
+		{
+			label: "Shutters, Gates & Grilles",
+			path: "/services/shutters-gates-grilles",
+		},
+		{ label: "UPVC Door Locks", path: "/services/upvc-door-locks" },
+		{ label: "UPVC Doors & Windows", path: "/services/upvc-doors-windows" },
 	];
 
 	const quickLinks = [
@@ -188,8 +212,6 @@ export default function Footer() {
 		{ label: "Richmond", path: "/locations/richmond" },
 		{ label: "Southfields", path: "/locations/southfields" },
 	];
-
-
 
 	const handleSubscribe = async (e) => {
 		e.preventDefault();
@@ -228,26 +250,32 @@ export default function Footer() {
 
 	return (
 		<FooterContainer component="footer">
-			<Container maxWidth="xl">
+			<Container
+				maxWidth={false}
+				sx={{ px: { xs: 2, sm: 4, md: 8, lg: 12, xl: 16 } }}>
 				<Box
 					sx={{
 						display: "flex",
 						gap: 3,
 						flexWrap: "wrap",
 						alignItems: "center",
+						justifyContent: "center",
 						mb: 4,
 					}}>
-					<Typography sx={{ color: alpha("#fff", 0.7), fontSize: "0.9rem" }}>
+					<Typography
+						sx={{
+							color: alpha("#fff", 0.7),
+							fontSize: "0.9rem",
+							textAlign: "center",
+						}}>
 						Certified and insured • Trusted by leading organisations
 					</Typography>
 				</Box>
 				<Grid
 					container
-					spacing={{ xs: 4, md: 6 }}>
-					<Grid
-						item
-						xs={12}
-						md={4}>
+					spacing={{ xs: 4, md: 6 }}
+					justifyContent="center">
+					<Grid size={{ xs: 12, sm: 6, md: 3 }}>
 						<Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
 							<Image
 								src="/images/jw/jw-logo.webp"
@@ -317,11 +345,7 @@ export default function Footer() {
 							</Box>
 						)}
 					</Grid>
-					<Grid
-						item
-						xs={12}
-						sm={6}
-						md={2}>
+					<Grid size={{ xs: 12, sm: 6, md: 2 }}>
 						<FooterHeading variant="h6">Quick Links</FooterHeading>
 						{quickLinks.map((link, index) => (
 							<Link
@@ -337,11 +361,8 @@ export default function Footer() {
 							</Link>
 						))}
 					</Grid>
-					<Grid
-						item
-						xs={12}
-						sm={6}
-						md={2}>
+
+					<Grid size={{ xs: 12, sm: 6, md: 2 }}>
 						<FooterHeading variant="h6">Our Services</FooterHeading>
 						{services.map((service, index) => (
 							<Link
@@ -357,11 +378,8 @@ export default function Footer() {
 							</Link>
 						))}
 					</Grid>
-					<Grid
-						item
-						xs={12}
-						sm={6}
-						md={2}>
+
+					<Grid size={{ xs: 12, sm: 6, md: 2 }}>
 						<FooterHeading variant="h6">Our Locations</FooterHeading>
 						{ourLocations.map((link, index) => (
 							<Link
@@ -377,10 +395,8 @@ export default function Footer() {
 							</Link>
 						))}
 					</Grid>
-					<Grid
-						item
-						xs={12}
-						md={4}>
+
+					<Grid size={{ xs: 12, sm: 6, md: 3 }}>
 						<FooterHeading variant="h6">Contact Us</FooterHeading>
 						<Box sx={{ mb: 3 }}>
 							<ContactInfoItem>
@@ -497,11 +513,16 @@ export default function Footer() {
 					{isMobile && (
 						<Typography
 							variant="body2"
-							sx={{ fontSize: "0.9rem", mb: { xs: 2, sm: 0 } }}>
+							sx={{
+								fontSize: "0.9rem",
+								mb: { xs: 2, sm: 0 },
+								textAlign: "center",
+							}}>
 							© {new Date().getFullYear()} JW Security. All Rights Reserved.
 						</Typography>
 					)}
-					<Box sx={{ display: "flex", gap: 3 }}>
+					<Box
+						sx={{ display: "flex", gap: 3, justifyContent: "center", flex: 1 }}>
 						<Link
 							href="/privacy"
 							style={{

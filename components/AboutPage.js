@@ -2,6 +2,7 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
 import { JW_BLUE } from "../constants/colors";
+import ContactSection from "./common/ContactSection";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import BusinessIcon from "@mui/icons-material/Business";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
@@ -116,10 +117,7 @@ export default function AboutPage() {
 						container
 						spacing={6}
 						alignItems="center">
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						<Grid size={{ xs: 12, md: 6 }}>
 							<SectionTitle
 								variant="h3"
 								align="left">
@@ -147,10 +145,7 @@ export default function AboutPage() {
 								built over three decades.
 							</Typography>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						<Grid size={{ xs: 12, md: 6 }}>
 							<Box
 								component="img"
 								src="/images/jw/locksmith.webp"
@@ -186,9 +181,7 @@ export default function AboutPage() {
 						spacing={4}>
 						{values.map((value, index) => (
 							<Grid
-								item
-								xs={12}
-								sm={6}
+								size={{ xs: 12, sm: 6 }}
 								key={index}>
 								<Box sx={{ display: "flex", mb: 3 }}>
 									<CheckCircleOutlineIcon
@@ -227,10 +220,7 @@ export default function AboutPage() {
 						container
 						spacing={4}
 						justifyContent="center">
-						<Grid
-							item
-							xs={12}
-							md={4}>
+						<Grid size={{ xs: 12, md: 4 }}>
 							<Paper sx={{ p: 4, textAlign: "center", height: "100%" }}>
 								<WorkspacePremiumIcon
 									sx={{ fontSize: 60, color: JW_BLUE, mb: 2 }}
@@ -247,10 +237,7 @@ export default function AboutPage() {
 								</Typography>
 							</Paper>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={4}>
+						<Grid size={{ xs: 12, md: 4 }}>
 							<Paper sx={{ p: 4, textAlign: "center", height: "100%" }}>
 								<VerifiedIcon sx={{ fontSize: 60, color: JW_BLUE, mb: 2 }} />
 								<Typography
@@ -265,10 +252,7 @@ export default function AboutPage() {
 								</Typography>
 							</Paper>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={4}>
+						<Grid size={{ xs: 12, md: 4 }}>
 							<Paper sx={{ p: 4, textAlign: "center", height: "100%" }}>
 								<BusinessIcon sx={{ fontSize: 60, color: JW_BLUE, mb: 2 }} />
 								<Typography
@@ -304,10 +288,7 @@ export default function AboutPage() {
 					<Grid
 						container
 						spacing={4}>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						<Grid size={{ xs: 12, md: 6 }}>
 							<Box sx={{ mb: 4 }}>
 								<Typography
 									variant="h5"
@@ -330,10 +311,7 @@ export default function AboutPage() {
 								</Typography>
 							</Box>
 						</Grid>
-						<Grid
-							item
-							xs={12}
-							md={6}>
+						<Grid size={{ xs: 12, md: 6 }}>
 							<Box sx={{ mb: 4 }}>
 								<Typography
 									variant="h5"
@@ -385,6 +363,10 @@ export default function AboutPage() {
 					</Grid>
 				</Container>
 			</Section>
+			<ContactSection
+				title="Ready to Secure Your Property?"
+				subtitle="Contact us today for a free consultation and quotation"
+			/>
 		</>
 	);
 }
