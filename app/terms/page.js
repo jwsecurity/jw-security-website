@@ -4,6 +4,21 @@ import LegalPage from "@/components/LegalPage";
 export const metadata = {
 	title: "Terms of Service | JW Security | London Locksmiths",
 	description: "Terms of Service for JW Security. Professional locksmith and security services in London.",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/terms",
+	},
+	openGraph: {
+		title: "Terms of Service | JW Security | London Locksmiths",
+		description: "Terms of Service for JW Security. Professional locksmith and security services in London.",
+		url: "https://jwsecurity.co.uk/terms",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary",
+		title: "Terms of Service | JW Security | London Locksmiths",
+		description: "Terms of Service for JW Security. Professional locksmith and security services in London.",
+	},
 };
 
 export default function TermsOfService() {

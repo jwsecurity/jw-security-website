@@ -2,12 +2,28 @@ import Script from "next/script";
 import HammersmithPage from "@/components/locations/HammersmithPage";
 
 export const metadata = {
-	title: "Locksmith Hammersmith | 24/7 Emergency Locksmith & Security W6",
+	title: "Locksmith Hammersmith | 24/7 Emergency Locksmith W6 | JW Security",
 	description:
-		"Professional locksmith services in Hammersmith, W6. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Hammersmith Broadway, Ravenscourt Park, and Brook Green. Call 0208 646 7931.",
+		"Professional locksmith services in Hammersmith, W6. 24/7 emergency response, lock changes, key cutting, and security solutions. Serving Hammersmith Broadway and King Street. Call 0208 646 7931.",
 	keywords:
-		"locksmith Hammersmith, emergency locksmith Hammersmith W6, Hammersmith security services, Hammersmith Broadway locksmith, Ravenscourt Park locksmith, Brook Green locksmith",
-	canonical: "https://jwsecurity.co.uk/locations/hammersmith",
+		"locksmith Hammersmith, emergency locksmith Hammersmith W6, Hammersmith security services, King Street locksmith",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/locations/hammersmith",
+	},
+	openGraph: {
+		title: "Locksmith Hammersmith | 24/7 Emergency Locksmith W6 | JW Security",
+		description:
+			"Professional locksmith services in Hammersmith, W6. 24/7 emergency response, lock changes, key cutting, and security solutions. Call 0208 646 7931.",
+		url: "https://jwsecurity.co.uk/locations/hammersmith",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Locksmith Hammersmith | 24/7 Emergency Locksmith W6 | JW Security",
+		description:
+			"Professional locksmith services in Hammersmith, W6. 24/7 emergency response, lock changes, key cutting, and security solutions.",
+	},
 };
 
 export default function Hammersmith() {

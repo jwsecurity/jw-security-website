@@ -2,12 +2,28 @@ import Script from "next/script";
 import SurreyPage from "@/components/locations/SurreyPage";
 
 export const metadata = {
-	title: "Locksmith Surrey | 24 Hour Emergency Locksmith & Security Services",
+	title: "Locksmith Surrey | 24/7 Emergency Locksmith & Security | JW Security",
 	description:
-		"Trusted locksmith Surrey services for homes, businesses, landlords, and managed properties across Surrey, with 24 hour help for urgent lock and access problems. Call 0208 646 7931.",
+		"Professional locksmith and property security services across Surrey. 24/7 emergency response, lock changes, key cutting, and security surveys. Call 0208 646 7931.",
 	keywords:
-		"locksmith Surrey, emergency locksmith Surrey, Surrey locksmith 24 hour, Surrey security services, Wimbledon locksmith, Kingston locksmith, Richmond locksmith, Croydon locksmith",
-	canonical: "https://jwsecurity.co.uk/locations/surrey",
+		"locksmith Surrey, emergency locksmith Surrey, Surrey security services, Guildford locksmith, Epsom locksmith, Kingston locksmith",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/locations/surrey",
+	},
+	openGraph: {
+		title: "Locksmith Surrey | 24/7 Emergency Locksmith & Security | JW Security",
+		description:
+			"Professional locksmith and property security services across Surrey. 24/7 emergency response, lock changes, key cutting, and security surveys. Call 0208 646 7931.",
+		url: "https://jwsecurity.co.uk/locations/surrey",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Locksmith Surrey | 24/7 Emergency Locksmith & Security | JW Security",
+		description:
+			"Professional locksmith and property security services across Surrey. 24/7 emergency response, lock changes, key cutting, and security surveys.",
+	},
 };
 
 export default function Surrey() {

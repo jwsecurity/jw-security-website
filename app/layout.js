@@ -19,23 +19,38 @@ const poppins = Poppins({
 });
 
 export const metadata = {
+	metadataBase: new URL("https://jwsecurity.co.uk"),
 	title: "JW Security | Locksmiths & Security Specialists London",
 	description:
 		"JW Security provides premium locksmith, fire protection, security systems, and emergency services for residential and commercial properties across London and Surrey.",
-
+	keywords:
+		"JW Security, London locksmiths, security specialists London, emergency locksmith London, fire protection London, security surveys Surrey",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk",
+	},
 	openGraph: {
 		type: "website",
-		url: "https://www.jwsecurity.co.uk/",
+		url: "https://jwsecurity.co.uk",
 		title: "JW Security | Locksmiths & Security Specialists London",
 		description:
 			"Premium security solutions for residential and commercial properties across London and Surrey since 1991.",
+		siteName: "JW Security",
 		images: [
 			{
-				url: "https://www.jwsecurity.co.uk/images/jw/locksmith.webp",
+				url: "https://jwsecurity.co.uk/images/jw/locksmith.webp",
+				width: 1200,
+				height: 630,
+				alt: "JW Security Locksmiths London",
 			},
 		],
 	},
-
+	twitter: {
+		card: "summary_large_image",
+		title: "JW Security | Locksmiths & Security Specialists London",
+		description:
+			"Premium security solutions for residential and commercial properties across London and Surrey since 1991.",
+		images: ["https://jwsecurity.co.uk/images/jw/locksmith.webp"],
+	},
 	other: {
 		"geo.region": "GB-LND",
 		"geo.placename": "London",
@@ -49,9 +64,9 @@ const locksmithSchema = {
 	"@context": "https://schema.org",
 	"@type": "Locksmith",
 	"name": "JW Security",
-	"url": "https://www.jwsecurity.co.uk/",
-	"image": "https://www.jwsecurity.co.uk/images/jw/locksmith.webp",
-	"telephone": "+44 7860 606151",
+	"url": "https://jwsecurity.co.uk",
+	"image": "https://jwsecurity.co.uk/images/jw/locksmith.webp",
+	"telephone": "0208 646 7931",
 	"description":
 		"Premium security solutions for residential and commercial properties across London and Surrey since 1991.",
 	"areaServed": [
@@ -74,9 +89,9 @@ const businessSchema = {
 	"@context": "https://schema.org",
 	"@type": "Locksmith",
 	"name": "JW Security",
-	"url": "https://www.jwsecurity.co.uk/",
-	"image": "https://www.jwsecurity.co.uk/images/jw/locksmith.webp",
-	"telephone": "+44 7860 606151",
+	"url": "https://jwsecurity.co.uk",
+	"image": "https://jwsecurity.co.uk/images/jw/locksmith.webp",
+	"telephone": "0208 646 7931",
 	"email": "help@jwsecurity.co.uk",
 	"description":
 		"Premium security solutions for residential and commercial properties across London and Surrey since 1991.",

@@ -7,7 +7,23 @@ export const metadata = {
 		"Trusted locksmith Chelsea services for homes, flats, shops, galleries, landlords, and managed buildings across SW3, SW10, and nearby Chelsea areas. Call 0208 646 7931.",
 	keywords:
 		"locksmith Chelsea, emergency locksmith Chelsea SW3, Chelsea security services, Kings Road locksmith, Sloane Square locksmith, luxury property security Chelsea",
-	canonical: "https://jwsecurity.co.uk/locations/chelsea",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/locations/chelsea",
+	},
+	openGraph: {
+		title: "Locksmith Chelsea | 24/7 Emergency Locksmith & Security Services SW3",
+		description:
+			"Trusted locksmith Chelsea services for homes, flats, shops, galleries, landlords, and managed buildings across SW3 and SW10.",
+		url: "https://jwsecurity.co.uk/locations/chelsea",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Locksmith Chelsea | 24/7 Emergency Locksmith & Security Services SW3",
+		description:
+			"Trusted locksmith Chelsea services for homes, flats, shops, galleries, landlords, and managed buildings across SW3 and SW10.",
+	},
 };
 
 export default function Chelsea() {

@@ -2,12 +2,28 @@ import Script from "next/script";
 import SouthfieldsPage from "@/components/locations/SouthfieldsPage";
 
 export const metadata = {
-	title: "Locksmith Southfields | 24/7 Emergency Locksmith & Security SW18",
+	title: "Locksmith Southfields | 24/7 Emergency Locksmith & Security SW19 | JW Security",
 	description:
-		"Professional locksmith services in Southfields, SW18. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Southfields Station, Wimbledon Park, and Replingham Road. Call 0208 646 7931.",
+		"Professional locksmith services in Southfields, SW19. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Wimbledon Park and Replingham Road. Call 0208 646 7931.",
 	keywords:
-		"locksmith Southfields, emergency locksmith Southfields SW18, Southfields security services, Southfields Station locksmith, Wimbledon Park locksmith, Replingham Road locksmith",
-	canonical: "https://jwsecurity.co.uk/locations/southfields",
+		"locksmith Southfields, emergency locksmith Southfields SW19, Southfields security services, Replingham Road locksmith",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/locations/southfields",
+	},
+	openGraph: {
+		title: "Locksmith Southfields | 24/7 Emergency Locksmith & Security SW19 | JW Security",
+		description:
+			"Professional locksmith services in Southfields, SW19. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Call 0208 646 7931.",
+		url: "https://jwsecurity.co.uk/locations/southfields",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Locksmith Southfields | 24/7 Emergency Locksmith & Security SW19 | JW Security",
+		description:
+			"Professional locksmith services in Southfields, SW19. 24/7 emergency response, lock changes, key cutting, and burglary repairs.",
+	},
 };
 
 export default function Southfields() {

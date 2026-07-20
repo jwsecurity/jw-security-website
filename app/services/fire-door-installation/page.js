@@ -7,7 +7,23 @@ export const metadata = {
 		"Professional fire door installation in London and Surrey. We supply and fit internal fire doors, door frames, hinges, closers, and intumescent smoke seals for flats, offices, and HMOs. Call 0208 646 7931.",
 	keywords:
 		"fire door installation London, fire door supply and fit London, fire door replacement, internal fire doors, fire door cost London, HMO fire safety doors",
-	canonical: "https://jwsecurity.co.uk/services/fire-door-installation",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/services/fire-door-installation",
+	},
+	openGraph: {
+		title: "Fire Door Installation In London | Supply & Fit | JW Security",
+		description:
+			"Professional fire door installation in London and Surrey. We supply and fit internal fire doors, door frames, hinges, closers, and intumescent smoke seals for flats, offices, and HMOs. Call 0208 646 7931.",
+		url: "https://jwsecurity.co.uk/services/fire-door-installation",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Fire Door Installation In London | Supply & Fit | JW Security",
+		description:
+			"Professional fire door installation in London and Surrey. We supply and fit internal fire doors, door frames, hinges, closers, and intumescent smoke seals for flats, offices, and HMOs.",
+	},
 };
 
 export default function FireDoorInstallationInLondon() {

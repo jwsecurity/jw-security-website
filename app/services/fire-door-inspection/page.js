@@ -7,7 +7,23 @@ export const metadata = {
 		"Fire door inspection, fire door survey, and fire door compliance checks for landlords, managing agents, businesses, HMOs, and managed buildings across London and Surrey.",
 	keywords:
 		"fire door inspection London, fire door survey London, fire door compliance London, fire door inspection cost London",
-	canonical: "https://jwsecurity.co.uk/services/fire-door-inspection",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/services/fire-door-inspection",
+	},
+	openGraph: {
+		title: "Fire Door Inspection In London | JW Security",
+		description:
+			"Fire door inspection, fire door survey, and fire door compliance checks for landlords, managing agents, businesses, HMOs, and managed buildings across London and Surrey.",
+		url: "https://jwsecurity.co.uk/services/fire-door-inspection",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Fire Door Inspection In London | JW Security",
+		description:
+			"Fire door inspection, fire door survey, and fire door compliance checks for landlords, managing agents, businesses, HMOs, and managed buildings across London and Surrey.",
+	},
 };
 
 export default function FireDoorInspectionPage() {

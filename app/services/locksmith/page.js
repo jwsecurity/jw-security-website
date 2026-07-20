@@ -4,10 +4,26 @@ import LocksmithServicesPage from "@/components/LocksmithServicesPage";
 export const metadata = {
 	title: "Locksmith Services London | 24/7 Emergency Locksmith | JW Security",
 	description:
-		"Professional locksmith services in London. 24/7 emergency response, residential & commercial locks, high-security upgrades. MLA certified locksmiths. Call 020 7946 0125.",
+		"Professional locksmith services in London. 24/7 emergency response, residential & commercial locks, high-security upgrades. MLA certified locksmiths. Call 0208 646 7931.",
 	keywords:
 		"locksmith London, emergency locksmith, 24 hour locksmith, lock repair, lock installation, master locksmith, commercial locksmith, residential locksmith",
-	canonical: "https://jwsecurity.co.uk/services/locksmith",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/services/locksmith",
+	},
+	openGraph: {
+		title: "Locksmith Services London | 24/7 Emergency Locksmith | JW Security",
+		description:
+			"Professional locksmith services in London. 24/7 emergency response, residential & commercial locks, high-security upgrades. MLA certified locksmiths.",
+		url: "https://jwsecurity.co.uk/services/locksmith",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Locksmith Services London | 24/7 Emergency Locksmith | JW Security",
+		description:
+			"Professional locksmith services in London. 24/7 emergency response, residential & commercial locks, high-security upgrades.",
+	},
 };
 
 export default function Locksmith() {
@@ -19,7 +35,7 @@ export default function Locksmith() {
 			"@type": "LocalBusiness",
 			"name": "JW Security",
 			"image": "https://jwsecurity.co.uk/images/jw/jw-logo.webp",
-			"telephone": "020 7946 0125",
+			"telephone": "0208 646 7931",
 			"address": {
 				"@type": "PostalAddress",
 				"addressLocality": "London",

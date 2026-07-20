@@ -1,9 +1,29 @@
 import ContactPage from "@/components/ContactPage";
+import Script from "next/script";
 
 export const metadata = {
-	title: "Contact Us | JW Security",
+	title: "Contact Us | JW Security London | Locksmiths & Security",
 	description:
-		"Get in touch with JW Security for locksmith and security services in London and Surrey.",
+		"Get in touch with JW Security for professional locksmith and security services in London and Surrey. 24/7 emergency hotline 0208 646 7931.",
+	keywords:
+		"contact JW Security, London locksmith phone number, emergency locksmith contact, Wandsworth locksmith, security consultation London",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/contact",
+	},
+	openGraph: {
+		title: "Contact Us | JW Security London | Locksmiths & Security",
+		description:
+			"Get in touch with JW Security for professional locksmith and security services in London and Surrey. 24/7 emergency hotline 0208 646 7931.",
+		url: "https://jwsecurity.co.uk/contact",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Contact Us | JW Security London | Locksmiths & Security",
+		description:
+			"Get in touch with JW Security for professional locksmith and security services in London and Surrey. 24/7 emergency hotline 0208 646 7931.",
+	},
 };
 
 const faqSchema = {
@@ -62,7 +82,8 @@ const faqSchema = {
 export default function Contact() {
 	return (
 		<>
-			<script
+			<Script
+				id="contact-faq-schema"
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{
 					__html: JSON.stringify(faqSchema),

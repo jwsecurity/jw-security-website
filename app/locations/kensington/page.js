@@ -2,12 +2,28 @@ import Script from "next/script";
 import KensingtonPage from "@/components/locations/KensingtonPage";
 
 export const metadata = {
-	title: "Locksmith Kensington | 24/7 Emergency Locksmith & Security Services W8",
+	title: "Locksmith Kensington | 24/7 Emergency Locksmith W8 & W14 | JW Security",
 	description:
-		"Professional locksmith services in Kensington, W8. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Kensington High Street, South Kensington, and Holland Park. Call 0208 646 7931.",
+		"Professional locksmith services in Kensington, W8 and W14. 24/7 emergency response, high security locks, key cutting, and burglary repairs. Serving Kensington High Street and South Kensington. Call 0208 646 7931.",
 	keywords:
-		"locksmith Kensington, emergency locksmith Kensington W8, Kensington security services, Kensington High Street locksmith, South Kensington locksmith, Holland Park locksmith",
-	canonical: "https://jwsecurity.co.uk/locations/kensington",
+		"locksmith Kensington, emergency locksmith Kensington W8, Kensington security services, High Street Kensington locksmith",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/locations/kensington",
+	},
+	openGraph: {
+		title: "Locksmith Kensington | 24/7 Emergency Locksmith W8 & W14 | JW Security",
+		description:
+			"Professional locksmith services in Kensington, W8 and W14. 24/7 emergency response, high security locks, key cutting, and burglary repairs. Call 0208 646 7931.",
+		url: "https://jwsecurity.co.uk/locations/kensington",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Locksmith Kensington | 24/7 Emergency Locksmith W8 & W14 | JW Security",
+		description:
+			"Professional locksmith services in Kensington, W8 and W14. 24/7 emergency response, high security locks, key cutting, and burglary repairs.",
+	},
 };
 
 export default function Kensington() {

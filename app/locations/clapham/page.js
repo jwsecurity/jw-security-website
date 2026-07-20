@@ -7,7 +7,23 @@ export const metadata = {
 		"Professional locksmith services in Clapham, SW4. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Clapham Common, Clapham Old Town, and Clapham High Street. Call 0208 646 7931.",
 	keywords:
 		"locksmith Clapham, emergency locksmith Clapham SW4, Clapham security services, Clapham Common locksmith, Clapham Old Town locksmith, Clapham High Street locksmith",
-	canonical: "https://jwsecurity.co.uk/locations/clapham",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/locations/clapham",
+	},
+	openGraph: {
+		title: "Locksmith Clapham | 24/7 Emergency Locksmith & Security Services SW4",
+		description:
+			"Professional locksmith services in Clapham, SW4. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Call 0208 646 7931.",
+		url: "https://jwsecurity.co.uk/locations/clapham",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Locksmith Clapham | 24/7 Emergency Locksmith & Security Services SW4",
+		description:
+			"Professional locksmith services in Clapham, SW4. 24/7 emergency response, lock changes, key cutting, and burglary repairs.",
+	},
 };
 
 export default function Clapham() {

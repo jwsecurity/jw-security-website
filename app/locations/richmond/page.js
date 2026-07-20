@@ -2,12 +2,28 @@ import Script from "next/script";
 import RichmondPage from "@/components/locations/RichmondPage";
 
 export const metadata = {
-	title: "Locksmith Richmond | 24/7 Emergency Locksmith & Security Services TW9",
+	title: "Locksmith Richmond | 24/7 Emergency Locksmith TW9 & TW10 | JW Security",
 	description:
-		"Professional locksmith services in Richmond, TW9. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Richmond Station, Richmond Green, and Richmond Hill. Call 0208 646 7931.",
+		"Professional locksmith services in Richmond, TW9 and TW10. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Richmond Hill and Kew. Call 0208 646 7931.",
 	keywords:
-		"locksmith Richmond, emergency locksmith Richmond TW9, Richmond security services, Richmond Station locksmith, Richmond Green locksmith, Richmond Hill locksmith",
-	canonical: "https://jwsecurity.co.uk/locations/richmond",
+		"locksmith Richmond, emergency locksmith Richmond TW9, Richmond security services, Richmond Hill locksmith, Kew locksmith",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/locations/richmond",
+	},
+	openGraph: {
+		title: "Locksmith Richmond | 24/7 Emergency Locksmith TW9 & TW10 | JW Security",
+		description:
+			"Professional locksmith services in Richmond, TW9 and TW10. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Call 0208 646 7931.",
+		url: "https://jwsecurity.co.uk/locations/richmond",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Locksmith Richmond | 24/7 Emergency Locksmith TW9 & TW10 | JW Security",
+		description:
+			"Professional locksmith services in Richmond, TW9 and TW10. 24/7 emergency response, lock changes, key cutting, and burglary repairs.",
+	},
 };
 
 export default function Richmond() {

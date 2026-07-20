@@ -7,7 +7,23 @@ export const metadata = {
 		"Professional locksmith services in Camden, NW1. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Camden Town, Chalk Farm, and Mornington Crescent. Call 0208 646 7931.",
 	keywords:
 		"locksmith Camden, emergency locksmith Camden NW1, Camden security services, Camden Town locksmith, Chalk Farm locksmith, Mornington Crescent locksmith",
-	canonical: "https://jwsecurity.co.uk/locations/camden",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/locations/camden",
+	},
+	openGraph: {
+		title: "Locksmith Camden | 24/7 Emergency Locksmith & Security Services NW1",
+		description:
+			"Professional locksmith services in Camden, NW1. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Call 0208 646 7931.",
+		url: "https://jwsecurity.co.uk/locations/camden",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Locksmith Camden | 24/7 Emergency Locksmith & Security Services NW1",
+		description:
+			"Professional locksmith services in Camden, NW1. 24/7 emergency response, lock changes, key cutting, and burglary repairs.",
+	},
 };
 
 export default function Camden() {

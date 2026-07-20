@@ -7,7 +7,23 @@ export const metadata = {
 		"Professional fire risk assessment in London and Surrey for landlords, HMOs, businesses, managed residential blocks, and commercial premises. Get a clear written report and safety check. Call 0208 646 7931.",
 	keywords:
 		"fire risk assessment London, fire risk assessment cost London, fire risk assessment HMO London, commercial fire risk assessment London",
-	canonical: "https://jwsecurity.co.uk/services/fire-risk-assessment",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/services/fire-risk-assessment",
+	},
+	openGraph: {
+		title: "Fire Risk Assessment In London | JW Security",
+		description:
+			"Professional fire risk assessment in London and Surrey for landlords, HMOs, businesses, managed residential blocks, and commercial premises. Call 0208 646 7931.",
+		url: "https://jwsecurity.co.uk/services/fire-risk-assessment",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Fire Risk Assessment In London | JW Security",
+		description:
+			"Professional fire risk assessment in London and Surrey for landlords, HMOs, businesses, managed residential blocks, and commercial premises.",
+	},
 };
 
 export default function FireRiskAssessmentPage() {

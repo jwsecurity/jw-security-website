@@ -5,10 +5,26 @@ export const metadata = {
 	title:
 		"Fire Protection Services London | Fire Doors & Safety Systems | JW Security",
 	description:
-		"Professional fire protection services in London. Fire door installation, inspection & maintenance, fire alarms, emergency lighting. BS 476 compliant. Call 020 7946 0125.",
+		"Professional fire protection services in London. Fire door installation, inspection & maintenance, fire alarms, emergency lighting. BS 476 compliant. Call 0208 646 7931.",
 	keywords:
 		"fire protection London, fire door installation, fire door inspection, fire alarm systems, emergency lighting, fire safety compliance",
-	canonical: "https://jwsecurity.co.uk/services/fire-protection",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/services/fire-protection",
+	},
+	openGraph: {
+		title: "Fire Protection Services London | Fire Doors & Safety Systems | JW Security",
+		description:
+			"Professional fire protection services in London. Fire door installation, inspection & maintenance, fire alarms, emergency lighting.",
+		url: "https://jwsecurity.co.uk/services/fire-protection",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Fire Protection Services London | Fire Doors & Safety Systems | JW Security",
+		description:
+			"Professional fire protection services in London. Fire door installation, inspection & maintenance, fire alarms, emergency lighting.",
+	},
 };
 
 export default function FireProtection() {
@@ -20,7 +36,7 @@ export default function FireProtection() {
 			"@type": "LocalBusiness",
 			"name": "JW Security",
 			"image": "https://jwsecurity.co.uk/images/jw/jw-logo.webp",
-			"telephone": "020 7946 0125",
+			"telephone": "0208 646 7931",
 			"address": {
 				"@type": "PostalAddress",
 				"addressLocality": "London",

@@ -5,10 +5,26 @@ export const metadata = {
 	title:
 		"Carpentry Services London | Door Installation & Joinery | JW Security",
 	description:
-		"Expert carpentry services in London. Door installation, window repairs, custom joinery, kitchen fitting. Skilled craftsmen with 30+ years experience. Call 020 7946 0125.",
+		"Expert carpentry services in London. Door installation, window repairs, custom joinery, kitchen fitting. Skilled craftsmen with 30+ years experience. Call 0208 646 7931.",
 	keywords:
 		"carpentry London, door installation, window repair, joinery services, custom carpentry, kitchen fitting, emergency carpenter London",
-	canonical: "https://jwsecurity.co.uk/services/carpentry",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/services/carpentry",
+	},
+	openGraph: {
+		title: "Carpentry Services London | Door Installation & Joinery | JW Security",
+		description:
+			"Expert carpentry services in London. Door installation, window repairs, custom joinery, and door repairs across London and Surrey.",
+		url: "https://jwsecurity.co.uk/services/carpentry",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Carpentry Services London | Door Installation & Joinery | JW Security",
+		description:
+			"Expert carpentry services in London. Door installation, window repairs, custom joinery, and door repairs across London and Surrey.",
+	},
 };
 
 export default function Carpentry() {
@@ -20,7 +36,7 @@ export default function Carpentry() {
 			"@type": "LocalBusiness",
 			"name": "JW Security",
 			"image": "https://jwsecurity.co.uk/images/jw/jw-logo.webp",
-			"telephone": "020 7946 0125",
+			"telephone": "0208 646 7931",
 			"address": {
 				"@type": "PostalAddress",
 				"addressLocality": "London",

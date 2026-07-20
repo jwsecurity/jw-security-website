@@ -2,12 +2,28 @@ import Script from "next/script";
 import ColliersWoodPage from "@/components/locations/ColliersWoodPage";
 
 export const metadata = {
-	title: "Locksmith Colliers Wood | 24/7 Emergency Locksmith & Security SW19",
+	title: "Locksmith Colliers Wood | 24/7 Emergency Locksmith SW19 | JW Security",
 	description:
-		"Professional locksmith services in Colliers Wood, SW19. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Colliers Wood Station, Merton Abbey Mills, and South Wimbledon. Call 0208 646 7931.",
+		"Local locksmith services in Colliers Wood, SW19. 24/7 emergency response, lock replacements, key cutting, and security installations across Colliers Wood and Merton. Call 0208 646 7931.",
 	keywords:
-		"locksmith Colliers Wood, emergency locksmith Colliers Wood SW19, Colliers Wood security services, Colliers Wood Station locksmith, Merton Abbey Mills locksmith, South Wimbledon locksmith",
-	canonical: "https://jwsecurity.co.uk/locations/colliers-wood",
+		"locksmith Colliers Wood, emergency locksmith Colliers Wood SW19, Colliers Wood security services, Merton locksmith",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/locations/colliers-wood",
+	},
+	openGraph: {
+		title: "Locksmith Colliers Wood | 24/7 Emergency Locksmith SW19 | JW Security",
+		description:
+			"Local locksmith services in Colliers Wood, SW19. 24/7 emergency response, lock replacements, key cutting, and security installations. Call 0208 646 7931.",
+		url: "https://jwsecurity.co.uk/locations/colliers-wood",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Locksmith Colliers Wood | 24/7 Emergency Locksmith SW19 | JW Security",
+		description:
+			"Local locksmith services in Colliers Wood, SW19. 24/7 emergency response, lock replacements, key cutting, and security installations.",
+	},
 };
 
 export default function ColliersWood() {

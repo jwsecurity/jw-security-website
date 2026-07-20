@@ -2,12 +2,28 @@ import Script from "next/script";
 import PutneyPage from "@/components/locations/PutneyPage";
 
 export const metadata = {
-	title: "Locksmith Putney | 24/7 Emergency Locksmith & Security Services SW15",
+	title: "Locksmith Putney | 24/7 Emergency Locksmith & Security SW15 | JW Security",
 	description:
-		"Professional locksmith services in Putney, SW15. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Putney High Street, Putney Heath, and East Putney. Call 0208 646 7931.",
+		"Professional locksmith services in Putney, SW15. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Putney High Street and Upper Richmond Road. Call 0208 646 7931.",
 	keywords:
-		"locksmith Putney, emergency locksmith Putney SW15, Putney security services, Putney High Street locksmith, Putney Heath locksmith, East Putney locksmith",
-	canonical: "https://jwsecurity.co.uk/locations/putney",
+		"locksmith Putney, emergency locksmith Putney SW15, Putney security services, Putney High Street locksmith",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/locations/putney",
+	},
+	openGraph: {
+		title: "Locksmith Putney | 24/7 Emergency Locksmith & Security SW15 | JW Security",
+		description:
+			"Professional locksmith services in Putney, SW15. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Call 0208 646 7931.",
+		url: "https://jwsecurity.co.uk/locations/putney",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Locksmith Putney | 24/7 Emergency Locksmith & Security SW15 | JW Security",
+		description:
+			"Professional locksmith services in Putney, SW15. 24/7 emergency response, lock changes, key cutting, and burglary repairs.",
+	},
 };
 
 export default function Putney() {

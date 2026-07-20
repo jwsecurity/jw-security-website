@@ -4,6 +4,21 @@ import LegalPage from "@/components/LegalPage";
 export const metadata = {
 	title: "Privacy Policy | JW Security | London Locksmiths",
 	description: "Privacy Policy for JW Security. We are committed to protecting your personal data and privacy.",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/privacy",
+	},
+	openGraph: {
+		title: "Privacy Policy | JW Security | London Locksmiths",
+		description: "Privacy Policy for JW Security. We are committed to protecting your personal data and privacy.",
+		url: "https://jwsecurity.co.uk/privacy",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary",
+		title: "Privacy Policy | JW Security | London Locksmiths",
+		description: "Privacy Policy for JW Security. We are committed to protecting your personal data and privacy.",
+	},
 };
 
 export default function PrivacyPolicy() {

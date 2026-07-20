@@ -2,12 +2,28 @@ import Script from "next/script";
 import TootingPage from "@/components/locations/TootingPage";
 
 export const metadata = {
-	title: "Locksmith Tooting | 24/7 Emergency Locksmith & Security Services SW17",
+	title: "Locksmith Tooting | 24/7 Emergency Locksmith & Security SW17 | JW Security",
 	description:
-		"Professional locksmith services in Tooting, SW17. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Tooting Broadway, Tooting Bec, Upper Tooting Road, and surrounding areas. Call 0208 646 7931.",
+		"Professional locksmith services in Tooting, SW17. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Tooting Broadway and Tooting Bec. Call 0208 646 7931.",
 	keywords:
-		"locksmith Tooting, emergency locksmith Tooting SW17, Tooting security services, Tooting Broadway locksmith, Tooting Bec locksmith, Upper Tooting Road locksmith",
-	canonical: "https://jwsecurity.co.uk/locations/tooting",
+		"locksmith Tooting, emergency locksmith Tooting SW17, Tooting security services, Tooting Broadway locksmith, Tooting Bec locksmith",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/locations/tooting",
+	},
+	openGraph: {
+		title: "Locksmith Tooting | 24/7 Emergency Locksmith & Security SW17 | JW Security",
+		description:
+			"Professional locksmith services in Tooting, SW17. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Call 0208 646 7931.",
+		url: "https://jwsecurity.co.uk/locations/tooting",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Locksmith Tooting | 24/7 Emergency Locksmith & Security SW17 | JW Security",
+		description:
+			"Professional locksmith services in Tooting, SW17. 24/7 emergency response, lock changes, key cutting, and burglary repairs.",
+	},
 };
 
 export default function Tooting() {

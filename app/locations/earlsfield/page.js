@@ -4,10 +4,26 @@ import EarlsfieldPage from "@/components/locations/EarlsfieldPage";
 export const metadata = {
 	title: "Locksmith Earlsfield | 24/7 Emergency Locksmith & Security SW18",
 	description:
-		"Professional locksmith services in Earlsfield, SW18. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Earlsfield Station, Garratt Lane, and Wandsworth Common. Call 0208 646 7931.",
+		"Professional locksmith services in Earlsfield, SW18. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Garratt Lane, Earlsfield Station, and Wandsworth. Call 0208 646 7931.",
 	keywords:
-		"locksmith Earlsfield, emergency locksmith Earlsfield SW18, Earlsfield security services, Earlsfield Station locksmith, Garratt Lane locksmith, Wandsworth Common locksmith",
-	canonical: "https://jwsecurity.co.uk/locations/earlsfield",
+		"locksmith Earlsfield, emergency locksmith Earlsfield SW18, Earlsfield security services, Garratt Lane locksmith, Earlsfield Station locksmith",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/locations/earlsfield",
+	},
+	openGraph: {
+		title: "Locksmith Earlsfield | 24/7 Emergency Locksmith & Security SW18",
+		description:
+			"Professional locksmith services in Earlsfield, SW18. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Call 0208 646 7931.",
+		url: "https://jwsecurity.co.uk/locations/earlsfield",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Locksmith Earlsfield | 24/7 Emergency Locksmith & Security SW18",
+		description:
+			"Professional locksmith services in Earlsfield, SW18. 24/7 emergency response, lock changes, key cutting, and burglary repairs.",
+	},
 };
 
 export default function Earlsfield() {

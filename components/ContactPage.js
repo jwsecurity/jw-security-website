@@ -545,6 +545,7 @@ export default function ContactPage() {
 												name="zipCode"
 												value={formData.zipCode}
 												onChange={handleChange}
+												required
 												disabled={isSubmitting}
 											/>
 											<StyledTextField

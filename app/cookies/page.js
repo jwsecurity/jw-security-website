@@ -4,6 +4,21 @@ import LegalPage from "@/components/LegalPage";
 export const metadata = {
 	title: "Cookie Policy | JW Security | London Locksmiths",
 	description: "Cookie Policy for JW Security. Information about how we use cookies on our website.",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/cookies",
+	},
+	openGraph: {
+		title: "Cookie Policy | JW Security | London Locksmiths",
+		description: "Cookie Policy for JW Security. Information about how we use cookies on our website.",
+		url: "https://jwsecurity.co.uk/cookies",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary",
+		title: "Cookie Policy | JW Security | London Locksmiths",
+		description: "Cookie Policy for JW Security. Information about how we use cookies on our website.",
+	},
 };
 
 export default function CookiePolicy() {

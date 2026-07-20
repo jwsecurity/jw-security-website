@@ -7,12 +7,15 @@ export const metadata = {
 		"Established in 1991, JW Security provides professional locksmith and security services across London. MLA approved, SIA certified, trusted by government and high-profile clients.",
 	keywords:
 		"JW Security about, London locksmith company, security experts since 1991, Julian Whitter, MLA approved locksmith",
-	canonical: "https://jwsecurity.co.uk/about",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/about",
+	},
 	openGraph: {
 		title: "About JW Security | 30+ Years of Security Excellence | London",
 		description:
 			"Established in 1991, JW Security provides professional locksmith and security services across London. MLA approved, SIA certified, trusted by government and high-profile clients.",
 		url: "https://jwsecurity.co.uk/about",
+		siteName: "JW Security",
 		type: "website",
 	},
 	twitter: {
@@ -30,9 +33,9 @@ export default function About() {
 		"name": "JW Security",
 		"alternateName": "1st Call Security",
 		"image": "https://jwsecurity.co.uk/images/jw/jw-logo.webp",
-		"@id": "https://jwsecurity.co.uk",
-		"url": "https://jwsecurity.co.uk",
-		"telephone": "020 7946 0125",
+		"@id": "https://jwsecurity.co.uk/about",
+		"url": "https://jwsecurity.co.uk/about",
+		"telephone": "0208 646 7931",
 		"address": {
 			"@type": "PostalAddress",
 			"addressLocality": "London",

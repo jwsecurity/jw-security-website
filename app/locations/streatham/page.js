@@ -2,12 +2,28 @@ import Script from "next/script";
 import StreathamPage from "@/components/locations/StreathamPage";
 
 export const metadata = {
-	title: "Locksmith Streatham | 24/7 Emergency Locksmith & Security Services",
+	title: "Locksmith Streatham | 24/7 Emergency Locksmith SW16 | JW Security",
 	description:
-		"Trusted locksmith Streatham services for homes, flats, shops, landlords, and managed buildings, with 24 hour help for urgent lock and access problems. Call 0208 646 7931.",
+		"Professional locksmith services in Streatham, SW16. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Streatham Hill and Streatham Common. Call 0208 646 7931.",
 	keywords:
-		"locksmith Streatham, emergency locksmith Streatham, Streatham security services, Streatham High Road locksmith, Streatham Hill locksmith, Streatham Common locksmith",
-	canonical: "https://jwsecurity.co.uk/locations/streatham",
+		"locksmith Streatham, emergency locksmith Streatham SW16, Streatham security services, Streatham Hill locksmith",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/locations/streatham",
+	},
+	openGraph: {
+		title: "Locksmith Streatham | 24/7 Emergency Locksmith SW16 | JW Security",
+		description:
+			"Professional locksmith services in Streatham, SW16. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Call 0208 646 7931.",
+		url: "https://jwsecurity.co.uk/locations/streatham",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Locksmith Streatham | 24/7 Emergency Locksmith SW16 | JW Security",
+		description:
+			"Professional locksmith services in Streatham, SW16. 24/7 emergency response, lock changes, key cutting, and burglary repairs.",
+	},
 };
 
 export default function Streatham() {

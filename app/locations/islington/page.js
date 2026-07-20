@@ -2,12 +2,28 @@ import Script from "next/script";
 import IslingtonPage from "@/components/locations/IslingtonPage";
 
 export const metadata = {
-	title: "Locksmith Islington | 24/7 Emergency Locksmith & Security Services N1",
+	title: "Locksmith Islington | 24/7 Emergency Locksmith N1 | JW Security",
 	description:
-		"Professional locksmith services in Islington, N1. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Upper Street, Angel, and Highbury. Call 0208 646 7931.",
+		"Professional locksmith services in Islington, N1. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Upper Street and Angel. Call 0208 646 7931.",
 	keywords:
-		"locksmith Islington, emergency locksmith Islington N1, Islington security services, Upper Street locksmith, Angel locksmith, Highbury locksmith",
-	canonical: "https://jwsecurity.co.uk/locations/islington",
+		"locksmith Islington, emergency locksmith Islington N1, Islington security services, Upper Street locksmith, Angel locksmith",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/locations/islington",
+	},
+	openGraph: {
+		title: "Locksmith Islington | 24/7 Emergency Locksmith N1 | JW Security",
+		description:
+			"Professional locksmith services in Islington, N1. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Call 0208 646 7931.",
+		url: "https://jwsecurity.co.uk/locations/islington",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Locksmith Islington | 24/7 Emergency Locksmith N1 | JW Security",
+		description:
+			"Professional locksmith services in Islington, N1. 24/7 emergency response, lock changes, key cutting, and burglary repairs.",
+	},
 };
 
 export default function Islington() {

@@ -2,12 +2,28 @@ import Script from "next/script";
 import FulhamPage from "@/components/locations/FulhamPage";
 
 export const metadata = {
-	title: "Locksmith Fulham | 24/7 Emergency Locksmith & Security Services SW6",
+	title: "Locksmith Fulham | 24/7 Emergency Locksmith & Security SW6",
 	description:
-		"Professional locksmith services in Fulham, SW6. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Fulham Broadway, Parsons Green, and Chelsea Harbour. Call 0208 646 7931.",
+		"Professional locksmith services in Fulham, SW6. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Fulham Broadway, Parsons Green, and Fulham Road. Call 0208 646 7931.",
 	keywords:
-		"locksmith Fulham, emergency locksmith Fulham SW6, Fulham security services, Fulham Broadway locksmith, Parsons Green locksmith, Chelsea Harbour locksmith",
-	canonical: "https://jwsecurity.co.uk/locations/fulham",
+		"locksmith Fulham, emergency locksmith Fulham SW6, Fulham security services, Fulham Broadway locksmith, Parsons Green locksmith",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/locations/fulham",
+	},
+	openGraph: {
+		title: "Locksmith Fulham | 24/7 Emergency Locksmith & Security SW6",
+		description:
+			"Professional locksmith services in Fulham, SW6. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Call 0208 646 7931.",
+		url: "https://jwsecurity.co.uk/locations/fulham",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Locksmith Fulham | 24/7 Emergency Locksmith & Security SW6",
+		description:
+			"Professional locksmith services in Fulham, SW6. 24/7 emergency response, lock changes, key cutting, and burglary repairs.",
+	},
 };
 
 export default function Fulham() {

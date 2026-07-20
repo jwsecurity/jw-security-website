@@ -2,13 +2,28 @@ import Script from "next/script";
 import WimbledonPage from "@/components/locations/WimbledonPage";
 
 export const metadata = {
-	title:
-		"Locksmith Wimbledon | 24/7 Emergency Locksmith & Security Services SW19",
+	title: "Locksmith Wimbledon | 24/7 Emergency Locksmith & Security SW19 | JW Security",
 	description:
-		"Professional locksmith services in Wimbledon, SW19. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Wimbledon Village, Wimbledon Station, and South Wimbledon. Call 0208 646 7931.",
+		"Professional locksmith services in Wimbledon, SW19. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Wimbledon Village, Broadway, and South Wimbledon. Call 0208 646 7931.",
 	keywords:
-		"locksmith Wimbledon, emergency locksmith Wimbledon SW19, Wimbledon security services, Wimbledon Village locksmith, Wimbledon Station locksmith, South Wimbledon locksmith",
-	canonical: "https://jwsecurity.co.uk/locations/wimbledon",
+		"locksmith Wimbledon, emergency locksmith Wimbledon SW19, Wimbledon security services, Wimbledon Village locksmith, Wimbledon Broadway locksmith",
+	alternates: {
+		canonical: "https://jwsecurity.co.uk/locations/wimbledon",
+	},
+	openGraph: {
+		title: "Locksmith Wimbledon | 24/7 Emergency Locksmith & Security SW19 | JW Security",
+		description:
+			"Professional locksmith services in Wimbledon, SW19. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Call 0208 646 7931.",
+		url: "https://jwsecurity.co.uk/locations/wimbledon",
+		siteName: "JW Security",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Locksmith Wimbledon | 24/7 Emergency Locksmith & Security SW19 | JW Security",
+		description:
+			"Professional locksmith services in Wimbledon, SW19. 24/7 emergency response, lock changes, key cutting, and burglary repairs.",
+	},
 };
 
 export default function Wimbledon() {
