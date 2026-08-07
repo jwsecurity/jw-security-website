@@ -8,13 +8,13 @@ export const metadata = {
 	keywords:
 		"JW Security case studies, London locksmith projects, commercial security case studies, fire door installation examples, security survey results",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/case-studies",
+		canonical: "https://www.jwsecurity.co.uk/case-studies",
 	},
 	openGraph: {
 		title: "Security Case Studies | JW Security Projects London",
 		description:
 			"Browse JW Security case studies — real residential and commercial security projects, fire door installations, and master key setups across London and Surrey.",
-		url: "https://jwsecurity.co.uk/case-studies",
+		url: "https://www.jwsecurity.co.uk/case-studies",
 		siteName: "JW Security",
 		type: "website",
 	},
@@ -32,7 +32,8 @@ export default function CaseStudies() {
 		"@type": "WebPage",
 		"name": "Security Case Studies | JW Security",
 		"url": "https://jwsecurity.co.uk/case-studies",
-		"description": "Real-world security and locksmith project case studies by JW Security in London and Surrey.",
+		"description":
+			"Real-world security and locksmith project case studies by JW Security in London and Surrey.",
 	};
 
 	return (

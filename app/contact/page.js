@@ -8,13 +8,13 @@ export const metadata = {
 	keywords:
 		"contact JW Security, London locksmith phone number, emergency locksmith contact, Wandsworth locksmith, security consultation London",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/contact",
+		canonical: "https://www.jwsecurity.co.uk/contact",
 	},
 	openGraph: {
 		title: "Contact Us | JW Security London | Locksmiths & Security",
 		description:
 			"Get in touch with JW Security for professional locksmith and security services in London and Surrey. 24/7 emergency hotline 0208 646 7931.",
-		url: "https://jwsecurity.co.uk/contact",
+		url: "https://www.jwsecurity.co.uk/contact",
 		siteName: "JW Security",
 		type: "website",
 	},

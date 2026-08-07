@@ -8,13 +8,13 @@ export const metadata = {
 	keywords:
 		"locksmith Earlsfield, emergency locksmith Earlsfield SW18, Earlsfield security services, Garratt Lane locksmith, Earlsfield Station locksmith",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/locations/earlsfield",
+		canonical: "https://www.jwsecurity.co.uk/locations/earlsfield",
 	},
 	openGraph: {
 		title: "Locksmith Earlsfield | 24/7 Emergency Locksmith & Security SW18",
 		description:
 			"Professional locksmith services in Earlsfield, SW18. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Call 0208 646 7931.",
-		url: "https://jwsecurity.co.uk/locations/earlsfield",
+		url: "https://www.jwsecurity.co.uk/locations/earlsfield",
 		siteName: "JW Security",
 		type: "website",
 	},

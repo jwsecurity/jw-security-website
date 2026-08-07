@@ -2,25 +2,28 @@ import Script from "next/script";
 import MayfairPage from "@/components/locations/MayfairPage";
 
 export const metadata = {
-	title: "Locksmith Mayfair | 24/7 Emergency Locksmith & Security W1J | JW Security",
+	title:
+		"Locksmith Mayfair | 24/7 Emergency Locksmith & Security W1J | JW Security",
 	description:
 		"Discreet, premium locksmith services in Mayfair, W1J. 24/7 emergency response, high security lock upgrades, master key systems for luxury residences, commercial offices, and retail. Call 0208 646 7931.",
 	keywords:
 		"locksmith Mayfair, emergency locksmith Mayfair W1, Mayfair security services, Bond Street locksmith, Berkeley Square locksmith, luxury locksmith Mayfair",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/locations/mayfair",
+		canonical: "https://www.jwsecurity.co.uk/locations/mayfair",
 	},
 	openGraph: {
-		title: "Locksmith Mayfair | 24/7 Emergency Locksmith & Security W1J | JW Security",
+		title:
+			"Locksmith Mayfair | 24/7 Emergency Locksmith & Security W1J | JW Security",
 		description:
 			"Discreet, premium locksmith services in Mayfair, W1J. 24/7 emergency response, high security lock upgrades, master key systems.",
-		url: "https://jwsecurity.co.uk/locations/mayfair",
+		url: "https://www.jwsecurity.co.uk/locations/mayfair",
 		siteName: "JW Security",
 		type: "website",
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Locksmith Mayfair | 24/7 Emergency Locksmith & Security W1J | JW Security",
+		title:
+			"Locksmith Mayfair | 24/7 Emergency Locksmith & Security W1J | JW Security",
 		description:
 			"Discreet, premium locksmith services in Mayfair, W1J. 24/7 emergency response, high security lock upgrades, master key systems.",
 	},

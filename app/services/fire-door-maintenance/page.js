@@ -8,13 +8,13 @@ export const metadata = {
 	keywords:
 		"fire door maintenance London, fire door repair London, fire door maintenance cost London, commercial fire door repair London, HMO fire door repair",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/services/fire-door-maintenance",
+		canonical: "https://www.jwsecurity.co.uk/services/fire-door-maintenance",
 	},
 	openGraph: {
 		title: "Fire Door Maintenance & Repair In London | JW Security",
 		description:
 			"Professional fire door maintenance and repair services in London and Surrey. We fix door closers, hinges, seals, gaps, alignment, and carry out compliance repairs for landlords, HMOs, and commercial buildings.",
-		url: "https://jwsecurity.co.uk/services/fire-door-maintenance",
+		url: "https://www.jwsecurity.co.uk/services/fire-door-maintenance",
 		siteName: "JW Security",
 		type: "website",
 	},

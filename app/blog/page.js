@@ -8,13 +8,13 @@ export const metadata = {
 	keywords:
 		"security blog London, locksmith advice, door lock buying guide, home security tips London, locksmith blog UK",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/blog",
+		canonical: "https://www.jwsecurity.co.uk/blog",
 	},
 	openGraph: {
 		title: "Security & Locksmith Blog | Advice & Guides | JW Security London",
 		description:
 			"Security tips, door lock buying guides, home safety advice, and news from JW Security — London and Surrey locksmiths since 1991.",
-		url: "https://jwsecurity.co.uk/blog",
+		url: "https://www.jwsecurity.co.uk/blog",
 		siteName: "JW Security",
 		type: "website",
 	},
@@ -32,7 +32,8 @@ export default function Blog() {
 		"@type": "Blog",
 		"name": "JW Security Blog",
 		"url": "https://jwsecurity.co.uk/blog",
-		"description": "Locksmith advice, security tips, and property protection guides for London and Surrey.",
+		"description":
+			"Locksmith advice, security tips, and property protection guides for London and Surrey.",
 	};
 
 	return (

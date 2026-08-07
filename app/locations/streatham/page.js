@@ -8,13 +8,13 @@ export const metadata = {
 	keywords:
 		"locksmith Streatham, emergency locksmith Streatham SW16, Streatham security services, Streatham Hill locksmith",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/locations/streatham",
+		canonical: "https://www.jwsecurity.co.uk/locations/streatham",
 	},
 	openGraph: {
 		title: "Locksmith Streatham | 24/7 Emergency Locksmith SW16 | JW Security",
 		description:
 			"Professional locksmith services in Streatham, SW16. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Call 0208 646 7931.",
-		url: "https://jwsecurity.co.uk/locations/streatham",
+		url: "https://www.jwsecurity.co.uk/locations/streatham",
 		siteName: "JW Security",
 		type: "website",
 	},

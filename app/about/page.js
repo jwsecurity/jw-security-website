@@ -8,13 +8,13 @@ export const metadata = {
 	keywords:
 		"JW Security about, London locksmith company, security experts since 1991, Julian Whitter, MLA approved locksmith",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/about",
+		canonical: "https://www.jwsecurity.co.uk/about",
 	},
 	openGraph: {
 		title: "About JW Security | 30+ Years of Security Excellence | London",
 		description:
 			"Established in 1991, JW Security provides professional locksmith and security services across London. MLA approved, SIA certified, trusted by government and high-profile clients.",
-		url: "https://jwsecurity.co.uk/about",
+		url: "https://www.jwsecurity.co.uk/about",
 		siteName: "JW Security",
 		type: "website",
 	},

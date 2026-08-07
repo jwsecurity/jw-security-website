@@ -8,13 +8,13 @@ export const metadata = {
 	keywords:
 		"UPVC door locks London, UPVC lock repair, multi point lock replacement, anti-snap UPVC cylinder, patio door lock repair",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/services/upvc-door-locks",
+		canonical: "https://www.jwsecurity.co.uk/services/upvc-door-locks",
 	},
 	openGraph: {
 		title: "UPVC Door Lock Repairs & Upgrades London | JW Security",
 		description:
 			"Specialist UPVC door lock repair, multi-point lock mechanism replacement, and anti-snap cylinder upgrades across London and Surrey.",
-		url: "https://jwsecurity.co.uk/services/upvc-door-locks",
+		url: "https://www.jwsecurity.co.uk/services/upvc-door-locks",
 		siteName: "JW Security",
 		type: "website",
 	},
@@ -41,7 +41,8 @@ export default function UPVCDoorLocks() {
 			"@type": "City",
 			"name": "London",
 		},
-		"description": "Repair, replacement, and upgrading of UPVC door multi-point gearboxes, handles, and cylinders.",
+		"description":
+			"Repair, replacement, and upgrading of UPVC door multi-point gearboxes, handles, and cylinders.",
 	};
 
 	return (

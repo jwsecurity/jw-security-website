@@ -5,7 +5,7 @@ export const metadata = {
 	description:
 		"Thank you for contacting JW Security. Your enquiry has been received and we will be in touch shortly.",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/contact/thank-you",
+		canonical: "https://www.jwsecurity.co.uk/contact/thank-you",
 	},
 	robots: {
 		index: false,

@@ -8,13 +8,13 @@ export const metadata = {
 	keywords:
 		"security survey London, property security audit, home security assessment, commercial security survey, insurance security check London",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/services/security-surveys",
+		canonical: "https://www.jwsecurity.co.uk/services/security-surveys",
 	},
 	openGraph: {
 		title: "Property Security Surveys London | Risk Assessments | JW Security",
 		description:
 			"Professional security surveys and risk assessments for residential homes and commercial properties in London and Surrey.",
-		url: "https://jwsecurity.co.uk/services/security-surveys",
+		url: "https://www.jwsecurity.co.uk/services/security-surveys",
 		siteName: "JW Security",
 		type: "website",
 	},
@@ -41,7 +41,8 @@ export default function SecuritySurveys() {
 			"@type": "City",
 			"name": "London",
 		},
-		"description": "On-site property security inspection, vulnerability assessment, and insurance compliance audit.",
+		"description":
+			"On-site property security inspection, vulnerability assessment, and insurance compliance audit.",
 	};
 
 	return (

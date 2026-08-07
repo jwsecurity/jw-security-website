@@ -2,25 +2,28 @@ import CommercialPage from "@/components/CommercialPage";
 import Script from "next/script";
 
 export const metadata = {
-	title: "Commercial Security Services London | Business Locksmith | JW Security",
+	title:
+		"Commercial Security Services London | Business Locksmith | JW Security",
 	description:
 		"Professional commercial security and locksmith services for businesses, retail, offices, and landlords across London and Surrey. Master keys, access control, and fire doors.",
 	keywords:
 		"commercial security London, business locksmith London, commercial door locks, office access control, master key systems London, shopfront security",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/commercial",
+		canonical: "https://www.jwsecurity.co.uk/commercial",
 	},
 	openGraph: {
-		title: "Commercial Security Services London | Business Locksmith | JW Security",
+		title:
+			"Commercial Security Services London | Business Locksmith | JW Security",
 		description:
 			"Professional commercial security and locksmith services for businesses, retail, offices, and landlords across London and Surrey.",
-		url: "https://jwsecurity.co.uk/commercial",
+		url: "https://www.jwsecurity.co.uk/commercial",
 		siteName: "JW Security",
 		type: "website",
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Commercial Security Services London | Business Locksmith | JW Security",
+		title:
+			"Commercial Security Services London | Business Locksmith | JW Security",
 		description:
 			"Professional commercial security and locksmith services for businesses, retail, offices, and landlords across London and Surrey.",
 	},

@@ -8,19 +8,21 @@ export const metadata = {
 	keywords:
 		"locksmith Balham, emergency locksmith Balham SW12, Balham security services, Balham High Road locksmith, Bedford Hill locksmith, Nightingale Lane locksmith",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/locations/balham",
+		canonical: "https://www.jwsecurity.co.uk/locations/balham",
 	},
 	openGraph: {
-		title: "Locksmith Balham | 24/7 Emergency Locksmith & Security Services SW12",
+		title:
+			"Locksmith Balham | 24/7 Emergency Locksmith & Security Services SW12",
 		description:
 			"Professional locksmith services in Balham, SW12. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Call 0208 646 7931.",
-		url: "https://jwsecurity.co.uk/locations/balham",
+		url: "https://www.jwsecurity.co.uk/locations/balham",
 		siteName: "JW Security",
 		type: "website",
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Locksmith Balham | 24/7 Emergency Locksmith & Security Services SW12",
+		title:
+			"Locksmith Balham | 24/7 Emergency Locksmith & Security Services SW12",
 		description:
 			"Professional locksmith services in Balham, SW12. 24/7 emergency response, lock changes, key cutting, and burglary repairs.",
 	},

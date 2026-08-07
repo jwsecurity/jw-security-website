@@ -8,13 +8,13 @@ export const metadata = {
 	keywords:
 		"residential locksmith London, home security London, house lock change, anti-snap locks, domestic locksmith Surrey, high security door locks",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/residential",
+		canonical: "https://www.jwsecurity.co.uk/residential",
 	},
 	openGraph: {
 		title: "Residential Locksmith & Home Security London | JW Security",
 		description:
 			"Expert residential locksmith and home security services across London and Surrey. High-security door locks, lock repairs, smart locks, and home security surveys.",
-		url: "https://jwsecurity.co.uk/residential",
+		url: "https://www.jwsecurity.co.uk/residential",
 		siteName: "JW Security",
 		type: "website",
 	},

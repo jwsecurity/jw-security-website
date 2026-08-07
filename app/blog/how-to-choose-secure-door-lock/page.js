@@ -1,4 +1,4 @@
-import HowToChooseSecureDoorLock from '@/components/blog/HowToChooseSecureDoorLock';
+import HowToChooseSecureDoorLock from "@/components/blog/HowToChooseSecureDoorLock";
 import Script from "next/script";
 
 export const metadata = {
@@ -8,13 +8,14 @@ export const metadata = {
 	keywords:
 		"how to choose secure door lock, BS3621 locks, anti-snap cylinders, high security door locks, home security guide London",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/blog/how-to-choose-secure-door-lock",
+		canonical:
+			"https://www.jwsecurity.co.uk/blog/how-to-choose-secure-door-lock",
 	},
 	openGraph: {
 		title: "How to Choose a Secure Door Lock | JW Security Blog",
 		description:
 			"Expert guide on choosing the most secure door lock for your home or business from JW Security.",
-		url: "https://jwsecurity.co.uk/blog/how-to-choose-secure-door-lock",
+		url: "https://www.jwsecurity.co.uk/blog/how-to-choose-secure-door-lock",
 		siteName: "JW Security",
 		type: "article",
 	},
@@ -31,7 +32,8 @@ export default function HowToChooseSecureDoorLockPage() {
 		"@context": "https://schema.org",
 		"@type": "BlogPosting",
 		"headline": "How to Choose a Secure Door Lock",
-		"description": "Expert guide on choosing the most secure door lock for your home or business.",
+		"description":
+			"Expert guide on choosing the most secure door lock for your home or business.",
 		"url": "https://jwsecurity.co.uk/blog/how-to-choose-secure-door-lock",
 		"author": {
 			"@type": "Organization",

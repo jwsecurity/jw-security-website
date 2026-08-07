@@ -9,19 +9,21 @@ export const metadata = {
 	keywords:
 		"carpentry London, door installation, window repair, joinery services, custom carpentry, kitchen fitting, emergency carpenter London",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/services/carpentry",
+		canonical: "https://www.jwsecurity.co.uk/services/carpentry",
 	},
 	openGraph: {
-		title: "Carpentry Services London | Door Installation & Joinery | JW Security",
+		title:
+			"Carpentry Services London | Door Installation & Joinery | JW Security",
 		description:
 			"Expert carpentry services in London. Door installation, window repairs, custom joinery, and door repairs across London and Surrey.",
-		url: "https://jwsecurity.co.uk/services/carpentry",
+		url: "https://www.jwsecurity.co.uk/services/carpentry",
 		siteName: "JW Security",
 		type: "website",
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Carpentry Services London | Door Installation & Joinery | JW Security",
+		title:
+			"Carpentry Services London | Door Installation & Joinery | JW Security",
 		description:
 			"Expert carpentry services in London. Door installation, window repairs, custom joinery, and door repairs across London and Surrey.",
 	},

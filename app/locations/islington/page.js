@@ -8,13 +8,13 @@ export const metadata = {
 	keywords:
 		"locksmith Islington, emergency locksmith Islington N1, Islington security services, Upper Street locksmith, Angel locksmith",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/locations/islington",
+		canonical: "https://www.jwsecurity.co.uk/locations/islington",
 	},
 	openGraph: {
 		title: "Locksmith Islington | 24/7 Emergency Locksmith N1 | JW Security",
 		description:
 			"Professional locksmith services in Islington, N1. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Call 0208 646 7931.",
-		url: "https://jwsecurity.co.uk/locations/islington",
+		url: "https://www.jwsecurity.co.uk/locations/islington",
 		siteName: "JW Security",
 		type: "website",
 	},

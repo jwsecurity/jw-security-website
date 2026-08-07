@@ -8,13 +8,13 @@ export const metadata = {
 	keywords:
 		"emergency locksmith London, 24 hour locksmith, locked out, burglary repair, emergency lock repair, urgent locksmith",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/services/emergency",
+		canonical: "https://www.jwsecurity.co.uk/services/emergency",
 	},
 	openGraph: {
 		title: "24/7 Emergency Locksmith London | Rapid Response | JW Security",
 		description:
 			"24/7 emergency locksmith services in London. Locked out? Need urgent repairs? 20-30 minute response time. Call 0208 646 7931.",
-		url: "https://jwsecurity.co.uk/services/emergency",
+		url: "https://www.jwsecurity.co.uk/services/emergency",
 		siteName: "JW Security",
 		type: "website",
 	},

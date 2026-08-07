@@ -8,13 +8,13 @@ export const metadata = {
 	keywords:
 		"security shutters London, security gates London, window grilles London, roller shutters, collapsible grilles London",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/services/shutters-gates-grilles",
+		canonical: "https://www.jwsecurity.co.uk/services/shutters-gates-grilles",
 	},
 	openGraph: {
 		title: "Security Shutters, Gates & Grilles London | JW Security",
 		description:
 			"Security shutters, security gates, and window grilles professionally supplied and installed across London and Surrey.",
-		url: "https://jwsecurity.co.uk/services/shutters-gates-grilles",
+		url: "https://www.jwsecurity.co.uk/services/shutters-gates-grilles",
 		siteName: "JW Security",
 		type: "website",
 	},
@@ -41,7 +41,8 @@ export default function ShuttersGatesGrilles() {
 			"@type": "City",
 			"name": "London",
 		},
-		"description": "Supply, installation, and maintenance of physical security shutters, gates, and window grilles.",
+		"description":
+			"Supply, installation, and maintenance of physical security shutters, gates, and window grilles.",
 	};
 
 	return (

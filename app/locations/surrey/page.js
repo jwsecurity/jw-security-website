@@ -8,19 +8,21 @@ export const metadata = {
 	keywords:
 		"locksmith Surrey, emergency locksmith Surrey, Surrey security services, Guildford locksmith, Epsom locksmith, Kingston locksmith",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/locations/surrey",
+		canonical: "https://www.jwsecurity.co.uk/locations/surrey",
 	},
 	openGraph: {
-		title: "Locksmith Surrey | 24/7 Emergency Locksmith & Security | JW Security",
+		title:
+			"Locksmith Surrey | 24/7 Emergency Locksmith & Security | JW Security",
 		description:
 			"Professional locksmith and property security services across Surrey. 24/7 emergency response, lock changes, key cutting, and security surveys. Call 0208 646 7931.",
-		url: "https://jwsecurity.co.uk/locations/surrey",
+		url: "https://www.jwsecurity.co.uk/locations/surrey",
 		siteName: "JW Security",
 		type: "website",
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Locksmith Surrey | 24/7 Emergency Locksmith & Security | JW Security",
+		title:
+			"Locksmith Surrey | 24/7 Emergency Locksmith & Security | JW Security",
 		description:
 			"Professional locksmith and property security services across Surrey. 24/7 emergency response, lock changes, key cutting, and security surveys.",
 	},
@@ -46,7 +48,7 @@ export default function Surrey() {
 		"geo": {
 			"@type": "GeoCoordinates",
 			"latitude": 51.3148,
-			"longitude": -0.5600,
+			"longitude": -0.56,
 		},
 		"openingHoursSpecification": {
 			"@type": "OpeningHoursSpecification",
@@ -94,7 +96,7 @@ export default function Surrey() {
 			"geoMidpoint": {
 				"@type": "GeoCoordinates",
 				"latitude": 51.3148,
-				"longitude": -0.5600,
+				"longitude": -0.56,
 			},
 			"geoRadius": "15000",
 		},

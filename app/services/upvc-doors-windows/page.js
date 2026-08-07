@@ -8,13 +8,13 @@ export const metadata = {
 	keywords:
 		"UPVC door repairs London, UPVC window lock repair, double glazing lock repair, UPVC door handle replacement London",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/services/upvc-doors-windows",
+		canonical: "https://www.jwsecurity.co.uk/services/upvc-doors-windows",
 	},
 	openGraph: {
 		title: "UPVC Doors & Windows Repairs London | JW Security",
 		description:
 			"Specialist repair and maintenance of UPVC doors, window locks, handles, hinges, and double-glazing mechanisms in London and Surrey.",
-		url: "https://jwsecurity.co.uk/services/upvc-doors-windows",
+		url: "https://www.jwsecurity.co.uk/services/upvc-doors-windows",
 		siteName: "JW Security",
 		type: "website",
 	},
@@ -41,7 +41,8 @@ export default function UPVCDoorsWindows() {
 			"@type": "City",
 			"name": "London",
 		},
-		"description": "Repair and servicing of UPVC door multi-point locks, window friction hinges, handles, and locking mechanisms.",
+		"description":
+			"Repair and servicing of UPVC door multi-point locks, window friction hinges, handles, and locking mechanisms.",
 	};
 
 	return (

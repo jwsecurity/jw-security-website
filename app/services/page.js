@@ -8,13 +8,13 @@ export const metadata = {
 	keywords:
 		"locksmith services London, security services London, emergency locksmith, fire door installation, security surveys, master key systems",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/services",
+		canonical: "https://www.jwsecurity.co.uk/services",
 	},
 	openGraph: {
 		title: "Locksmith & Security Services London | JW Security",
 		description:
 			"Professional locksmith, fire protection, security systems, security surveys, and emergency services across London and Surrey.",
-		url: "https://jwsecurity.co.uk/services",
+		url: "https://www.jwsecurity.co.uk/services",
 		siteName: "JW Security",
 		type: "website",
 	},

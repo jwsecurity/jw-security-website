@@ -8,13 +8,13 @@ export const metadata = {
 	keywords:
 		"fire door inspection London, fire door survey London, fire door compliance London, fire door inspection cost London",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/services/fire-door-inspection",
+		canonical: "https://www.jwsecurity.co.uk/services/fire-door-inspection",
 	},
 	openGraph: {
 		title: "Fire Door Inspection In London | JW Security",
 		description:
 			"Fire door inspection, fire door survey, and fire door compliance checks for landlords, managing agents, businesses, HMOs, and managed buildings across London and Surrey.",
-		url: "https://jwsecurity.co.uk/services/fire-door-inspection",
+		url: "https://www.jwsecurity.co.uk/services/fire-door-inspection",
 		siteName: "JW Security",
 		type: "website",
 	},

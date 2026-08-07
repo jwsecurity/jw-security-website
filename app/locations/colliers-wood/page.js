@@ -2,25 +2,28 @@ import Script from "next/script";
 import ColliersWoodPage from "@/components/locations/ColliersWoodPage";
 
 export const metadata = {
-	title: "Locksmith Colliers Wood | 24/7 Emergency Locksmith SW19 | JW Security",
+	title:
+		"Locksmith Colliers Wood | 24/7 Emergency Locksmith SW19 | JW Security",
 	description:
 		"Local locksmith services in Colliers Wood, SW19. 24/7 emergency response, lock replacements, key cutting, and security installations across Colliers Wood and Merton. Call 0208 646 7931.",
 	keywords:
 		"locksmith Colliers Wood, emergency locksmith Colliers Wood SW19, Colliers Wood security services, Merton locksmith",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/locations/colliers-wood",
+		canonical: "https://www.jwsecurity.co.uk/locations/colliers-wood",
 	},
 	openGraph: {
-		title: "Locksmith Colliers Wood | 24/7 Emergency Locksmith SW19 | JW Security",
+		title:
+			"Locksmith Colliers Wood | 24/7 Emergency Locksmith SW19 | JW Security",
 		description:
 			"Local locksmith services in Colliers Wood, SW19. 24/7 emergency response, lock replacements, key cutting, and security installations. Call 0208 646 7931.",
-		url: "https://jwsecurity.co.uk/locations/colliers-wood",
+		url: "https://www.jwsecurity.co.uk/locations/colliers-wood",
 		siteName: "JW Security",
 		type: "website",
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Locksmith Colliers Wood | 24/7 Emergency Locksmith SW19 | JW Security",
+		title:
+			"Locksmith Colliers Wood | 24/7 Emergency Locksmith SW19 | JW Security",
 		description:
 			"Local locksmith services in Colliers Wood, SW19. 24/7 emergency response, lock replacements, key cutting, and security installations.",
 	},

@@ -8,13 +8,13 @@ export const metadata = {
 	keywords:
 		"electronic keypads London, digital door locks, keyless entry London, access control systems, electronic door locks Surrey",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/services/electronic-key-pads",
+		canonical: "https://www.jwsecurity.co.uk/services/electronic-key-pads",
 	},
 	openGraph: {
 		title: "Electronic Key Pads & Access Control London | JW Security",
 		description:
 			"Electronic keypad locks, digital access control systems, keyless entry installation and maintenance across London and Surrey.",
-		url: "https://jwsecurity.co.uk/services/electronic-key-pads",
+		url: "https://www.jwsecurity.co.uk/services/electronic-key-pads",
 		siteName: "JW Security",
 		type: "website",
 	},
@@ -41,7 +41,8 @@ export default function ElectronicKeyPads() {
 			"@type": "City",
 			"name": "London",
 		},
-		"description": "Supply, installation, and programming of commercial and residential electronic keypad access systems.",
+		"description":
+			"Supply, installation, and programming of commercial and residential electronic keypad access systems.",
 	};
 
 	return (

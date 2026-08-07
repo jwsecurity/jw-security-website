@@ -8,13 +8,13 @@ export const metadata = {
 	keywords:
 		"locksmith Hammersmith, emergency locksmith Hammersmith W6, Hammersmith security services, King Street locksmith",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/locations/hammersmith",
+		canonical: "https://www.jwsecurity.co.uk/locations/hammersmith",
 	},
 	openGraph: {
 		title: "Locksmith Hammersmith | 24/7 Emergency Locksmith W6 | JW Security",
 		description:
 			"Professional locksmith services in Hammersmith, W6. 24/7 emergency response, lock changes, key cutting, and security solutions. Call 0208 646 7931.",
-		url: "https://jwsecurity.co.uk/locations/hammersmith",
+		url: "https://www.jwsecurity.co.uk/locations/hammersmith",
 		siteName: "JW Security",
 		type: "website",
 	},
@@ -47,7 +47,7 @@ export default function Hammersmith() {
 		"geo": {
 			"@type": "GeoCoordinates",
 			"latitude": 51.4928,
-			"longitude": -0.2230,
+			"longitude": -0.223,
 		},
 		"openingHoursSpecification": {
 			"@type": "OpeningHoursSpecification",
@@ -87,7 +87,7 @@ export default function Hammersmith() {
 			"geoMidpoint": {
 				"@type": "GeoCoordinates",
 				"latitude": 51.4928,
-				"longitude": -0.2230,
+				"longitude": -0.223,
 			},
 			"geoRadius": "3000",
 		},

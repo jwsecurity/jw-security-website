@@ -8,19 +8,21 @@ export const metadata = {
 	keywords:
 		"mobile key cutting London, key duplication London, master key cutting, high security key duplication, door key duplication Surrey",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/services/key-cutting",
+		canonical: "https://www.jwsecurity.co.uk/services/key-cutting",
 	},
 	openGraph: {
-		title: "Mobile Key Cutting London | Master Keys & Duplication | JW Security",
+		title:
+			"Mobile Key Cutting London | Master Keys & Duplication | JW Security",
 		description:
 			"Professional mobile key cutting service across London and Surrey — high-security keys, window keys, master keys, and cylinder keys cut on site.",
-		url: "https://jwsecurity.co.uk/services/key-cutting",
+		url: "https://www.jwsecurity.co.uk/services/key-cutting",
 		siteName: "JW Security",
 		type: "website",
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Mobile Key Cutting London | Master Keys & Duplication | JW Security",
+		title:
+			"Mobile Key Cutting London | Master Keys & Duplication | JW Security",
 		description:
 			"Professional mobile key cutting service across London and Surrey — high-security keys, window keys, master keys, and cylinder keys cut on site.",
 	},
@@ -41,7 +43,8 @@ export default function KeyCutting() {
 			"@type": "City",
 			"name": "London",
 		},
-		"description": "On-site mobile key cutting and precision key duplication for residential and commercial premises.",
+		"description":
+			"On-site mobile key cutting and precision key duplication for residential and commercial premises.",
 	};
 
 	return (

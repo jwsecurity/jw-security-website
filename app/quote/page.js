@@ -8,13 +8,13 @@ export const metadata = {
 	keywords:
 		"free security quote London, locksmith cost estimate, security survey quote, fire door quote London, JW Security pricing",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk/quote",
+		canonical: "https://www.jwsecurity.co.uk/quote",
 	},
 	openGraph: {
 		title: "Request a Free Security Quote | JW Security London",
 		description:
 			"Get a free, no-obligation security quote from JW Security for your home or business in London and Surrey.",
-		url: "https://jwsecurity.co.uk/quote",
+		url: "https://www.jwsecurity.co.uk/quote",
 		siteName: "JW Security",
 		type: "website",
 	},
@@ -32,7 +32,8 @@ export default function Quote() {
 		"@type": "ContactPage",
 		"name": "Request a Free Security Quote",
 		"url": "https://jwsecurity.co.uk/quote",
-		"description": "Request a free security or locksmith quote from JW Security in London and Surrey.",
+		"description":
+			"Request a free security or locksmith quote from JW Security in London and Surrey.",
 	};
 
 	return (
