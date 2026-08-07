@@ -76,7 +76,7 @@ export default function TootingPage() {
 		"Garratt Lane",
 		"St George’s Hospital Area",
 		"Furzedown",
-		"Wandsworth Common"
+		"Wandsworth Common",
 	];
 
 	const residentialServices = [
@@ -86,34 +86,40 @@ export default function TootingPage() {
 		"Key cutting and key control",
 		"Emergency door opening",
 		"Burglary repairs and securing work",
-		"Master key systems for managed properties"
+		"Master key systems for managed properties",
 	];
 
 	const faqData = [
 		{
 			question: "Do You Provide Locksmith Services In Tooting?",
-			answer: "Yes. JW Security provides locksmith Tooting services for homes, flats, shops, offices, landlords, and managed buildings."
+			answer:
+				"Yes. JW Security provides locksmith Tooting services for homes, flats, shops, offices, landlords, and managed buildings.",
 		},
 		{
 			question: "Do You Cover Tooting SW17?",
-			answer: "Yes. We provide locksmith Tooting SW17 services, including lock changes, emergency access, key cutting, lock replacement, and property security work."
+			answer:
+				"Yes. We provide locksmith Tooting SW17 services, including lock changes, emergency access, key cutting, lock replacement, and property security work.",
 		},
 		{
 			question: "Are You A Professional Locksmith In Tooting?",
-			answer: "Yes. JW Security has worked across London since 1991 and provides professional locksmith Tooting services for residential and commercial properties."
+			answer:
+				"Yes. JW Security has worked across London since 1991 and provides professional locksmith Tooting services for residential and commercial properties.",
 		},
 		{
 			question: "Can You Help With Lockouts In Tooting?",
-			answer: "Yes. We help with house lockouts, flat lockouts, office lockouts, failed locks, lost keys, and urgent access problems across Tooting."
+			answer:
+				"Yes. We help with house lockouts, flat lockouts, office lockouts, failed locks, lost keys, and urgent access problems across Tooting.",
 		},
 		{
 			question: "Do You Work With Landlords And Managing Agents?",
-			answer: "Yes. We support landlords, letting agents, managing agents, and residential blocks with lock changes, key control, access issues, and wider security work."
+			answer:
+				"Yes. We support landlords, letting agents, managing agents, and residential blocks with lock changes, key control, access issues, and wider security work.",
 		},
 		{
 			question: "What Areas Near Tooting Do You Cover?",
-			answer: "We cover Tooting Broadway, Tooting Bec, Upper Tooting Road, Mitcham Road, Garratt Lane, Furzedown, Wandsworth Common, SW17, and nearby areas."
-		}
+			answer:
+				"We cover Tooting Broadway, Tooting Bec, Upper Tooting Road, Mitcham Road, Garratt Lane, Furzedown, Wandsworth Common, SW17, and nearby areas.",
+		},
 	];
 
 	return (
@@ -153,17 +159,27 @@ export default function TootingPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security provides locksmith and security services across Tooting for homeowners, tenants, landlords, businesses, managing agents, and residential blocks that need reliable help without delays.
+								JW Security provides locksmith and security services across
+								Tooting for homeowners, tenants, landlords, businesses, managing
+								agents, and residential blocks that need reliable help without
+								delays.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								From lock changes and emergency access to key cutting, lock replacement, burglary repairs, and wider security improvements, our team supports properties across Tooting and SW17 with work that fits the building.
+								From lock changes and emergency access to key cutting, lock
+								replacement, burglary repairs, and wider security improvements,
+								our team supports properties across Tooting and SW17 with work
+								that fits the building.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Whether you need a local locksmith in Tooting for a flat near Tooting Broadway, a house close to Tooting Bec, a shop on Upper Tooting Road, or a managed property near Mitcham Road, we keep the service clear, tidy, and focused on the issue in front of us.
+								Whether you need a local locksmith in Tooting for a flat near
+								Tooting Broadway, a house close to Tooting Bec, a shop on Upper
+								Tooting Road, or a managed property near Mitcham Road, we keep
+								the service clear, tidy, and focused on the issue in front of
+								us.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -178,11 +194,15 @@ export default function TootingPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h3">Serving Tooting And Nearby Areas</SectionTitle>
+							<SectionTitle variant="h3">
+								Serving Tooting And Nearby Areas
+							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security covers Tooting and nearby locations for planned locksmith work, urgent access issues, and property security improvements.
+								JW Security covers Tooting and nearby locations for planned
+								locksmith work, urgent access issues, and property security
+								improvements.
 							</Typography>
 							<Typography
 								variant="h6"
@@ -271,12 +291,19 @@ export default function TootingPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Tooting has a mix of family homes, rental flats, shared houses, shops, clinics, offices, and managed buildings. Each property type comes with different access and security needs.
+								Tooting has a mix of family homes, rental flats, shared houses,
+								shops, clinics, offices, and managed buildings. Each property
+								type comes with different access and security needs.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security works with homes, flats, landlords, offices, shops, and managed buildings across Tooting. We can help with lock replacement, BS3621 locks, window locks, emergency locksmith work, key control, and wider security upgrades. Our aim is simple. Make the property secure, keep the work neat, and explain the options before anything begins.
+								JW Security works with homes, flats, landlords, offices, shops,
+								and managed buildings across Tooting. We can help with lock
+								replacement, BS3621 locks, window locks, emergency locksmith
+								work, key control, and wider security upgrades. Our aim is
+								simple. Make the property secure, keep the work neat, and
+								explain the options before anything begins.
 							</Typography>
 							<Grid
 								container
@@ -340,7 +367,6 @@ export default function TootingPage() {
 				</Container>
 			</Box>
 
-			{/* Local Knowledge Parallax-style Banner */}
 			<Box
 				sx={{
 					py: 12,
@@ -358,24 +384,26 @@ export default function TootingPage() {
 						spacing={6}>
 						<Grid size={{ xs: 12, md: 8 }}>
 							<Typography
-								variant="overline"
-								sx={{
-									color: "white",
-									fontWeight: 700,
-									mb: 1,
-									display: "block",
-								}}>
-								LOCAL KNOWLEDGE
-							</Typography>
-							<Typography
 								variant="h3"
 								sx={{ fontWeight: 800, mb: 3, color: "white" }}>
 								Understanding Tooting’s Security Needs
 							</Typography>
 							<Typography
 								variant="h6"
-								sx={{ mb: 4, fontWeight: 400, opacity: 0.9, color: "white", lineHeight: 1.8 }}>
-								Tooting is a busy South London area with homes, converted flats, rental properties, small businesses, clinics, shops, restaurants, and shared buildings. A locksmith job here can be anything from a simple lock change to urgent help after a failed mechanism. JW Security brings local experience to these situations, helping clients choose the right level of security without overcomplicating the job.
+								sx={{
+									mb: 4,
+									fontWeight: 400,
+									opacity: 0.9,
+									color: "white",
+									lineHeight: 1.8,
+								}}>
+								Tooting is a busy South London area with homes, converted flats,
+								rental properties, small businesses, clinics, shops,
+								restaurants, and shared buildings. A locksmith job here can be
+								anything from a simple lock change to urgent help after a failed
+								mechanism. JW Security brings local experience to these
+								situations, helping clients choose the right level of security
+								without overcomplicating the job.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -403,11 +431,18 @@ export default function TootingPage() {
 							/>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h3">Residential Locksmith Services In Tooting</SectionTitle>
+							<SectionTitle variant="h3">
+								Residential Locksmith Services In Tooting
+							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								We provide locksmith Tooting services for houses, flats, landlords, tenants, and residential blocks where access needs to be safe and easy to manage. Whether you need a lock change, BS3621 locks, window lock fitting, key cutting, emergency door opening, or a security review, our team can advise on suitable options for the door, frame, and property type.
+								We provide locksmith Tooting services for houses, flats,
+								landlords, tenants, and residential blocks where access needs to
+								be safe and easy to manage. Whether you need a lock change,
+								BS3621 locks, window lock fitting, key cutting, emergency door
+								opening, or a security review, our team can advise on suitable
+								options for the door, frame, and property type.
 							</Typography>
 							<List sx={{ mb: 4 }}>
 								{residentialServices.map((feature, idx) => (
@@ -440,12 +475,19 @@ export default function TootingPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Tooting businesses, shops, clinics, offices, restaurants, and managed sites need security that works around daily use. JW Security supports commercial clients with access control, CCTV, alarm systems, master key systems, commercial lock changes, emergency response, and security surveys.
+								Tooting businesses, shops, clinics, offices, restaurants, and
+								managed sites need security that works around daily use. JW
+								Security supports commercial clients with access control, CCTV,
+								alarm systems, master key systems, commercial lock changes,
+								emergency response, and security surveys.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Whether you manage a shop on Upper Tooting Road, an office near Tooting Broadway, a healthcare site, or a shared commercial building, we can help improve access, protect entry points, and deal with weak spots around the property.
+								Whether you manage a shop on Upper Tooting Road, an office near
+								Tooting Broadway, a healthcare site, or a shared commercial
+								building, we can help improve access, protect entry points, and
+								deal with weak spots around the property.
 							</Typography>
 							<Button
 								variant="contained"
@@ -503,7 +545,8 @@ export default function TootingPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									Locksmith Tooting SW17 help for lockouts, lost keys, failed locks, damaged locks, and urgent access problems.
+									Locksmith Tooting SW17 help for lockouts, lost keys, failed
+									locks, damaged locks, and urgent access problems.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -520,7 +563,8 @@ export default function TootingPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									Qualified and insured locksmiths with experience in homes, shops, offices, clinics, and managed buildings.
+									Qualified and insured locksmiths with experience in homes,
+									shops, offices, clinics, and managed buildings.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -537,7 +581,8 @@ export default function TootingPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									Professional locksmith Tooting service with clear quotes before planned work begins.
+									Professional locksmith Tooting service with clear quotes
+									before planned work begins.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -568,7 +613,8 @@ export default function TootingPage() {
 								color: alpha("#000", 0.6),
 								fontSize: "1.05rem",
 							}}>
-							Answers to frequently asked questions about our Tooting locksmith services
+							Answers to frequently asked questions about our Tooting locksmith
+							services
 						</Typography>
 					</Box>
 					<Box
@@ -609,9 +655,7 @@ export default function TootingPage() {
 									},
 								}}>
 								<AccordionSummary
-									expandIcon={
-										<ExpandMoreIcon sx={{ color: JW_CYAN }} />
-									}>
+									expandIcon={<ExpandMoreIcon sx={{ color: JW_CYAN }} />}>
 									<Typography
 										sx={{
 											fontWeight: 600,
@@ -653,7 +697,8 @@ export default function TootingPage() {
 					<Typography
 						variant="h6"
 						sx={{ mb: 4, color: "white", opacity: 0.9 }}>
-						Join hundreds of Tooting residents who trust JW Security for their peace of mind.
+						Join hundreds of Tooting residents who trust JW Security for their
+						peace of mind.
 					</Typography>
 					<Button
 						variant="contained"

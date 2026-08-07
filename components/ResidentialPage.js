@@ -520,7 +520,12 @@ export default function ResidentialPage() {
 								</SectionTitle>
 								<Typography
 									paragraph
-									sx={{ mb: 2, opacity: 0.9, fontSize: "1.05rem", lineHeight: 1.7 }}>
+									sx={{
+										mb: 2,
+										opacity: 0.9,
+										fontSize: "1.05rem",
+										lineHeight: 1.7,
+									}}>
 									We work with homeowners, landlords, tenants, and managing
 									agents who need residential security they can rely on.
 								</Typography>
@@ -637,9 +642,7 @@ export default function ResidentialPage() {
 										},
 									}}>
 									<AccordionSummary
-										expandIcon={
-											<ExpandMoreIcon sx={{ color: JW_CYAN }} />
-										}>
+										expandIcon={<ExpandMoreIcon sx={{ color: JW_CYAN }} />}>
 										<Typography
 											sx={{
 												fontWeight: 600,
@@ -688,25 +691,18 @@ export default function ResidentialPage() {
 								viewport={{ once: true, amount: 0.3 }}
 								variants={fadeInLeftVariants}>
 								<Typography
-									variant="overline"
-									sx={{
-										color: "white",
-										fontWeight: 700,
-										mb: 1,
-										display: "block",
-									}}>
-									Need Help With Your Home Security?
-								</Typography>
-								<Typography
 									variant="h3"
 									sx={{ fontWeight: 800, mb: 3, color: "white" }}>
-									JW Security supports homes, flats, rental properties, and
-									residential blocks across London with planned locksmith work,
-									urgent access help, and home security improvements.
+									Need Help With Your Home Security?
 								</Typography>
 								<Typography
 									variant="h6"
 									sx={{ mb: 4, fontWeight: 400, opacity: 0.9, color: "white" }}>
+									JW Security supports homes, flats, rental properties, and
+									residential blocks across London with planned locksmith work,
+									urgent access help, and home security improvements.
+									<br />
+									<br />
 									Tell us what type of property you have and what needs
 									attention. We can provide a quote or arrange a visit where
 									needed.

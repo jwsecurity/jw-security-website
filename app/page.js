@@ -8,18 +8,18 @@ export const metadata = {
 	keywords:
 		"London locksmith, security specialists London, emergency locksmith 24/7, fire door installation London, security surveys Surrey, master key systems",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk",
+		canonical: "https://www.jwsecurity.co.uk/",
 	},
 	openGraph: {
 		title: "JW Security | Locksmiths & Security Specialists London",
 		description:
 			"Premium security solutions for residential and commercial properties across London and Surrey since 1991.",
-		url: "https://jwsecurity.co.uk",
+		url: "https://www.jwsecurity.co.uk/",
 		siteName: "JW Security",
 		type: "website",
 		images: [
 			{
-				url: "https://jwsecurity.co.uk/images/jw/locksmith.webp",
+				url: "https://www.jwsecurity.co.uk/images/jw/locksmith.webp",
 				width: 1200,
 				height: 630,
 				alt: "JW Security London",
@@ -31,7 +31,7 @@ export const metadata = {
 		title: "JW Security | Locksmiths & Security Specialists London",
 		description:
 			"Premium security solutions for residential and commercial properties across London and Surrey since 1991.",
-		images: ["https://jwsecurity.co.uk/images/jw/locksmith.webp"],
+		images: ["https://www.jwsecurity.co.uk/images/jw/locksmith.webp"],
 	},
 };
 
@@ -40,7 +40,7 @@ export default function Home() {
 		"@context": "https://schema.org",
 		"@type": "WebSite",
 		"name": "JW Security",
-		"url": "https://jwsecurity.co.uk",
+		"url": "https://www.jwsecurity.co.uk/",
 	};
 
 	return (

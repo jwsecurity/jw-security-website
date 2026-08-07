@@ -19,25 +19,25 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-	metadataBase: new URL("https://jwsecurity.co.uk"),
+	metadataBase: new URL("https://www.jwsecurity.co.uk/"),
 	title: "JW Security | Locksmiths & Security Specialists London",
 	description:
 		"JW Security provides premium locksmith, fire protection, security systems, and emergency services for residential and commercial properties across London and Surrey.",
 	keywords:
 		"JW Security, London locksmiths, security specialists London, emergency locksmith London, fire protection London, security surveys Surrey",
 	alternates: {
-		canonical: "https://jwsecurity.co.uk",
+		canonical: "https://www.jwsecurity.co.uk/",
 	},
 	openGraph: {
 		type: "website",
-		url: "https://jwsecurity.co.uk",
+		url: "https://www.jwsecurity.co.uk/",
 		title: "JW Security | Locksmiths & Security Specialists London",
 		description:
 			"Premium security solutions for residential and commercial properties across London and Surrey since 1991.",
 		siteName: "JW Security",
 		images: [
 			{
-				url: "https://jwsecurity.co.uk/images/jw/locksmith.webp",
+				url: "https://www.jwsecurity.co.uk/images/jw/locksmith.webp",
 				width: 1200,
 				height: 630,
 				alt: "JW Security Locksmiths London",
@@ -49,7 +49,7 @@ export const metadata = {
 		title: "JW Security | Locksmiths & Security Specialists London",
 		description:
 			"Premium security solutions for residential and commercial properties across London and Surrey since 1991.",
-		images: ["https://jwsecurity.co.uk/images/jw/locksmith.webp"],
+		images: ["https://www.jwsecurity.co.uk/images/jw/locksmith.webp"],
 	},
 	other: {
 		"geo.region": "GB-LND",
@@ -64,8 +64,8 @@ const locksmithSchema = {
 	"@context": "https://schema.org",
 	"@type": "Locksmith",
 	"name": "JW Security",
-	"url": "https://jwsecurity.co.uk",
-	"image": "https://jwsecurity.co.uk/images/jw/locksmith.webp",
+	"url": "https://www.jwsecurity.co.uk/",
+	"image": "https://www.jwsecurity.co.uk/images/jw/locksmith.webp",
 	"telephone": "0208 646 7931",
 	"description":
 		"Premium security solutions for residential and commercial properties across London and Surrey since 1991.",
@@ -89,8 +89,8 @@ const businessSchema = {
 	"@context": "https://schema.org",
 	"@type": "Locksmith",
 	"name": "JW Security",
-	"url": "https://jwsecurity.co.uk",
-	"image": "https://jwsecurity.co.uk/images/jw/locksmith.webp",
+	"url": "https://www.jwsecurity.co.uk/",
+	"image": "https://www.jwsecurity.co.uk/images/jw/locksmith.webp",
 	"telephone": "0208 646 7931",
 	"email": "help@jwsecurity.co.uk",
 	"description":
@@ -136,7 +136,6 @@ export default function RootLayout({ children }) {
 					crossOrigin="anonymous"
 				/>
 
-				{/* Google Analytics (gtag.js) Base Code */}
 				<Script
 					strategy="afterInteractive"
 					src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
@@ -154,7 +153,6 @@ export default function RootLayout({ children }) {
 					}}
 				/>
 
-				{/* Google Tag Manager (GTM) Container Code */}
 				<Script
 					id="gtm-script"
 					strategy="afterInteractive"

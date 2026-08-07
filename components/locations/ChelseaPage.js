@@ -76,7 +76,7 @@ export default function ChelseaPage() {
 		"Chelsea Embankment",
 		"Cheyne Walk",
 		"Fulham Road",
-		"Royal Hospital Road"
+		"Royal Hospital Road",
 	];
 
 	const residentialServices = [
@@ -86,34 +86,40 @@ export default function ChelseaPage() {
 		"Keypad and keyless entry systems",
 		"Master key systems for managed homes",
 		"Emergency door opening",
-		"Burglary repairs and securing work"
+		"Burglary repairs and securing work",
 	];
 
 	const faqData = [
 		{
 			question: "Do You Provide Locksmith Services In Chelsea?",
-			answer: "Yes. JW Security provides locksmith Chelsea services for homes, flats, shops, offices, galleries, landlords, and managed buildings."
+			answer:
+				"Yes. JW Security provides locksmith Chelsea services for homes, flats, shops, offices, galleries, landlords, and managed buildings.",
 		},
 		{
 			question: "Are You A Trusted Locksmith In Chelsea?",
-			answer: "Yes. JW Security has worked across London since 1991 and supports residential and commercial clients with locksmith and security services."
+			answer:
+				"Yes. JW Security has worked across London since 1991 and supports residential and commercial clients with locksmith and security services.",
 		},
 		{
 			question: "Do You Offer Affordable Locksmith Services In Chelsea?",
-			answer: "Yes. We provide clear pricing before planned work begins, with locksmith support for lock changes, access issues, repairs, and upgrades."
+			answer:
+				"Yes. We provide clear pricing before planned work begins, with locksmith support for lock changes, access issues, repairs, and upgrades.",
 		},
 		{
 			question: "Can You Help With Emergency Lockouts In Chelsea?",
-			answer: "Yes. We help with house lockouts, flat lockouts, office lockouts, failed locks, and urgent access problems across Chelsea."
+			answer:
+				"Yes. We help with house lockouts, flat lockouts, office lockouts, failed locks, and urgent access problems across Chelsea.",
 		},
 		{
 			question: "Do You Work With Chelsea Landlords And Managing Agents?",
-			answer: "Yes. We support landlords, estate teams, managing agents, and residential blocks with lock changes, key control, access issues, and wider security work."
+			answer:
+				"Yes. We support landlords, estate teams, managing agents, and residential blocks with lock changes, key control, access issues, and wider security work.",
 		},
 		{
 			question: "What Areas Of Chelsea Do You Cover?",
-			answer: "We cover Kings Road, Sloane Square, Chelsea Harbour, World’s End, Chelsea Embankment, Cheyne Walk, Fulham Road, Royal Hospital Road, SW3, SW10, and nearby areas."
-		}
+			answer:
+				"We cover Kings Road, Sloane Square, Chelsea Harbour, World’s End, Chelsea Embankment, Cheyne Walk, Fulham Road, Royal Hospital Road, SW3, SW10, and nearby areas.",
+		},
 	];
 
 	return (
@@ -153,17 +159,27 @@ export default function ChelseaPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security provides locksmith and security services across Chelsea for homeowners, landlords, businesses, managing agents, and private residences that need reliable work without delays.
+								JW Security provides locksmith and security services across
+								Chelsea for homeowners, landlords, businesses, managing agents,
+								and private residences that need reliable work without delays.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								From Kings Road and Sloane Square to Chelsea Harbour and World’s End, we understand the mix of period homes, mansion blocks, luxury apartments, shops, galleries, and managed buildings found across the area.
+								From Kings Road and Sloane Square to Chelsea Harbour and World’s
+								End, we understand the mix of period homes, mansion blocks,
+								luxury apartments, shops, galleries, and managed buildings found
+								across the area.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Our team handles lock changes, emergency access, security upgrades, access control, key cutting, burglary repairs, and wider property security work. Whether you need a trusted locksmith in Chelsea for a flat, townhouse, boutique, or commercial site, we keep the service straightforward and respectful of the property.
+								Our team handles lock changes, emergency access, security
+								upgrades, access control, key cutting, burglary repairs, and
+								wider property security work. Whether you need a trusted
+								locksmith in Chelsea for a flat, townhouse, boutique, or
+								commercial site, we keep the service straightforward and
+								respectful of the property.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -182,7 +198,9 @@ export default function ChelseaPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security covers Chelsea and nearby areas for planned locksmith work, urgent access problems, and property security improvements.
+								JW Security covers Chelsea and nearby areas for planned
+								locksmith work, urgent access problems, and property security
+								improvements.
 							</Typography>
 							<Typography
 								variant="h6"
@@ -237,7 +255,8 @@ export default function ChelseaPage() {
 								<Typography
 									variant="body2"
 									sx={{ color: "text.secondary", mb: 4 }}>
-									Fast locksmiths help across Chelsea, SW3, SW10, and nearby locations.
+									Fast locksmiths help across Chelsea, SW3, SW10, and nearby
+									locations.
 								</Typography>
 								<Button
 									variant="contained"
@@ -271,12 +290,20 @@ export default function ChelseaPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Chelsea properties often need more than a basic lock change. Older doors, listed style fittings, high value interiors, shared entrances, and busy commercial sites all need the right approach.
+								Chelsea properties often need more than a basic lock change.
+								Older doors, listed style fittings, high value interiors, shared
+								entrances, and busy commercial sites all need the right
+								approach.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security works with homes, flats, offices, galleries, boutiques, landlords, and managing agents across Chelsea. We can help with lock replacement, BS3621 locks, window locks, access control, CCTV, master key systems, and emergency locksmith work. Our aim is simple. Secure the property properly, keep the finish neat, and explain the work before anything begins.
+								JW Security works with homes, flats, offices, galleries,
+								boutiques, landlords, and managing agents across Chelsea. We can
+								help with lock replacement, BS3621 locks, window locks, access
+								control, CCTV, master key systems, and emergency locksmith work.
+								Our aim is simple. Secure the property properly, keep the finish
+								neat, and explain the work before anything begins.
 							</Typography>
 							<Grid
 								container
@@ -340,7 +367,6 @@ export default function ChelseaPage() {
 				</Container>
 			</Box>
 
-			{/* Local Knowledge Parallax-style Banner */}
 			<Box
 				sx={{
 					py: 12,
@@ -358,24 +384,25 @@ export default function ChelseaPage() {
 						spacing={6}>
 						<Grid size={{ xs: 12, md: 8 }}>
 							<Typography
-								variant="overline"
-								sx={{
-									color: "white",
-									fontWeight: 700,
-									mb: 1,
-									display: "block",
-								}}>
-								LOCAL KNOWLEDGE
-							</Typography>
-							<Typography
 								variant="h3"
 								sx={{ fontWeight: 800, mb: 3, color: "white" }}>
 								Understanding Chelsea’s Security Needs
 							</Typography>
 							<Typography
 								variant="h6"
-								sx={{ mb: 4, fontWeight: 400, opacity: 0.9, color: "white", lineHeight: 1.8 }}>
-								Chelsea has a mix of high value homes, period buildings, rental flats, boutique shops, galleries, offices, and riverside developments. Each one brings different access and security concerns. JW Security brings local experience to these situations, helping clients choose security that fits the building rather than forcing a standard setup.
+								sx={{
+									mb: 4,
+									fontWeight: 400,
+									opacity: 0.9,
+									color: "white",
+									lineHeight: 1.8,
+								}}>
+								Chelsea has a mix of high value homes, period buildings, rental
+								flats, boutique shops, galleries, offices, and riverside
+								developments. Each one brings different access and security
+								concerns. JW Security brings local experience to these
+								situations, helping clients choose security that fits the
+								building rather than forcing a standard setup.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -403,11 +430,19 @@ export default function ChelseaPage() {
 							/>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h3">Residential And Luxury Property Security</SectionTitle>
+							<SectionTitle variant="h3">
+								Residential And Luxury Property Security
+							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								We provide locksmith Chelsea services for homes, flats, townhouses, landlords, and private residences where security needs to be reliable without affecting the look of the property. Whether you need a lock change after moving in, BS3621 locks, window lock fitting, keyless entry, or a security review, our team can advise on suitable options for the door, frame, and property type.
+								We provide locksmith Chelsea services for homes, flats,
+								townhouses, landlords, and private residences where security
+								needs to be reliable without affecting the look of the property.
+								Whether you need a lock change after moving in, BS3621 locks,
+								window lock fitting, keyless entry, or a security review, our
+								team can advise on suitable options for the door, frame, and
+								property type.
 							</Typography>
 							<List sx={{ mb: 4 }}>
 								{residentialServices.map((feature, idx) => (
@@ -440,12 +475,18 @@ export default function ChelseaPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Chelsea’s shops, galleries, offices, studios, and luxury retail spaces need security that protects the site without disrupting daily use. JW Security supports commercial clients with access control, CCTV, alarm systems, master key systems, lock changes, emergency response, and security surveys.
+								Chelsea’s shops, galleries, offices, studios, and luxury retail
+								spaces need security that protects the site without disrupting
+								daily use. JW Security supports commercial clients with access
+								control, CCTV, alarm systems, master key systems, lock changes,
+								emergency response, and security surveys.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Whether you manage a gallery, boutique, office, or shared commercial building, we can help improve access, protect valuable stock, and reduce weak points around the site.
+								Whether you manage a gallery, boutique, office, or shared
+								commercial building, we can help improve access, protect
+								valuable stock, and reduce weak points around the site.
 							</Typography>
 							<Button
 								variant="contained"
@@ -503,7 +544,8 @@ export default function ChelseaPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									Urgent locksmith help for lockouts, failed locks, lost keys, and damaged entry points across Chelsea and nearby areas.
+									Urgent locksmith help for lockouts, failed locks, lost keys,
+									and damaged entry points across Chelsea and nearby areas.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -520,7 +562,8 @@ export default function ChelseaPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									Qualified and insured locksmiths with experience in homes, flats, shops, galleries, and managed buildings.
+									Qualified and insured locksmiths with experience in homes,
+									flats, shops, galleries, and managed buildings.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -537,7 +580,8 @@ export default function ChelseaPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									Affordable locksmith Chelsea support with clear quotes before planned work begins.
+									Affordable locksmith Chelsea support with clear quotes before
+									planned work begins.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -568,7 +612,8 @@ export default function ChelseaPage() {
 								color: alpha("#000", 0.6),
 								fontSize: "1.05rem",
 							}}>
-							Answers to frequently asked questions about our Chelsea locksmith services
+							Answers to frequently asked questions about our Chelsea locksmith
+							services
 						</Typography>
 					</Box>
 					<Box
@@ -609,9 +654,7 @@ export default function ChelseaPage() {
 									},
 								}}>
 								<AccordionSummary
-									expandIcon={
-										<ExpandMoreIcon sx={{ color: JW_CYAN }} />
-									}>
+									expandIcon={<ExpandMoreIcon sx={{ color: JW_CYAN }} />}>
 									<Typography
 										sx={{
 											fontWeight: 600,
@@ -653,7 +696,8 @@ export default function ChelseaPage() {
 					<Typography
 						variant="h6"
 						sx={{ mb: 4, color: "white", opacity: 0.9 }}>
-						Join hundreds of Chelsea residents who trust JW Security for their peace of mind.
+						Join hundreds of Chelsea residents who trust JW Security for their
+						peace of mind.
 					</Typography>
 					<Button
 						variant="contained"

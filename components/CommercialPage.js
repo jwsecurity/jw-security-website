@@ -512,7 +512,12 @@ export default function CommercialPage() {
 								</SectionTitle>
 								<Typography
 									paragraph
-									sx={{ mb: 2, opacity: 0.9, fontSize: "1.05rem", lineHeight: 1.7 }}>
+									sx={{
+										mb: 2,
+										opacity: 0.9,
+										fontSize: "1.05rem",
+										lineHeight: 1.7,
+									}}>
 									We work with offices, schools, estates, NHS sites, managing
 									agents, landlords, and commercial premises that need security
 									they can depend on.
@@ -630,9 +635,7 @@ export default function CommercialPage() {
 										},
 									}}>
 									<AccordionSummary
-										expandIcon={
-											<ExpandMoreIcon sx={{ color: JW_CYAN }} />
-										}>
+										expandIcon={<ExpandMoreIcon sx={{ color: JW_CYAN }} />}>
 										<Typography
 											sx={{
 												fontWeight: 600,
@@ -681,25 +684,18 @@ export default function CommercialPage() {
 								viewport={{ once: true, amount: 0.3 }}
 								variants={fadeInLeftVariants}>
 								<Typography
-									variant="overline"
-									sx={{
-										color: "white",
-										fontWeight: 700,
-										mb: 1,
-										display: "block",
-									}}>
-									Need A Proposal For Your Site?
-								</Typography>
-								<Typography
 									variant="h3"
 									sx={{ fontWeight: 800, mb: 3, color: "white" }}>
-									JW Security supports commercial properties across London with
-									planned security work, urgent locksmith support, commercial
-									lock change services, and access control installation.
+									Need A Proposal For Your Site?
 								</Typography>
 								<Typography
 									variant="h6"
 									sx={{ mb: 4, fontWeight: 400, opacity: 0.9, color: "white" }}>
+									JW Security supports commercial properties across London with
+									planned security work, urgent locksmith support, commercial
+									lock change services, and access control installation.
+									<br />
+									<br />
 									Tell us what type of site you manage and what needs attention.
 									We can provide a quote or arrange a visit where needed.
 								</Typography>

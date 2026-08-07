@@ -78,7 +78,7 @@ export default function HammersmithPage() {
 		"Fulham Palace Road",
 		"Glenthorne Road",
 		"Barons Court",
-		"West Kensington"
+		"West Kensington",
 	];
 
 	const residentialServices = [
@@ -88,38 +88,45 @@ export default function HammersmithPage() {
 		"Key cutting and key control",
 		"Emergency door opening",
 		"Burglary repairs and securing work",
-		"Master key systems for managed properties"
+		"Master key systems for managed properties",
 	];
 
 	const faqData = [
 		{
 			question: "Do You Provide Locksmith Services In Hammersmith?",
-			answer: "Yes. JW Security provides locksmith Hammersmith services for homes, flats, shops, offices, landlords, and managed buildings."
+			answer:
+				"Yes. JW Security provides locksmith Hammersmith services for homes, flats, shops, offices, landlords, and managed buildings.",
 		},
 		{
 			question: "Do You Cover Hammersmith W6?",
-			answer: "Yes. We provide locksmith Hammersmith W6 services, including lock changes, emergency access, key cutting, lock replacement, and property security work."
+			answer:
+				"Yes. We provide locksmith Hammersmith W6 services, including lock changes, emergency access, key cutting, lock replacement, and property security work.",
 		},
 		{
 			question: "Are You A Local Locksmith In Hammersmith?",
-			answer: "Yes. JW Security provides local locksmith Hammersmith services for residential and commercial properties across Hammersmith, W6, and nearby areas."
+			answer:
+				"Yes. JW Security provides local locksmith Hammersmith services for residential and commercial properties across Hammersmith, W6, and nearby areas.",
 		},
 		{
 			question: "Do You Offer Affordable Locksmith Services In Hammersmith?",
-			answer: "Yes. We provide affordable locksmith Hammersmith support with clear quotes before planned work begins."
+			answer:
+				"Yes. We provide affordable locksmith Hammersmith support with clear quotes before planned work begins.",
 		},
 		{
 			question: "Can You Help With Lockouts In Hammersmith?",
-			answer: "Yes. We help with house lockouts, flat lockouts, office lockouts, failed locks, lost keys, and urgent access problems across Hammersmith."
+			answer:
+				"Yes. We help with house lockouts, flat lockouts, office lockouts, failed locks, lost keys, and urgent access problems across Hammersmith.",
 		},
 		{
 			question: "Do You Work With Landlords And Managing Agents?",
-			answer: "Yes. We support landlords, letting agents, managing agents, and residential blocks with lock changes, key control, access issues, and wider security work."
+			answer:
+				"Yes. We support landlords, letting agents, managing agents, and residential blocks with lock changes, key control, access issues, and wider security work.",
 		},
 		{
 			question: "What Areas Near Hammersmith Do You Cover?",
-			answer: "We cover Hammersmith Broadway, King Street, Ravenscourt Park, Hammersmith Bridge, Brook Green, Shepherd’s Bush Road, Fulham Palace Road, Barons Court, West Kensington, W6, and nearby areas."
-		}
+			answer:
+				"We cover Hammersmith Broadway, King Street, Ravenscourt Park, Hammersmith Bridge, Brook Green, Shepherd’s Bush Road, Fulham Palace Road, Barons Court, West Kensington, W6, and nearby areas.",
+		},
 	];
 
 	return (
@@ -159,17 +166,27 @@ export default function HammersmithPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security provides locksmith and security services across Hammersmith for homeowners, tenants, landlords, businesses, managing agents, and residential blocks that need reliable help without delays.
+								JW Security provides locksmith and security services across
+								Hammersmith for homeowners, tenants, landlords, businesses,
+								managing agents, and residential blocks that need reliable help
+								without delays.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								From lock changes and emergency access to key cutting, lock replacement, burglary repairs, and wider security improvements, our team supports properties across Hammersmith and W6 with work that suits the building.
+								From lock changes and emergency access to key cutting, lock
+								replacement, burglary repairs, and wider security improvements,
+								our team supports properties across Hammersmith and W6 with work
+								that suits the building.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Whether you need a local locksmith in Hammersmith for a flat near Hammersmith Broadway, a house close to Ravenscourt Park, a shop near King Street, or a managed building near Hammersmith Bridge, we keep the service clear, tidy, and focused on the issue in front of us.
+								Whether you need a local locksmith in Hammersmith for a flat
+								near Hammersmith Broadway, a house close to Ravenscourt Park, a
+								shop near King Street, or a managed building near Hammersmith
+								Bridge, we keep the service clear, tidy, and focused on the
+								issue in front of us.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -184,11 +201,15 @@ export default function HammersmithPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h3">Serving Hammersmith And Nearby Areas</SectionTitle>
+							<SectionTitle variant="h3">
+								Serving Hammersmith And Nearby Areas
+							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security covers Hammersmith and nearby locations for planned locksmith work, urgent access issues, and property security improvements.
+								JW Security covers Hammersmith and nearby locations for planned
+								locksmith work, urgent access issues, and property security
+								improvements.
 							</Typography>
 							<Typography
 								variant="h6"
@@ -277,12 +298,20 @@ export default function HammersmithPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Hammersmith has a mix of flats, family homes, rental properties, offices, shops, cafés, theatres, riverside buildings, and managed blocks. Each property has different lock, access, and security needs.
+								Hammersmith has a mix of flats, family homes, rental properties,
+								offices, shops, cafés, theatres, riverside buildings, and
+								managed blocks. Each property has different lock, access, and
+								security needs.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security works with homes, flats, landlords, offices, shops, and managed properties across Hammersmith. We can help with lock replacement, BS3621 locks, window locks, emergency locksmith work, key control, and wider security upgrades. Our aim is simple. Make the property secure, keep the work neat, and explain the options before anything begins.
+								JW Security works with homes, flats, landlords, offices, shops,
+								and managed properties across Hammersmith. We can help with lock
+								replacement, BS3621 locks, window locks, emergency locksmith
+								work, key control, and wider security upgrades. Our aim is
+								simple. Make the property secure, keep the work neat, and
+								explain the options before anything begins.
 							</Typography>
 							<Grid
 								container
@@ -346,7 +375,6 @@ export default function HammersmithPage() {
 				</Container>
 			</Box>
 
-			{/* Local Knowledge Parallax-style Banner */}
 			<Box
 				sx={{
 					py: 12,
@@ -364,24 +392,26 @@ export default function HammersmithPage() {
 						spacing={6}>
 						<Grid size={{ xs: 12, md: 8 }}>
 							<Typography
-								variant="overline"
-								sx={{
-									color: "white",
-									fontWeight: 700,
-									mb: 1,
-									display: "block",
-								}}>
-								LOCAL KNOWLEDGE
-							</Typography>
-							<Typography
 								variant="h3"
 								sx={{ fontWeight: 800, mb: 3, color: "white" }}>
 								Understanding Hammersmith’s Security Needs
 							</Typography>
 							<Typography
 								variant="h6"
-								sx={{ mb: 4, fontWeight: 400, opacity: 0.9, color: "white", lineHeight: 1.8 }}>
-								Hammersmith is a busy West London area with rental flats, family homes, offices, shops, restaurants, entertainment venues, shared buildings, and riverside properties. A locksmith job here can range from a simple lock change to urgent help with a failed mechanism. JW Security brings local experience to these situations, helping clients choose the right level of security without making the job more complicated than it needs to be.
+								sx={{
+									mb: 4,
+									fontWeight: 400,
+									opacity: 0.9,
+									color: "white",
+									lineHeight: 1.8,
+								}}>
+								Hammersmith is a busy West London area with rental flats, family
+								homes, offices, shops, restaurants, entertainment venues, shared
+								buildings, and riverside properties. A locksmith job here can
+								range from a simple lock change to urgent help with a failed
+								mechanism. JW Security brings local experience to these
+								situations, helping clients choose the right level of security
+								without making the job more complicated than it needs to be.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -409,11 +439,18 @@ export default function HammersmithPage() {
 							/>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h3">Residential Locksmith Services In Hammersmith</SectionTitle>
+							<SectionTitle variant="h3">
+								Residential Locksmith Services In Hammersmith
+							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								We provide locksmith Hammersmith services for houses, flats, landlords, tenants, and residential blocks where access needs to be safe and easy to manage. Whether you need a lock change, BS3621 locks, window lock fitting, key cutting, emergency door opening, or a security review, our team can advise on suitable options for the door, frame, and property type.
+								We provide locksmith Hammersmith services for houses, flats,
+								landlords, tenants, and residential blocks where access needs to
+								be safe and easy to manage. Whether you need a lock change,
+								BS3621 locks, window lock fitting, key cutting, emergency door
+								opening, or a security review, our team can advise on suitable
+								options for the door, frame, and property type.
 							</Typography>
 							<List sx={{ mb: 4 }}>
 								{residentialServices.map((feature, idx) => (
@@ -446,12 +483,19 @@ export default function HammersmithPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Hammersmith businesses, shops, offices, cafés, restaurants, theatres, and managed sites need security that works around daily use. JW Security supports commercial clients with access control, CCTV, alarm systems, master key systems, commercial lock changes, emergency response, and security surveys.
+								Hammersmith businesses, shops, offices, cafés, restaurants,
+								theatres, and managed sites need security that works around
+								daily use. JW Security supports commercial clients with access
+								control, CCTV, alarm systems, master key systems, commercial
+								lock changes, emergency response, and security surveys.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Whether you manage a shop on King Street, an office near Hammersmith Broadway, a café close to Ravenscourt Park, or a shared commercial building, we can help improve access, protect entry points, and deal with weak spots around the property.
+								Whether you manage a shop on King Street, an office near
+								Hammersmith Broadway, a café close to Ravenscourt Park, or a
+								shared commercial building, we can help improve access, protect
+								entry points, and deal with weak spots around the property.
 							</Typography>
 							<Button
 								variant="contained"
@@ -509,7 +553,8 @@ export default function HammersmithPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									Locksmith Hammersmith W6 help for lockouts, lost keys, failed locks, damaged locks, and urgent access problems.
+									Locksmith Hammersmith W6 help for lockouts, lost keys, failed
+									locks, damaged locks, and urgent access problems.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -526,7 +571,9 @@ export default function HammersmithPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									Qualified and insured locksmiths with experience in homes, shops, offices, cafés, restaurants, theatres, and managed buildings.
+									Qualified and insured locksmiths with experience in homes,
+									shops, offices, cafés, restaurants, theatres, and managed
+									buildings.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -543,7 +590,8 @@ export default function HammersmithPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									Affordable locksmith Hammersmith service with clear quotes before planned work begins.
+									Affordable locksmith Hammersmith service with clear quotes
+									before planned work begins.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -574,7 +622,8 @@ export default function HammersmithPage() {
 								color: alpha("#000", 0.6),
 								fontSize: "1.05rem",
 							}}>
-							Answers to frequently asked questions about our Hammersmith locksmith services
+							Answers to frequently asked questions about our Hammersmith
+							locksmith services
 						</Typography>
 					</Box>
 					<Box
@@ -615,9 +664,7 @@ export default function HammersmithPage() {
 									},
 								}}>
 								<AccordionSummary
-									expandIcon={
-										<ExpandMoreIcon sx={{ color: JW_CYAN }} />
-									}>
+									expandIcon={<ExpandMoreIcon sx={{ color: JW_CYAN }} />}>
 									<Typography
 										sx={{
 											fontWeight: 600,
@@ -659,7 +706,8 @@ export default function HammersmithPage() {
 					<Typography
 						variant="h6"
 						sx={{ mb: 4, color: "white", opacity: 0.9 }}>
-						Join hundreds of Hammersmith residents who trust JW Security for their peace of mind.
+						Join hundreds of Hammersmith residents who trust JW Security for
+						their peace of mind.
 					</Typography>
 					<Button
 						variant="contained"

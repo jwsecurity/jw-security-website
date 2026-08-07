@@ -78,7 +78,7 @@ export default function ClaphamPage() {
 		"Clapham Junction",
 		"Lavender Hill",
 		"Wandsworth Road",
-		"Battersea Rise"
+		"Battersea Rise",
 	];
 
 	const residentialServices = [
@@ -88,38 +88,45 @@ export default function ClaphamPage() {
 		"Key cutting and key control",
 		"Emergency door opening",
 		"Burglary repairs and securing work",
-		"Master key systems for managed properties"
+		"Master key systems for managed properties",
 	];
 
 	const faqData = [
 		{
 			question: "Do You Provide Locksmith Services In Clapham?",
-			answer: "Yes. JW Security provides locksmith Clapham services for homes, flats, shops, offices, landlords, and managed buildings."
+			answer:
+				"Yes. JW Security provides locksmith Clapham services for homes, flats, shops, offices, landlords, and managed buildings.",
 		},
 		{
 			question: "Do You Cover Clapham SW4?",
-			answer: "Yes. We provide locksmith Clapham SW4 services, including lock changes, emergency access, key cutting, lock replacement, and property security work."
+			answer:
+				"Yes. We provide locksmith Clapham SW4 services, including lock changes, emergency access, key cutting, lock replacement, and property security work.",
 		},
 		{
 			question: "Are You A Local Locksmith In Clapham?",
-			answer: "Yes. JW Security provides local locksmith Clapham services for residential and commercial properties across Clapham, SW4, and nearby areas."
+			answer:
+				"Yes. JW Security provides local locksmith Clapham services for residential and commercial properties across Clapham, SW4, and nearby areas.",
 		},
 		{
 			question: "Do You Offer Affordable Locksmith Services In Clapham?",
-			answer: "Yes. We provide affordable locksmith Clapham support with clear quotes before planned work begins."
+			answer:
+				"Yes. We provide affordable locksmith Clapham support with clear quotes before planned work begins.",
 		},
 		{
 			question: "Can You Help With Lockouts In Clapham?",
-			answer: "Yes. We help with house lockouts, flat lockouts, office lockouts, failed locks, lost keys, and urgent access problems across Clapham."
+			answer:
+				"Yes. We help with house lockouts, flat lockouts, office lockouts, failed locks, lost keys, and urgent access problems across Clapham.",
 		},
 		{
 			question: "Do You Work With Landlords And Managing Agents?",
-			answer: "Yes. We support landlords, letting agents, managing agents, and residential blocks with lock changes, key control, access issues, and wider security work."
+			answer:
+				"Yes. We support landlords, letting agents, managing agents, and residential blocks with lock changes, key control, access issues, and wider security work.",
 		},
 		{
 			question: "What Areas Near Clapham Do You Cover?",
-			answer: "We cover Clapham Common, Clapham High Street, Clapham North, Clapham South, Clapham Old Town, Abbeville Village, Lavender Hill, Wandsworth Road, SW4, and nearby areas."
-		}
+			answer:
+				"We cover Clapham Common, Clapham High Street, Clapham North, Clapham South, Clapham Old Town, Abbeville Village, Lavender Hill, Wandsworth Road, SW4, and nearby areas.",
+		},
 	];
 
 	return (
@@ -159,17 +166,27 @@ export default function ClaphamPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security provides locksmith and security services across Clapham for homeowners, tenants, landlords, businesses, managing agents, and residential blocks that need reliable help without delay.
+								JW Security provides locksmith and security services across
+								Clapham for homeowners, tenants, landlords, businesses, managing
+								agents, and residential blocks that need reliable help without
+								delay.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								From lock changes and emergency access to key cutting, lock replacement, burglary repairs, and wider security improvements, our team supports properties across Clapham and SW4 with work that suits the building.
+								From lock changes and emergency access to key cutting, lock
+								replacement, burglary repairs, and wider security improvements,
+								our team supports properties across Clapham and SW4 with work
+								that suits the building.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Whether you need a local locksmith in Clapham for a flat near Clapham Common, a house close to Abbeville Village, a shop on Clapham High Street, or a managed property near Clapham North, we keep the service clear, tidy, and focused on the issue in front of us.
+								Whether you need a local locksmith in Clapham for a flat near
+								Clapham Common, a house close to Abbeville Village, a shop on
+								Clapham High Street, or a managed property near Clapham North,
+								we keep the service clear, tidy, and focused on the issue in
+								front of us.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -184,11 +201,15 @@ export default function ClaphamPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h3">Serving Clapham And Nearby Areas</SectionTitle>
+							<SectionTitle variant="h3">
+								Serving Clapham And Nearby Areas
+							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security covers Clapham and nearby locations for planned locksmith work, urgent access issues, and property security improvements.
+								JW Security covers Clapham and nearby locations for planned
+								locksmith work, urgent access issues, and property security
+								improvements.
 							</Typography>
 							<Typography
 								variant="h6"
@@ -277,12 +298,20 @@ export default function ClaphamPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Clapham has a mix of family homes, converted flats, rental properties, restaurants, shops, offices, cafés, and managed buildings. Each property has different lock, access, and security needs.
+								Clapham has a mix of family homes, converted flats, rental
+								properties, restaurants, shops, offices, cafés, and managed
+								buildings. Each property has different lock, access, and
+								security needs.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security works with homes, flats, landlords, offices, shops, and managed properties across Clapham. We can help with lock replacement, BS3621 locks, window locks, emergency locksmith work, key control, and wider security upgrades. Our aim is simple. Make the property secure, keep the work neat, and explain the options before anything begins.
+								JW Security works with homes, flats, landlords, offices, shops,
+								and managed properties across Clapham. We can help with lock
+								replacement, BS3621 locks, window locks, emergency locksmith
+								work, key control, and wider security upgrades. Our aim is
+								simple. Make the property secure, keep the work neat, and
+								explain the options before anything begins.
 							</Typography>
 							<Grid
 								container
@@ -345,8 +374,6 @@ export default function ClaphamPage() {
 					</Grid>
 				</Container>
 			</Box>
-
-			{/* Local Knowledge Parallax-style Banner */}
 			<Box
 				sx={{
 					py: 12,
@@ -364,24 +391,26 @@ export default function ClaphamPage() {
 						spacing={6}>
 						<Grid size={{ xs: 12, md: 8 }}>
 							<Typography
-								variant="overline"
-								sx={{
-									color: "white",
-									fontWeight: 700,
-									mb: 1,
-									display: "block",
-								}}>
-								LOCAL KNOWLEDGE
-							</Typography>
-							<Typography
 								variant="h3"
 								sx={{ fontWeight: 800, mb: 3, color: "white" }}>
 								Understanding Clapham’s Security Needs
 							</Typography>
 							<Typography
 								variant="h6"
-								sx={{ mb: 4, fontWeight: 400, opacity: 0.9, color: "white", lineHeight: 1.8 }}>
-								Clapham is a busy South London area with homes, flats, rental properties, shops, offices, cafés, restaurants, shared houses, and managed buildings. A locksmith job here can be anything from a simple lock change to urgent help with a failed mechanism. JW Security brings local experience to these situations, helping clients choose the right level of security without making the job more complicated than it needs to be.
+								sx={{
+									mb: 4,
+									fontWeight: 400,
+									opacity: 0.9,
+									color: "white",
+									lineHeight: 1.8,
+								}}>
+								Clapham is a busy South London area with homes, flats, rental
+								properties, shops, offices, cafés, restaurants, shared houses,
+								and managed buildings. A locksmith job here can be anything from
+								a simple lock change to urgent help with a failed mechanism. JW
+								Security brings local experience to these situations, helping
+								clients choose the right level of security without making the
+								job more complicated than it needs to be.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -409,11 +438,18 @@ export default function ClaphamPage() {
 							/>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h3">Residential Locksmith Services In Clapham</SectionTitle>
+							<SectionTitle variant="h3">
+								Residential Locksmith Services In Clapham
+							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								We provide locksmith Clapham services for houses, flats, landlords, tenants, and residential blocks where access needs to be safe and easy to manage. Whether you need a lock change, BS3621 locks, window lock fitting, key cutting, emergency door opening, or a security review, our team can advise on suitable options for the door, frame, and property type.
+								We provide locksmith Clapham services for houses, flats,
+								landlords, tenants, and residential blocks where access needs to
+								be safe and easy to manage. Whether you need a lock change,
+								BS3621 locks, window lock fitting, key cutting, emergency door
+								opening, or a security review, our team can advise on suitable
+								options for the door, frame, and property type.
 							</Typography>
 							<List sx={{ mb: 4 }}>
 								{residentialServices.map((feature, idx) => (
@@ -446,12 +482,19 @@ export default function ClaphamPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Clapham businesses, shops, restaurants, cafés, offices, and managed sites need security that works around daily use. JW Security supports commercial clients with access control, CCTV, alarm systems, master key systems, commercial lock changes, emergency response, and security surveys.
+								Clapham businesses, shops, restaurants, cafés, offices, and
+								managed sites need security that works around daily use. JW
+								Security supports commercial clients with access control, CCTV,
+								alarm systems, master key systems, commercial lock changes,
+								emergency response, and security surveys.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Whether you manage a shop on Clapham High Street, an office near Clapham North, a café close to Clapham Common, or a shared commercial building, we can help improve access, protect entry points, and deal with weak spots around the property.
+								Whether you manage a shop on Clapham High Street, an office near
+								Clapham North, a café close to Clapham Common, or a shared
+								commercial building, we can help improve access, protect entry
+								points, and deal with weak spots around the property.
 							</Typography>
 							<Button
 								variant="contained"
@@ -509,7 +552,8 @@ export default function ClaphamPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									Locksmith Clapham SW4 help for lockouts, lost keys, failed locks, damaged locks, and urgent access problems.
+									Locksmith Clapham SW4 help for lockouts, lost keys, failed
+									locks, damaged locks, and urgent access problems.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -526,7 +570,8 @@ export default function ClaphamPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									Qualified and insured locksmiths with experience in homes, shops, offices, cafés, restaurants, and managed buildings.
+									Qualified and insured locksmiths with experience in homes,
+									shops, offices, cafés, restaurants, and managed buildings.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -543,7 +588,8 @@ export default function ClaphamPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									Affordable locksmith Clapham service with clear quotes before planned work begins.
+									Affordable locksmith Clapham service with clear quotes before
+									planned work begins.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -574,7 +620,8 @@ export default function ClaphamPage() {
 								color: alpha("#000", 0.6),
 								fontSize: "1.05rem",
 							}}>
-							Answers to frequently asked questions about our Clapham locksmith services
+							Answers to frequently asked questions about our Clapham locksmith
+							services
 						</Typography>
 					</Box>
 					<Box
@@ -615,9 +662,7 @@ export default function ClaphamPage() {
 									},
 								}}>
 								<AccordionSummary
-									expandIcon={
-										<ExpandMoreIcon sx={{ color: JW_CYAN }} />
-									}>
+									expandIcon={<ExpandMoreIcon sx={{ color: JW_CYAN }} />}>
 									<Typography
 										sx={{
 											fontWeight: 600,
@@ -659,7 +704,8 @@ export default function ClaphamPage() {
 					<Typography
 						variant="h6"
 						sx={{ mb: 4, color: "white", opacity: 0.9 }}>
-						Join hundreds of Clapham residents who trust JW Security for their peace of mind.
+						Join hundreds of Clapham residents who trust JW Security for their
+						peace of mind.
 					</Typography>
 					<Button
 						variant="contained"

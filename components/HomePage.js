@@ -1313,16 +1313,6 @@ export default function HomePage() {
 						spacing={6}>
 						<Grid size={{ xs: 12, md: 8 }}>
 							<Typography
-								variant="overline"
-								sx={{
-									color: "white",
-									fontWeight: 700,
-									mb: 1,
-									display: "block",
-								}}>
-								LOCAL KNOWLEDGE
-							</Typography>
-							<Typography
 								variant="h3"
 								sx={{ fontWeight: 800, mb: 3, color: "white" }}>
 								Understanding London&apos;s <br /> Security Challenges

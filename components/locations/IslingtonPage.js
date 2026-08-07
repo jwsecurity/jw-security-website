@@ -78,7 +78,7 @@ export default function IslingtonPage() {
 		"Caledonian Road",
 		"King’s Cross",
 		"Holloway Road",
-		"De Beauvoir Town"
+		"De Beauvoir Town",
 	];
 
 	const residentialServices = [
@@ -88,38 +88,45 @@ export default function IslingtonPage() {
 		"Key cutting and key control",
 		"Emergency door opening",
 		"Burglary repairs and securing work",
-		"Master key systems for managed properties"
+		"Master key systems for managed properties",
 	];
 
 	const faqData = [
 		{
 			question: "Do You Provide Locksmith Services In Islington?",
-			answer: "Yes. JW Security provides locksmith Islington services for homes, flats, shops, offices, landlords, and managed buildings."
+			answer:
+				"Yes. JW Security provides locksmith Islington services for homes, flats, shops, offices, landlords, and managed buildings.",
 		},
 		{
 			question: "Do You Cover Islington N1?",
-			answer: "Yes. We provide locksmith Islington N1 services, including lock changes, emergency access, key cutting, lock replacement, and property security work."
+			answer:
+				"Yes. We provide locksmith Islington N1 services, including lock changes, emergency access, key cutting, lock replacement, and property security work.",
 		},
 		{
 			question: "Are You A Local Locksmith In Islington?",
-			answer: "Yes. JW Security provides local locksmith Islington services for residential and commercial properties across Islington, N1, and nearby areas."
+			answer:
+				"Yes. JW Security provides local locksmith Islington services for residential and commercial properties across Islington, N1, and nearby areas.",
 		},
 		{
 			question: "Are You A Trusted Locksmith In Islington?",
-			answer: "Yes. JW Security has worked across London since 1991 and provides trusted locksmith Islington services for homes, businesses, landlords, and managed buildings."
+			answer:
+				"Yes. JW Security has worked across London since 1991 and provides trusted locksmith Islington services for homes, businesses, landlords, and managed buildings.",
 		},
 		{
 			question: "Can You Help With Lockouts In Islington?",
-			answer: "Yes. We help with house lockouts, flat lockouts, office lockouts, failed locks, lost keys, and urgent access problems across Islington."
+			answer:
+				"Yes. We help with house lockouts, flat lockouts, office lockouts, failed locks, lost keys, and urgent access problems across Islington.",
 		},
 		{
 			question: "Do You Work With Landlords And Managing Agents?",
-			answer: "Yes. We support landlords, letting agents, managing agents, and residential blocks with lock changes, key control, access issues, and wider security work."
+			answer:
+				"Yes. We support landlords, letting agents, managing agents, and residential blocks with lock changes, key control, access issues, and wider security work.",
 		},
 		{
 			question: "What Areas Near Islington Do You Cover?",
-			answer: "We cover Upper Street, Angel, Essex Road, Canonbury, Highbury, Barnsbury, Caledonian Road, King’s Cross, Holloway Road, De Beauvoir Town, N1, and nearby areas."
-		}
+			answer:
+				"We cover Upper Street, Angel, Essex Road, Canonbury, Highbury, Barnsbury, Caledonian Road, King’s Cross, Holloway Road, De Beauvoir Town, N1, and nearby areas.",
+		},
 	];
 
 	return (
@@ -159,17 +166,26 @@ export default function IslingtonPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security provides locksmith and security services across Islington for homeowners, tenants, landlords, businesses, managing agents, and residential blocks that need reliable help without delays.
+								JW Security provides locksmith and security services across
+								Islington for homeowners, tenants, landlords, businesses,
+								managing agents, and residential blocks that need reliable help
+								without delays.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								From lock changes and emergency access to key cutting, lock replacement, burglary repairs, and wider security improvements, our team supports properties across Islington and N1 with work that suits the building.
+								From lock changes and emergency access to key cutting, lock
+								replacement, burglary repairs, and wider security improvements,
+								our team supports properties across Islington and N1 with work
+								that suits the building.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Whether you need a local locksmith in Islington for a flat near Upper Street, a house close to Canonbury, a shop near Angel, or a managed building around Essex Road, we keep the service clear, tidy, and focused on the issue in front of us.
+								Whether you need a local locksmith in Islington for a flat near
+								Upper Street, a house close to Canonbury, a shop near Angel, or
+								a managed building around Essex Road, we keep the service clear,
+								tidy, and focused on the issue in front of us.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -184,11 +200,15 @@ export default function IslingtonPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h3">Serving Islington And Nearby Areas</SectionTitle>
+							<SectionTitle variant="h3">
+								Serving Islington And Nearby Areas
+							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security covers Islington and nearby locations for planned locksmith work, urgent access issues, and property security improvements.
+								JW Security covers Islington and nearby locations for planned
+								locksmith work, urgent access issues, and property security
+								improvements.
 							</Typography>
 							<Typography
 								variant="h6"
@@ -277,12 +297,20 @@ export default function IslingtonPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Islington has a mix of period homes, converted flats, rental properties, shops, cafés, restaurants, offices, townhouses, and managed buildings. Each property has different lock, access, and security needs.
+								Islington has a mix of period homes, converted flats, rental
+								properties, shops, cafés, restaurants, offices, townhouses, and
+								managed buildings. Each property has different lock, access, and
+								security needs.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security works with homes, flats, landlords, offices, shops, and managed properties across Islington. We can help with lock replacement, BS3621 locks, window locks, emergency locksmith work, key control, and wider security upgrades. Our aim is simple. Make the property secure, keep the work neat, and explain the options before anything begins.
+								JW Security works with homes, flats, landlords, offices, shops,
+								and managed properties across Islington. We can help with lock
+								replacement, BS3621 locks, window locks, emergency locksmith
+								work, key control, and wider security upgrades. Our aim is
+								simple. Make the property secure, keep the work neat, and
+								explain the options before anything begins.
 							</Typography>
 							<Grid
 								container
@@ -346,7 +374,6 @@ export default function IslingtonPage() {
 				</Container>
 			</Box>
 
-			{/* Local Knowledge Parallax-style Banner */}
 			<Box
 				sx={{
 					py: 12,
@@ -364,24 +391,26 @@ export default function IslingtonPage() {
 						spacing={6}>
 						<Grid size={{ xs: 12, md: 8 }}>
 							<Typography
-								variant="overline"
-								sx={{
-									color: "white",
-									fontWeight: 700,
-									mb: 1,
-									display: "block",
-								}}>
-								LOCAL KNOWLEDGE
-							</Typography>
-							<Typography
 								variant="h3"
 								sx={{ fontWeight: 800, mb: 3, color: "white" }}>
 								Understanding Islington’s Security Needs
 							</Typography>
 							<Typography
 								variant="h6"
-								sx={{ mb: 4, fontWeight: 400, opacity: 0.9, color: "white", lineHeight: 1.8 }}>
-								Islington is a busy North London area with period homes, flats above shops, rental properties, offices, restaurants, cafés, shared buildings, and managed blocks. A locksmith job here can be anything from a lock change after moving in to urgent help with a failed lock. JW Security brings local experience to these situations, helping clients choose the right level of security without making the job more complicated than it needs to be.
+								sx={{
+									mb: 4,
+									fontWeight: 400,
+									opacity: 0.9,
+									color: "white",
+									lineHeight: 1.8,
+								}}>
+								Islington is a busy North London area with period homes, flats
+								above shops, rental properties, offices, restaurants, cafés,
+								shared buildings, and managed blocks. A locksmith job here can
+								be anything from a lock change after moving in to urgent help
+								with a failed lock. JW Security brings local experience to these
+								situations, helping clients choose the right level of security
+								without making the job more complicated than it needs to be.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -409,11 +438,18 @@ export default function IslingtonPage() {
 							/>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h3">Residential Locksmith Services In Islington</SectionTitle>
+							<SectionTitle variant="h3">
+								Residential Locksmith Services In Islington
+							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								We provide locksmith Islington services for houses, flats, landlords, tenants, and residential blocks where access needs to be safe and easy to manage. Whether you need a lock change, BS3621 locks, window lock fitting, key cutting, emergency door opening, or a security review, our team can advise on suitable options for the door, frame, and property type.
+								We provide locksmith Islington services for houses, flats,
+								landlords, tenants, and residential blocks where access needs to
+								be safe and easy to manage. Whether you need a lock change,
+								BS3621 locks, window lock fitting, key cutting, emergency door
+								opening, or a security review, our team can advise on suitable
+								options for the door, frame, and property type.
 							</Typography>
 							<List sx={{ mb: 4 }}>
 								{residentialServices.map((feature, idx) => (
@@ -446,12 +482,19 @@ export default function IslingtonPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Islington businesses, shops, cafés, restaurants, offices, studios, and managed sites need security that works around busy daily use. JW Security supports commercial clients with access control, CCTV, alarm systems, master key systems, commercial lock changes, emergency response, and security surveys.
+								Islington businesses, shops, cafés, restaurants, offices,
+								studios, and managed sites need security that works around busy
+								daily use. JW Security supports commercial clients with access
+								control, CCTV, alarm systems, master key systems, commercial
+								lock changes, emergency response, and security surveys.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Whether you manage a shop near Angel, an office close to Upper Street, a café on Essex Road, or a shared commercial building, we can help improve access, protect entry points, and deal with weak spots around the property.
+								Whether you manage a shop near Angel, an office close to Upper
+								Street, a café on Essex Road, or a shared commercial building,
+								we can help improve access, protect entry points, and deal with
+								weak spots around the property.
 							</Typography>
 							<Button
 								variant="contained"
@@ -509,7 +552,8 @@ export default function IslingtonPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									Locksmith Islington N1 help for lockouts, lost keys, failed locks, damaged locks, and urgent access problems.
+									Locksmith Islington N1 help for lockouts, lost keys, failed
+									locks, damaged locks, and urgent access problems.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -526,7 +570,9 @@ export default function IslingtonPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									Qualified and insured locksmiths with experience in homes, shops, offices, cafés, restaurants, studios, and managed buildings.
+									Qualified and insured locksmiths with experience in homes,
+									shops, offices, cafés, restaurants, studios, and managed
+									buildings.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -543,7 +589,8 @@ export default function IslingtonPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									Trusted locksmith Islington service with clear quotes before planned work begins.
+									Trusted locksmith Islington service with clear quotes before
+									planned work begins.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -574,7 +621,8 @@ export default function IslingtonPage() {
 								color: alpha("#000", 0.6),
 								fontSize: "1.05rem",
 							}}>
-							Answers to frequently asked questions about our Islington locksmith services
+							Answers to frequently asked questions about our Islington
+							locksmith services
 						</Typography>
 					</Box>
 					<Box
@@ -615,9 +663,7 @@ export default function IslingtonPage() {
 									},
 								}}>
 								<AccordionSummary
-									expandIcon={
-										<ExpandMoreIcon sx={{ color: JW_CYAN }} />
-									}>
+									expandIcon={<ExpandMoreIcon sx={{ color: JW_CYAN }} />}>
 									<Typography
 										sx={{
 											fontWeight: 600,
@@ -659,7 +705,8 @@ export default function IslingtonPage() {
 					<Typography
 						variant="h6"
 						sx={{ mb: 4, color: "white", opacity: 0.9 }}>
-						Join hundreds of Islington residents who trust JW Security for their peace of mind.
+						Join hundreds of Islington residents who trust JW Security for their
+						peace of mind.
 					</Typography>
 					<Button
 						variant="contained"

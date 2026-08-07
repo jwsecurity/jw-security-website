@@ -76,7 +76,7 @@ export default function SurreyPage() {
 		"Sutton",
 		"Epsom",
 		"Wandsworth",
-		"Putney"
+		"Putney",
 	];
 
 	const residentialServices = [
@@ -86,34 +86,40 @@ export default function SurreyPage() {
 		"Key cutting and key control",
 		"Emergency door opening",
 		"Burglary repairs and securing work",
-		"Master key systems for managed properties"
+		"Master key systems for managed properties",
 	];
 
 	const faqData = [
 		{
 			question: "Do You Provide Locksmith Services In Surrey?",
-			answer: "Yes. JW Security provides locksmith Surrey services for homes, flats, shops, offices, landlords, and managed buildings."
+			answer:
+				"Yes. JW Security provides locksmith Surrey services for homes, flats, shops, offices, landlords, and managed buildings.",
 		},
 		{
 			question: "Are You A Trusted Locksmith In Surrey?",
-			answer: "Yes. JW Security has worked across London and Surrey since 1991, supporting residential and commercial clients with locksmith and security services."
+			answer:
+				"Yes. JW Security has worked across London and Surrey since 1991, supporting residential and commercial clients with locksmith and security services.",
 		},
 		{
 			question: "Do You Offer 24 Hour Locksmith Help In Surrey?",
-			answer: "Yes. We provide locksmith Surrey 24 hour support for urgent lockouts, failed locks, lost keys, and access problems."
+			answer:
+				"Yes. We provide locksmith Surrey 24 hour support for urgent lockouts, failed locks, lost keys, and access problems.",
 		},
 		{
 			question: "Can You Help With Lock Changes In Surrey?",
-			answer: "Yes. We carry out lock changes for homeowners, landlords, businesses, tenant changes, lost keys, and security concerns."
+			answer:
+				"Yes. We carry out lock changes for homeowners, landlords, businesses, tenant changes, lost keys, and security concerns.",
 		},
 		{
 			question: "Do You Work With Landlords And Managing Agents?",
-			answer: "Yes. We support landlords, letting agents, managing agents, and residential blocks with lock changes, key control, access issues, and wider security work."
+			answer:
+				"Yes. We support landlords, letting agents, managing agents, and residential blocks with lock changes, key control, access issues, and wider security work.",
 		},
 		{
 			question: "What Areas Of Surrey Do You Cover?",
-			answer: "We cover Surrey and nearby areas, including Wimbledon, Kingston, Richmond, Croydon, Sutton, Epsom, Wandsworth, Putney, and surrounding locations."
-		}
+			answer:
+				"We cover Surrey and nearby areas, including Wimbledon, Kingston, Richmond, Croydon, Sutton, Epsom, Wandsworth, Putney, and surrounding locations.",
+		},
 	];
 
 	return (
@@ -153,17 +159,25 @@ export default function SurreyPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security provides locksmith and security services across Surrey for homeowners, landlords, businesses, managing agents, and residential blocks that need reliable work without delays.
+								JW Security provides locksmith and security services across
+								Surrey for homeowners, landlords, businesses, managing agents,
+								and residential blocks that need reliable work without delays.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								From lock changes and emergency access to security upgrades, key cutting, access control, and burglary repairs, our team supports properties that need safe access and stronger day to day protection.
+								From lock changes and emergency access to security upgrades, key
+								cutting, access control, and burglary repairs, our team supports
+								properties that need safe access and stronger day to day
+								protection.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Whether you need a local locksmith in Surrey for a house, flat, office, shop, or managed building, we keep the service straightforward, respectful, and focused on what the property needs.
+								Whether you need a local locksmith in Surrey for a house, flat,
+								office, shop, or managed building, we keep the service
+								straightforward, respectful, and focused on what the property
+								needs.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -178,11 +192,14 @@ export default function SurreyPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h3">Serving Surrey And Nearby Areas</SectionTitle>
+							<SectionTitle variant="h3">
+								Serving Surrey And Nearby Areas
+							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security covers Surrey for planned locksmith work, urgent access issues, and wider property security improvements.
+								JW Security covers Surrey for planned locksmith work, urgent
+								access issues, and wider property security improvements.
 							</Typography>
 							<Typography
 								variant="h6"
@@ -271,12 +288,20 @@ export default function SurreyPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Surrey properties can have very different security needs. A family home may need a lock change after moving in. A landlord may need better key control. A business may need access control, CCTV, or a stronger entry setup.
+								Surrey properties can have very different security needs. A
+								family home may need a lock change after moving in. A landlord
+								may need better key control. A business may need access control,
+								CCTV, or a stronger entry setup.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								JW Security works with homes, flats, offices, shops, landlords, and managed buildings across Surrey. We can help with lock replacement, BS3621 locks, window locks, master key systems, emergency locksmith work, and wider security upgrades. Our aim is simple. Make the property secure, keep the work neat, and explain the options before anything begins.
+								JW Security works with homes, flats, offices, shops, landlords,
+								and managed buildings across Surrey. We can help with lock
+								replacement, BS3621 locks, window locks, master key systems,
+								emergency locksmith work, and wider security upgrades. Our aim
+								is simple. Make the property secure, keep the work neat, and
+								explain the options before anything begins.
 							</Typography>
 							<Grid
 								container
@@ -340,7 +365,6 @@ export default function SurreyPage() {
 				</Container>
 			</Box>
 
-			{/* Local Knowledge Parallax-style Banner */}
 			<Box
 				sx={{
 					py: 12,
@@ -358,24 +382,25 @@ export default function SurreyPage() {
 						spacing={6}>
 						<Grid size={{ xs: 12, md: 8 }}>
 							<Typography
-								variant="overline"
-								sx={{
-									color: "white",
-									fontWeight: 700,
-									mb: 1,
-									display: "block",
-								}}>
-								LOCAL KNOWLEDGE
-							</Typography>
-							<Typography
 								variant="h3"
 								sx={{ fontWeight: 800, mb: 3, color: "white" }}>
 								Understanding Surrey’s Security Needs
 							</Typography>
 							<Typography
 								variant="h6"
-								sx={{ mb: 4, fontWeight: 400, opacity: 0.9, color: "white", lineHeight: 1.8 }}>
-								Surrey includes family homes, rental flats, shops, offices, schools, managed blocks, and commercial sites. Each type of property brings different access and security concerns. JW Security brings local experience to these situations, helping clients choose the right level of security without overcomplicating the job.
+								sx={{
+									mb: 4,
+									fontWeight: 400,
+									opacity: 0.9,
+									color: "white",
+									lineHeight: 1.8,
+								}}>
+								Surrey includes family homes, rental flats, shops, offices,
+								schools, managed blocks, and commercial sites. Each type of
+								property brings different access and security concerns. JW
+								Security brings local experience to these situations, helping
+								clients choose the right level of security without
+								overcomplicating the job.
 							</Typography>
 						</Grid>
 					</Grid>
@@ -403,11 +428,19 @@ export default function SurreyPage() {
 							/>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h3">Residential And Property Security In Surrey</SectionTitle>
+							<SectionTitle variant="h3">
+								Residential And Property Security In Surrey
+							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								We provide locksmith Surrey services for houses, flats, landlords, residential blocks, and managed properties where security needs to be reliable and easy to manage. Whether you need a lock change, BS3621 locks, window lock fitting, key cutting, emergency door opening, or a security review, our team can advise on suitable options for the door, frame, and property type.
+								We provide locksmith Surrey services for houses, flats,
+								landlords, residential blocks, and managed properties where
+								security needs to be reliable and easy to manage. Whether you
+								need a lock change, BS3621 locks, window lock fitting, key
+								cutting, emergency door opening, or a security review, our team
+								can advise on suitable options for the door, frame, and property
+								type.
 							</Typography>
 							<List sx={{ mb: 4 }}>
 								{residentialServices.map((feature, idx) => (
@@ -440,12 +473,18 @@ export default function SurreyPage() {
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Surrey businesses, offices, shops, schools, and managed sites need security that works around daily use. JW Security supports commercial clients with access control, CCTV, alarm systems, master key systems, lock changes, emergency response, and security surveys.
+								Surrey businesses, offices, shops, schools, and managed sites
+								need security that works around daily use. JW Security supports
+								commercial clients with access control, CCTV, alarm systems,
+								master key systems, lock changes, emergency response, and
+								security surveys.
 							</Typography>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.1rem", lineHeight: 1.8 }}>
-								Whether you manage one office, a shop, a school site, or several properties, we can help improve access, protect entry points, and deal with weak spots around the building.
+								Whether you manage one office, a shop, a school site, or several
+								properties, we can help improve access, protect entry points,
+								and deal with weak spots around the building.
 							</Typography>
 							<Button
 								variant="contained"
@@ -503,7 +542,8 @@ export default function SurreyPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									24 hour locksmith Surrey support for lockouts, failed locks, lost keys, damaged locks, and urgent access problems.
+									24 hour locksmith Surrey support for lockouts, failed locks,
+									lost keys, damaged locks, and urgent access problems.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -520,7 +560,8 @@ export default function SurreyPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									Qualified and insured locksmiths with experience in homes, shops, offices, schools, and managed buildings.
+									Qualified and insured locksmiths with experience in homes,
+									shops, offices, schools, and managed buildings.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -537,7 +578,8 @@ export default function SurreyPage() {
 								<Typography
 									variant="body1"
 									sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-									Trusted locksmith Surrey service with clear quotes before planned work begins.
+									Trusted locksmith Surrey service with clear quotes before
+									planned work begins.
 								</Typography>
 							</ServiceCard>
 						</Grid>
@@ -568,7 +610,8 @@ export default function SurreyPage() {
 								color: alpha("#000", 0.6),
 								fontSize: "1.05rem",
 							}}>
-							Answers to frequently asked questions about our Surrey locksmith services
+							Answers to frequently asked questions about our Surrey locksmith
+							services
 						</Typography>
 					</Box>
 					<Box
@@ -609,9 +652,7 @@ export default function SurreyPage() {
 									},
 								}}>
 								<AccordionSummary
-									expandIcon={
-										<ExpandMoreIcon sx={{ color: JW_CYAN }} />
-									}>
+									expandIcon={<ExpandMoreIcon sx={{ color: JW_CYAN }} />}>
 									<Typography
 										sx={{
 											fontWeight: 600,
@@ -653,7 +694,8 @@ export default function SurreyPage() {
 					<Typography
 						variant="h6"
 						sx={{ mb: 4, color: "white", opacity: 0.9 }}>
-						Join hundreds of Surrey residents who trust JW Security for their peace of mind.
+						Join hundreds of Surrey residents who trust JW Security for their
+						peace of mind.
 					</Typography>
 					<Button
 						variant="contained"
