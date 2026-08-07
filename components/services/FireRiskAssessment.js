@@ -219,7 +219,7 @@ export default function FireRiskAssessment() {
 								whileInView="visible"
 								viewport={{ once: true, amount: 0.2 }}
 								variants={fadeInUpVariants}>
-								<SectionTitle variant="h4">
+								<SectionTitle variant="h4" component="h2">
 									Fire Risk Assessments For London Properties
 								</SectionTitle>
 								<Typography
@@ -357,7 +357,7 @@ export default function FireRiskAssessment() {
 								whileInView="visible"
 								viewport={{ once: true, amount: 0.2 }}
 								variants={fadeInUpVariants}>
-								<SectionTitle variant="h4">
+								<SectionTitle variant="h4" component="h2">
 									Fire Risk Assessment Cost In London
 								</SectionTitle>
 								<Typography
@@ -409,6 +409,7 @@ export default function FireRiskAssessment() {
 				<Container>
 					<Typography
 						variant="h3"
+						component="h2"
 						sx={{ fontWeight: 800, mb: 3 }}>
 						SCHEDULE A{" "}
 						<Box
@@ -449,7 +450,7 @@ export default function FireRiskAssessment() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">
+							<SectionTitle variant="h4" component="h2">
 								Fire Risk Assessment For HMOs In London
 							</SectionTitle>
 							<Typography
@@ -595,7 +596,7 @@ export default function FireRiskAssessment() {
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box sx={{ p: 3 }}>
-								<SectionTitle variant="h4">
+								<SectionTitle variant="h4" component="h2">
 									Who Needs A Fire Risk Assessment?
 								</SectionTitle>
 								<Typography
@@ -669,7 +670,7 @@ export default function FireRiskAssessment() {
 								whileInView="visible"
 								viewport={{ once: true, amount: 0.2 }}
 								variants={fadeInUpVariants}>
-								<SectionTitle variant="h4">
+								<SectionTitle variant="h4" component="h2">
 									Why Choose JW Security?
 								</SectionTitle>
 								<Typography
@@ -806,7 +807,7 @@ export default function FireRiskAssessment() {
 												}}
 											/>
 										}>
-										<Typography sx={{ fontWeight: 600, color: JW_BLUE }}>
+										<Typography component="h3" sx={{ fontWeight: 600, color: JW_BLUE }}>
 											{faq.question}
 										</Typography>
 									</AccordionSummary>

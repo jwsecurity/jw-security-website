@@ -229,7 +229,7 @@ export default function SecuritySurveysPage() {
 							/>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">
+							<SectionTitle variant="h4" component="h2">
 								Security Checks For Real Buildings
 							</SectionTitle>
 							<Typography
@@ -277,7 +277,7 @@ export default function SecuritySurveysPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">
+							<SectionTitle variant="h4" component="h2">
 								Our Security Survey Services
 							</SectionTitle>
 							<Typography
@@ -355,6 +355,7 @@ export default function SecuritySurveysPage() {
 				<Container>
 					<Typography
 						variant="h3"
+						component="h2"
 						sx={{ fontWeight: 800, mb: 3 }}>
 						NEED A SECURITY SURVEY FOR YOUR PROPERTY?
 					</Typography>
@@ -400,7 +401,7 @@ export default function SecuritySurveysPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">
+							<SectionTitle variant="h4" component="h2">
 								Our Security Survey Process
 							</SectionTitle>
 							<Typography
@@ -473,7 +474,7 @@ export default function SecuritySurveysPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h5">
+							<SectionTitle variant="h5" component="h2">
 								When To Consider A Survey
 							</SectionTitle>
 							<Typography
@@ -507,7 +508,7 @@ export default function SecuritySurveysPage() {
 							</List>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h5">
+							<SectionTitle variant="h5" component="h2">
 								Benefits Of Our Expert Assessments
 							</SectionTitle>
 							<Box
@@ -543,6 +544,7 @@ export default function SecuritySurveysPage() {
 				<Container>
 					<Typography
 						variant="h3"
+						component="h2"
 						sx={{ fontWeight: 800, mb: 3 }}>
 						24/7 EMERGENCY SERVICE
 					</Typography>
@@ -585,7 +587,7 @@ export default function SecuritySurveysPage() {
 						container
 						spacing={6}>
 						<Grid size={{ xs: 12, md: 5 }}>
-							<SectionTitle variant="h4">Common Questions</SectionTitle>
+							<SectionTitle variant="h4" component="h2">Common Questions</SectionTitle>
 
 							<Typography
 								paragraph
@@ -629,6 +631,7 @@ export default function SecuritySurveysPage() {
 										}}>
 										<Typography
 											variant="subtitle1"
+											component="h3"
 											sx={{ fontWeight: 700, color: JW_BLUE }}>
 											{faq.question}
 										</Typography>

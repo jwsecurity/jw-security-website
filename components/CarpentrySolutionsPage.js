@@ -245,7 +245,7 @@ export default function CarpentrySolutionsPage() {
 							item
 							xs={12}
 							md={6}>
-							<SectionTitle variant="h4">
+							<SectionTitle variant="h4" component="h2">
 								Experienced Carpenters Working Across London Since 1991
 							</SectionTitle>
 							<Typography
@@ -286,6 +286,7 @@ export default function CarpentrySolutionsPage() {
 					<Box sx={{ mt: 8, mb: 6 }}>
 						<SectionTitle
 							variant="h4"
+							component="h2"
 							sx={{ mb: 4, textAlign: "center" }}>
 							Our Carpentry Services
 						</SectionTitle>
@@ -303,6 +304,7 @@ export default function CarpentrySolutionsPage() {
 										<IconBox>{service.icon}</IconBox>
 										<Typography
 											variant="h5"
+											component="h3"
 											sx={{ mb: 2, fontWeight: 600, color: JW_BLUE }}>
 											{service.title}
 										</Typography>
@@ -344,7 +346,7 @@ export default function CarpentrySolutionsPage() {
 							item
 							xs={12}
 							md={6}>
-							<SectionTitle variant="h5">
+							<SectionTitle variant="h5" component="h2">
 								Additional Carpentry Services
 							</SectionTitle>
 							<Grid
@@ -370,7 +372,7 @@ export default function CarpentrySolutionsPage() {
 							item
 							xs={12}
 							md={6}>
-							<SectionTitle variant="h5">Materials We Work With</SectionTitle>
+							<SectionTitle variant="h5" component="h2">Materials We Work With</SectionTitle>
 							<Grid
 								container
 								spacing={2}>
@@ -421,7 +423,7 @@ export default function CarpentrySolutionsPage() {
 								item
 								xs={12}
 								md={6}>
-								<SectionTitle variant="h5">
+								<SectionTitle variant="h5" component="h2">
 									Why Choose JW Security Carpentry?
 								</SectionTitle>
 								<List>
@@ -468,7 +470,7 @@ export default function CarpentrySolutionsPage() {
 						container
 						spacing={6}>
 						<Grid size={{ xs: 12, md: 5 }}>
-							<SectionTitle variant="h4">Common Questions</SectionTitle>
+							<SectionTitle variant="h4" component="h2">Common Questions</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
@@ -508,6 +510,7 @@ export default function CarpentrySolutionsPage() {
 										}}>
 										<Typography
 											variant="subtitle1"
+											component="h3"
 											sx={{ fontWeight: 700, color: JW_BLUE }}>
 											{faq.question}
 										</Typography>

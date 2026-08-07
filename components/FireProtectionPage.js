@@ -248,7 +248,9 @@ export default function FireProtectionPage() {
 							/>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">
+							<SectionTitle
+								variant="h4"
+								component="h2">
 								Fire Protection Work For London Buildings
 							</SectionTitle>
 							<Typography
@@ -286,7 +288,11 @@ export default function FireProtectionPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">What We Do</SectionTitle>
+							<SectionTitle
+								variant="h4"
+								component="h2">
+								What We Do
+							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
@@ -321,6 +327,7 @@ export default function FireProtectionPage() {
 												})}
 												<Typography
 													variant="subtitle1"
+													component="h3"
 													sx={{
 														fontWeight: 800,
 														color: JW_BLUE,
@@ -354,6 +361,7 @@ export default function FireProtectionPage() {
 					<Container>
 						<Typography
 							variant="h4"
+							component="h2"
 							sx={{ fontWeight: 900, mb: 3 }}>
 							FIRE SAFETY ASSESSMENT?
 						</Typography>
@@ -398,6 +406,7 @@ export default function FireProtectionPage() {
 										<ComplianceCard sx={{ mb: 0 }}>
 											<Typography
 												variant="h6"
+												component="h3"
 												sx={{
 													fontWeight: 700,
 													color: JW_BLUE,
@@ -417,7 +426,9 @@ export default function FireProtectionPage() {
 							</Grid>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">
+							<SectionTitle
+								variant="h4"
+								component="h2">
 								Fire Safety Compliance Made Clear
 							</SectionTitle>
 							<Typography
@@ -460,7 +471,11 @@ export default function FireProtectionPage() {
 							/>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h5">Why Choose JW Security?</SectionTitle>
+							<SectionTitle
+								variant="h5"
+								component="h2">
+								Why Choose JW Security?
+							</SectionTitle>
 							<Box
 								sx={{
 									p: 3,
@@ -507,7 +522,11 @@ export default function FireProtectionPage() {
 						container
 						spacing={6}>
 						<Grid size={{ xs: 12, md: 5 }}>
-							<SectionTitle variant="h4">Common Questions</SectionTitle>
+							<SectionTitle
+								variant="h4"
+								component="h2">
+								Common Questions
+							</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
@@ -548,6 +567,7 @@ export default function FireProtectionPage() {
 										}}>
 										<Typography
 											variant="subtitle1"
+											component="h3"
 											sx={{ fontWeight: 700, color: JW_BLUE }}>
 											{faq.question}
 										</Typography>

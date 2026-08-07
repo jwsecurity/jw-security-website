@@ -156,7 +156,7 @@ export default function EmergencyDoorOpeningPage() {
 						</Grid>
 
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">
+							<SectionTitle variant="h4" component="h2">
 								Professional Emergency Door Opening Services
 							</SectionTitle>
 
@@ -196,6 +196,7 @@ export default function EmergencyDoorOpeningPage() {
 				<Container>
 					<Typography
 						variant="h3"
+						component="h2"
 						sx={{ fontWeight: 800, mb: 3 }}>
 						SCHEDULE A{" "}
 						<Box
@@ -238,7 +239,7 @@ export default function EmergencyDoorOpeningPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">
+							<SectionTitle variant="h4" component="h2">
 								Why Choose Our Emergency Door Opening Service
 							</SectionTitle>
 
@@ -330,7 +331,7 @@ export default function EmergencyDoorOpeningPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h5">
+							<SectionTitle variant="h5" component="h2">
 								What To Do When You Are Locked Out
 							</SectionTitle>
 
@@ -374,7 +375,7 @@ export default function EmergencyDoorOpeningPage() {
 						</Grid>
 
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h5">Benefits Of Our Service</SectionTitle>
+							<SectionTitle variant="h5" component="h2">Benefits Of Our Service</SectionTitle>
 
 							<Box
 								sx={{
@@ -446,7 +447,7 @@ export default function EmergencyDoorOpeningPage() {
 						container
 						spacing={6}>
 						<Grid size={{ xs: 12, md: 5 }}>
-							<SectionTitle variant="h4">Common Questions</SectionTitle>
+							<SectionTitle variant="h4" component="h2">Common Questions</SectionTitle>
 
 							<Typography
 								paragraph
@@ -490,6 +491,7 @@ export default function EmergencyDoorOpeningPage() {
 										}}>
 										<Typography
 											variant="subtitle1"
+											component="h3"
 											sx={{ fontWeight: 700, color: JW_BLUE }}>
 											{faq.question}
 										</Typography>

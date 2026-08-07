@@ -219,7 +219,7 @@ export default function FireDoorMaintenance() {
 								whileInView="visible"
 								viewport={{ once: true, amount: 0.2 }}
 								variants={fadeInUpVariants}>
-								<SectionTitle variant="h4">
+								<SectionTitle variant="h4" component="h2">
 									Fire Door Repairs And Maintenance For London Properties
 								</SectionTitle>
 								<Typography
@@ -357,7 +357,7 @@ export default function FireDoorMaintenance() {
 								whileInView="visible"
 								viewport={{ once: true, amount: 0.2 }}
 								variants={fadeInUpVariants}>
-								<SectionTitle variant="h4">
+								<SectionTitle variant="h4" component="h2">
 									Fire Door Services For Existing Doors
 								</SectionTitle>
 								<Typography
@@ -415,6 +415,7 @@ export default function FireDoorMaintenance() {
 				<Container>
 					<Typography
 						variant="h3"
+						component="h2"
 						sx={{ fontWeight: 800, mb: 3 }}>
 						SCHEDULE A{" "}
 						<Box
@@ -455,7 +456,7 @@ export default function FireDoorMaintenance() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">
+							<SectionTitle variant="h4" component="h2">
 								Common Fire Door Problems We Fix
 							</SectionTitle>
 							<Typography
@@ -624,7 +625,7 @@ export default function FireDoorMaintenance() {
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box sx={{ p: 3 }}>
-								<SectionTitle variant="h4">
+								<SectionTitle variant="h4" component="h2">
 									Planned Fire Door Maintenance
 								</SectionTitle>
 								<Typography
@@ -704,7 +705,7 @@ export default function FireDoorMaintenance() {
 								whileInView="visible"
 								viewport={{ once: true, amount: 0.2 }}
 								variants={fadeInUpVariants}>
-								<SectionTitle variant="h4">
+								<SectionTitle variant="h4" component="h2">
 									Why Choose JW Security?
 								</SectionTitle>
 								<Typography
@@ -823,7 +824,7 @@ export default function FireDoorMaintenance() {
 												}}
 											/>
 										}>
-										<Typography sx={{ fontWeight: 600, color: JW_BLUE }}>
+										<Typography component="h3" sx={{ fontWeight: 600, color: JW_BLUE }}>
 											{faq.question}
 										</Typography>
 									</AccordionSummary>

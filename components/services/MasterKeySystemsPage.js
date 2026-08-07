@@ -277,7 +277,7 @@ export default function MasterKeySystemsPage() {
 							/>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">
+							<SectionTitle variant="h4" component="h2">
 								Controlled Access Without Too Many Keys
 							</SectionTitle>
 							<Typography
@@ -315,7 +315,7 @@ export default function MasterKeySystemsPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">
+							<SectionTitle variant="h4" component="h2">
 								Our Master Key System Services
 							</SectionTitle>
 							<Typography
@@ -387,6 +387,7 @@ export default function MasterKeySystemsPage() {
 					<Box sx={{ textAlign: "center", mb: 6 }}>
 						<SectionTitle
 							variant="h4"
+							component="h2"
 							sx={{
 								"display": "inline-block",
 								"&::after": {
@@ -467,6 +468,7 @@ export default function MasterKeySystemsPage() {
 					<Box sx={{ textAlign: "center", mb: 6 }}>
 						<SectionTitle
 							variant="h4"
+							component="h2"
 							sx={{
 								"display": "inline-block",
 								"&::after": {
@@ -507,7 +509,7 @@ export default function MasterKeySystemsPage() {
 							/>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">Our Installation Process</SectionTitle>
+							<SectionTitle variant="h4" component="h2">Our Installation Process</SectionTitle>
 							<Box sx={{ display: "flex", flexDirection: "column", gap: 2.5 }}>
 								{processSteps.map((step, index) => (
 									<ProcessStep key={index}>
@@ -553,6 +555,7 @@ export default function MasterKeySystemsPage() {
 				<Container>
 					<Typography
 						variant="h3"
+						component="h2"
 						sx={{ fontWeight: 800, mb: 3 }}>
 						SCHEDULE A{" "}
 						<Box
@@ -593,7 +596,7 @@ export default function MasterKeySystemsPage() {
 						container
 						spacing={6}>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">
+							<SectionTitle variant="h4" component="h2">
 								Benefits Of A Master Key System
 							</SectionTitle>
 							<Typography
@@ -617,7 +620,7 @@ export default function MasterKeySystemsPage() {
 							</List>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">
+							<SectionTitle variant="h4" component="h2">
 								Why Choose JW Security?
 							</SectionTitle>
 							<Typography
@@ -659,6 +662,7 @@ export default function MasterKeySystemsPage() {
 					<Box sx={{ textAlign: "center", mb: 6 }}>
 						<SectionTitle
 							variant="h4"
+							component="h2"
 							sx={{
 								"display": "inline-block",
 								"&::after": {
@@ -722,6 +726,7 @@ export default function MasterKeySystemsPage() {
 										<ExpandMoreIcon sx={{ color: JW_CYAN }} />
 									}>
 									<Typography
+										component="h3"
 										sx={{
 											fontWeight: 600,
 											color: JW_BLUE,

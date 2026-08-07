@@ -185,7 +185,7 @@ export default function Footer() {
 		{ label: "Commercial", path: "/commercial" },
 		{ label: "Services", path: "/services" },
 		{ label: "About Us", path: "/about" },
-		{ label: "Our Locations", path: "/locations" },
+		{ label: "Our Locations", path: "/locations/chelsea" },
 		{ label: "Case Studies", path: "/case-studies" },
 		{ label: "Blog", path: "/blog" },
 		{ label: "Request a Quote", path: "/quote" },

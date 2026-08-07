@@ -219,7 +219,7 @@ export default function FireDoorInspection() {
 								whileInView="visible"
 								viewport={{ once: true, amount: 0.2 }}
 								variants={fadeInUpVariants}>
-								<SectionTitle variant="h4">
+								<SectionTitle variant="h4" component="h2">
 									Fire Door Checks For London Buildings
 								</SectionTitle>
 								<Typography
@@ -363,7 +363,7 @@ export default function FireDoorInspection() {
 								whileInView="visible"
 								viewport={{ once: true, amount: 0.2 }}
 								variants={fadeInUpVariants}>
-								<SectionTitle variant="h4">
+								<SectionTitle variant="h4" component="h2">
 									Fire Door Survey And Compliance Support
 								</SectionTitle>
 								<Typography
@@ -421,6 +421,7 @@ export default function FireDoorInspection() {
 				<Container>
 					<Typography
 						variant="h3"
+						component="h2"
 						sx={{ fontWeight: 800, mb: 3 }}>
 						SCHEDULE A{" "}
 						<Box
@@ -461,7 +462,7 @@ export default function FireDoorInspection() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">
+							<SectionTitle variant="h4" component="h2">
 								Common Fire Door Issues We Find
 							</SectionTitle>
 							<Typography
@@ -630,9 +631,9 @@ export default function FireDoorInspection() {
 						alignItems="start">
 						<Grid size={{ xs: 12, md: 6 }}>
 							<Box sx={{ p: 3 }}>
-								<SectionTitle variant="h4">
-									Who Needs Fire Door Inspection?
-								</SectionTitle>
+								<SectionTitle variant="h4" component="h2">
+								Who Needs Fire Door Inspection?
+							</SectionTitle>
 								<Typography
 									paragraph
 									sx={{ mb: 2, opacity: 0.9 }}>
@@ -700,7 +701,7 @@ export default function FireDoorInspection() {
 								whileInView="visible"
 								viewport={{ once: true, amount: 0.2 }}
 								variants={fadeInUpVariants}>
-								<SectionTitle variant="h4">
+								<SectionTitle variant="h4" component="h2">
 									Why Choose JW Security?
 								</SectionTitle>
 								<Typography
@@ -837,7 +838,7 @@ export default function FireDoorInspection() {
 												}}
 											/>
 										}>
-										<Typography sx={{ fontWeight: 600, color: JW_BLUE }}>
+										<Typography component="h3" sx={{ fontWeight: 600, color: JW_BLUE }}>
 											{faq.question}
 										</Typography>
 									</AccordionSummary>

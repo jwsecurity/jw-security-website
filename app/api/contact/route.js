@@ -79,12 +79,12 @@ export async function POST(request) {
 			imagesHtml = `
             <div style="background-color: white; padding: 20px; border-radius: 8px; margin-top: 20px;">
               <h3 style="color: #1c2e4a; margin-top: 0;">Uploaded Lock Pictures</h3>
-              <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+              <div style="display: flex; flex-wrap: wrap; flex-direction: column; align-items: flex-start; gap: 10px;">
                 ${images
 									.map(
 										(url) => `
                   <a href="${escapeHtml(url)}" target="_blank" style="display: inline-block;">
-                    <img src="${escapeHtml(url)}" alt="Lock Picture" style="width: 120px; height: 120px; object-fit: cover; border: 1px solid #ddd; border-radius: 6px;" />
+                    <img src="${escapeHtml(url)}" alt="Lock Picture" style="width: 80px; height: 80px; object-fit: cover; border: 1px solid #ddd; border-radius: 6px;" />
                   </a>
                 `,
 									)

@@ -185,7 +185,7 @@ export default function BurglaryRepairsPage() {
 							/>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">
+							<SectionTitle variant="h4" component="h2">
 								Professional Burglary Repair Services
 							</SectionTitle>
 							<Typography
@@ -226,6 +226,7 @@ export default function BurglaryRepairsPage() {
 				<Container>
 					<Typography
 						variant="h3"
+						component="h2"
 						sx={{ fontWeight: 800, mb: 3 }}>
 						SCHEDULE A{" "}
 						<Box
@@ -266,7 +267,7 @@ export default function BurglaryRepairsPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">
+							<SectionTitle variant="h4" component="h2">
 								Our Burglary Repair Services
 							</SectionTitle>
 							<Typography
@@ -326,7 +327,7 @@ export default function BurglaryRepairsPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h5">
+							<SectionTitle variant="h5" component="h2">
 								What To Do After A Break In
 							</SectionTitle>
 							<Typography
@@ -367,7 +368,7 @@ export default function BurglaryRepairsPage() {
 							</List>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h5">
+							<SectionTitle variant="h5" component="h2">
 								Benefits Of Our Expert Service
 							</SectionTitle>
 							<Box
@@ -483,7 +484,7 @@ export default function BurglaryRepairsPage() {
 												}}
 											/>
 										}>
-										<Typography sx={{ fontWeight: 600, color: JW_BLUE }}>
+										<Typography component="h3" sx={{ fontWeight: 600, color: JW_BLUE }}>
 											{faq.question}
 										</Typography>
 									</AccordionSummary>

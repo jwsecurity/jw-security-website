@@ -182,7 +182,7 @@ export default function LocksAndSafesPage() {
 							/>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">Locks And Safes Supplied And Fitted</SectionTitle>
+							<SectionTitle variant="h4" component="h2">Locks And Safes Supplied And Fitted</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 3, fontSize: "1.05rem", lineHeight: 1.7 }}>
@@ -215,7 +215,7 @@ export default function LocksAndSafesPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">Our Security Products</SectionTitle>
+							<SectionTitle variant="h4" component="h2">Our Security Products</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
@@ -245,6 +245,7 @@ export default function LocksAndSafesPage() {
 											<CardContent sx={{ p: 2 }}>
 												<Typography
 													variant="subtitle2"
+													component="h3"
 													sx={{
 														fontWeight: 700,
 														color: JW_BLUE,
@@ -292,7 +293,7 @@ export default function LocksAndSafesPage() {
 							/>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">Types Of Locks We Supply</SectionTitle>
+							<SectionTitle variant="h4" component="h2">Types Of Locks We Supply</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
@@ -367,7 +368,7 @@ export default function LocksAndSafesPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">Safe Solutions</SectionTitle>
+							<SectionTitle variant="h4" component="h2">Safe Solutions</SectionTitle>
 							<Typography
 								paragraph
 								sx={{ mb: 4, fontSize: "1.05rem", lineHeight: 1.7 }}>
@@ -415,6 +416,7 @@ export default function LocksAndSafesPage() {
 				<Container>
 					<SectionTitle
 						variant="h4"
+						component="h2"
 						sx={{ mb: 4 }}>
 						Our Locks And Safes Services
 					</SectionTitle>

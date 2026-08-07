@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import {
 	Box,
 	Container,
@@ -321,6 +321,7 @@ export default function ServicesPage() {
 					<Box sx={{ mb: 6, textAlign: "center" }}>
 						<SectionTitle
 							variant="h4"
+							component="h2"
 							sx={{
 								"mb": 3,
 								"&::after": { left: "50%", transform: "translateX(-50%)" },
@@ -354,6 +355,7 @@ export default function ServicesPage() {
 								<Box sx={{ mb: 4 }}>
 									<Typography
 										variant="h5"
+										component="h2"
 										sx={{ fontWeight: 600, color: JW_BLUE, mb: 1 }}>
 										{category.title}
 									</Typography>
@@ -456,6 +458,7 @@ export default function ServicesPage() {
 						}}>
 						<Typography
 							variant="h5"
+							component="h2"
 							sx={{ fontWeight: 600, color: JW_BLUE, mb: 2 }}>
 							Need Emergency Assistance?
 						</Typography>

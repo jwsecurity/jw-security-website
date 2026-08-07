@@ -219,7 +219,7 @@ export default function FireDoorInstallationInLondonPage() {
 								whileInView="visible"
 								viewport={{ once: true, amount: 0.2 }}
 								variants={fadeInUpVariants}>
-								<SectionTitle variant="h4">
+								<SectionTitle variant="h4" component="h2">
 									Fire Door Supply And Fit For London Properties
 								</SectionTitle>
 								<Typography
@@ -388,7 +388,7 @@ export default function FireDoorInstallationInLondonPage() {
 								whileInView="visible"
 								viewport={{ once: true, amount: 0.2 }}
 								variants={fadeInUpVariants}>
-								<SectionTitle variant="h4">
+								<SectionTitle variant="h4" component="h2">
 									Fire Door Installation Cost In London
 								</SectionTitle>
 								<Typography
@@ -422,6 +422,7 @@ export default function FireDoorInstallationInLondonPage() {
 				<Container>
 					<Typography
 						variant="h3"
+						component="h2"
 						sx={{ fontWeight: 800, mb: 3 }}>
 						SCHEDULE A{" "}
 						<Box
@@ -576,7 +577,7 @@ export default function FireDoorInstallationInLondonPage() {
 								whileInView="visible"
 								viewport={{ once: true, amount: 0.2 }}
 								variants={fadeInUpVariants}>
-								<SectionTitle variant="h4">
+								<SectionTitle variant="h4" component="h2">
 									Why Choose JW Security As Your Fire Door Installer?
 								</SectionTitle>
 								<Typography
@@ -689,7 +690,7 @@ export default function FireDoorInstallationInLondonPage() {
 												}}
 											/>
 										}>
-										<Typography sx={{ fontWeight: 600, color: JW_BLUE }}>
+										<Typography component="h3" sx={{ fontWeight: 600, color: JW_BLUE }}>
 											{faq.question}
 										</Typography>
 									</AccordionSummary>

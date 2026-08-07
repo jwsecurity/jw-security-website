@@ -263,7 +263,7 @@ export default function LockReplacementPage() {
 							/>
 						</Grid>
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">
+							<SectionTitle variant="h4" component="h2">
 								Lock Change And Replacement For London Properties
 							</SectionTitle>
 							<Typography
@@ -308,7 +308,7 @@ export default function LockReplacementPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">
+							<SectionTitle variant="h4" component="h2">
 								Our Lock Replacement Services
 							</SectionTitle>
 							<Typography
@@ -381,7 +381,7 @@ export default function LockReplacementPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">
+							<SectionTitle variant="h4" component="h2">
 								When Should You Replace A Lock?
 							</SectionTitle>
 							<Typography
@@ -433,7 +433,7 @@ export default function LockReplacementPage() {
 						spacing={6}
 						alignItems="center">
 						<Grid size={{ xs: 12, md: 6 }}>
-							<SectionTitle variant="h4">
+							<SectionTitle variant="h4" component="h2">
 								High Security Locks And Better Key Control
 							</SectionTitle>
 							<Typography
@@ -499,6 +499,7 @@ export default function LockReplacementPage() {
 					<Box sx={{ textAlign: "center", mb: 6 }}>
 						<SectionTitle
 							variant="h4"
+							component="h2"
 							sx={{
 								"display": "inline-block",
 								"&::after": {
@@ -573,6 +574,7 @@ export default function LockReplacementPage() {
 				<Container>
 					<Typography
 						variant="h3"
+						component="h2"
 						sx={{ fontWeight: 800, mb: 3 }}>
 						SCHEDULE A{" "}
 						<Box
@@ -796,6 +798,7 @@ export default function LockReplacementPage() {
 					<Box sx={{ textAlign: "center", mb: 6 }}>
 						<SectionTitle
 							variant="h4"
+							component="h2"
 							sx={{
 								"display": "inline-block",
 								"&::after": {
@@ -859,6 +862,7 @@ export default function LockReplacementPage() {
 										<ExpandMoreIcon sx={{ color: JW_CYAN }} />
 									}>
 									<Typography
+										component="h3"
 										sx={{
 											fontWeight: 600,
 											color: JW_BLUE,
