@@ -68,6 +68,15 @@ const slideInLeft = keyframes`
   }
 `;
 
+const marqueeScroll = keyframes`
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+`;
+
 const JW_CYAN = "#00c6d7";
 const JW_BLUE = "#1c2e4a";
 
@@ -570,9 +579,11 @@ export default function HomePage() {
 
 	const clients = [
 		{ name: "Alpha Property", logo: "/images/trusted/Alpha Propery.webp" },
+		{ name: "ukas", logo: "/images/trusted/ukas.jpeg" },
 		{ name: "Antony Roberts", logo: "/images/trusted/Antony Roberts.webp" },
 		{ name: "Garton Jones", logo: "/images/trusted/Garton Jones.webp" },
 		{ name: "EPML", logo: "/images/trusted/EPML.webp" },
+		{ name: "ukas", logo: "/images/trusted/ukas2.jpeg" },
 		{
 			name: "Haus Block Management",
 			logo: "/images/trusted/Haus Block Management.webp",
@@ -581,6 +592,7 @@ export default function HomePage() {
 			name: "Hurford Salvi Carr",
 			logo: "/images/trusted/Hurford Salvi Carr.webp",
 		},
+		{ name: "ukas", logo: "/images/trusted/ukas3.jpeg" },
 		{ name: "Rampton Baseley", logo: "/images/trusted/Rampton Baseley.webp" },
 	];
 
@@ -973,8 +985,10 @@ export default function HomePage() {
 					</motion.div>
 				</ServiceIconsContainer>
 			</HeroSectionStyled>
-			<Section>
-				<Container sx={{ textAlign: "center", marginBottom: "-60px" }}>
+			<Section sx={{ overflow: "hidden", py: { xs: 6, md: 8 } }}>
+				<Container
+					maxWidth="xl"
+					sx={{ textAlign: "center" }}>
 					<motion.div
 						initial="hidden"
 						whileInView="visible"
@@ -983,39 +997,60 @@ export default function HomePage() {
 						<SectionTitle
 							variant="h4"
 							component="h2"
-							sx={{ mb: 4, fontSize: "2.2rem" }}>
+							sx={{ mb: 6, fontSize: "2.2rem" }}>
 							Trusted By Leading Names
 						</SectionTitle>
 					</motion.div>
-					<Grid
-						container
-						spacing={5}
-						justifyContent="center"
-						alignItems="center">
-						{clients.map((client, index) => (
-							<Grid
-								item
-								xs={6}
-								sm={4}
-								md={2}
-								key={index}>
-								<motion.div
-									initial="hidden"
-									whileInView="visible"
-									viewport={{ once: true, amount: 0.3 }}
-									variants={fadeInUpVariants}
-									transition={{ delay: index * 0.1 }}>
+					<Box
+						sx={{
+							width: "100%",
+							overflow: "hidden",
+							position: "relative",
+							maskImage:
+								"linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+							WebkitMaskImage:
+								"linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+						}}>
+						<Box
+							sx={{
+								"display": "flex",
+								"alignItems": "center",
+								"width": "max-content",
+								"animation": `${marqueeScroll} 30s linear infinite`,
+								"willChange": "transform",
+								"&:hover": {
+									animationPlayState: "paused",
+								},
+							}}>
+							{[...clients, ...clients].map((client, index) => (
+								<Box
+									key={index}
+									sx={{
+										px: 4,
+										display: "flex",
+										alignItems: "center",
+										justifyContent: "center",
+										minWidth: { xs: "140px", sm: "180px", md: "200px" },
+										height: "90px",
+										flexShrink: 0,
+									}}>
 									<Image
 										src={client.logo}
 										alt={client.name}
-										width={100}
-										height={100}
-										sizes=""
+										width={150}
+										height={150}
+										style={{
+											objectFit: "contain",
+											maxHeight: "70px",
+											maxWidth: "150px",
+											width: "auto",
+											height: "auto",
+										}}
 									/>
-								</motion.div>
-							</Grid>
-						))}
-					</Grid>
+								</Box>
+							))}
+						</Box>
+					</Box>
 				</Container>
 			</Section>
 			<Section odd>
