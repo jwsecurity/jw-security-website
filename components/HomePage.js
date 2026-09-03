@@ -579,11 +579,9 @@ export default function HomePage() {
 
 	const clients = [
 		{ name: "Alpha Property", logo: "/images/trusted/Alpha Propery.webp" },
-		{ name: "ukas", logo: "/images/trusted/ukas.jpeg" },
 		{ name: "Antony Roberts", logo: "/images/trusted/Antony Roberts.webp" },
 		{ name: "Garton Jones", logo: "/images/trusted/Garton Jones.webp" },
 		{ name: "EPML", logo: "/images/trusted/EPML.webp" },
-		{ name: "ukas", logo: "/images/trusted/ukas2.jpeg" },
 		{
 			name: "Haus Block Management",
 			logo: "/images/trusted/Haus Block Management.webp",
@@ -592,7 +590,6 @@ export default function HomePage() {
 			name: "Hurford Salvi Carr",
 			logo: "/images/trusted/Hurford Salvi Carr.webp",
 		},
-		{ name: "ukas", logo: "/images/trusted/ukas3.jpeg" },
 		{ name: "Rampton Baseley", logo: "/images/trusted/Rampton Baseley.webp" },
 	];
 
@@ -1049,6 +1046,78 @@ export default function HomePage() {
 									/>
 								</Box>
 							))}
+						</Box>
+					</Box>
+				</Container>
+			</Section>
+			<Section sx={{ py: { xs: 6, md: 8 }, backgroundColor: "white" }}>
+				<Container maxWidth="xl">
+					<Box
+						sx={{
+							display: "flex",
+							flexDirection: { xs: "column", md: "row" },
+							alignItems: "center",
+							justifyContent: "center",
+							gap: { xs: 4, md: 8 },
+							p: { xs: 4, md: 6 },
+							backgroundColor: alpha(JW_CYAN, 0.05),
+							borderRadius: "16px",
+							border: `1px solid ${alpha(JW_CYAN, 0.2)}`,
+						}}>
+						<Box sx={{ flex: 1, textAlign: { xs: "center", md: "left" } }}>
+							<Typography
+								variant="subtitle2"
+								sx={{
+									color: JW_CYAN,
+									fontWeight: 700,
+									letterSpacing: 1.5,
+									textTransform: "uppercase",
+									mb: 2,
+									fontSize: "0.8rem",
+								}}>
+								CERTIFIED PROFESSIONALS
+							</Typography>
+							<Typography
+								variant="h3"
+								sx={{
+									fontWeight: 800,
+									mb: 3,
+									fontSize: { xs: "1.8rem", md: "2.2rem" },
+									color: JW_BLUE,
+								}}>
+								Recognised Industry Standards
+							</Typography>
+							<Typography
+								sx={{
+									fontSize: "1.05rem",
+									lineHeight: 1.7,
+									color: alpha("#000", 0.7),
+									mb: 0,
+								}}>
+								We are fully certified for Fire Door Installation and Fire Door
+								Maintenance. Our accreditations from BM Trada and UKAS ensure
+								that all our work meets the highest industry and legal safety
+								standards, providing you with complete peace of mind.
+							</Typography>
+						</Box>
+						<Box
+							sx={{
+								flex: { xs: "1 1 auto", md: "0 0 400px" },
+								display: "flex",
+								justifyContent: "center",
+								alignItems: "center",
+							}}>
+							<Box
+								component="img"
+								src="/images/trusted/ukas.jpeg"
+								alt="BM Trada and UKAS Certifications"
+								sx={{
+									maxWidth: "100%",
+									height: "100%",
+									objectFit: "cover",
+									filter: "drop-shadow(0 4px 10px rgba(0,0,0,0.1))",
+								}}
+							/>
 						</Box>
 					</Box>
 				</Container>
