@@ -23,8 +23,8 @@ import ContactSection from "../common/ContactSection";
 import SecurityIcon from "@mui/icons-material/Security";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 
 const JW_BLUE = "#1c2e4a";
 const JW_CYAN = "#00c6d7";
@@ -265,7 +265,7 @@ export default function BalhamPage() {
 									variant="contained"
 									fullWidth
 									size="large"
-									href="/contact"
+									href="tel:02086467931"
 									sx={{
 										"bgcolor": JW_BLUE,
 										"py": 2,
@@ -705,7 +705,7 @@ export default function BalhamPage() {
 					<Button
 						variant="contained"
 						size="large"
-						href="/contact"
+						href="tel:02086467931"
 						sx={{
 							fontWeight: 900,
 							px: 6,

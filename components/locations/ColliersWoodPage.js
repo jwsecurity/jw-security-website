@@ -271,7 +271,7 @@ export default function ColliersWoodPage() {
 									variant="contained"
 									fullWidth
 									size="large"
-									href="/contact"
+									href="tel:02086467931"
 									sx={{
 										"bgcolor": JW_BLUE,
 										"py": 2,
@@ -712,7 +712,7 @@ export default function ColliersWoodPage() {
 					<Button
 						variant="contained"
 						size="large"
-						href="/contact"
+						href="tel:02086467931"
 						sx={{
 							fontWeight: 900,
 							px: 6,

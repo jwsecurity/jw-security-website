@@ -10,6 +10,9 @@ import {
 	ListItemIcon,
 	ListItemText,
 	Button,
+	AccordionSummary,
+	AccordionDetails,
+	Accordion,
 } from "@mui/material";
 import PageHero from "../common/PageHero";
 import LockIcon from "@mui/icons-material/Lock";
@@ -19,6 +22,7 @@ import ContactSection from "../common/ContactSection";
 import SecurityIcon from "@mui/icons-material/Security";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 
 const JW_BLUE = "#1c2e4a";
@@ -91,6 +95,39 @@ export default function MayfairPage() {
 			landmarks: ["Annabel's", "Morton's Club", "Historic plane trees"],
 			description:
 				"Prestigious square home to exclusive private members' clubs and luxury offices.",
+		},
+	];
+
+	const faqData = [
+		{
+			question: "Do You Provide Locksmith Services In Mayfair?",
+			answer:
+				"Yes. JW Security provides locksmith Mayfair services for homes, flats, shops, offices, landlords, and managed buildings.",
+		},
+		{
+			question: "Do You Cover Mayfair W1?",
+			answer:
+				"Yes. We provide locksmith Mayfair W1 services, including lock changes, emergency access, key cutting, lock replacement, and property security work.",
+		},
+		{
+			question: "Are You A Professional Locksmith In Mayfair?",
+			answer:
+				"Yes. JW Security has worked across London since 1991 and provides professional locksmith Mayfair services for residential and commercial properties.",
+		},
+		{
+			question: "Can You Help With Lockouts In Mayfair?",
+			answer:
+				"Yes. We help with house lockouts, flat lockouts, office lockouts, failed locks, lost keys, and urgent access problems across Mayfair.",
+		},
+		{
+			question: "Do You Work With Landlords And Managing Agents In Mayfair?",
+			answer:
+				"Yes. We support landlords, letting agents, managing agents, and residential or commercial properties with lock changes, key control, access issues, and wider security work.",
+		},
+		{
+			question: "What Areas Near Mayfair Do You Cover?",
+			answer:
+				"We cover Mayfair, Oxford Street, Park Lane, Grosvenor Square, Berkeley Square, Bond Street, Hyde Park Corner, Shepherd Market, Marble Arch, W1, and nearby areas.",
 		},
 	];
 
@@ -211,7 +248,7 @@ export default function MayfairPage() {
 								<Typography
 									variant="h3"
 									sx={{ fontWeight: 800, color: JW_CYAN, mb: 1 }}>
-									020 7946 0125
+									0208 646 7931
 								</Typography>
 								<Typography
 									variant="body2"
@@ -219,6 +256,7 @@ export default function MayfairPage() {
 									15-20 Minute Rapid Response in Mayfair (W1 area)
 								</Typography>
 								<Button
+									href="tel:02086467931"
 									variant="contained"
 									fullWidth
 									size="large"
@@ -522,6 +560,96 @@ export default function MayfairPage() {
 					</Grid>
 				</Container>
 			</Box>
+
+			<Box sx={{ py: { xs: 5, md: 8 }, bgcolor: alpha(JW_BLUE, 0.02) }}>
+				<Container>
+					<Box sx={{ textAlign: "center", mb: 6 }}>
+						<Typography
+							variant="h3"
+							component="h2"
+							sx={{
+								fontWeight: 700,
+								fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.5rem" },
+								color: JW_BLUE,
+								mb: 2,
+							}}>
+							Common Questions
+						</Typography>
+						<Typography
+							sx={{
+								maxWidth: "700px",
+								mx: "auto",
+								mt: 2,
+								color: alpha("#000", 0.6),
+								fontSize: "1.05rem",
+							}}>
+							Answers to frequently asked questions about our Balham locksmith
+							services
+						</Typography>
+					</Box>
+					<Box
+						sx={{
+							"maxWidth": "900px",
+							"mx": "auto",
+							"& .MuiAccordion-root": {
+								"bgcolor": "white",
+								"borderRadius": "8px",
+								"boxShadow": "0 5px 20px rgba(0,0,0,0.05)",
+								"&:not(:last-child)": {
+									mb: 2,
+								},
+								"&:before": {
+									display: "none",
+								},
+							},
+							"& .MuiAccordionSummary-root": {
+								px: 3,
+								py: 1.5,
+							},
+							"& .MuiAccordionDetails-root": {
+								px: 3,
+								py: 2,
+								borderTop: `1px solid ${alpha("#000", 0.08)}`,
+							},
+						}}>
+						{faqData.map((faq, index) => (
+							<Accordion
+								key={index}
+								disableGutters
+								elevation={0}
+								sx={{
+									"overflow": "hidden",
+									"transition": "all 0.3s ease",
+									"&:hover": {
+										boxShadow: "0 8px 25px rgba(0,0,0,0.08)",
+									},
+								}}>
+								<AccordionSummary
+									expandIcon={<ExpandMoreIcon sx={{ color: JW_CYAN }} />}>
+									<Typography
+										sx={{
+											fontWeight: 600,
+											color: JW_BLUE,
+											fontSize: "1rem",
+										}}>
+										{faq.question}
+									</Typography>
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography
+										sx={{
+											color: alpha("#000", 0.7),
+											lineHeight: 1.7,
+										}}>
+										{faq.answer}
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+						))}
+					</Box>
+				</Container>
+			</Box>
+
 			<CTABanner sx={{ py: 8 }}>
 				<Container>
 					<Typography
@@ -542,16 +670,16 @@ export default function MayfairPage() {
 						mind.
 					</Typography>
 					<Button
+						href="tel:02086467931"
 						variant="contained"
 						size="large"
-						href="/contact"
 						sx={{
 							fontWeight: 900,
 							px: 6,
 							py: 2,
 							fontSize: "1.1rem",
 						}}>
-						CALL US TODAY: 020 7946 0125
+						CALL US TODAY: 0208 646 7931
 					</Button>
 				</Container>
 			</CTABanner>
