@@ -61,10 +61,7 @@ export default function About() {
 			"opens": "00:00",
 			"closes": "23:59",
 		},
-		"sameAs": [
-			"https://www.facebook.com/jwsecurity",
-			"https://www.linkedin.com/company/jw-security",
-		],
+		"sameAs": ["#", "https://www.linkedin.com/company/jw-security/"],
 		"foundingDate": "1991",
 		"founder": {
 			"@type": "Person",

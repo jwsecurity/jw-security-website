@@ -302,7 +302,7 @@ export default function Footer() {
 								size="small"
 								component="a"
 								aria-label="facebook"
-								href="https://www.facebook.com/jwsecurity"
+								href="#"
 								target="_blank"
 								rel="noopener noreferrer">
 								<FacebookIcon fontSize="small" />
@@ -311,7 +311,7 @@ export default function Footer() {
 								size="small"
 								aria-label="twitter"
 								component="a"
-								href="https://www.twitter.com/jwsecurity"
+								href="#"
 								target="_blank"
 								rel="noopener noreferrer">
 								<TwitterIcon fontSize="small" />
@@ -320,7 +320,7 @@ export default function Footer() {
 								size="small"
 								component="a"
 								aria-label="linkedin"
-								href="https://www.linkedin.com/company/jwsecurity"
+								href="https://www.linkedin.com/company/jw-security/"
 								target="_blank"
 								rel="noopener noreferrer">
 								<LinkedInIcon fontSize="small" />
@@ -329,7 +329,7 @@ export default function Footer() {
 								size="small"
 								component="a"
 								aria-label="instagram"
-								href="https://www.instagram.com/jwsecurity"
+								href="#"
 								target="_blank"
 								rel="noopener noreferrer">
 								<InstagramIcon fontSize="small" />

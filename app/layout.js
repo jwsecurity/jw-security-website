@@ -109,12 +109,7 @@ const businessSchema = {
 		"latitude": 51.528739805029666,
 		"longitude": -0.3004697848794909,
 	},
-	"sameAs": [
-		"https://www.facebook.com/jwsecurity",
-		"https://www.twitter.com/jwsecurity",
-		"https://www.linkedin.com/company/jwsecurity",
-		"https://www.instagram.com/jwsecurity",
-	],
+	"sameAs": ["#", "#", "https://www.linkedin.com/company/jw-security/", "#"],
 };
 
 const GTM_ID = "GTM-K5R23XWC";
