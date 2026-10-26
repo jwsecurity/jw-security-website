@@ -36,6 +36,7 @@ import { styled, alpha, useTheme } from "@mui/material/styles";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 const JW_CYAN = "#00c6d7";
 const JW_BLUE = "#1c2e4a";
@@ -187,9 +188,11 @@ export default function Header() {
 	const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 	const [scrolled, setScrolled] = useState(false);
 	const [mobileOpen, setMobileOpen] = useState(false);
-	const [megaMenuAnchorEl, setMegaMenuAnchorEl] = useState(null);
+	const [servicesAnchorEl, setServicesAnchorEl] = useState(null);
+	const [locationsAnchorEl, setLocationsAnchorEl] = useState(null);
 	const [mobileSubMenu, setMobileSubMenu] = useState("");
 	const servicesButtonRef = useRef(null);
+	const locationsButtonRef = useRef(null);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -204,6 +207,12 @@ export default function Header() {
 			window.removeEventListener("scroll", handleScroll);
 		};
 	}, [scrolled]);
+
+	useEffect(() => {
+		setServicesAnchorEl(null);
+		setLocationsAnchorEl(null);
+		setMobileOpen(false);
+	}, [pathname]);
 
 	const services = [
 		{
@@ -247,6 +256,43 @@ export default function Header() {
 		},
 	];
 
+	const locationsGroup = [
+		{
+			title: "Wimbledon",
+			icon: <LocationOnIcon sx={{ color: JW_CYAN, fontSize: 28 }} />,
+			link: "/locations/wimbledon",
+			highlighted: true,
+		},
+		{
+			title: "Battersea",
+			icon: <LocationOnIcon sx={{ color: JW_CYAN, fontSize: 28 }} />,
+			link: "/locations/battersea",
+			highlighted: true,
+		},
+		{
+			title: "Clapham",
+			icon: <LocationOnIcon sx={{ color: JW_CYAN, fontSize: 28 }} />,
+			link: "/locations/clapham",
+		},
+		{
+			title: "Balham",
+			icon: <LocationOnIcon sx={{ color: JW_CYAN, fontSize: 28 }} />,
+			link: "/locations/balham",
+		},
+	];
+
+	const allLocationsList = [...locationsGroup];
+
+	const isLocationActive = (loc) => {
+		if (isPathActive(loc.link)) return true;
+		if (
+			loc.subPaths &&
+			loc.subPaths.some((path) => pathname.startsWith(path))
+		)
+			return true;
+		return false;
+	};
+
 	const isServiceActive = (service) => {
 		if (isPathActive(service.link)) return true;
 		if (
@@ -261,12 +307,22 @@ export default function Header() {
 		setMobileOpen(!mobileOpen);
 	};
 
-	const handleMegaMenuToggle = (event) => {
-		setMegaMenuAnchorEl(megaMenuAnchorEl ? null : servicesButtonRef.current);
+	const handleServicesToggle = () => {
+		setLocationsAnchorEl(null);
+		setServicesAnchorEl((prev) => (prev ? null : servicesButtonRef.current));
 	};
 
-	const handleMegaMenuClose = () => {
-		setMegaMenuAnchorEl(null);
+	const handleServicesClose = () => {
+		setServicesAnchorEl(null);
+	};
+
+	const handleLocationsToggle = () => {
+		setServicesAnchorEl(null);
+		setLocationsAnchorEl((prev) => (prev ? null : locationsButtonRef.current));
+	};
+
+	const handleLocationsClose = () => {
+		setLocationsAnchorEl(null);
 	};
 
 	const handleMobileSubMenuToggle = (menu) => {
@@ -284,13 +340,15 @@ export default function Header() {
 				position="fixed"
 				scrolled={scrolled ? 1 : 0}
 				elevation={0}>
-				<Container maxWidth="xl">
+				<Box className="w-full">
 					<Toolbar
 						disableGutters
 						sx={{
+							px: 10,
 							py: scrolled ? 0.8 : 1.5,
 							transition: "padding 0.3s ease",
 							[theme.breakpoints.down("md")]: {
+								px: 5,
 								py: scrolled ? 0.5 : 0.8,
 							},
 						}}>
@@ -356,42 +414,42 @@ export default function Header() {
 									<Box sx={{ position: "relative" }}>
 										<NavigationButton
 											ref={servicesButtonRef}
-											onClick={handleMegaMenuToggle}
+											onClick={handleServicesToggle}
 											active={
 												pathname.includes("/services") ||
-												Boolean(megaMenuAnchorEl)
+												Boolean(servicesAnchorEl)
 											}
 											endIcon={
 												<KeyboardArrowDownIcon
 													sx={{
 														transition: "transform 0.3s",
-														transform: megaMenuAnchorEl
+														transform: servicesAnchorEl
 															? "rotate(180deg)"
 															: "rotate(0)",
 													}}
 												/>
 											}
 											aria-haspopup="true"
-											aria-expanded={Boolean(megaMenuAnchorEl)}
+											aria-expanded={Boolean(servicesAnchorEl)}
 											aria-label="Services Menu">
 											Services
 										</NavigationButton>
 										<Popper
-											open={Boolean(megaMenuAnchorEl)}
-											anchorEl={megaMenuAnchorEl}
+											open={Boolean(servicesAnchorEl)}
+											anchorEl={servicesAnchorEl}
 											role="menu"
 											placement="bottom-start"
 											transition
 											disablePortal
 											sx={{ zIndex: 1350 }}>
-											{({ TransitionProps, placement }) => (
+											{({ TransitionProps }) => (
 												<Fade
 													{...TransitionProps}
 													timeout={250}>
 													<MegaMenuContainer
-														className={Boolean(megaMenuAnchorEl) ? "open" : ""}>
+														className={Boolean(servicesAnchorEl) ? "open" : ""}>
 														<ClickAwayListener
-															onClickAway={handleMegaMenuClose}>
+															onClickAway={handleServicesClose}>
 															<List
 																component="nav"
 																dense
@@ -404,7 +462,7 @@ export default function Header() {
 																			passHref>
 																			<HighlightedMenuItem
 																				component="span"
-																				onClick={handleMegaMenuClose}
+																				onClick={handleServicesClose}
 																				role="menuitem"
 																				sx={
 																					isServiceActive(service)
@@ -429,7 +487,7 @@ export default function Header() {
 																			passHref>
 																			<MegaMenuItem
 																				component="span"
-																				onClick={handleMegaMenuClose}
+																				onClick={handleServicesClose}
 																				role="menuitem"
 																				sx={
 																					isServiceActive(service)
@@ -460,13 +518,136 @@ export default function Header() {
 																	passHref>
 																	<MegaMenuItem
 																		component="span"
-																		onClick={handleMegaMenuClose}
+																		onClick={handleServicesClose}
 																		sx={{ fontWeight: "bold", color: JW_CYAN }}
 																		role="menuitem">
 																		<ArrowForwardIosIcon
 																			sx={{ fontSize: "1rem !important" }}
 																		/>{" "}
 																		View All Services
+																	</MegaMenuItem>
+																</Link>
+															</List>
+														</ClickAwayListener>
+													</MegaMenuContainer>
+												</Fade>
+											)}
+										</Popper>
+									</Box>
+									<Box sx={{ position: "relative" }}>
+										<NavigationButton
+											ref={locationsButtonRef}
+											onClick={handleLocationsToggle}
+											active={
+												pathname.includes("/locations") ||
+												Boolean(locationsAnchorEl)
+											}
+											endIcon={
+												<KeyboardArrowDownIcon
+													sx={{
+														transition: "transform 0.3s",
+														transform: locationsAnchorEl
+															? "rotate(180deg)"
+															: "rotate(0)",
+													}}
+												/>
+											}
+											aria-haspopup="true"
+											aria-expanded={Boolean(locationsAnchorEl)}
+											aria-label="Locations Menu">
+											Locations
+										</NavigationButton>
+										<Popper
+											open={Boolean(locationsAnchorEl)}
+											anchorEl={locationsAnchorEl}
+											role="menu"
+											placement="bottom-start"
+											transition
+											disablePortal
+											sx={{ zIndex: 1350 }}>
+											{({ TransitionProps }) => (
+												<Fade
+													{...TransitionProps}
+													timeout={250}>
+													<MegaMenuContainer
+														className={Boolean(locationsAnchorEl) ? "open" : ""}>
+														<ClickAwayListener
+															onClickAway={handleLocationsClose}>
+															<List
+																component="nav"
+																dense
+																aria-label="locations menu">
+																{locationsGroup.map((loc, index) =>
+																	loc.highlighted ? (
+																		<Link
+																			key={index}
+																			href={loc.link}
+																			passHref>
+																			<HighlightedMenuItem
+																				component="span"
+																				onClick={handleLocationsClose}
+																				role="menuitem"
+																				sx={
+																					isLocationActive(loc)
+																						? {
+																								backgroundColor: alpha(
+																									JW_CYAN,
+																									0.15,
+																								),
+																								color: "white",
+																								borderLeft: `3px solid ${JW_CYAN}`,
+																							}
+																						: {}
+																				}>
+																				{loc.icon}
+																				{loc.title}
+																			</HighlightedMenuItem>
+																		</Link>
+																	) : (
+																		<Link
+																			key={index}
+																			href={loc.link}
+																			passHref>
+																			<MegaMenuItem
+																				component="span"
+																				onClick={handleLocationsClose}
+																				role="menuitem"
+																				sx={
+																					isLocationActive(loc)
+																						? {
+																								backgroundColor: alpha(
+																									JW_CYAN,
+																									0.15,
+																								),
+																								color: "white",
+																								borderLeft: `3px solid ${JW_CYAN}`,
+																							}
+																						: {}
+																				}>
+																				{loc.icon}
+																				{loc.title}
+																			</MegaMenuItem>
+																		</Link>
+																	),
+																)}
+																<Divider
+																	sx={{
+																		my: 1,
+																		borderColor: alpha("#fff", 0.1),
+																	}}
+																/>
+																<Link
+																	href="/locations"
+																	passHref>
+																	<MegaMenuItem
+																		component="span"
+																		onClick={handleLocationsClose}
+																		sx={{ fontWeight: "bold", color: JW_CYAN }}
+																		role="menuitem">
+																		<ArrowForwardIosIcon
+																			sx={{ fontSize: "1rem !important" }}
+																		/>{" "}
+																		View All Locations
 																	</MegaMenuItem>
 																</Link>
 															</List>
@@ -588,7 +769,7 @@ export default function Header() {
 							</Box>
 						)}
 					</Toolbar>
-				</Container>
+				</Box>
 			</FrostedGlassAppBar>
 			{isMobile && (
 				<Drawer
@@ -746,6 +927,111 @@ export default function Header() {
 										</MobileNavItem>
 									</Link>
 								))}
+								<Link
+									href="/services"
+									passHref>
+									<MobileNavItem
+										button
+										component="span"
+										onClick={handleMobileMenuToggle}
+										sx={{
+											pl: 4,
+											color: JW_CYAN,
+										}}>
+										<Box sx={{ mr: 2, display: "flex" }}>
+											<ArrowForwardIosIcon sx={{ fontSize: 16 }} />
+										</Box>
+										<ListItemText
+											primary="View All Services"
+											primaryTypographyProps={{
+												fontSize: "0.95rem",
+												fontWeight: 600,
+											}}
+										/>
+									</MobileNavItem>
+								</Link>
+							</List>
+						</Collapse>
+						<MobileNavItem
+							button
+							onClick={() => handleMobileSubMenuToggle("locations")}
+							aria-expanded={mobileSubMenu === "locations"}
+							aria-controls="locations-submenu">
+							<ListItemText primary="Locations" />
+							<ArrowDropDownIcon
+								sx={{
+									ml: 1,
+									transition: "transform 0.3s",
+									transform:
+										mobileSubMenu === "locations"
+											? "rotate(180deg)"
+											: "rotate(0)",
+								}}
+							/>
+						</MobileNavItem>
+						<Collapse
+							in={mobileSubMenu === "locations"}
+							timeout="auto"
+							unmountOnExit
+							id="locations-submenu">
+							<List
+								component="div"
+								disablePadding>
+								{allLocationsList.map((loc, index) => (
+									<Link
+										key={index}
+										href={loc.link}
+										passHref>
+										<MobileNavItem
+											button
+											component="span"
+											onClick={handleMobileMenuToggle}
+											sx={{
+												pl: 4,
+												...(isLocationActive(loc) && {
+													backgroundColor: alpha(JW_CYAN, 0.12),
+													borderLeft: `3px solid ${JW_CYAN}`,
+													pl: 3.7,
+												}),
+											}}>
+											<Box sx={{ mr: 2, display: "flex" }}>
+												{React.cloneElement(loc.icon, {
+													sx: { fontSize: 20 },
+												})}
+											</Box>
+											<ListItemText
+												primary={loc.title}
+												primaryTypographyProps={{
+													fontSize: "0.95rem",
+													...(loc.highlighted && { fontWeight: 600 }),
+												}}
+											/>
+										</MobileNavItem>
+									</Link>
+								))}
+								<Link
+									href="/locations"
+									passHref>
+									<MobileNavItem
+										button
+										component="span"
+										onClick={handleMobileMenuToggle}
+										sx={{
+											pl: 4,
+											color: JW_CYAN,
+										}}>
+										<Box sx={{ mr: 2, display: "flex" }}>
+											<ArrowForwardIosIcon sx={{ fontSize: 16 }} />
+										</Box>
+										<ListItemText
+											primary="View All Locations"
+											primaryTypographyProps={{
+												fontSize: "0.95rem",
+												fontWeight: 700,
+											}}
+										/>
+									</MobileNavItem>
+								</Link>
 							</List>
 						</Collapse>
 						<Link
