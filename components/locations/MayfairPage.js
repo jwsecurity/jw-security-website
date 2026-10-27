@@ -24,6 +24,7 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import SharedServicesSection from "./SharedServicesSection";
 
 const JW_BLUE = "#1c2e4a";
 const JW_CYAN = "#00c6d7";
@@ -486,6 +487,10 @@ export default function MayfairPage() {
 					</Grid>
 				</Container>
 			</Box>
+
+			{/* Shared Services Section */}
+			<SharedServicesSection />
+
 			<Box sx={{ py: 10 }}>
 				<Container>
 					<Typography

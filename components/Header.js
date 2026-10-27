@@ -270,6 +270,12 @@ export default function Header() {
 			highlighted: true,
 		},
 		{
+			title: "Wandsworth",
+			icon: <LocationOnIcon sx={{ color: JW_CYAN, fontSize: 28 }} />,
+			link: "/locations/wandsworth",
+			highlighted: true,
+		},
+		{
 			title: "Clapham",
 			icon: <LocationOnIcon sx={{ color: JW_CYAN, fontSize: 28 }} />,
 			link: "/locations/clapham",

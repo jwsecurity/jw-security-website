@@ -1,55 +1,55 @@
 import Script from "next/script";
-import BalhamPage from "@/components/locations/BalhamPage";
+import BatterseaPage from "@/components/locations/BatterseaPage";
 
 export const metadata = {
-	title: "Locksmith Balham | 24/7 Emergency Locksmith & Security Services SW12",
+	title: "Locksmith Battersea SW11 | 24/7 Security Services | JW Security",
 	description:
-		"Professional locksmith services in Balham, SW12. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Serving Balham High Road, Bedford Hill, Nightingale Lane, and surrounding areas. Call 0208 646 7931.",
+		"Need a locksmith in Battersea SW11? JW Security provides 24/7 emergency locksmiths, lock replacement, commercial security and fire door services.",
 	keywords:
-		"locksmith Balham, emergency locksmith Balham SW12, Balham security services, Balham High Road locksmith, Bedford Hill locksmith, Nightingale Lane locksmith",
+		"locksmith Battersea, emergency locksmith Battersea SW11, Battersea security services, Battersea Park locksmith, Battersea Power Station locksmith, Clapham Junction locksmith, Nine Elms locksmith",
 	alternates: {
-		canonical: "https://www.jwsecurity.co.uk/locations/balham",
+		canonical: "https://www.jwsecurity.co.uk/locations/battersea",
 	},
 	openGraph: {
 		title:
-			"Locksmith Balham | 24/7 Emergency Locksmith & Security Services SW12",
+			"Locksmith Battersea SW11 | 24/7 Security Services | JW Security",
 		description:
-			"Professional locksmith services in Balham, SW12. 24/7 emergency response, lock changes, key cutting, and burglary repairs. Call 0208 646 7931.",
-		url: "https://www.jwsecurity.co.uk/locations/balham",
+			"Need a locksmith in Battersea SW11? JW Security provides 24/7 emergency locksmiths, lock replacement, commercial security and fire door services.",
+		url: "https://www.jwsecurity.co.uk/locations/battersea",
 		siteName: "JW Security",
 		type: "website",
 	},
 	twitter: {
 		card: "summary_large_image",
 		title:
-			"Locksmith Balham | 24/7 Emergency Locksmith & Security Services SW12",
+			"Locksmith Battersea SW11 | 24/7 Security Services | JW Security",
 		description:
-			"Professional locksmith services in Balham, SW12. 24/7 emergency response, lock changes, key cutting, and burglary repairs.",
+			"Need a locksmith in Battersea SW11? JW Security provides 24/7 emergency locksmiths, lock replacement, commercial security and fire door services.",
 	},
 };
 
-export default function Balham() {
+export default function Battersea() {
 	const jsonLd = {
 		"@context": "https://schema.org",
 		"@type": "LocalBusiness",
-		"name": "JW Security - Balham Locksmith & Security Services",
+		"name": "JW Security - Battersea Locksmith & Security Services",
 		"image": "https://jwsecurity.co.uk/images/jw/jw-logo.webp",
 		"description":
-			"Expert locksmith and security services in Balham, London. 24/7 emergency response, lock changes, key cutting, and property security. Serving Balham High Road, Bedford Hill, and Nightingale Lane.",
-		"@id": "https://jwsecurity.co.uk/locations/balham",
-		"url": "https://jwsecurity.co.uk/locations/balham",
+			"Professional locksmith and security services for homes, flats, businesses, landlords and managed buildings across Battersea, SW11, and nearby areas.",
+		"@id": "https://jwsecurity.co.uk/locations/battersea",
+		"url": "https://jwsecurity.co.uk/locations/battersea",
 		"telephone": "0208 646 7931",
 		"address": {
 			"@type": "PostalAddress",
-			"addressLocality": "Balham",
+			"addressLocality": "Battersea",
 			"addressRegion": "London",
-			"postalCode": "SW12",
+			"postalCode": "SW11",
 			"addressCountry": "GB",
 		},
 		"geo": {
 			"@type": "GeoCoordinates",
-			"latitude": 51.4429,
-			"longitude": -0.1524,
+			"latitude": 51.4688,
+			"longitude": -0.1687,
 		},
 		"openingHoursSpecification": {
 			"@type": "OpeningHoursSpecification",
@@ -69,27 +69,35 @@ export default function Balham() {
 		"areaServed": [
 			{
 				"@type": "Place",
-				"name": "Balham High Road",
+				"name": "Battersea Park",
 			},
 			{
 				"@type": "Place",
-				"name": "Bedford Hill",
+				"name": "Battersea Square",
 			},
 			{
 				"@type": "Place",
-				"name": "Nightingale Lane",
+				"name": "Battersea Power Station",
 			},
 			{
 				"@type": "Place",
-				"name": "Clapham South",
+				"name": "Nine Elms",
+			},
+			{
+				"@type": "Place",
+				"name": "Clapham Junction",
+			},
+			{
+				"@type": "Place",
+				"name": "Northcote Road",
 			},
 		],
 		"serviceArea": {
 			"@type": "GeoCircle",
 			"geoMidpoint": {
 				"@type": "GeoCoordinates",
-				"latitude": 51.4429,
-				"longitude": -0.1524,
+				"latitude": 51.4688,
+				"longitude": -0.1687,
 			},
 			"geoRadius": "3000",
 		},
@@ -98,13 +106,13 @@ export default function Balham() {
 	return (
 		<>
 			<Script
-				id="balham-json-ld"
+				id="battersea-json-ld"
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{
 					__html: JSON.stringify(jsonLd),
 				}}
 			/>
-			<BalhamPage />
+			<BatterseaPage />
 		</>
 	);
 }

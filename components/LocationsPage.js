@@ -199,6 +199,16 @@ export default function LocationsPage() {
 			category: "south-west",
 			featured: true,
 		},
+		{
+			title: "Wandsworth",
+			postcode: "SW18",
+			description:
+				"Professional locksmith, lock replacement and security services for residential and commercial properties throughout Wandsworth.",
+			icon: <BusinessIcon sx={{ fontSize: 30 }} />,
+			link: "/locations/wandsworth",
+			category: "south-west",
+			featured: true,
+		},
 
 		// West & Central London
 		{

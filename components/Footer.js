@@ -197,6 +197,8 @@ export default function Footer() {
 		{ label: "Kensington", path: "/locations/kensington" },
 		{ label: "Mayfair", path: "/locations/mayfair" },
 		{ label: "Balham", path: "/locations/balham" },
+		{ label: "Battersea", path: "/locations/battersea" },
+		{ label: "Wandsworth", path: "/locations/wandsworth" },
 		{ label: "Clapham", path: "/locations/clapham" },
 		{ label: "Streatham", path: "/locations/streatham" },
 		{ label: "Surrey", path: "/locations/surrey" },
