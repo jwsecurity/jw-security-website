@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import {
 	Box,
 	Container,
@@ -92,18 +93,21 @@ export default function SecuritySurveysPage() {
 	const surveyTypes = [
 		{
 			title: "Residential Security Surveys",
+			link: "/services/security-surveys",
 			description:
 				"Checks for houses, flats, landlords, and residential blocks where doors, windows, side gates, lighting, alarms, and entry points need review.",
 			icon: <HomeIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "Commercial Security Surveys",
+			link: "/services/security-surveys",
 			description:
 				"Checks for offices, shops, warehouses, and business premises where staff entrances, visitor access, stock rooms, CCTV, and access control need attention.",
 			icon: <BusinessIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "Post Incident Security Assessments",
+			link: "/services/burglary-repairs",
 			description:
 				"A closer look after a break in, attempted entry, or repeated concern, with advice on weak points and what should be improved next.",
 			icon: <AssessmentIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
@@ -300,10 +304,8 @@ export default function SecuritySurveysPage() {
 							<Grid
 								container
 								spacing={2}>
-								{surveyTypes.map((type, index) => (
-									<Grid
-										size={{ xs: 12 }}
-										key={index}>
+								{surveyTypes.map((type, index) => {
+									const card = (
 										<SurveyTypeCard
 											sx={{
 												p: 2.5,
@@ -311,6 +313,7 @@ export default function SecuritySurveysPage() {
 												flexDirection: "row",
 												alignItems: "center",
 												gap: 2.5,
+												cursor: type.link ? "pointer" : "default",
 											}}>
 											<Box
 												sx={{
@@ -342,8 +345,28 @@ export default function SecuritySurveysPage() {
 												</Typography>
 											</Box>
 										</SurveyTypeCard>
-									</Grid>
-								))}
+									);
+
+									return (
+										<Grid
+											size={{ xs: 12 }}
+											key={index}>
+											{type.link ? (
+												<Link
+													href={type.link}
+													style={{
+														textDecoration: "none",
+														display: "block",
+														height: "100%",
+													}}>
+													{card}
+												</Link>
+											) : (
+												card
+											)}
+										</Grid>
+									);
+								})}
 							</Grid>
 						</Grid>
 					</Grid>

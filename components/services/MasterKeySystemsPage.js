@@ -17,6 +17,7 @@ import {
 	AccordionDetails,
 } from "@mui/material";
 import React from "react";
+import Link from "next/link";
 import PageHero from "../common/PageHero";
 import ContactSection from "../common/ContactSection";
 import { styled, alpha } from "@mui/material/styles";
@@ -105,24 +106,28 @@ export default function MasterKeySystemsPage() {
 	const services = [
 		{
 			title: "Master Key System Installation",
+			link: "/services/master-key-systems",
 			description:
 				"We design and install master key systems for buildings that need simple, controlled access across several doors, rooms, floors, or units.",
 			icon: <KeyIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "Key Hierarchy Planning",
+			link: "/services/master-key-systems",
 			description:
 				"We help plan who needs access to which doors, from individual users to managers, facilities teams, and building owners.",
 			icon: <AccountTreeIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "Lock Cylinder Setup",
+			link: "/services/lock-replacement",
 			description:
 				"We supply and fit suitable cylinders so the master key system works across the required doors without affecting day to day use.",
 			icon: <LockIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "Restricted Key Control",
+			link: "/services/key-cutting",
 			description:
 				"Where needed, we can use restricted keys to help reduce unauthorised duplication and keep key control tighter.",
 			icon: <SecurityIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
@@ -338,11 +343,9 @@ export default function MasterKeySystemsPage() {
 							<Grid
 								container
 								spacing={2}>
-								{services.map((service, index) => (
-									<Grid
-										size={{ xs: 12, sm: 6 }}
-										key={index}>
-										<ServiceCard sx={{ p: 2.5 }}>
+								{services.map((service, index) => {
+									const card = (
+										<ServiceCard sx={{ p: 2.5, cursor: service.link ? "pointer" : "default" }}>
 											<Box
 												sx={{
 													display: "flex",
@@ -373,8 +376,28 @@ export default function MasterKeySystemsPage() {
 												{service.description}
 											</Typography>
 										</ServiceCard>
-									</Grid>
-								))}
+									);
+
+									return (
+										<Grid
+											size={{ xs: 12, sm: 6 }}
+											key={index}>
+											{service.link ? (
+												<Link
+													href={service.link}
+													style={{
+														textDecoration: "none",
+														display: "block",
+														height: "100%",
+													}}>
+													{card}
+												</Link>
+											) : (
+												card
+											)}
+										</Grid>
+									);
+								})}
 							</Grid>
 						</Grid>
 					</Grid>

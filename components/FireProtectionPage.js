@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import {
 	Box,
 	Container,
@@ -89,6 +90,7 @@ export default function FireProtectionPage() {
 	const fireProtectionServices = [
 		{
 			title: "Fire Door Inspections",
+			link: "/services/fire-door-inspection",
 			icon: <DoorSlidingIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
 				"We check fire doors for fit, condition, closers, seals, hinges, latching, and gaps.",
@@ -103,6 +105,7 @@ export default function FireProtectionPage() {
 		},
 		{
 			title: "Fire Door Maintenance",
+			link: "/services/fire-door-maintenance",
 			icon: <WarningAmberIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
 				"We repair common fire door faults, including worn closers, damaged seals, loose hinges, and doors that do not close or latch properly.",
@@ -117,6 +120,7 @@ export default function FireProtectionPage() {
 		},
 		{
 			title: "Fire Door Installation",
+			link: "/services/fire-door-installation",
 			icon: <LocalFireDepartmentIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
 				"We fit new fire doors where existing doors cannot be repaired or brought up to standard.",
@@ -131,6 +135,7 @@ export default function FireProtectionPage() {
 		},
 		{
 			title: "Fire Risk Assessments",
+			link: "/services/fire-risk-assessment",
 			icon: <WarningAmberIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
 				"We review fire safety risks, escape routes, fire doors, and key problem areas, then provide a written report with recommendations.",
@@ -310,11 +315,9 @@ export default function FireProtectionPage() {
 							<Grid
 								container
 								spacing={2}>
-								{fireProtectionServices.slice(0, 4).map((service, index) => (
-									<Grid
-										size={{ xs: 12, sm: 6 }}
-										key={index}>
-										<ServiceCard sx={{ p: 2.5 }}>
+								{fireProtectionServices.slice(0, 4).map((service, index) => {
+									const card = (
+										<ServiceCard sx={{ p: 2.5, cursor: service.link ? "pointer" : "default" }}>
 											<Box
 												sx={{
 													display: "flex",
@@ -342,8 +345,28 @@ export default function FireProtectionPage() {
 												{service.description}
 											</Typography>
 										</ServiceCard>
-									</Grid>
-								))}
+									);
+
+									return (
+										<Grid
+											size={{ xs: 12, sm: 6 }}
+											key={index}>
+											{service.link ? (
+												<Link
+													href={service.link}
+													style={{
+														textDecoration: "none",
+														display: "block",
+														height: "100%",
+													}}>
+													{card}
+												</Link>
+											) : (
+												card
+											)}
+										</Grid>
+									);
+								})}
 							</Grid>
 						</Grid>
 					</Grid>

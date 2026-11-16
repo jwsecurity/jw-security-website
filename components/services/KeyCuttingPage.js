@@ -14,6 +14,7 @@ import {
 	Button,
 } from "@mui/material";
 import React from "react";
+import Link from "next/link";
 import PageHero from "../common/PageHero";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import { styled, alpha } from "@mui/material/styles";
@@ -90,24 +91,28 @@ export default function KeyCuttingPage() {
 	const services = [
 		{
 			title: "Mobile Key Cutting",
+			link: "/services/key-cutting",
 			description:
 				"We come to you with key cutting equipment, saving time for homeowners, landlords, offices, and managed properties.",
 			icon: <DirectionsCarIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "Registered Key Systems",
+			link: "/services/master-key-systems",
 			description:
 				"Registered key systems help control who can request copies, reducing the risk of unauthorised duplication.",
 			icon: <VerifiedUserIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "All Key Types",
+			link: "/services/key-cutting",
 			description:
 				"We cut a wide range of key types, including cylinder keys, mortice keys, padlock keys, cabinet keys, and window lock keys.",
 			icon: <VpnKeyIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "While You Wait Service",
+			link: "/services/key-cutting",
 			description:
 				"Many standard keys can be cut on site while you wait, depending on the key type and blank availability.",
 			icon: <AccessTimeIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
@@ -241,11 +246,9 @@ export default function KeyCuttingPage() {
 							<Grid
 								container
 								spacing={2}>
-								{services.map((service, index) => (
-									<Grid
-										size={{ xs: 12, sm: 6 }}
-										key={index}>
-										<ServiceCard sx={{ p: 2.5 }}>
+								{services.map((service, index) => {
+									const card = (
+										<ServiceCard sx={{ p: 2.5, cursor: service.link ? "pointer" : "default" }}>
 											<Box
 												sx={{
 													display: "flex",
@@ -276,8 +279,28 @@ export default function KeyCuttingPage() {
 												{service.description}
 											</Typography>
 										</ServiceCard>
-									</Grid>
-								))}
+									);
+
+									return (
+										<Grid
+											size={{ xs: 12, sm: 6 }}
+											key={index}>
+											{service.link ? (
+												<Link
+													href={service.link}
+													style={{
+														textDecoration: "none",
+														display: "block",
+														height: "100%",
+													}}>
+													{card}
+												</Link>
+											) : (
+												card
+											)}
+										</Grid>
+									);
+								})}
 							</Grid>
 						</Grid>
 					</Grid>

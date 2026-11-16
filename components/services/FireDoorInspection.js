@@ -16,6 +16,7 @@ import {
 	ListItemText,
 } from "@mui/material";
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import PageHero from "../common/PageHero";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -91,21 +92,25 @@ export default function FireDoorInspection() {
 	const lockProducts = [
 		{
 			title: "Door Gaps And Alignment",
+			link: "/services/fire-door-maintenance",
 			description:
 				"We check whether the door sits correctly in the frame, closes fully, and has suitable gaps around the edges.",
 		},
 		{
 			title: "Closers And Latching",
+			link: "/services/fire-door-maintenance",
 			description:
 				"We test whether the closer brings the door shut and whether the latch holds correctly when the door closes.",
 		},
 		{
 			title: "Seals And Strips",
+			link: "/services/fire-door-maintenance",
 			description:
 				"We inspect smoke seals, intumescent strips, and visible damage that may affect fire door performance.",
 		},
 		{
 			title: "Hinges And Ironmongery",
+			link: "/services/fire-door-installation",
 			description:
 				"We check hinges, handles, locks, signage, glazing, and other fitted hardware linked to the door set.",
 		},
@@ -293,14 +298,8 @@ export default function FireDoorInspection() {
 							},
 							gap: 3,
 						}}>
-						{lockProducts.map((item, index) => (
-							<motion.div
-								key={index}
-								initial="hidden"
-								whileInView="visible"
-								viewport={{ once: true, amount: 0.1 }}
-								variants={fadeInUpVariants}
-								transition={{ delay: index * 0.1 }}>
+						{lockProducts.map((item, index) => {
+							const card = (
 								<Box
 									sx={{
 										"height": "100%",
@@ -309,6 +308,7 @@ export default function FireDoorInspection() {
 										"overflow": "hidden",
 										"boxShadow": "0 2px 10px rgba(0,0,0,0.05)",
 										"transition": "all .3s ease",
+										"cursor": item.link ? "pointer" : "default",
 										"&:hover": {
 											transform: "translateY(-5px)",
 											boxShadow: "0 8px 25px rgba(0,0,0,0.12)",
@@ -345,8 +345,32 @@ export default function FireDoorInspection() {
 										</Typography>
 									</Box>
 								</Box>
-							</motion.div>
-						))}
+							);
+
+							return (
+								<motion.div
+									key={index}
+									initial="hidden"
+									whileInView="visible"
+									viewport={{ once: true, amount: 0.1 }}
+									variants={fadeInUpVariants}
+									transition={{ delay: index * 0.1 }}>
+									{item.link ? (
+										<Link
+											href={item.link}
+											style={{
+												textDecoration: "none",
+												display: "block",
+												height: "100%",
+											}}>
+											{card}
+										</Link>
+									) : (
+										card
+									)}
+								</motion.div>
+							);
+						})}
 					</Box>
 				</Container>
 			</Section>

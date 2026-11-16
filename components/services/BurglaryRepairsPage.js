@@ -16,6 +16,7 @@ import {
 	useMediaQuery,
 } from "@mui/material";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import PageHero from "../common/PageHero";
 import { styled, alpha, useTheme } from "@mui/material/styles";
 import ContactSection from "../common/ContactSection";
@@ -94,21 +95,25 @@ export default function BurglaryRepairsPage() {
 	const services = [
 		{
 			title: "Door Repairs",
+			link: "/services/carpentry",
 			description:
 				"Repairs for damaged doors, split frames, forced entry marks, broken hinges, and door hardware affected during a break in.",
 		},
 		{
 			title: "Window Repairs",
+			link: "/services/upvc-doors-windows",
 			description:
 				"Help with damaged windows, broken glazing, weak frames, and openings that need boarding or securing quickly.",
 		},
 		{
 			title: "Lock Replacement",
+			link: "/services/lock-replacement",
 			description:
 				"Lock change after burglary for locks that have been forced, damaged, compromised, or no longer feel safe to use.",
 		},
 		{
 			title: "Security Upgrades",
+			link: "/services/security-surveys",
 			description:
 				"Extra security improvements for vulnerable doors, windows, and entry points after a burglary or attempted break in.",
 		},
@@ -291,11 +296,9 @@ export default function BurglaryRepairsPage() {
 							<Grid
 								container
 								spacing={2}>
-								{services.map((service, index) => (
-									<Grid
-										size={{ xs: 12, sm: 6 }}
-										key={index}>
-										<FeatureCard sx={{ p: 2.5 }}>
+								{services.map((service, index) => {
+									const card = (
+										<FeatureCard sx={{ p: 2.5, cursor: service.link ? "pointer" : "default" }}>
 											<Typography
 												variant="h6"
 												sx={{
@@ -312,8 +315,28 @@ export default function BurglaryRepairsPage() {
 												{service.description}
 											</Typography>
 										</FeatureCard>
-									</Grid>
-								))}
+									);
+
+									return (
+										<Grid
+											size={{ xs: 12, sm: 6 }}
+											key={index}>
+											{service.link ? (
+												<Link
+													href={service.link}
+													style={{
+														textDecoration: "none",
+														display: "block",
+														height: "100%",
+													}}>
+													{card}
+												</Link>
+											) : (
+												card
+											)}
+										</Grid>
+									);
+								})}
 							</Grid>
 						</Grid>
 					</Grid>

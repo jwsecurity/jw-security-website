@@ -16,6 +16,7 @@ import {
 	ListItemText,
 } from "@mui/material";
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import PageHero from "../common/PageHero";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -91,21 +92,25 @@ export default function FireRiskAssessment() {
 	const lockProducts = [
 		{
 			title: "Escape Routes",
+			link: "/services/fire-protection",
 			description:
 				"We review exits, corridors, stairwells, communal areas, and routes people may need to use during an emergency.",
 		},
 		{
 			title: "Fire Doors And Separation",
+			link: "/services/fire-door-inspection",
 			description:
 				"We check visible fire door issues, compartmentation concerns, door closers, seals, gaps, and areas where fire or smoke could spread.",
 		},
 		{
 			title: "Alarms, Lighting, And Signage",
+			link: "/services/fire-protection",
 			description:
 				"We look at fire alarm provision, emergency lighting, warning signs, and safety information where relevant to the building.",
 		},
 		{
 			title: "Hazards And Building Use",
+			link: "/services/fire-risk-assessment",
 			description:
 				"We review common fire risks linked to storage, electrics, waste, kitchens, tenant behaviour, business use, and shared areas.",
 		},
@@ -287,14 +292,8 @@ export default function FireRiskAssessment() {
 							},
 							gap: 3,
 						}}>
-						{lockProducts.map((item, index) => (
-							<motion.div
-								key={index}
-								initial="hidden"
-								whileInView="visible"
-								viewport={{ once: true, amount: 0.1 }}
-								variants={fadeInUpVariants}
-								transition={{ delay: index * 0.1 }}>
+						{lockProducts.map((item, index) => {
+							const card = (
 								<Box
 									sx={{
 										"height": "100%",
@@ -303,6 +302,7 @@ export default function FireRiskAssessment() {
 										"overflow": "hidden",
 										"boxShadow": "0 2px 10px rgba(0,0,0,0.05)",
 										"transition": "all .3s ease",
+										"cursor": item.link ? "pointer" : "default",
 										"&:hover": {
 											transform: "translateY(-5px)",
 											boxShadow: "0 8px 25px rgba(0,0,0,0.12)",
@@ -339,8 +339,32 @@ export default function FireRiskAssessment() {
 										</Typography>
 									</Box>
 								</Box>
-							</motion.div>
-						))}
+							);
+
+							return (
+								<motion.div
+									key={index}
+									initial="hidden"
+									whileInView="visible"
+									viewport={{ once: true, amount: 0.1 }}
+									variants={fadeInUpVariants}
+									transition={{ delay: index * 0.1 }}>
+									{item.link ? (
+										<Link
+											href={item.link}
+											style={{
+												textDecoration: "none",
+												display: "block",
+												height: "100%",
+											}}>
+											{card}
+										</Link>
+									) : (
+										card
+									)}
+								</motion.div>
+							);
+						})}
 					</Box>
 				</Container>
 			</Section>

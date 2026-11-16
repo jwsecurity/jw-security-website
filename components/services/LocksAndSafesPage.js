@@ -15,6 +15,7 @@ import {
 	Button,
 } from "@mui/material";
 import PageHero from "../common/PageHero";
+import Link from "next/link";
 import { styled, alpha } from "@mui/material/styles";
 
 const CTABanner = styled(Box)(({ theme }) => ({
@@ -83,18 +84,21 @@ export default function LocksAndSafesPage() {
 	const lockProducts = [
 		{
 			title: "High Security Door Locks",
+			link: "/services/lock-replacement",
 			description:
 				"Strong door locks for homes, flats, offices, shops, and shared entrances where basic hardware is no longer enough.",
 			image: "/images/jw/locksmith.webp",
 		},
 		{
 			title: "Digital Smart Locks",
+			link: "/services/electronic-key-pads",
 			description:
 				"Smart locks, keypad systems, and digital entry options for properties that need keyless access and easier control.",
 			image: "/images/jw/tools-to-repair-in-old-locksmiths-workshop.webp",
 		},
 		{
 			title: "Home Safes",
+			link: "/services/locks-and-safes",
 			description:
 				"Home safes for valuables, documents, jewellery, keys, and personal items that need secure storage inside the property.",
 			image:
@@ -102,6 +106,7 @@ export default function LocksAndSafesPage() {
 		},
 		{
 			title: "Commercial Grade Safes",
+			link: "/services/locks-and-safes",
 			description:
 				"Safes for offices, shops, and business premises that need secure storage for cash, documents, stock, or sensitive items.",
 			image:
@@ -231,11 +236,9 @@ export default function LocksAndSafesPage() {
 							<Grid
 								container
 								spacing={2}>
-								{lockProducts.map((product, index) => (
-									<Grid
-										size={{ xs: 12, sm: 6 }}
-										key={index}>
-										<ProductCard>
+								{lockProducts.map((product, index) => {
+									const card = (
+										<ProductCard sx={{ cursor: product.link ? "pointer" : "default" }}>
 											<CardMedia
 												component="img"
 												height="120"
@@ -265,8 +268,28 @@ export default function LocksAndSafesPage() {
 												</Typography>
 											</CardContent>
 										</ProductCard>
-									</Grid>
-								))}
+									);
+
+									return (
+										<Grid
+											size={{ xs: 12, sm: 6 }}
+											key={index}>
+											{product.link ? (
+												<Link
+													href={product.link}
+													style={{
+														textDecoration: "none",
+														display: "block",
+														height: "100%",
+													}}>
+													{card}
+												</Link>
+											) : (
+												card
+											)}
+										</Grid>
+									);
+								})}
 							</Grid>
 						</Grid>
 					</Grid>

@@ -14,6 +14,7 @@ import {
 	AccordionSummary,
 } from "@mui/material";
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import PageHero from "../common/PageHero";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -88,6 +89,7 @@ export default function FireDoorInstallationInLondonPage() {
 	const lockProducts = [
 		{
 			title: "Internal Fire Doors",
+			link: "/services/fire-door-installation",
 			description:
 				"Fire door installation for flats, offices, corridors, communal areas, plant rooms, and internal building routes.",
 			image:
@@ -95,6 +97,7 @@ export default function FireDoorInstallationInLondonPage() {
 		},
 		{
 			title: "Fire Door Frames",
+			link: "/services/fire-door-installation",
 			description:
 				"Frame checks, adjustments, and replacement where the existing frame is damaged, unsuitable, or cannot support the new door correctly.",
 			image:
@@ -102,6 +105,7 @@ export default function FireDoorInstallationInLondonPage() {
 		},
 		{
 			title: "Closers And Hinges",
+			link: "/services/fire-door-maintenance",
 			description:
 				"Correct fitting of fire door closers, hinges, latches, and related hardware so the door closes and latches as it should.",
 			image:
@@ -109,6 +113,7 @@ export default function FireDoorInstallationInLondonPage() {
 		},
 		{
 			title: "Seals And Ironmongery",
+			link: "/services/fire-door-maintenance",
 			description:
 				"Intumescent strips, smoke seals, handles, locks, signage, and compatible fire rated fittings where required.",
 			image:
@@ -288,14 +293,8 @@ export default function FireDoorInstallationInLondonPage() {
 							},
 							gap: 3,
 						}}>
-						{lockProducts.map((item, index) => (
-							<motion.div
-								key={index}
-								initial="hidden"
-								whileInView="visible"
-								viewport={{ once: true, amount: 0.1 }}
-								variants={fadeInUpVariants}
-								transition={{ delay: index * 0.1 }}>
+						{lockProducts.map((item, index) => {
+							const card = (
 								<Box
 									sx={{
 										"height": "100%",
@@ -304,6 +303,7 @@ export default function FireDoorInstallationInLondonPage() {
 										"overflow": "hidden",
 										"boxShadow": "0 2px 10px rgba(0,0,0,0.05)",
 										"transition": "all .3s ease",
+										"cursor": item.link ? "pointer" : "default",
 										"&:hover": {
 											transform: "translateY(-5px)",
 											boxShadow: "0 8px 25px rgba(0,0,0,0.12)",
@@ -351,8 +351,32 @@ export default function FireDoorInstallationInLondonPage() {
 										</Typography>
 									</Box>
 								</Box>
-							</motion.div>
-						))}
+							);
+
+							return (
+								<motion.div
+									key={index}
+									initial="hidden"
+									whileInView="visible"
+									viewport={{ once: true, amount: 0.1 }}
+									variants={fadeInUpVariants}
+									transition={{ delay: index * 0.1 }}>
+									{item.link ? (
+										<Link
+											href={item.link}
+											style={{
+												textDecoration: "none",
+												display: "block",
+												height: "100%",
+											}}>
+											{card}
+										</Link>
+									) : (
+										card
+									)}
+								</motion.div>
+							);
+						})}
 					</Box>
 				</Container>
 			</Section>

@@ -13,6 +13,7 @@ import {
 	Button,
 } from "@mui/material";
 import PageHero from "../common/PageHero";
+import Link from "next/link";
 import { styled, alpha } from "@mui/material/styles";
 
 const CTABanner = styled(Box)(({ theme }) => ({
@@ -78,18 +79,21 @@ export default function ShuttersGatesGrillesPage() {
 	const products = [
 		{
 			title: "Security Shutters",
+			link: "/services/shutters-gates-grilles",
 			description:
 				"Security shutters for doors, windows, shopfronts, and other openings that need stronger protection. Manual and electric options are available depending on the site.",
 			features: [],
 		},
 		{
 			title: "Security Gates",
+			link: "/services/shutters-gates-grilles",
 			description:
 				"Security gates for entrances, driveways, side access, rear yards, and commercial perimeters where controlled entry matters.",
 			features: [],
 		},
 		{
 			title: "Security Grilles",
+			link: "/services/shutters-gates-grilles",
 			description:
 				"Fixed and retractable security grilles for windows, doors, and internal openings where visibility and airflow still need to be maintained.",
 			features: [],
@@ -228,11 +232,9 @@ export default function ShuttersGatesGrillesPage() {
 							<Grid
 								container
 								spacing={2}>
-								{products.map((product, index) => (
-									<Grid
-										size={{ xs: 12 }}
-										key={index}>
-										<ProductCard sx={{ p: 2.5 }}>
+								{products.map((product, index) => {
+									const card = (
+										<ProductCard sx={{ p: 2.5, cursor: product.link ? "pointer" : "default" }}>
 											<Typography
 												variant="h6"
 												sx={{
@@ -249,8 +251,28 @@ export default function ShuttersGatesGrillesPage() {
 												{product.description}
 											</Typography>
 										</ProductCard>
-									</Grid>
-								))}
+									);
+
+									return (
+										<Grid
+											size={{ xs: 12 }}
+											key={index}>
+											{product.link ? (
+												<Link
+													href={product.link}
+													style={{
+														textDecoration: "none",
+														display: "block",
+														height: "100%",
+													}}>
+													{card}
+												</Link>
+											) : (
+												card
+											)}
+										</Grid>
+									);
+								})}
 							</Grid>
 						</Grid>
 					</Grid>

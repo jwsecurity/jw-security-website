@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import {
 	Box,
 	Container,
@@ -137,6 +138,7 @@ export default function EmergencyServicesPage() {
 	const emergencyServices = [
 		{
 			title: "Emergency Lockout",
+			link: "/services/emergency-door-opening",
 			icon: <LockOpenIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
 				"Locked out of your house, flat, office, shop, or managed building? We help you regain entry without unnecessary delay.",
@@ -150,6 +152,7 @@ export default function EmergencyServicesPage() {
 		},
 		{
 			title: "Burglary Damage",
+			link: "/services/burglary-repairs",
 			icon: <LocalPoliceIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
 				"Urgent help for damaged locks, weak entry points, and doors that need securing after attempted or forced entry.",
@@ -163,6 +166,7 @@ export default function EmergencyServicesPage() {
 		},
 		{
 			title: "Lost Key Replacement",
+			link: "/services/key-cutting",
 			icon: <HomeIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
 				"Lost your keys or need access sorted quickly after keys go missing? We help you regain entry and secure the site.",
@@ -176,6 +180,7 @@ export default function EmergencyServicesPage() {
 		},
 		{
 			title: "Lock Mechanism Failure",
+			link: "/services/lock-replacement",
 			icon: <BuildIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
 				"Expert repair when locks jam, break, or fail to operate correctly.",
@@ -336,11 +341,9 @@ export default function EmergencyServicesPage() {
 							<Grid
 								container
 								spacing={2}>
-								{emergencyServices.slice(0, 4).map((service, index) => (
-									<Grid
-										size={{ xs: 12, sm: 6 }}
-										key={index}>
-										<ServiceCard sx={{ p: 2.5 }}>
+								{emergencyServices.slice(0, 4).map((service, index) => {
+									const card = (
+										<ServiceCard sx={{ p: 2.5, cursor: service.link ? "pointer" : "default" }}>
 											<Box
 												sx={{
 													display: "flex",
@@ -367,8 +370,28 @@ export default function EmergencyServicesPage() {
 												{service.description}
 											</Typography>
 										</ServiceCard>
-									</Grid>
-								))}
+									);
+
+									return (
+										<Grid
+											size={{ xs: 12, sm: 6 }}
+											key={index}>
+											{service.link ? (
+												<Link
+													href={service.link}
+													style={{
+														textDecoration: "none",
+														display: "block",
+														height: "100%",
+													}}>
+													{card}
+												</Link>
+											) : (
+												card
+											)}
+										</Grid>
+									);
+								})}
 							</Grid>
 						</Grid>
 					</Grid>

@@ -17,6 +17,7 @@ import {
 	AccordionDetails,
 } from "@mui/material";
 import React from "react";
+import Link from "next/link";
 import PageHero from "../common/PageHero";
 import ContactSection from "../common/ContactSection";
 import { styled, alpha } from "@mui/material/styles";
@@ -104,24 +105,28 @@ export default function LockReplacementPage() {
 	const services = [
 		{
 			title: "Lock Replacement",
+			link: "/services/lock-replacement",
 			description:
 				"We replace old, damaged, worn, or unreliable locks on homes, offices, shops, shared buildings, and commercial premises.",
 			icon: <LockIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "Lock Change",
+			link: "/services/lock-replacement",
 			description:
 				"Lock change in London for lost keys, moved tenants, staff changes, property handovers, and access control concerns.",
 			icon: <LockOpenIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "High Security Locks",
+			link: "/services/locks-and-safes",
 			description:
 				"High security locks in London for properties that need stronger protection, better key control, anti snap cylinders, or insurance approved options.",
 			icon: <SecurityIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "Lock Upgrades",
+			link: "/services/security",
 			description:
 				"Security upgrades for doors that still work but need better locks, stronger cylinders, or more suitable hardware.",
 			icon: <UpgradeIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
@@ -330,11 +335,9 @@ export default function LockReplacementPage() {
 							<Grid
 								container
 								spacing={2}>
-								{services.map((service, index) => (
-									<Grid
-										size={{ xs: 12, sm: 6 }}
-										key={index}>
-										<ServiceCard sx={{ p: 2.5 }}>
+								{services.map((service, index) => {
+									const card = (
+										<ServiceCard sx={{ p: 2.5, cursor: service.link ? "pointer" : "default" }}>
 											<Box
 												sx={{
 													display: "flex",
@@ -365,8 +368,28 @@ export default function LockReplacementPage() {
 												{service.description}
 											</Typography>
 										</ServiceCard>
-									</Grid>
-								))}
+									);
+
+									return (
+										<Grid
+											size={{ xs: 12, sm: 6 }}
+											key={index}>
+											{service.link ? (
+												<Link
+													href={service.link}
+													style={{
+														textDecoration: "none",
+														display: "block",
+														height: "100%",
+													}}>
+													{card}
+												</Link>
+											) : (
+												card
+											)}
+										</Grid>
+									);
+								})}
 							</Grid>
 						</Grid>
 					</Grid>

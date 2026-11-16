@@ -13,6 +13,7 @@ import {
 	Button,
 } from "@mui/material";
 import React from "react";
+import Link from "next/link";
 import PageHero from "../common/PageHero";
 import BuildIcon from "@mui/icons-material/Build";
 import { styled, alpha } from "@mui/material/styles";
@@ -96,24 +97,28 @@ export default function UPVCDoorsWindowsPage() {
 	const services = [
 		{
 			title: "UPVC Door Lock Repair",
+			link: "/services/upvc-door-locks",
 			description:
 				"uPVC door repair in London for jammed locks, failed gearboxes, stiff handles, and multi point systems that no longer engage properly.",
 			icon: <BuildIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "Window Lock & Handle Repair",
+			link: "/services/upvc-doors-windows",
 			description:
 				"uPVC window repair in London for broken handles, faulty window locks, seized mechanisms, and windows that no longer open or close smoothly.",
 			icon: <SecurityIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "Lock Replacement & Upgrades",
+			link: "/services/lock-replacement",
 			description:
 				"Replacement locks, cylinders, handles, and security hardware for uPVC doors and windows where the existing parts are worn, damaged, or outdated.",
 			icon: <HandymanIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "Emergency Services",
+			link: "/services/emergency",
 			description:
 				"Fast help for uPVC doors or windows that cannot be locked, opened, closed, or secured properly.",
 			icon: <ErrorOutlineIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
@@ -239,11 +244,9 @@ export default function UPVCDoorsWindowsPage() {
 							<Grid
 								container
 								spacing={2}>
-								{services.map((service, index) => (
-									<Grid
-										size={{ xs: 12, sm: 6 }}
-										key={index}>
-										<ServiceCard sx={{ p: 2.5 }}>
+								{services.map((service, index) => {
+									const card = (
+										<ServiceCard sx={{ p: 2.5, cursor: service.link ? "pointer" : "default" }}>
 											<Box
 												sx={{
 													display: "flex",
@@ -270,8 +273,28 @@ export default function UPVCDoorsWindowsPage() {
 												{service.description}
 											</Typography>
 										</ServiceCard>
-									</Grid>
-								))}
+									);
+
+									return (
+										<Grid
+											size={{ xs: 12, sm: 6 }}
+											key={index}>
+											{service.link ? (
+												<Link
+													href={service.link}
+													style={{
+														textDecoration: "none",
+														display: "block",
+														height: "100%",
+													}}>
+													{card}
+												</Link>
+											) : (
+												card
+											)}
+										</Grid>
+									);
+								})}
 							</Grid>
 						</Grid>
 					</Grid>

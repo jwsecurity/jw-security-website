@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import {
 	Box,
 	Container,
@@ -127,6 +128,7 @@ export default function LocksmithServicesPage() {
 	const locksmithServices = [
 		{
 			title: "Lock Repairs",
+			link: "/services/lock-replacement",
 			icon: <Lock sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
 				"Stiff locks, jammed cylinders, broken springs, worn mechanisms. We'll have a look and tell you if it's worth fixing or needs replacing.",
@@ -141,6 +143,7 @@ export default function LocksmithServicesPage() {
 		},
 		{
 			title: "Key Cutting ",
+			link: "/services/key-cutting",
 			icon: <Key sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description: "Need a spare? We cut keys on site for most lock types.",
 			services: [
@@ -154,6 +157,7 @@ export default function LocksmithServicesPage() {
 		},
 		{
 			title: "Lock Replacement",
+			link: "/services/lock-replacement",
 			icon: <Lock sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
 				"Old locks wear out. Sometimes they break. Sometimes you just want something better. We carry stock for most common types, so it's usually sorted the same day.",
@@ -326,11 +330,9 @@ export default function LocksmithServicesPage() {
 							<Grid
 								container
 								spacing={2}>
-								{locksmithServices.slice(0, 4).map((service, index) => (
-									<Grid
-										size={{ xs: 12, sm: 6 }}
-										key={index}>
-										<ServiceCard sx={{ p: 2.5 }}>
+								{locksmithServices.slice(0, 4).map((service, index) => {
+									const card = (
+										<ServiceCard sx={{ p: 2.5, cursor: service.link ? "pointer" : "default" }}>
 											<Box
 												sx={{
 													display: "flex",
@@ -357,8 +359,28 @@ export default function LocksmithServicesPage() {
 												{service.description}
 											</Typography>
 										</ServiceCard>
-									</Grid>
-								))}
+									);
+
+									return (
+										<Grid
+											size={{ xs: 12, sm: 6 }}
+											key={index}>
+											{service.link ? (
+												<Link
+													href={service.link}
+													style={{
+														textDecoration: "none",
+														display: "block",
+														height: "100%",
+													}}>
+													{card}
+												</Link>
+											) : (
+												card
+											)}
+										</Grid>
+									);
+								})}
 							</Grid>
 						</Grid>
 					</Grid>

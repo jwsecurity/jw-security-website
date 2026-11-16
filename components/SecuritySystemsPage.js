@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import {
 	Box,
 	Container,
@@ -157,6 +158,7 @@ export default function SecuritySystemsPage() {
 		},
 		{
 			title: "Access Control",
+			link: "/services/electronic-key-pads",
 			icon: <BadgeIcon sx={{ fontSize: 35, color: JW_CYAN }} />,
 			description:
 				"Fob systems, keypad entry, intercoms, and secure door access for shared entrances, staff areas, offices, and managed buildings.",
@@ -298,11 +300,9 @@ export default function SecuritySystemsPage() {
 							<Grid
 								container
 								spacing={2}>
-								{securityServices.map((service, index) => (
-									<Grid
-										size={{ xs: 12, sm: 6 }}
-										key={index}>
-										<ServiceCard sx={{ p: 2.5 }}>
+								{securityServices.map((service, index) => {
+									const card = (
+										<ServiceCard sx={{ p: 2.5, cursor: service.link ? "pointer" : "default" }}>
 											<Box
 												sx={{
 													display: "flex",
@@ -329,8 +329,28 @@ export default function SecuritySystemsPage() {
 												{service.description}
 											</Typography>
 										</ServiceCard>
-									</Grid>
-								))}
+									);
+
+									return (
+										<Grid
+											size={{ xs: 12, sm: 6 }}
+											key={index}>
+											{service.link ? (
+												<Link
+													href={service.link}
+													style={{
+														textDecoration: "none",
+														display: "block",
+														height: "100%",
+													}}>
+													{card}
+												</Link>
+											) : (
+												card
+											)}
+										</Grid>
+									);
+								})}
 							</Grid>
 						</Grid>
 					</Grid>

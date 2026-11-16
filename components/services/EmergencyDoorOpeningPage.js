@@ -16,6 +16,7 @@ import {
 	AccordionDetails,
 } from "@mui/material";
 import PageHero from "../common/PageHero";
+import Link from "next/link";
 import { styled, alpha } from "@mui/material/styles";
 import ContactSection from "../common/ContactSection";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
@@ -63,21 +64,25 @@ export default function EmergencyDoorOpeningPage() {
 	const features = [
 		{
 			title: "Fast Response Time",
+			link: "/services/emergency",
 			description:
 				"Quick attendance for lockouts and urgent access issues across London and Surrey.",
 		},
 		{
 			title: "Non Destructive Entry",
+			link: "/services/emergency-door-opening",
 			description:
 				"We use non destructive entry methods where possible to reduce unnecessary damage.",
 		},
 		{
 			title: "24/7 Availability",
+			link: "/services/emergency",
 			description:
 				"Emergency door opening support for situations that cannot wait until later.",
 		},
 		{
 			title: "Fully Equipped Technicians",
+			link: "/services/locksmith",
 			description:
 				"Our team arrives with the tools needed for common lock and door access problems.",
 		},
@@ -273,16 +278,15 @@ export default function EmergencyDoorOpeningPage() {
 							<Grid
 								container
 								spacing={2}>
-								{features.map((feature, index) => (
-									<Grid
-										size={{ xs: 12, sm: 12 }}
-										key={index}>
+								{features.map((feature, index) => {
+									const card = (
 										<FeatureCard
 											sx={{
 												p: 2,
 												display: "flex",
 												alignItems: "center",
 												gap: 2.5,
+												cursor: feature.link ? "pointer" : "default",
 											}}>
 											<Box
 												sx={{
@@ -316,8 +320,28 @@ export default function EmergencyDoorOpeningPage() {
 												</Typography>
 											</Box>
 										</FeatureCard>
-									</Grid>
-								))}
+									);
+
+									return (
+										<Grid
+											size={{ xs: 12, sm: 12 }}
+											key={index}>
+											{feature.link ? (
+												<Link
+													href={feature.link}
+													style={{
+														textDecoration: "none",
+														display: "block",
+														height: "100%",
+													}}>
+													{card}
+												</Link>
+											) : (
+												card
+											)}
+										</Grid>
+									);
+								})}
 							</Grid>
 						</Grid>
 					</Grid>

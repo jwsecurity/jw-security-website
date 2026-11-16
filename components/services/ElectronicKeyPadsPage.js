@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import {
 	Box,
 	Container,
@@ -97,18 +98,21 @@ export default function ElectronicKeyPadsPage() {
 	const keypads = [
 		{
 			title: "Digital Code Keypads",
+			link: "/services/electronic-key-pads",
 			description:
 				"Simple code based keypad locks for homes, offices, staff rooms, storage areas, and internal doors where key control needs to be easier.",
 			icon: <LockIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "Advanced Smart Keypads",
+			link: "/services/security",
 			description:
 				"Smart keypad systems with multiple user codes, temporary codes, app based control where available, and better access management for busier sites.",
 			icon: <BusinessIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
 		},
 		{
 			title: "Biometric Entry Systems",
+			link: "/services/security",
 			description:
 				"Biometric access options for properties that need extra control, including fingerprint access where suitable for the door, users, and site requirements.",
 			icon: <HomeIcon sx={{ fontSize: 30, color: JW_CYAN }} />,
@@ -247,16 +251,15 @@ export default function ElectronicKeyPadsPage() {
 							<Grid
 								container
 								spacing={2}>
-								{keypads.map((keypad, index) => (
-									<Grid
-										size={{ xs: 12, sm: 6, md: 12 }}
-										key={index}>
+								{keypads.map((keypad, index) => {
+									const card = (
 										<ProductCard
 											sx={{
 												p: 2,
 												display: "flex",
 												alignItems: "center",
 												gap: 2,
+												cursor: keypad.link ? "pointer" : "default",
 											}}>
 											<Box
 												sx={{
@@ -282,8 +285,28 @@ export default function ElectronicKeyPadsPage() {
 												</Typography>
 											</Box>
 										</ProductCard>
-									</Grid>
-								))}
+									);
+
+									return (
+										<Grid
+											size={{ xs: 12, sm: 6, md: 12 }}
+											key={index}>
+											{keypad.link ? (
+												<Link
+													href={keypad.link}
+													style={{
+														textDecoration: "none",
+														display: "block",
+														height: "100%",
+													}}>
+													{card}
+												</Link>
+											) : (
+												card
+											)}
+										</Grid>
+									);
+								})}
 							</Grid>
 						</Grid>
 					</Grid>
